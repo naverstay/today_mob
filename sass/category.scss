@@ -1,0 +1,211 @@
+.category_tip {
+  @extend %icon_pseudo;
+  position: relative;
+  margin: 0 17px 24px -16px;
+  padding: 25px 20px 15px 0;
+  list-style: none;
+
+  &:before {
+    content: $icon-ufo;
+    position: absolute;
+    right: -115px;
+    top: 50%;
+    margin-top: -72px;
+    font-size: 200px;
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  li {
+    position: relative;
+    padding-right: 20px;
+    padding-left: 36px;
+    color: #fff;
+    margin-bottom: 12px;
+    font: 24px/26px $FrutigerNeueLTW1GBlack;
+    letter-spacing: .025em;
+
+    &:before {
+      content: '#';
+      position: absolute;
+      left: 16px;
+      top: 0;
+    }
+
+  }
+
+  &._stories,
+  &._top {
+    background: $violette;
+  }
+
+  &._release {
+    background: $violette_2;
+  }
+
+  &._analysis {
+    background: $orange;
+  }
+
+  &._pricewise {
+    background: $green;
+  }
+
+  &._sponsored {
+    background: $green_2;
+  }
+
+  &._pool {
+    background: $blue;
+  }
+
+  &._features {
+    background: $red;
+  }
+
+  &._wiki {
+    background: $brown;
+  }
+
+  &._watch {
+    background: $brown_2;
+  }
+}
+
+.category_link {
+  @extend %icon_pseudo;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  height: 28px;
+  border-radius: 14px;
+  color: #fff;
+  font: 12px/18px $FrutigerNeueLTW1GBlack;
+  letter-spacing: .015em;
+  padding: 7px 14px 3px 35px;
+  margin-top: -14px;
+  margin-bottom: 10px;
+
+  &:before {
+    content: $icon-say;
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    font-size: 16px;
+  }
+}
+
+.category_tool {
+  margin-top: -24px;
+  margin-bottom: 14px;
+  padding: 0 0 25px;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -16px;
+    left: -16px;
+    border-bottom: 8px solid;
+  }
+
+  p {
+    font: 14px/1.6 $FrutigerNeueLTW1GBlack;
+    color: #000;
+    margin-top: 5px;
+    letter-spacing: -.05em;
+  }
+
+  &._stories,
+  &._top {
+    &:before {
+      border-bottom-color: $violette;
+    }
+
+    .category_link {
+      background: $violette;
+    }
+  }
+
+  &._release {
+    &:before {
+      border-bottom-color: $violette_2;
+    }
+
+    .category_link {
+      background: $violette_2;
+    }
+  }
+
+  &._analysis {
+    &:before {
+      border-bottom-color: $orange;
+    }
+
+    .category_link {
+      background: $orange;
+    }
+  }
+
+  &._pricewise {
+    &:before {
+      border-bottom-color: $green;
+    }
+
+    .category_link {
+      background: $green;
+    }
+  }
+
+  &._sponsored {
+    &:before {
+      border-bottom-color: $green_2;
+    }
+
+    .category_link {
+      background: $green_2;
+    }
+  }
+
+  &._pool {
+    &:before {
+      border-bottom-color: $blue;
+    }
+
+    .category_link {
+      background: $blue;
+    }
+  }
+
+  &._features {
+    &:before {
+      border-bottom-color: $red;
+    }
+
+    .category_link {
+      background: $red;
+    }
+  }
+
+  &._wiki {
+    &:before {
+      border-bottom-color: $brown;
+    }
+
+    .category_link {
+      background: $brown;
+    }
+  }
+
+  &._watch {
+    &:before {
+      border-bottom-color: $brown_2;
+    }
+
+    .category_link {
+      background: $brown_2;
+    }
+  }
+
+}

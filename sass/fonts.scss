@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'FrutigerNeueLTW1G-Black';
+  src: url($prefix + 'fonts/FrutigerNeueLTW1G-Black.eot');
+  src: url($prefix + 'fonts/FrutigerNeueLTW1G-Black.eot?#iefix') format("embedded-opentype"),
+  url($prefix + 'fonts/FrutigerNeueLTW1G-Black.woff') format("woff"),
+  url($prefix + 'fonts/FrutigerNeueLTW1G-Black.woff2') format("woff2"),
+  url($prefix + 'fonts/FrutigerNeueLTW1G-Black.ttf') format("truetype"),
+  url($prefix + 'fonts/FrutigerNeueLTW1G-Black.svg') format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FrutigerNeueLTW1G-Bold';
+  src: url($prefix + 'fonts/FrutigerNeueLTW1G-Bold.eot');
+  src: url($prefix + 'fonts/FrutigerNeueLTW1G-Bold.eot?#iefix') format("embedded-opentype"),
+  url($prefix + 'fonts/FrutigerNeueLTW1G-Bold.woff') format("woff"),
+  url($prefix + 'fonts/FrutigerNeueLTW1G-Bold.woff2') format("woff2"),
+  url($prefix + 'fonts/FrutigerNeueLTW1G-Bold.ttf') format("truetype"),
+  url($prefix + 'fonts/FrutigerNeueLTW1G-Bold.svg') format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FrutigerNeueLTW1G-Book';
+  src: url($prefix + 'fonts/FrutigerNeueLTW1G-Book.eot');
+  src: url($prefix + 'fonts/FrutigerNeueLTW1G-Book.eot?#iefix') format("embedded-opentype"),
+  url($prefix + 'fonts/FrutigerNeueLTW1G-Book.woff') format("woff"),
+  url($prefix + 'fonts/FrutigerNeueLTW1G-Book.woff2') format("woff2"),
+  url($prefix + 'fonts/FrutigerNeueLTW1G-Book.ttf') format("truetype"),
+  url($prefix + 'fonts/FrutigerNeueLTW1G-Book.svg') format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+

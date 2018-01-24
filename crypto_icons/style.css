@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'crypto_icons';
+  src:  url('fonts/crypto_icons.eot?6yx6s3');
+  src:  url('fonts/crypto_icons.eot?6yx6s3#iefix') format('embedded-opentype'),
+    url('fonts/crypto_icons.ttf?6yx6s3') format('truetype'),
+    url('fonts/crypto_icons.woff?6yx6s3') format('woff'),
+    url('fonts/crypto_icons.svg?6yx6s3#crypto_icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'crypto_icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-crypto:before {
+  content: "\e908";
+}
+.icon-splash:before {
+  content: "\e909";
+}
+.icon-say:before {
+  content: "\e90a";
+}
+.icon-shark:before {
+  content: "\e90b";
+}
+.icon-rss:before {
+  content: "\e90c";
+}
+.icon-star:before {
+  content: "\e90d";
+}
+.icon-ufo:before {
+  content: "\e90e";
+}
+.icon-share-alt:before {
+  content: "\e907";
+}
+.icon-eye:before {
+  content: "\e906";
+}
+.icon-search:before {
+  content: "\e902";
+}
+.icon-close:before {
+  content: "\e900";
+}
+.icon-fb:before {
+  content: "\e901";
+}
+.icon-tg:before {
+  content: "\e903";
+}
+.icon-triangle:before {
+  content: "\e904";
+}
+.icon-tw:before {
+  content: "\e905";
+}
+.icon-check:before {
+  content: "\ea10";
+}
+.icon-arrow-up:before {
+  content: "\ea3a";
+}

@@ -1,0 +1,178 @@
+- var prod = true;
+- var prod = false;
+
+mixin dev_head(page_title)
+    head
+        title=page_title
+        |
+        | <!-- saved from url=(0014)about:internet -->
+        meta(charset='utf-8')
+        meta(name='viewport', content="width=device-width, initial-scale=1.0")
+        meta(name="SKYPE_TOOLBAR", content="SKYPE_TOOLBAR_PARSER_COMPATIBLE")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="format-detection", content="telephone=no")
+        meta(name="theme-color", content="#3d0ba9")
+
+        - if (prod)
+            style
+                include ../styles/header_global.css
+
+mixin loop_while(counter)
+    -i=0;
+    while i < counter
+        -i++;
+        block
+
+mixin footer(white)
+    .footer(class= white ? '_white' : '')
+        .section_inner
+            ul.footer_menu
+                li: a.footer_link(href='#') News
+                li: a.footer_link(href='#') Features
+                li: a.footer_link(href='#') Sharks pool
+                li: a.footer_link(href='#') Price analysis
+                li: a.footer_link(href='#') Share insight
+                li: a.footer_link(href='about.html') About us
+
+            .footer_logo
+                a.logo(href='index.html')
+                    img(src= white ? 'i/logo_f_v.png' : 'i/logo_f.png')
+
+            p Follow us with:
+
+            ul.action_list
+                li: a.action_link._w(href='#')
+                    span Twitter
+                li: a.action_link._t(href='#')
+                    span Telegram
+                li: a.action_link._f(href='#')
+                    span Facebook
+                li: a.action_link._r(href='#')
+                    span RSS
+
+        .go_top_holder.goTopHolder
+            .section_inner
+                a.go_top.goTop(href='#')
+
+mixin top_info()
+    .top_info
+        .currency_switcher
+            select.currency_select
+                option &#8364;
+                option &#36;
+                option &#8381;
+                option &#163;
+            .select_arrow
+            .select_overlay
+        .currency_info
+            .currency_info_table
+                .currency_info_cell
+                    p
+                        span BTC
+                        span.clr_red_2 (-8.82%)
+                    p
+                        span.currency_val 2636.79
+                .currency_info_cell
+                    p
+                        span BCH
+                        span.clr_green (+10.82%)
+                    p
+                        span.currency_val 3236.51
+                .currency_info_cell
+                    p
+                        span ETH
+                        span.clr_red_2 (-8.82%)
+                    p
+                        span.currency_val 26236.79
+
+mixin main_menu()
+    .main_menu_holder
+        ul.main_menu
+            li.menu_item
+                a.menu_link(href='#') News
+            li.menu_item
+                a.menu_link(href='#') Features
+            li.menu_item
+                a.menu_link(href='#') Sharks pool
+            li.menu_item
+                a.menu_link(href='#') Price analysis
+            li.menu_item
+                a.menu_link(href='#') Share insight
+            li.menu_item
+                a.menu_link(href='about.html') About us
+
+        .menu_footer.subscribeBlock
+            .footer_subscribe
+                a.subscribe_close.subscribeClose(href='#')
+                a.subscribe_link.subscribeLink(href='#') Subscribe with your email
+
+            .footer_action
+                p Follow us with:
+
+                ul.action_list
+                    li: a.action_link._w(href='#')
+                        span Twitter
+                    li: a.action_link._t(href='#')
+                        span Telegram
+                    li: a.action_link._f(href='#')
+                        span Facebook
+                    li: a.action_link._r(href='#')
+                        span RSS
+
+            .footer_form
+                form.validateMe.formParent.subscribeForm(action='#')
+                    .form_cell.formCell
+                        .input_w
+                            input.input_v1.forceValidation(placeholder='Enter your email' class='validate[required]')
+
+                    .form_cell
+                        button.btn_v1.subscribe_btn.white_btn Subscribe
+
+            .footer_msg._success
+                .footer_msg_title
+                    span.icon-check.msg_icon
+                    br
+                    span Subscription<br>enabled
+
+            .footer_msg._fail
+                .footer_msg_title
+                    span.icon-close.clr_red.msg_icon
+                    span Error
+                p Something went wrong,<br>try again
+
+
+mixin search()
+    .search_holder
+        .search_title Search
+        form(action='#')
+            .form_cell
+                input.completeIt.search_input(placeholder='search...')
+                button.filter_btn
+
+mixin header()
+    .header
+        .section_inner
+            a.menu_btn.menuBtn(href='#')
+                span
+            .logo_block
+                a.logo(href='index.html')
+                    img(src='i/logo_h.png')
+
+            a.search_btn.searchBtn(href='#')
+
+mixin scripts()
+    -if (!prod)
+        link(rel='stylesheet', href='styles/header_global.css?t=' + time, media='all')
+
+    link(rel='stylesheet', href='styles/main_global.css?t=' + time, media='all')
+
+    - if (prod)
+        script(src='js/main.min.js?t=' + time)
+    - else
+        script(src='js/jquery1.10.js?t=' + time)
+        script(src='js/auto-complete.js?t=' + time)
+        script(src='js/jquery.validationEngine.js?t=' + time)
+        script(src='js/jquery.validationEngine-ru.js?t=' + time)
+        script(src='js/slick.js?t=' + time)
+        script(src='js/jquery.sticky-kit.min.js?t=' + time)
+        script(src='js/script.js?t=' + time)

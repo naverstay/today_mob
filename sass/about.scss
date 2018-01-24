@@ -1,0 +1,108 @@
+.about_block {
+  @extend %icon_pseudo;
+  position: relative;
+  padding: 107px 0 15px;
+
+  &:before {
+    @extend %hor_centr;
+    content: $icon-ufo;
+    position: absolute;
+    top: -117px;
+    padding-left: 12px;
+    font-size: 417px;
+    line-height: 1;
+    color: $violette;
+  }
+
+  .action_list {
+    margin: 0 0 25px;
+  }
+
+  > p {
+    letter-spacing: .025em;
+    font-size: 17px;
+    line-height: 22px;
+  }
+}
+
+.about_action {
+  margin-bottom: 24px;
+
+  img {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+  }
+}
+
+.about_title {
+  color: $violette;
+  font: 52px/1 $FrutigerNeueLTW1GBlack;
+  letter-spacing: .021em;
+  margin-bottom: 15px;
+}
+
+.about_team_holder {
+  padding: 34px 0 32px 36px;
+  margin-left: -16px;
+  margin-right: 17px;
+  position: relative;
+  background: url(../i/about_bg.png) no-repeat 50% 50%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: -33px;
+    height: 6px;
+    background: $violette;
+  }
+
+}
+
+.about_team {
+
+  li {
+    + li {
+      margin-top: 48px;
+    }
+  }
+}
+
+.team_unit {
+  @extend %clearfix;
+  color: #fff;
+  letter-spacing: .025em;
+}
+
+.team_unit_name {
+  font: 24px/1.1 $FrutigerNeueLTW1GBlack;
+  padding: 12px 0;
+}
+
+.team_unit_post {
+  opacity: .5;
+  font: 14px $FrutigerNeueLTW1GBold;
+}
+
+.team_unit_photo {
+  float: right;
+  margin-right: -17px;
+  width: 96px;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  + .team_unit_post,
+  + .team_unit_name {
+    margin-right: 100px;
+  }
+
+}

@@ -1,0 +1,198 @@
+//*************************** header
+
+%header_btn {
+  position: absolute;
+  z-index: 7;
+  top: 12px;
+  border-radius: 100%;
+  width: 48px;
+  height: 48px;
+  line-height: 52px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, .25);
+  background: transparentize($violette, .5);
+}
+
+.nav_holder {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+  max-width: $body_width;
+  margin: 0 auto;
+}
+
+.header {
+  @include transition_all(box-shadow .3s, transform .3s);
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  line-height: 48px;
+  padding-top: 8px;
+  min-height: 72px;
+  background: url($prefix + 'i/header_bg.jpg') no-repeat 50% 50%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  &._shadow {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .75);
+  }
+  &.nav-up {
+    @include transform_translate(0, -100%);
+    box-shadow: 0 0 rgba(0, 0, 0, 0);
+  }
+
+  .menu_opened &,
+  .search_opened & {
+    -webkit-transform: none !important;
+    -ms-transform: none !important;
+    transform: none !important;
+  }
+}
+
+.menu_btn {
+  @include transition_all(opacity .3s);
+  @extend %header_btn;
+  opacity: 1;
+  left: 16px;
+
+  &:before {
+    top: 19px;
+  }
+
+  &:after {
+    top: 23px;
+  }
+
+  span,
+  &:after,
+  &:before {
+    @include transition_all(transform .3s, top .3s);
+    content: '';
+    position: absolute;
+    left: 17px;
+    width: 14px;
+    height: 2px;
+    background: white;
+  }
+
+  span {
+    @include transition_all(opacity .3s);
+    width: 8px;
+    top: 27px;
+    opacity: 1;
+  }
+
+  .search_opened & {
+    @include transition_all(opacity .3s, z-index .01s .3s);
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .menu_opened & {
+    &:before {
+      transform: rotate(-45deg);
+      top: 24px;
+    }
+
+    &:after {
+      transform: rotate(45deg);
+      top: 24px;
+    }
+
+    span {
+      opacity: 0;
+    }
+  }
+}
+
+.search_btn {
+  @extend %header_btn;
+  @extend %icon_pseudo;
+  right: 16px;
+
+  &:before {
+    content: $icon-search;
+  }
+
+  &:after {
+    content: '';
+    background-color: transparent;
+  }
+
+  .search_opened & {
+    &:after,
+    &:before {
+      @include transition_all(transform .3s, top 0.3s, background .3s);
+      content: '';
+      position: absolute;
+      left: 17px;
+      width: 14px;
+      height: 2px;
+      top: 24px;
+      background: white;
+    }
+
+    &:before {
+      transform: rotate(-45deg);
+    }
+
+    &:after {
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.logo_block {
+  @include transition_all(opacity .3s);
+  position: relative;
+  z-index: 6;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 50px;
+  max-width: 100%;
+  opacity: 1;
+
+  .search_opened & {
+    @include transition_all(opacity .3s, z-index .01s .3s);
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+}
+
+.logo {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.callback_block {
+  float: right;
+}
+
+.clr_red_2 {
+  color: $red_2;
+}
+
+.clr_green {
+  color: $green;
+}
+
+.currency_val {
+  font: 13px $FrutigerNeueLTW1GBold;
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="15px" viewBox="0 0 8 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Path Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-9" transform="translate(-207.000000, -121.000000)" fill="#5C29C7">
+            <g id="Group-25" transform="translate(34.000000, 121.000000)">
+                <path d="M177.980523,14.9799995 L177.980523,7.48912274 L180.196354,7.48912274 L180.49,4.90772511 L177.980523,4.90772511 L177.984287,3.61571075 C177.984287,2.94244249 178.052836,2.58168997 179.089066,2.58168997 L180.474314,2.58168997 L180.474314,0 L178.258168,0 C175.596222,0 174.659285,1.25225558 174.659285,3.35815567 L174.659285,4.90801745 L173,4.90801745 L173,7.48941508 L174.659285,7.48941508 L174.659285,14.9799995 L177.980523,14.9799995 Z" id="Path-Copy"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,637 @@
+.attention_block {
+  @extend %icon_pseudo;
+  padding: 14px 12px 14px 27px;
+  margin: 12px 0;
+  background: #f7f6ef;
+  font: 13px $FrutigerNeueLTW1GBold;
+  letter-spacing: -.017em;
+  position: relative;
+  z-index: 1;
+
+  p {
+    line-height: 1.1;
+  }
+
+  &._warn {
+    border: 3px solid #ff0a24;
+    color: #271a0f;
+
+    &:before {
+      content: $icon-search;
+      position: absolute;
+      top: 50%;
+      margin-top: -14px;
+      left: -12px;
+      width: 28px;
+      height: 28px;
+      font-size: 14px;
+      line-height: 28px;
+      background: #ff0a24;
+      color: #fff;
+      text-align: center;
+    }
+  }
+}
+
+.top_story_caption {
+  font: 13px $FrutigerNeueLTW1GBold;
+  margin-top: 6px;
+  margin-bottom: 17px;
+  letter-spacing: .013em;
+  position: relative;
+  z-index: 1;
+}
+
+.article_block {
+  position: relative;
+  margin-right: -16px;
+  margin-bottom: 16px;
+
+  &._top {
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: -16px;
+      right: 0;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    .article_title {
+      padding-bottom: 25px;
+    }
+
+    &.story_block {
+      &:after {
+        background-image: url(../i/top_story_blue.jpg);
+      }
+
+      .top_story_caption {
+        color: #fff;
+      }
+    }
+  }
+
+  &._review {
+    @extend %clearfix;
+
+    .article_title {
+      background: none;
+      padding: 4px 0 0;
+    }
+
+    .article_link {
+      font: 18px/1.4 $FrutigerNeueLTW1GBold;
+    }
+
+    .article_stat {
+      clear: both;
+      padding-top: 7px;
+    }
+
+    .article_img {
+      float: left;
+      width: 88px;
+      margin-bottom: 10px;
+
+      + .article_title {
+        margin-left: 104px;
+
+        .article_link {
+          font-size: 16px;
+          letter-spacing: -.015em;
+        }
+      }
+    }
+  }
+
+}
+
+.article_img {
+  position: relative;
+  overflow: hidden;
+
+  img {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+  }
+
+  ._main & {
+    padding-right: 30px;
+    padding-top: 14px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 20px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -30px;
+      right: -140px;
+      width: 252px;
+      height: 163px;
+      background: url(../i/nlo.png) no-repeat 0 0;
+    }
+  }
+
+  ._article & {
+    margin-left: -16px;
+    padding-right: 17px;
+  }
+
+  ._stories &,
+  ._top & {
+    &:before {
+      background: $violette;
+    }
+  }
+
+  ._release & {
+    &:before {
+      background: $violette_2;
+    }
+  }
+
+  ._analysis & {
+    &:before {
+      background: $orange;
+    }
+  }
+
+  ._pricewise & {
+    &:before {
+      background: $green;
+    }
+  }
+
+  ._sponsored & {
+    &:before {
+      background: $green_2;
+    }
+  }
+
+  ._pool & {
+    &:before {
+      background: $blue;
+    }
+  }
+
+  ._features & {
+    &:before {
+      background: $red;
+    }
+  }
+
+  ._wiki & {
+    &:before {
+      background: $brown;
+    }
+  }
+
+  ._watch & {
+    &:before {
+      background: $brown_2;
+    }
+  }
+}
+
+.video_link {
+  @extend %icon_pseudo;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  border-radius: 100%;
+  width: 80px;
+  height: 80px;
+  color: #fff;
+  margin: -40px 0 0 -40px;
+
+  &:before {
+    -webkit-transform: translate(-40%, -50%) rotate(-90deg);
+    -ms-transform: translate(-40%, -50%) rotate(-90deg);
+    transform: translate(-40%, -50%) rotate(-90deg);
+    content: $icon-triangle;
+    font-size: 26px;
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+
+  &._stories,
+  &._top {
+    background: transparentize($violette, .2);
+  }
+
+  &._release {
+    background: transparentize($violette_2, .2);
+  }
+
+  &._analysis {
+    background: transparentize($orange, .2);
+  }
+
+  &._pricewise {
+    background: transparentize($green, .2);
+  }
+
+  &._sponsored {
+    background: transparentize($green_2, .2);
+  }
+
+  &._pool {
+    background: transparentize($blue, .2);
+  }
+
+  &._features {
+    background: transparentize($red, .2);
+  }
+
+  &._wiki {
+    background: transparentize($brown, .2);
+  }
+
+  &._watch {
+    background: transparentize($brown_2, .2);
+  }
+
+}
+
+.article_title {
+  z-index: 1;
+  position: relative;
+  padding: 17px 16px 20px 20px;
+  background: #f7f8f8;
+}
+
+.article_link {
+  font: 20px $FrutigerNeueLTW1GBlack;
+  letter-spacing: .021em;
+  text-decoration: none;
+  color: #000;
+
+  ._video & {
+    font: 16px/1.4 $FrutigerNeueLTW1GBold;
+    letter-spacing: -.015em;
+  }
+
+  ._stories &,
+  ._top & {
+    color: $violette;
+  }
+
+  ._release & {
+    color: $violette_2;
+  }
+
+  ._analysis & {
+    color: $orange;
+  }
+
+  ._pricewise & {
+    color: $green;
+  }
+
+  ._sponsored & {
+    color: $green_2;
+  }
+
+  ._pool & {
+    color: $blue;
+  }
+
+  ._features & {
+    color: $red;
+  }
+
+  ._wiki & {
+    color: $brown;
+  }
+
+  ._watch & {
+    color: $brown_2;
+  }
+
+  ._article & {
+    color: #000;
+    letter-spacing: .08em;
+  }
+}
+
+.article_theme {
+  text-decoration: underline;
+
+  .story_block & {
+    color: $violette;
+  }
+}
+
+.article_stat {
+  @extend %clearfix;
+  padding-top: 9px;
+  color: rgba(0, 0, 0, .4);
+  font: 12px $FrutigerNeueLTW1GBook;
+
+  li {
+    float: left;
+
+    &:before {
+      content: '\007C';
+      padding: 0 5px;
+    }
+
+    &:first-child {
+      &:before {
+        display: none;
+      }
+    }
+
+    &._fr {
+      float: right;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  ._video & {
+    padding-top: 5px;
+  }
+
+  &._mod_1 {
+    margin-bottom: 15px;
+  }
+}
+
+.article_stat_val {
+  @extend %icon_pseudo;
+  position: relative;
+
+  &._stat_views {
+    padding-left: 23px;
+
+    &:before {
+      position: absolute;
+      top: -2px;
+      left: 0;
+      content: $icon-eye;
+      font-size: 15px;
+    }
+  }
+}
+
+.article_action {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 57px;
+  left: -16px;
+
+  .article_tags + & {
+    bottom: 92px;
+  }
+
+  ._main & {
+    top: 16px;
+  }
+}
+
+.article_action_btn {
+  @extend %icon_pseudo;
+  float: left;
+  margin-top: 16px;
+  margin-left: 32px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 14px;
+  line-height: 30px;
+  background: rgba(0, 0, 0, .4);
+
+  &:before {
+    content: $icon-share-alt;
+    color: #fff;
+  }
+}
+
+.article_tags {
+  position: absolute;
+  z-index: 2;
+  bottom: 14px;
+  left: 16px;
+
+  li {
+    float: left;
+    padding-right: 10px;
+  }
+}
+
+.article_tag {
+  position: relative;
+  min-width: 28px;
+  height: 28px;
+  line-height: 26px;
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 14px;
+  color: #fff;
+
+  span {
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px 14px 5px 4px;
+    font: 12px/18px $FrutigerNeueLTW1GBlack;
+    letter-spacing: .015em;
+  }
+
+  &:before {
+    font-size: 18px;
+    width: 28px;
+    height: 28px;
+    //border-radius: inherit;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+  }
+
+  &._wide {
+    &:before {
+      padding-left: 5px;
+    }
+  }
+
+  &._stories,
+  &._top {
+    //&:before {
+    background: $violette;
+    //}
+  }
+
+  &._release {
+    //&:before {
+    background: $violette_2;
+    //}
+  }
+
+  &._analysis {
+    //&:before {
+    background: $orange;
+    //}
+  }
+
+  &._pricewise {
+    //&:before {
+    background: $green;
+    //}
+  }
+
+  &._sponsored {
+    //&:before {
+    background: $green_2;
+    //}
+  }
+
+  &._pool {
+    //&:before {
+    background: $blue;
+    //}
+  }
+
+  &._features {
+    //&:before {
+    background: $red;
+    //}
+  }
+
+  &._wiki {
+    //&:before {
+    background: $brown;
+    //}
+  }
+
+  &._watch {
+    //&:before {
+    background: $brown_2;
+    //}
+  }
+}
+
+.article_controls {
+  margin: 16px 0;
+}
+
+.article_group_title {
+  @extend %icon_pseudo;
+  position: relative;
+  color: #fff;
+  font: 18px $FrutigerNeueLTW1GBold;
+  letter-spacing: .025em;
+  padding: 21px 10px 15px 60px;
+  margin: 0 7px 12px -16px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  &:before {
+    position: absolute;
+    top: 18px;
+    left: 16px;
+    border-radius: 100%;
+    background: #fff;
+    height: 28px;
+    width: 28px;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+  }
+
+  &._stories {
+    background-image: url(../i/story_title_violette.jpg);
+
+    &:before {
+      content: $icon-crypto;
+      color: $violette;
+    }
+  }
+
+  &._features {
+    background-image: url(../i/story_title_red.jpg);
+
+    &:before {
+      content: $icon-star;
+      color: $red;
+    }
+  }
+
+  &._pool {
+    background-image: url(../i/story_title_blue.jpg);
+
+    &:before {
+      content: $icon-shark;
+      color: $blue;
+    }
+  }
+
+  &._analysis {
+    background-image: url(../i/story_title_orange.jpg);
+
+    &:before {
+      content: $icon-splash;
+      color: $orange;
+    }
+  }
+}
+
+.news_list {
+
+  li {
+    margin-top: 22px;
+  }
+}
+
+.news_item {
+  @extend %clearfix;
+
+}
+
+.news_date {
+  float: right;
+  width: 37px;
+  padding-top: 7px;
+  font: 12px/1.1 $FrutigerNeueLTW1GBook;
+
+  .news_list & {
+    color: rgba(0, 0, 0, .4);
+  }
+}
+
+.news_name {
+  letter-spacing: -.021em;
+  font: 20px/1.1 $FrutigerNeueLTW1GBold;
+}

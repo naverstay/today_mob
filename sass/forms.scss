@@ -1,0 +1,79 @@
+.autocomplete_v1 {
+  //display: block !important;
+  max-width: 100%;
+  background-color: transparent;
+  border: 0;
+  margin-top: 16px;
+  box-shadow: none;
+
+  .autocomplete-suggestion {
+    @include transition_all(color .3s);
+    @extend %clearfix;
+    position: relative;
+    padding: 9px 0;
+    color: #fff;
+
+    &.selected {
+      background-color: transparent;
+      color: #a7a7a7;
+    }
+  }
+
+  .search_result {
+    white-space: normal;
+    padding-left: 37px;
+    font: 16px/1.4 $FrutigerNeueLTW1GBold;
+    letter-spacing: -.021em;
+  }
+
+  .search_date {
+    @extend .news_date;
+
+    + .search_result {
+      margin-right: 50px;
+    }
+  }
+}
+
+.search_input {
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  color: #fff;
+  border: 0;
+  background: none;
+  font: 16px/1 $FrutigerNeueLTW1GBold;
+  border-radius: 24px;
+  height: 48px;
+  padding: 16px 56px 16px 36px;
+}
+
+.input_v1 {
+  @include transition_all(border-color .3s);
+  display: block;
+  height: 56px;
+  width: 100%;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 2px;
+  font: 16px/20px $FrutigerNeueLTW1GBold;
+  padding: 16px 14px;
+
+  &::-moz-placeholder {
+    color: rgba(255, 255, 255, .5);
+  }
+
+  &::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, .5);
+  }
+
+  &.error {
+    border-color: #ff0a24;
+  }
+
+}
+
+.input_w {
+  position: relative;
+}

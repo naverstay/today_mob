@@ -1,0 +1,130 @@
+include mixins.pug
+doctype html
+html(lang='ru')
+    +dev_head('Crypto category 2')
+
+    body.no_transition
+        .wrapper
+            .main_content
+                .section_inner
+                    +top_info()
+
+                    ul.category_tip._pricewise
+                        li Share insight
+
+                    .category_tool._pricewise
+                        a.category_link(href='#') Share insight
+
+                        p Share insight is smfng about the South Korean government announced today it will move to prohibit domestic cryptocurrency exchanges.
+
+                    ul.article_reviews
+                        li
+                            .article_block._review
+                                .article_img
+                                    img(src='i/regulators.jpg')
+
+                                .article_title
+                                    a.article_link(href='#') US State Regulators Hit BitConnect With Second Cease-And-Desist
+                                ul.article_stat
+                                    li
+                                        span.article_stat_val._stat_views 212
+                                    li
+                                        span.article_stat_val 2 minutes ago
+                                    li
+                                        span.article_stat_val Sujha Sund…
+
+                        li
+                            .article_block._review
+                                .article_img
+                                    img(src='i/arizona.jpg')
+
+                                .article_title
+                                    a.article_link(href='#') Arizona Lawmakers Want to Let People Pay Taxes in Bitcoin
+                                ul.article_stat
+                                    li
+                                        span.article_stat_val._stat_views 212
+                                    li
+                                        span.article_stat_val 2 minutes ago
+                                    li
+                                        span.article_stat_val Sujha Sund…
+
+                    .article_block
+                        .article_img
+                            a.video_link._pricewise(href='#')
+                            img(src='i/biosensor.jpg')
+
+                        .article_title._video
+                            a.article_link(href='#') Biosensor Analysis Tool - Human Behaviour Research Synchroniz…
+                            ul.article_stat
+                                li
+                                    span.article_stat_val._stat_views 212
+                                li._fr
+                                    span.article_stat_val 13:45
+
+                    ul.article_reviews
+                        +loop_while(2)
+                            li
+                                .article_block._review
+                                    .article_img
+                                        img(src='i/regulators.jpg')
+
+                                    .article_title
+                                        a.article_link(href='#') US State Regulators Hit BitConnect With Second Cease-And-Desist
+                                    ul.article_stat
+                                        li
+                                            span.article_stat_val._stat_views 212
+                                        li
+                                            span.article_stat_val 2 minutes ago
+                                        li
+                                            span.article_stat_val Sujha Sund…
+
+                            li
+                                .article_block._pricewise._review
+                                    .article_title
+                                        a.article_link(href='#') 2018: The Year Blockchain, AI and IoT Converge
+                                    ul.article_stat
+                                        li
+                                            span.article_stat_val._stat_views 212
+                                        li
+                                            span.article_stat_val 2 minutes ago
+                                        li
+                                            span.article_stat_val Sujha Sund…
+
+                            li
+                                .article_block._pricewise._review
+                                    .article_title
+                                        a.article_link(href='#') 2018: The Year Blockchain, AI and IoT Converge
+                                    ul.article_stat
+                                        li
+                                            span.article_stat_val._stat_views 212
+                                        li
+                                            span.article_stat_val 2 minutes ago
+                                        li
+                                            span.article_stat_val Sujha Sund…
+
+                            li
+                                .article_block._review
+                                    .article_img
+                                        img(src='i/arizona.jpg')
+
+                                    .article_title
+                                        a.article_link(href='#') Arizona Lawmakers Want to Let People Pay Taxes in Bitcoin
+                                    ul.article_stat
+                                        li
+                                            span.article_stat_val._stat_views 212
+                                        li
+                                            span.article_stat_val 2 minutes ago
+                                        li
+                                            span.article_stat_val Sujha Sund…
+
+                    .article_controls
+                        a.btn_v1.more_btn.gray_btn.clr_green(href='#') More  #Share insight
+
+            .nav_holder
+                +header()
+                +main_menu()
+                +search()
+
+            +footer()
+
+        +scripts()

@@ -1,0 +1,52 @@
+.article_author {
+  padding: 10px 17px 17px 0;
+  font: 12px $FrutigerNeueLTW1GBook;
+}
+
+.article_author_link {
+  &:before {
+    content: '@';
+  }
+
+  span {
+    text-decoration: underline;
+  }
+
+  ._stories &,
+  ._top & {
+    color: $violette;
+  }
+
+  ._release & {
+    color: $violette_2;
+  }
+
+  ._analysis & {
+    color: $orange;
+  }
+
+  ._pricewise & {
+    color: $green;
+  }
+
+  ._sponsored & {
+    color: $green_2;
+  }
+
+  ._pool & {
+    color: $blue;
+  }
+
+  ._features & {
+    color: $red;
+  }
+
+  ._wiki & {
+    color: $brown;
+  }
+
+  ._watch & {
+    color: $brown_2;
+  }
+}
+

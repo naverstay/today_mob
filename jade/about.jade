@@ -1,0 +1,64 @@
+include mixins.pug
+doctype html
+html(lang='ru')
+    +dev_head('Crypto about')
+
+    body.no_transition
+        .wrapper
+            .main_content
+                .section_inner
+                    +top_info()
+
+                    .attention_block._warn
+                        p Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate'
+
+                    .about_block
+                        .about_title About Us
+
+                        ul.action_list
+                            li: a.action_link._w(href='#')
+                                span Twitter
+                            li: a.action_link._t(href='#')
+                                span Telegram
+                            li: a.action_link._f(href='#')
+                                span Facebook
+                            li: a.action_link._r(href='#')
+                                span RSS
+
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.
+
+                    .about_action
+                        img(src='i/about_share.png')
+
+                    .about_team_holder
+                        ul.about_team
+                            li
+                                .team_unit
+                                    .team_unit_photo
+                                        img(src='i/chief.jpg')
+                                    .team_unit_name Konstantin<br>Bradly
+                                    .team_unit_post Chief of Chief
+
+                            li
+                                .team_unit
+                                    .team_unit_photo
+                                        img(src='i/chief.jpg')
+                                    .team_unit_name Amelia<br>Harris
+                                    .team_unit_post Ofiice manager
+
+                            li
+                                .team_unit
+                                    .team_unit_photo
+                                        img(src='i/chief.jpg')
+                                    .team_unit_name Alejandro<br>Quinn
+                                    .team_unit_post Anthropogenesis maniac
+
+
+            .nav_holder
+                +header()
+                +main_menu()
+                +search()
+
+            +footer(true)
+
+        +scripts()

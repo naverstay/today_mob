@@ -1,0 +1,45 @@
+include mixins.pug
+doctype html
+html(lang='ru')
+    +dev_head('Crypto article')
+
+    body.no_transition
+        .wrapper
+            .main_content
+                .section_inner
+                    +top_info()
+
+                    .article_block.story_block._main._pool._article
+                        ul.article_stat._mod_1
+                            li
+                                span.article_stat_val._stat_views 212
+                            li
+                                span.article_stat_val Jan 10, 2018 at 10:00
+
+                        a.article_link(href='#') Blockchain and the Rise of Transaction Techno
+
+                        .article_author
+                            span by Sarah Perez (&nbsp;
+                            a.article_author_link(href='#')
+                                span sarahintampa
+                            span &nbsp;)
+
+                        .article_img
+                            ul.article_tags
+                                li
+                                    span.icon-shark.article_tag._pool._wide
+                                        span Shark Pool
+                            img(src='i/sberbank.jpg')
+
+                        .article_author.text_right
+                            span Photo by Sarah Perez ( @sarahintampa )
+
+
+            .nav_holder
+                +header()
+                +main_menu()
+                +search()
+
+            +footer()
+
+        +scripts()

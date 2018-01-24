@@ -1,0 +1,114 @@
+@import "variables";
+
+@font-face {
+  font-family: 'crypto_icons';
+  src:  url('#{$icomoon-font-path}/crypto_icons.eot?6yx6s3');
+  src:  url('#{$icomoon-font-path}/crypto_icons.eot?6yx6s3#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/crypto_icons.ttf?6yx6s3') format('truetype'),
+    url('#{$icomoon-font-path}/crypto_icons.woff?6yx6s3') format('woff'),
+    url('#{$icomoon-font-path}/crypto_icons.svg?6yx6s3#crypto_icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'crypto_icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-crypto {
+  &:before {
+    content: $icon-crypto;
+  }
+}
+.icon-splash {
+  &:before {
+    content: $icon-splash;
+  }
+}
+.icon-say {
+  &:before {
+    content: $icon-say;
+  }
+}
+.icon-shark {
+  &:before {
+    content: $icon-shark;
+  }
+}
+.icon-rss {
+  &:before {
+    content: $icon-rss;
+  }
+}
+.icon-star {
+  &:before {
+    content: $icon-star;
+  }
+}
+.icon-ufo {
+  &:before {
+    content: $icon-ufo;
+  }
+}
+.icon-share-alt {
+  &:before {
+    content: $icon-share-alt;
+  }
+}
+.icon-eye {
+  &:before {
+    content: $icon-eye;
+  }
+}
+.icon-search {
+  &:before {
+    content: $icon-search;
+  }
+}
+.icon-close {
+  &:before {
+    content: $icon-close;
+  }
+}
+.icon-fb {
+  &:before {
+    content: $icon-fb;
+  }
+}
+.icon-tg {
+  &:before {
+    content: $icon-tg;
+  }
+}
+.icon-triangle {
+  &:before {
+    content: $icon-triangle;
+  }
+}
+.icon-tw {
+  &:before {
+    content: $icon-tw;
+  }
+}
+.icon-check {
+  &:before {
+    content: $icon-check;
+  }
+}
+.icon-arrow-up {
+  &:before {
+    content: $icon-arrow-up;
+  }
+}
+

@@ -1,0 +1,49 @@
+//************  buttons
+
+.btn_v1 {
+  height: 48px;
+
+  &.more_btn {
+    @extend %icon_pseudo;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    font: 13px/18px $FrutigerNeueLTW1GBold;
+    padding: 15px;
+
+    &:before {
+      content: $icon-triangle;
+      margin: 0 12px 0 -12px;
+      font-size: 9px;
+    }
+  }
+
+  &.subscribe_btn {
+    display: inline-block;
+    vertical-align: top;
+    letter-spacing: .05em;
+    font: 20px/24px $FrutigerNeueLTW1GBlack;
+    padding: 12px 14px;
+
+    .error & {
+      opacity: .2;
+      pointer-events: none;
+    }
+  }
+
+}
+
+.gray_btn {
+  color: $violette;
+  background: #f7f8f8;
+}
+
+.btn_red {
+  color: #fff;
+  background: #f46b65;
+}
+
+.white_btn {
+  background: #fff;
+  color: $violette;
+}
