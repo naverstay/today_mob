@@ -50,3 +50,494 @@
   }
 }
 
+.article_info {
+  margin-left: -16px;
+  padding-left: 16px;
+  background: #f7f8f8;
+
+  .article_author {
+    padding-top: 12px;
+    padding-bottom: 8px;
+  }
+
+  &._action_only {
+    margin-bottom: 7px;
+  }
+}
+
+.article_soc {
+  padding-bottom: 17px;
+
+  img {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+  }
+
+  ._action_only & {
+    padding-top: 17px;
+  }
+}
+
+.article_subscribe {
+  @extend %icon_pseudo;
+  position: relative;
+  padding: 20px 125px 20px 26px;
+  margin: 31px -16px 31px 20px;
+
+  .subscribe_btn {
+    letter-spacing: .025em;
+  }
+
+  &:before {
+    content: $icon-ufo;
+    position: absolute;
+    top: 0;
+    right: 7px;
+    font-size: 130px;
+    line-height: 1;
+    color: #fff;
+  }
+
+  &._stories {
+    background: url(../i/subscribe_bg_blue.jpg) no-repeat 50% 50%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+}
+
+.article_tag_list {
+  @extend %clearfix;
+  margin-left: -22px;
+  margin-bottom: 20px;
+
+  li {
+    float: left;
+    padding-left: 22px;
+    margin-top: 7px;
+  }
+}
+
+.tag_link {
+  font: 13px/22px $FrutigerNeueLTW1GBold;
+  letter-spacing: -.017em;
+
+  ._stories &,
+  ._top & {
+    color: $violette;
+  }
+
+  ._release & {
+    color: $violette_2;
+  }
+
+  ._analysis & {
+    color: $orange;
+  }
+
+  ._pricewise & {
+    color: $green;
+  }
+
+  ._sponsored & {
+    color: $green_2;
+  }
+
+  ._pool & {
+    color: $blue;
+  }
+
+  ._features & {
+    color: $red;
+  }
+
+  ._wiki & {
+    color: $brown;
+  }
+
+  ._watch & {
+    color: $brown_2;
+  }
+}
+
+.article_telegram_block {
+  font: 12px/14px $FrutigerNeueLTW1GBook;
+  margin-bottom: 28px;
+
+  span {
+    opacity: .4;
+  }
+}
+
+.telegram_link {
+  font: 12px/14px $FrutigerNeueLTW1GBold;
+
+  ._stories &,
+  ._top & {
+    color: $violette;
+  }
+
+  ._release & {
+    color: $violette_2;
+  }
+
+  ._analysis & {
+    color: $orange;
+  }
+
+  ._pricewise & {
+    color: $green;
+  }
+
+  ._sponsored & {
+    color: $green_2;
+  }
+
+  ._pool & {
+    color: $blue;
+  }
+
+  ._features & {
+    color: $red;
+  }
+
+  ._wiki & {
+    color: $brown;
+  }
+
+  ._watch & {
+    color: $brown_2;
+  }
+}
+
+.related_title {
+  position: relative;
+  font: 18px/22px $FrutigerNeueLTW1GBold;
+  padding: 20px 16px 18px;
+  margin: 0 -16px 20px 0;
+  color: #fff;
+  letter-spacing: .022em;
+
+  &._stories {
+    background: url(../i/related_bg_blue.jpg) no-repeat 50% 50%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+
+.article_soc {
+  @extend %clearfix;
+  margin-left: -4px;
+  padding-right: 10px;
+
+  li {
+    padding-left: 4px;
+    float: left;
+
+    &:last-child {
+      float: right;
+    }
+  }
+}
+
+.action_sh {
+  @include transition_all(color .3s, background .3s);
+  @extend %icon_pseudo;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  width: 34px;
+  height: 34px;
+  text-align: center;
+  border-radius: 17px;
+  font: 12px/32px $FrutigerNeueLTW1GBlack;
+  background: #fff;
+  border: 1px solid transparent;
+
+  &:before {
+    font-size: 17px;
+    line-height: 32px;
+  }
+
+  &._active,
+  &:hover {
+    color: #fff !important;
+  }
+
+  &._r {
+    width: 28px;
+    height: 28px;
+    margin-top: 3px;
+    margin-right: 6px;
+    line-height: 26px;
+
+    &:before {
+      content: $icon-share-alt;
+      font-size: 14px;
+      line-height: 26px;
+    }
+  }
+
+  &._f {
+    &:before {
+      content: $icon-fb;
+    }
+  }
+
+  &._t {
+    &:before {
+      content: $icon-tw;
+    }
+  }
+
+  ._stories &,
+  ._top & {
+    color: $violette;
+
+    &._active,
+    &:hover {
+      background: $violette;
+    }
+  }
+
+  ._release & {
+    color: $violette_2;
+
+    &._active,
+    &:hover {
+      background: $violette_2;
+    }
+  }
+
+  ._analysis & {
+    color: $orange;
+
+    &._active,
+    &:hover {
+      background: $orange;
+    }
+  }
+
+  ._pricewise & {
+    color: $green;
+
+    &._active,
+    &:hover {
+      background: $green;
+    }
+  }
+
+  ._sponsored & {
+    color: $green_2;
+
+    &._active,
+    &:hover {
+      background: $green_2;
+    }
+  }
+
+  ._pool & {
+    color: $blue;
+
+    &._active,
+    &:hover {
+      background: $blue;
+    }
+  }
+
+  ._features & {
+    color: $red;
+
+    &._active,
+    &:hover {
+      background: $red;
+    }
+  }
+
+  ._wiki & {
+    color: $brown;
+
+    &._active,
+    &:hover {
+      background: $brown;
+    }
+  }
+
+  ._watch & {
+    color: $brown_2;
+
+    &._active,
+    &:hover {
+      background: $brown_2;
+    }
+  }
+
+  &._more {
+    width: auto;
+    min-width: 34px;
+    padding: 0 10px 0 14px;
+  }
+
+  &._count {
+    width: auto;
+    margin-right: 5px;
+    border-radius: 2px;
+    padding: 0 10px;
+
+    &:after,
+    &:before {
+      @include transition_all(border-color .3s);
+      content: '';
+      position: absolute;
+      right: 100%;
+      top: 50%;
+      margin-top: -3px;
+    }
+
+    &:after {
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      border-right: 6px solid #fff;
+      margin-right: -1px;
+    }
+
+    &:before {
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      border-right: 6px solid #fff;
+    }
+
+    ._stories &,
+    ._top & {
+      border-color: $violette;
+
+      &:before {
+        border-right-color: $violette;
+      }
+
+      &:hover {
+        &:after {
+          border-right-color: $violette;
+        }
+      }
+    }
+
+    ._release & {
+      border-color: $violette_2;
+
+      &:before {
+        border-right-color: $violette_2;
+      }
+
+      &:hover {
+        &:after {
+          border-right-color: $violette_2;
+        }
+      }
+    }
+
+    ._analysis & {
+      border-color: $orange;
+
+      &:before {
+        border-right-color: $orange;
+      }
+
+      &:hover {
+        &:after {
+          border-right-color: $orange;
+        }
+      }
+    }
+
+    ._pricewise & {
+      border-color: $green;
+
+      &:before {
+        border-right-color: $green;
+      }
+
+      &:hover {
+        &:after {
+          border-right-color: $green;
+        }
+      }
+    }
+
+    ._sponsored & {
+      border-color: $green_2;
+
+      &:before {
+        border-right-color: $green_2;
+      }
+
+      &:hover {
+        &:after {
+          border-right-color: $green_2;
+        }
+      }
+    }
+
+    ._pool & {
+      border-color: $blue;
+
+      &:before {
+        border-right-color: $blue;
+      }
+
+      &:hover {
+        &:after {
+          border-right-color: $blue;
+        }
+      }
+    }
+
+    ._features & {
+      border-color: $red;
+
+      &:before {
+        border-right-color: $red;
+      }
+
+      &:hover {
+        &:after {
+          border-right-color: $red;
+        }
+      }
+    }
+
+    ._wiki & {
+      border-color: $brown;
+
+      &:before {
+        border-right-color: $brown;
+      }
+
+      &:hover {
+        &:after {
+          border-right-color: $brown;
+        }
+      }
+    }
+
+    ._watch & {
+      border-color: $brown_2;
+
+      &:before {
+        border-right-color: $brown_2;
+      }
+
+      &:hover {
+        &:after {
+          border-right-color: $brown_2;
+        }
+      }
+    }
+  }
+
+}

@@ -31,13 +31,84 @@ html(lang='ru')
                                         span Shark Pool
                             img(src='i/sberbank.jpg')
 
-                        .article_author.text_right
-                            span Photo by Sarah Perez ( @sarahintampa )
+                        .article_info
+                            .article_author.text_right
+                                span Photo by Sarah Perez ( @sarahintampa )
+
+                            +article_soc('_pool')
+
+                        p The South Korean government announced today it will move to prohibit domestic cryptocurrency exchanges from allowing users to make transactions through anonymous accounts, local news sources report.
+
+                        p As part of what appears to be a series of updates designed to improve oversight of industry practices, the government will also seek to bar banks from issuing new virtual accounts to cryptocurrency exchanges.
+
+                        p According to the South Korean news agency Yonhap, the announcements were made by Hong Nam-ki, the minister of the Office for Government&nbsp;Policy Coordination, after discussion with vice ministers from other governmental bodies regarding the recent rise in cryptocurrency interest and ownership domestically.
+
+                        .article_subscribe._stories
+                            a.transp_btn.btn_v1.subscribe_btn.subscribeAsideBtn(href='#') Subscribe
+
+                        p Hong’s announcement came just after an hour since the head of South Korea’s financial regulator warned against the bitcoin bubble during a meeting with the press.
+
+                        p "I bet the bubble in bitcoin will burst later," said Choe Heung-sik, the governor of the Financial Supervisory Service (FSS).
+
+                        p Hong told the news source that only accounts with real and matching identity can be allowed for deposit and withdrawals.
+
+                        blockquote.article_quote(cite='#' data-author='Henry James')
+                            p Do not mind anything that anyone tells you about anyone else. Judge everyone and everything for yourself.
+
+                        p The government's ban on using anonymous accounts, effectively a mandate that exchange providers perform know-your-customer (KYC) due diligence, is seen as the latest move to curb the trading activity around cryptocurrencies in the country.
+
+                        p It can also be seen as the result of recent events in which government bodies were reportedly considering measures to halt what they called an "overheating of virtual currency speculation."
+
+                        p According to the report, the Financial Intelligence Unit and the Financial Supervisory Service will implement the regulation and supervise exchanges to abide the new rule.
+
+                        p Image of South Korean Won via CoinDesk archive.
+
+                        p The leader in blockchain news, CoinDesk is an independent media outlet that strives for the highest journalistic standards and abides by a strict set of editorial policies. Have breaking news or a story tip to send to our journalists? Contact us at news@coindesk.com.
+
+                        .article_author
+                            span by Sarah Perez (&nbsp;
+                            a.article_author_link(href='#')
+                                span sarahintampa
+                            span &nbsp;)
+
+                        ul.article_tag_list
+                            li: a.tag_link(href='#') #hotnews
+                            li: a.tag_link(href='#') #korea
+                            li: a.tag_link(href='#') #exchange
+
+                        .article_telegram_block
+                            span ! Get more awesome news in our&nbsp;&nbsp;
+                            a.telegram_link(href='#') Telegram channel
+
+                        .article_info._action_only
+                            +article_soc('_pool')
+
+                        ul.article_stat._mod_1
+                            li
+                                span.article_stat_val._stat_views 212
+                            li
+                                span.article_stat_val Jan 10, 2018 at 10:00
+
+                    .related_title._stories Related Articles and News
+
+                    ul.news_list._related._stories
+                        +loop_while(3)
+                            li
+                                .news_item
+                                    .news_date 2 min<br>ago
+                                    a.news_name(href='#') Russia's Sberbank Has Launched&nbsp;a&nbsp;Blockchain Lab
+
+                            li
+                                .news_item
+                                    .news_date 1 hr<br>ago
+                                    a.news_name(href='#') PBoC Official Calls for Wider Ban on Chinese Crypto Trading
+
+                    .comments_block
 
 
             .nav_holder
                 +header()
-                +main_menu()
+                +main_menu(true)
                 +search()
 
             +footer()

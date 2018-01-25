@@ -85,7 +85,47 @@ mixin top_info()
                     p
                         span.currency_val 26236.79
 
-mixin main_menu()
+mixin main_menu(subscribe)
+    - if (subscribe)
+        .subscribe_holder
+            a.subscribe_close.subscribeAsideBtn(href='#')
+            .subscribeBlock.subscribe_block
+                .subscribe_title You can get more hot news and ideas.
+
+                .footer_form
+                    form.validateMe.formParent.subscribeForm(action='#')
+                        .form_cell.formCell
+                            .input_w
+                                input.input_v1.forceValidation(placeholder='Enter your email' class='validate[required]')
+
+                        .form_cell
+                            button.btn_v1.subscribe_btn.white_btn Subscribe
+
+                .footer_msg._success
+                    .footer_msg_title
+                        span.icon-check.msg_icon
+                        br
+                        span Subscription<br>enabled
+
+                .footer_msg._fail
+                    .footer_msg_title
+                        span.icon-close.clr_red.msg_icon
+                        span Error
+                    p Something went wrong,<br>try again
+
+            .footer_action
+                p Follow us with:
+
+                ul.action_list
+                    li: a.action_link._w(href='#')
+                        span Twitter
+                    li: a.action_link._t(href='#')
+                        span Telegram
+                    li: a.action_link._f(href='#')
+                        span Facebook
+                    li: a.action_link._r(href='#')
+                        span RSS
+
     .main_menu_holder
         ul.main_menu
             li.menu_item
@@ -140,6 +180,14 @@ mixin main_menu()
                     span Error
                 p Something went wrong,<br>try again
 
+mixin article_soc(cls)
+    ul.article_soc(class= cls)
+        li: a.action_sh._r._active(href='#')
+        li: a.action_sh._f(href='#')
+        li: a.action_sh._t(href='#')
+        li: a.action_sh._t(href='#')
+        li: a.action_sh._more(href='#') more…
+        li: a.action_sh._count(href='#') 250k
 
 mixin search()
     .search_holder

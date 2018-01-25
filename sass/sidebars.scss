@@ -15,6 +15,99 @@
   //opacity: 0;
 }
 
+.subscribe_holder {
+  @extend %icon_pseudo;
+  @extend %sidebar;
+  @include transform_translate(-100%, 0);
+  @extend %global_flex_block_column_nowrap_spb_stretch;
+  padding-top: 48px;
+  opacity: 0;
+  z-index: 10;
+  background: $violette;
+  overflow: hidden;
+
+  &:before {
+    content: $icon-ufo;
+    position: absolute;
+    pointer-events: none;
+    color: #000;
+    font-size: 610px;
+    line-height: 1;
+    right: -250px;
+    top: -10px;
+  }
+
+  .subscribe_close {
+    top: 15px;
+    display: block;
+
+    &:before {
+      color: #fff;
+    }
+  }
+
+  .footer_form {
+    display: block;
+  }
+
+  .footer_msg,
+  .footer_action,
+  .footer_form {
+    background: none !important;
+  }
+
+  .input_v1 {
+    background: $violette;
+  }
+
+  .footer_msg {
+    &._success {
+      padding-top: 0;
+    }
+
+    &._fail {
+      padding-top: 8px;
+    }
+  }
+
+  .footer_action {
+    color: #fff;
+
+    p {
+      font: 18px/24px $FrutigerNeueLTW1GBold;
+      letter-spacing: .025em;
+    }
+  }
+
+  .action_link {
+    color: #fff;
+  }
+
+  .subscribe_opened & {
+    @include transform_translate(0, 0);
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.subscribe_title {
+  color: #fff;
+  padding: 0 36px;
+  font: 28px/32px $FrutigerNeueLTW1GBlack;
+  letter-spacing: .025em;
+
+  .subscribe_fail &,
+  .subscribe_success & {
+    display: none;
+  }
+}
+
+.subscribe_block {
+  @include flex(1 0 auto);
+  overflow: hidden;
+  position: relative;
+}
+
 .main_menu_holder {
   @extend %sidebar;
   @include transform_translate(-100%, 0);

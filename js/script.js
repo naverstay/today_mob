@@ -63,6 +63,17 @@ $(function ($) {
             docScrollTo(0, 600);
             return false;
         })
+        .delegate('.subscribeAsideBtn', 'click', function () {
+            var btn = $(this);
+
+            $body.toggleClass('subscribe_opened');
+
+            setTimeout(function () {
+                btn.parent().find('.subscribeBlock').removeClass('subscribe_success').removeClass('subscribe_fail');
+            }, 300);
+
+            return false;
+        })
         .delegate('.searchBtn', 'click', function () {
             $body.removeClass('menu_opened').toggleClass('search_opened');
             return false;
