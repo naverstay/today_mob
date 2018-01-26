@@ -65,6 +65,52 @@
   }
 }
 
+.article_preview {
+  position: relative;
+  font: 17px/24px $FrutigerNeueLTW1GBold;
+  padding: 20px 20px 13px 16px;
+  margin-bottom: 28px;
+  margin-left: -16px;
+  border-bottom: 4px solid #000;
+
+  ._stories &,
+  ._top & {
+    border-bottom-color: $violette;
+  }
+
+  ._release & {
+    border-bottom-color: $violette_2;
+  }
+
+  ._analysis & {
+    border-bottom-color: $orange;
+  }
+
+  ._pricewise & {
+    border-bottom-color: $green;
+  }
+
+  ._sponsored & {
+    border-bottom-color: $green_2;
+  }
+
+  ._pool & {
+    border-bottom-color: $blue;
+  }
+
+  ._features & {
+    border-bottom-color: $red;
+  }
+
+  ._wiki & {
+    border-bottom-color: $brown;
+  }
+
+  ._watch & {
+    border-bottom-color: $brown_2;
+  }
+}
+
 .article_soc {
   padding-bottom: 17px;
 
