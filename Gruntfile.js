@@ -96,7 +96,7 @@ module.exports = function (grunt) {
             compile: {
                 options: {
                     basedir: 'jade',
-                    pretty: false,
+                    pretty: true,
                     data: {
                         time: (new Date()).getTime()
                     }
