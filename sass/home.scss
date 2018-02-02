@@ -17,7 +17,7 @@
     color: #271a0f;
 
     &:before {
-      content: $icon-search;
+      content: $icon-flash;
       position: absolute;
       top: 50%;
       margin-top: -14px;
@@ -138,7 +138,7 @@
     font: 20px/28px $FrutigerNeueLTW1GBlack;
     letter-spacing: .012em;
 
-    &:first-child {
+    &:first-of-type {
       &:before {
         content: '\201C';
         position: absolute;
@@ -149,7 +149,7 @@
       }
     }
 
-    &:last-child {
+    &:last-of-type {
       &:after {
         content: '\201D';
         position: absolute;
@@ -198,8 +198,7 @@
     }
   }
 
-  &:after {
-    content: attr(data-author);
+  span {
     position: absolute;
     bottom: 14px;
     left: 27px;
@@ -207,7 +206,6 @@
     font-size: 13px;
     line-height: 22px;
   }
-
 }
 
 .article_img {
