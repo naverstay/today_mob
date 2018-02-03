@@ -47,7 +47,7 @@ mixin footer(white)
 
             .footer_logo
                 a.logo(href='index.html')
-                    img(src= white ? 'i/logo_f_v.png' : 'i/logo_f.png')
+                    img(src= white ? 'i/logo_f_v.png' : 'i/logo_c.svg')
 
             p Follow us with:
 
@@ -172,7 +172,15 @@ mixin article_soc(cls)
         li: a.action_sh._r._active(href='#')
         li: a.action_sh._f(href='#' data-network="facebook" class='st-custom-button')
         li: a.action_sh._t(href='#' data-network="twitter" class='st-custom-button')
-        li: a.action_sh._t(href='#')
+        li: a.action_sh._g(href='#' data-network="googleplus" class='st-custom-button')
+
+        li: a.action_sh._rd(href='#' data-network="reddit" class='st-custom-button')
+        li: a.action_sh._l(href='#' data-network="linkedin" class='st-custom-button')
+        li: a.action_sh._i(href='#' data-network="instagram" class='st-custom-button')
+        li: a.action_sh._p(href='#' data-network="pinterest" class='st-custom-button')
+        li: a.action_sh._s(href='#' data-network="pinterest" class='st-custom-button')
+        li: a.action_sh._tm(href='#' data-network="tumblr" class='st-custom-button')
+
         li: a.action_sh._more(href='#') more…
         li: a.action_sh._count(href='#') 250k
 
@@ -191,7 +199,7 @@ mixin header()
                 span
             .logo_block
                 a.logo(href='index.html')
-                    img(src='i/logo_h.png')
+                    img(src='i/logo_h.svg')
 
             a.search_btn.searchBtn(href='#')
 

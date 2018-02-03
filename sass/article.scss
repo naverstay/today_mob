@@ -160,7 +160,7 @@
   list-style: none;
   margin-left: -4px;
   padding-right: 10px;
-  padding-bottom: 17px;
+  padding-bottom: 7px;
 
   img {
     display: inline-block;
@@ -173,6 +173,7 @@
   }
 
   li {
+    margin-bottom: 10px;
     padding-left: 4px;
     float: left;
 
@@ -229,6 +230,48 @@
   &._t {
     &:before {
       content: $icon-tw;
+    }
+  }
+
+  &._g {
+    &:before {
+      content: $icon-gp;
+    }
+  }
+
+  &._l {
+    &:before {
+      content: $icon-in;
+    }
+  }
+
+  &._i {
+    &:before {
+      content: $icon-inst;
+    }
+  }
+
+  &._p {
+    &:before {
+      content: $icon-pint;
+    }
+  }
+
+  &._s {
+    &:before {
+      content: $icon-stm;
+    }
+  }
+
+  &._tm {
+    &:before {
+      content: $icon-tmblr;
+    }
+  }
+
+  &._rd {
+    &:before {
+      content: $icon-rd;
     }
   }
 

@@ -224,7 +224,7 @@
 
   img {
     display: block;
-    width: 100%;
+    max-width: 100%;
   }
 
   ._main & {
@@ -674,6 +674,51 @@
     &:before {
       content: $icon-splash;
       color: $orange;
+    }
+  }
+
+  &._news {
+    background-image: url(../i/story_title_blue.jpg);
+
+    &:before {
+      content: $icon-ufo;
+      color: $violette;
+    }
+  }
+
+  &._pricewise {
+    background-image: url(../i/story_title_orange.jpg);
+
+    &:before {
+      content: $icon-splash;
+      color: $orange;
+    }
+  }
+
+  &._cryptotips {
+    background-image: url(../i/story_title_blue.jpg);
+
+    &:before {
+      content: $icon-ufo;
+      color: $brown;
+    }
+  }
+
+  &._wiki {
+    background-image: url(../i/story_title_orange.jpg);
+
+    &:before {
+      content: $icon-startwo;
+      color: $brown_2;
+    }
+  }
+
+  &._ico {
+    background-image: url(../i/story_title_orange.jpg);
+
+    &:before {
+      content: $icon-ico;
+      color: $violette_2;
     }
   }
 }

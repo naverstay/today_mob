@@ -257,6 +257,14 @@
       display: block;
     }
   }
+
+  .menu_opened & {
+    @include transform_translate(0, 0);
+
+    .subscribe_close {
+      display: none;
+    }
+  }
 }
 
 .footer_subscribe {
@@ -273,7 +281,11 @@
     right: -15px;
     width: 113px;
     height: 73px;
-    background: url(../i/footer_nlo.png) no-repeat 0 0;
+    background: url(../i/ufo.svg) no-repeat 0 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
 }
 
