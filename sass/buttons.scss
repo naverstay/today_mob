@@ -8,7 +8,7 @@
     cursor: pointer;
     display: block;
     text-align: center;
-    font: 13px/18px $FrutigerNeueLTW1GBold;
+    font: 13px/18px $RubikMed;
     padding: 15px;
 
     &:before {
@@ -22,7 +22,7 @@
     display: inline-block;
     vertical-align: top;
     letter-spacing: .05em;
-    font: 20px/24px $FrutigerNeueLTW1GBlack;
+    font: 20px/24px $RubikBold;
     padding: 12px 14px;
 
     .error & {

@@ -3,13 +3,13 @@
   padding: 14px 12px 14px 27px;
   margin: 12px 0;
   background: #f7f6ef;
-  font: 13px $FrutigerNeueLTW1GBold;
-  letter-spacing: -.017em;
+  font: 13px $RubikMed;
+  letter-spacing: -.03em;
   position: relative;
   z-index: 1;
 
   p {
-    line-height: 1.1;
+    //line-height: 1.1;
   }
 
   &._warn {
@@ -34,12 +34,16 @@
 }
 
 .top_story_caption {
-  font: 13px $FrutigerNeueLTW1GBold;
+  font: 13px $RubikMed;
   margin-top: 6px;
   margin-bottom: 17px;
   letter-spacing: .013em;
   position: relative;
   z-index: 1;
+}
+
+.article_reviews {
+  list-style: none;
 }
 
 .article_block {
@@ -90,7 +94,7 @@
     }
 
     .article_link {
-      font: 18px/1.4 $FrutigerNeueLTW1GBold;
+      font: 18px/1.4 $RubikMed;
     }
 
     .article_stat {
@@ -135,7 +139,7 @@
   margin: 36px 0 23px -8px;
 
   p {
-    font: 20px/28px $FrutigerNeueLTW1GBlack;
+    font: 20px/28px $RubikBold;
     letter-spacing: .012em;
 
     &:first-of-type {
@@ -208,13 +212,17 @@
   }
 }
 
+.article_img_link {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
 .article_img {
   position: relative;
   overflow: hidden;
 
   img {
-    position: relative;
-    z-index: 1;
     display: block;
     width: 100%;
   }
@@ -375,51 +383,16 @@
 }
 
 .article_link {
-  font: 20px $FrutigerNeueLTW1GBlack;
-  letter-spacing: .021em;
+  font: 20px $RubikBold;
+  letter-spacing: .035em;
   text-decoration: none;
   color: #000;
 
+  @extend %firm_color;
+
   ._video & {
-    font: 16px/1.4 $FrutigerNeueLTW1GBold;
-    letter-spacing: -.015em;
-  }
-
-  ._stories &,
-  ._top & {
-    color: $violette;
-  }
-
-  ._release & {
-    color: $violette_2;
-  }
-
-  ._analysis & {
-    color: $orange;
-  }
-
-  ._pricewise & {
-    color: $green;
-  }
-
-  ._sponsored & {
-    color: $green_2;
-  }
-
-  ._pool & {
-    color: $blue;
-  }
-
-  ._features & {
-    color: $red;
-  }
-
-  ._wiki & {
-    color: $brown;
-  }
-
-  ._watch & {
-    color: $brown_2;
+    font: 16px/1.4 $RubikMed;
+    letter-spacing: -.023em;
   }
 
   ._article & {
@@ -438,9 +411,10 @@
 
 .article_stat {
   @extend %clearfix;
+  list-style: none;
   padding-top: 9px;
   color: rgba(0, 0, 0, .4);
-  font: 12px/1.2 $FrutigerNeueLTW1GBook;
+  font: 12px/1.2 $RubikReg;
 
   li {
     float: left;
@@ -535,6 +509,7 @@
 .article_tags {
   position: absolute;
   z-index: 2;
+  list-style: none;
   bottom: 14px;
   left: 16px;
 
@@ -558,7 +533,7 @@
     display: inline-block;
     vertical-align: top;
     padding: 5px 14px 5px 4px;
-    font: 12px/18px $FrutigerNeueLTW1GBlack;
+    font: 12px/18px $RubikBold;
     letter-spacing: .015em;
   }
 
@@ -642,8 +617,8 @@
   @extend %icon_pseudo;
   position: relative;
   color: #fff;
-  font: 18px $FrutigerNeueLTW1GBold;
-  letter-spacing: .025em;
+  font: 18px $RubikMed;
+  //letter-spacing: .025em;
   padding: 21px 10px 15px 60px;
   margin: 0 7px 12px -16px;
   background-position: 0 0;
@@ -704,6 +679,7 @@
 }
 
 .news_list {
+  list-style: none;
 
   li {
     margin-top: 22px;
@@ -727,7 +703,7 @@
   float: right;
   width: 37px;
   padding-top: 7px;
-  font: 12px/1.1 $FrutigerNeueLTW1GBook;
+  font: 12px/1.1 $RubikReg;
 
   .news_list & {
     color: rgba(0, 0, 0, .4);
@@ -739,51 +715,14 @@
 }
 
 .news_name {
-  letter-spacing: -.021em;
-  font: 20px/1.1 $FrutigerNeueLTW1GBold;
+  @extend %firm_color;
+  letter-spacing: -.035em;
+  font: 20px/1.1 $RubikMed;
 
   ._related & {
     font-size: 16px;
     letter-spacing: .01em;
   }
-
-  ._stories &,
-  ._top & {
-    color: $violette;
-  }
-
-  ._release & {
-    color: $violette_2;
-  }
-
-  ._analysis & {
-    color: $orange;
-  }
-
-  ._pricewise & {
-    color: $green;
-  }
-
-  ._sponsored & {
-    color: $green_2;
-  }
-
-  ._pool & {
-    color: $blue;
-  }
-
-  ._features & {
-    color: $red;
-  }
-
-  ._wiki & {
-    color: $brown;
-  }
-
-  ._watch & {
-    color: $brown_2;
-  }
-
 }
 
 .comments_block {

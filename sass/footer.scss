@@ -10,7 +10,7 @@
 
   p {
     color: #fff;
-    font: 12px $FrutigerNeueLTW1GBold;
+    font: 12px $RubikMed;
   }
 
   .action_list {
@@ -43,13 +43,13 @@
     p {
       color: $violette;
     }
-
   }
 }
 
 .footer_menu {
+  list-style: none;
   text-align: center;
-  padding: 0 30px 12px;
+  padding: 0 25px 12px;
 
   li {
     display: inline-block;
@@ -62,8 +62,8 @@
 .footer_link {
   color: #fff;
   text-decoration: underline;
-  font: 16px $FrutigerNeueLTW1GBold;
-  letter-spacing: -.017em;
+  font: 16px $RubikMed;
+  letter-spacing: -.03em;
 }
 
 .footer_logo {
