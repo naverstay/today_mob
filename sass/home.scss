@@ -561,6 +561,15 @@
     text-align: center;
   }
 
+  &._news {
+    background-image: url(../i/stories_bg.svg);
+
+    &:before {
+      content: $icon-ufo;
+      color: $violette;
+    }
+  }
+
   &._stories {
     background-image: url(../i/stories_bg.svg);
 
@@ -594,15 +603,6 @@
     &:before {
       content: $icon-splash;
       color: $green;
-    }
-  }
-
-  &._news {
-    background-image: url(../i/stories_bg.svg);
-
-    &:before {
-      content: $icon-ufo;
-      color: $violette;
     }
   }
 
