@@ -1,5 +1,5 @@
 .footer {
-  background: url(../i/footer_bg.svg) no-repeat 50% 50%;
+  background: url(../i/footer_bg_2.svg) no-repeat 50% 50%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -22,12 +22,10 @@
     }
 
     .action_link {
+      color: #fff;
+
       &:before {
         font-size: 18px;
-      }
-
-      span {
-        color: #fff;
       }
     }
   }

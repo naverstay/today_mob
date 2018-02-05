@@ -523,6 +523,87 @@
 
 .content_block {
 
+  blockquote {
+    position: relative;
+    background: #f7f8f8;
+    padding: 26px 16px 44px 28px;
+    margin: 36px 0 23px -8px;
+
+    p {
+      font: 20px/28px $RubikBold;
+      letter-spacing: .012em;
+
+      &:first-of-type {
+        &:before {
+          content: '\201C';
+          position: absolute;
+          color: #000;
+          top: -16px;
+          left: 9px;
+          font: 90px/1 $cross_font_Georgia;
+        }
+      }
+
+      &:last-of-type {
+        &:after {
+          content: '\201D';
+          position: absolute;
+          color: #000;
+          bottom: -42px;
+          right: 7px;
+          font: 90px/1 $cross_font_Georgia;
+        }
+      }
+
+      ._stories &,
+      ._top & {
+        color: $violette;
+      }
+
+      ._release & {
+        color: $violette_2;
+      }
+
+      ._analysis & {
+        color: $orange;
+      }
+
+      ._pricewise & {
+        color: $green;
+      }
+
+      ._sponsored & {
+        color: $green_2;
+      }
+
+      ._pool & {
+        color: $blue;
+      }
+
+      ._features & {
+        color: $red;
+      }
+
+      ._wiki & {
+        color: $brown;
+      }
+
+      ._watch & {
+        color: $brown_2;
+      }
+    }
+
+    i {
+      position: absolute;
+      bottom: 14px;
+      left: 27px;
+      opacity: .4;
+      font-size: 13px;
+      line-height: 22px;
+      font-style: normal;
+    }
+  }
+
   h1, h3, h5, h2, h4, h6 {
     margin-top: 1em;
   }
@@ -611,9 +692,10 @@
             content: '';
             position: absolute;
             left: -10px;
-            top: 4px;
+            top: 7px;
             width: 8px;
             height: 8px;
+            line-height: 1;
           }
         }
       }

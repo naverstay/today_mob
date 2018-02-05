@@ -76,7 +76,7 @@
 
     &.story_block {
       &:after {
-        background-image: url(../i/top_story_blue.jpg);
+        background-image: url(../i/stories_bg.svg);
       }
 
       .top_story_caption {
@@ -130,86 +130,6 @@
     }
   }
 
-}
-
-.article_quote {
-  position: relative;
-  background: #f7f8f8;
-  padding: 26px 16px 44px 28px;
-  margin: 36px 0 23px -8px;
-
-  p {
-    font: 20px/28px $RubikBold;
-    letter-spacing: .012em;
-
-    &:first-of-type {
-      &:before {
-        content: '\201C';
-        position: absolute;
-        color: #000;
-        top: -16px;
-        left: 9px;
-        font: 90px/1 $cross_font_Georgia;
-      }
-    }
-
-    &:last-of-type {
-      &:after {
-        content: '\201D';
-        position: absolute;
-        color: #000;
-        bottom: -42px;
-        right: 7px;
-        font: 90px/1 $cross_font_Georgia;
-      }
-    }
-
-    ._stories &,
-    ._top & {
-      color: $violette;
-    }
-
-    ._release & {
-      color: $violette_2;
-    }
-
-    ._analysis & {
-      color: $orange;
-    }
-
-    ._pricewise & {
-      color: $green;
-    }
-
-    ._sponsored & {
-      color: $green_2;
-    }
-
-    ._pool & {
-      color: $blue;
-    }
-
-    ._features & {
-      color: $red;
-    }
-
-    ._wiki & {
-      color: $brown;
-    }
-
-    ._watch & {
-      color: $brown_2;
-    }
-  }
-
-  span {
-    position: absolute;
-    bottom: 14px;
-    left: 27px;
-    opacity: .4;
-    font-size: 13px;
-    line-height: 22px;
-  }
 }
 
 .article_img_link {
@@ -271,7 +191,7 @@
 
   ._analysis & {
     &:before {
-      background: $orange;
+      background: $green;
     }
   }
 
@@ -642,7 +562,7 @@
   }
 
   &._stories {
-    background-image: url(../i/story_title_violette.jpg);
+    background-image: url(../i/stories_bg.svg);
 
     &:before {
       content: $icon-crypto;
@@ -651,7 +571,7 @@
   }
 
   &._features {
-    background-image: url(../i/story_title_red.jpg);
+    background-image: url(../i/features_bg.svg);
 
     &:before {
       content: $icon-star;
@@ -660,7 +580,7 @@
   }
 
   &._pool {
-    background-image: url(../i/story_title_blue.jpg);
+    background-image: url(../i/sharks_pool_bg.svg);
 
     &:before {
       content: $icon-shark;
@@ -669,16 +589,16 @@
   }
 
   &._analysis {
-    background-image: url(../i/story_title_orange.jpg);
+    background-image: url(../i/pricewise_bg.svg);
 
     &:before {
       content: $icon-splash;
-      color: $orange;
+      color: $green;
     }
   }
 
   &._news {
-    background-image: url(../i/story_title_blue.jpg);
+    background-image: url(../i/stories_bg.svg);
 
     &:before {
       content: $icon-ufo;
@@ -687,16 +607,16 @@
   }
 
   &._pricewise {
-    background-image: url(../i/story_title_orange.jpg);
+    background-image: url(../i/pricewise_bg.svg);
 
     &:before {
       content: $icon-splash;
-      color: $orange;
+      color: $green;
     }
   }
 
   &._cryptotips {
-    background-image: url(../i/story_title_blue.jpg);
+    background-image: url(../i/crypto.svg);
 
     &:before {
       content: $icon-ufo;
@@ -705,7 +625,7 @@
   }
 
   &._wiki {
-    background-image: url(../i/story_title_orange.jpg);
+    background-image: url(../i/wikicoin_bg.svg);
 
     &:before {
       content: $icon-startwo;

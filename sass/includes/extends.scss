@@ -159,7 +159,8 @@
     }
 
     ._analysis & {
-      color: $orange;
+      //color: $orange;
+      color: $green;
     }
 
     ._pricewise & {
@@ -178,12 +179,16 @@
       color: $red;
     }
 
-    ._wiki & {
+    ._crypto & {
       color: $brown;
     }
 
-    ._watch & {
+    ._wiki & {
       color: $brown_2;
+    }
+
+    ._watch & {
+      color: $violette_2;
     }
   }
 
@@ -198,7 +203,8 @@
     }
 
     ._analysis & {
-      border-color: $orange;
+      //border-color: $orange;
+      border-color: $green;
     }
 
     ._pricewise & {
@@ -217,12 +223,16 @@
       border-color: $red;
     }
 
-    ._wiki & {
+    ._crypto & {
       border-color: $brown;
     }
 
-    ._watch & {
+    ._wiki & {
       border-color: $brown_2;
+    }
+
+    ._watch & {
+      border-color: $violette_2;
     }
   }
 
@@ -237,7 +247,8 @@
     }
 
     ._analysis & {
-      background-color: $orange;
+      //background-color: $orange;
+      background-color: $green;
     }
 
     ._pricewise & {
@@ -256,12 +267,16 @@
       background-color: $red;
     }
 
-    ._wiki & {
+    ._crypto & {
       background-color: $brown;
     }
 
-    ._watch & {
+    ._wiki & {
       background-color: $brown_2;
+    }
+
+    ._watch & {
+      background-color: $violette_2;
     }
   }
 
