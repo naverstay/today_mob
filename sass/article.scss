@@ -145,13 +145,47 @@
   margin: 0 -16px 20px 0;
   color: #fff;
   letter-spacing: .022em;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  &._news {
+    background-image: url(../i/stories_bg.svg);
+  }
 
   &._stories {
-    background: url(../i/related_bg_blue.jpg) no-repeat 50% 50%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background-image: url(../i/stories_bg.svg);
+  }
+
+  &._features {
+    background-image: url(../i/features_bg.svg);
+  }
+
+  &._pool {
+    background-image: url(../i/sharks_pool_bg.svg);
+  }
+
+  &._analysis {
+    background-image: url(../i/pricewise_bg.svg);
+  }
+
+  &._pricewise {
+    background-image: url(../i/pricewise_bg.svg);
+  }
+
+  &._cryptotips {
+    background-image: url(../i/crypto.svg);
+  }
+
+  &._wiki {
+    background-image: url(../i/wikicoin_bg.svg);
+  }
+
+  &._watch {
+    background-image: url(../i/ico_bg.svg);
   }
 }
 
