@@ -31,9 +31,9 @@
       left: 16px;
       top: 0;
     }
-
   }
 
+  &._news,
   &._stories,
   &._top {
     background: $violette;
@@ -155,6 +155,16 @@
 
     .category_link {
       background: $green;
+    }
+  }
+
+  &._news {
+    &:before {
+      border-bottom-color: $violette;
+    }
+
+    .category_link {
+      background: $violette;
     }
   }
 

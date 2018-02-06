@@ -176,6 +176,7 @@
     padding-right: 17px;
   }
 
+  ._news &,
   ._stories &,
   ._top & {
     &:before {
@@ -256,6 +257,7 @@
     left: 50%;
   }
 
+  &._news,
   &._stories,
   &._top {
     background: transparentize($violette, .2);
@@ -292,7 +294,6 @@
   &._watch {
     background: transparentize($brown_2, .2);
   }
-
 }
 
 .article_title {
@@ -473,6 +474,7 @@
     }
   }
 
+  &._news,
   &._stories,
   &._top {
     //&:before {

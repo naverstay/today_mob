@@ -37,6 +37,7 @@
   margin-left: -16px;
   border-bottom: 4px solid #000;
 
+  ._news &,
   ._stories &,
   ._top & {
     border-bottom-color: $violette;
@@ -309,6 +310,7 @@
     }
   }
 
+  ._news &,
   ._stories &,
   ._top & {
     color: $violette;
@@ -426,6 +428,7 @@
       border-right: 6px solid #fff;
     }
 
+    ._news &,
     ._stories &,
     ._top & {
       border-color: $violette;
@@ -564,6 +567,7 @@
     margin: 36px 0 23px -8px;
 
     p {
+      @extend %firm_color;
       font: 20px/28px $RubikBold;
       letter-spacing: .012em;
 
@@ -587,43 +591,6 @@
           right: 7px;
           font: 90px/1 $cross_font_Georgia;
         }
-      }
-
-      ._stories &,
-      ._top & {
-        color: $violette;
-      }
-
-      ._release & {
-        color: $violette_2;
-      }
-
-      ._analysis & {
-        color: $orange;
-      }
-
-      ._pricewise & {
-        color: $green;
-      }
-
-      ._sponsored & {
-        color: $green_2;
-      }
-
-      ._pool & {
-        color: $blue;
-      }
-
-      ._features & {
-        color: $red;
-      }
-
-      ._wiki & {
-        color: $brown;
-      }
-
-      ._watch & {
-        color: $brown_2;
       }
     }
 
