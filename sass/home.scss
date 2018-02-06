@@ -228,6 +228,12 @@
 
   ._watch & {
     &:before {
+      background: $violette_2;
+    }
+  }
+
+  ._crypto & {
+    &:before {
       background: $brown_2;
     }
   }
@@ -292,6 +298,10 @@
   }
 
   &._watch {
+    background: transparentize($violette_2, .2);
+  }
+
+  &._crypto {
     background: transparentize($brown_2, .2);
   }
 }
@@ -524,9 +534,15 @@
     //}
   }
 
-  &._watch {
+  &._crypto {
     //&:before {
     background: $brown_2;
+    //}
+  }
+
+  &._watch {
+    //&:before {
+    background: $violette_2;
     //}
   }
 }

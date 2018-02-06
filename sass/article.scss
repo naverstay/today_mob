@@ -71,8 +71,12 @@
     border-bottom-color: $brown;
   }
 
-  ._watch & {
+  ._crypto & {
     border-bottom-color: $brown_2;
+  }
+
+  ._watch & {
+    border-bottom-color: $violette_2;
   }
 }
 
@@ -384,12 +388,21 @@
     }
   }
 
-  ._watch & {
+  ._crypto & {
     color: $brown_2;
 
     &._active,
     &:hover {
       background: $brown_2;
+    }
+  }
+
+  ._watch & {
+    color: $violette_2;
+
+    &._active,
+    &:hover {
+      background: $violette_2;
     }
   }
 
@@ -542,7 +555,7 @@
       }
     }
 
-    ._watch & {
+    ._crypto & {
       border-color: $brown_2;
 
       &:before {
@@ -552,6 +565,20 @@
       &:hover {
         &:after {
           border-right-color: $brown_2;
+        }
+      }
+    }
+
+    ._watch & {
+      border-color: $violette_2;
+
+      &:before {
+        border-right-color: $violette_2;
+      }
+
+      &:hover {
+        &:after {
+          border-right-color: $violette_2;
         }
       }
     }

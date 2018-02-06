@@ -67,8 +67,12 @@
     background: $brown;
   }
 
-  &._watch {
+  &._crypto {
     background: $brown_2;
+  }
+
+  &._watch {
+    background: $violette_2;
   }
 }
 
@@ -208,7 +212,7 @@
     }
   }
 
-  &._watch {
+  &._crypto {
     &:before {
       border-bottom-color: $brown_2;
     }
@@ -218,4 +222,13 @@
     }
   }
 
+  &._watch {
+    &:before {
+      border-bottom-color: $violette_2;
+    }
+
+    .category_link {
+      background: $violette_2;
+    }
+  }
 }
