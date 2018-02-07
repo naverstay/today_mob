@@ -115,6 +115,34 @@
   }
 }
 
+.menu_close_btn {
+  @extend %header_btn;
+  @extend %icon_pseudo;
+  right: 16px;
+  background: none;
+  box-shadow: none;
+
+  &:after,
+  &:before {
+    @include transition_all(transform .3s, top 0.3s, background .3s);
+    content: '';
+    position: absolute;
+    left: 17px;
+    width: 14px;
+    height: 2px;
+    top: 24px;
+    background: white;
+  }
+
+  &:before {
+    transform: rotate(-45deg);
+  }
+
+  &:after {
+    transform: rotate(45deg);
+  }
+}
+
 .search_btn {
   @extend %header_btn;
   @extend %icon_pseudo;

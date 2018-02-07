@@ -167,6 +167,35 @@ mixin main_menu(subscribe)
                     span Error
                 p Something went wrong,<br>try again
 
+    .sh_holder
+        .search_title Share
+        a.menu_close_btn.actionBtn(href='#')
+        .action_block
+            .action_target
+                .action_img
+                    img(src='i/action_img.jpg')
+                .action_title US State Regulators Hitt BitConnect With Second Cease-And-Desist
+
+            ul.action_soc
+                li: a.action_sh._f(href='#' data-network="facebook" class='st-custom-button')
+                    span.action_sh_text Facebook
+                li: a.action_sh._t(href='#' data-network="twitter" class='st-custom-button')
+                    span.action_sh_text Twitter
+                li: a.action_sh._rd(href='#' data-network="reddit" class='st-custom-button')
+                    span.action_sh_text Reddit
+                li: a.action_sh._l(href='#' data-network="linkedin" class='st-custom-button')
+                    span.action_sh_text Linkedin
+                li: a.action_sh._i(href='#' data-network="instagram" class='st-custom-button')
+                    span.action_sh_text Instagram
+                li: a.action_sh._p(href='#' data-network="pinterest" class='st-custom-button')
+                    span.action_sh_text Pinterest
+                li: a.action_sh._s(href='#' data-network="pinterest" class='st-custom-button')
+                    span.action_sh_text Pinterest
+                li: a.action_sh._tm(href='#' data-network="tumblr" class='st-custom-button')
+                    span.action_sh_text Tumblr
+                li: a.action_sh._tg(href='#')
+                    span.action_sh_text Telegram
+
 mixin article_soc(cls)
     ul.article_soc(class= cls)
         li: a.action_sh._r._active(href='#')

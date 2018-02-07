@@ -74,6 +74,10 @@ $(function ($) {
 
             return false;
         })
+        .delegate('.actionBtn', 'click', function () {
+            $body.toggleClass('sh_opened');
+            return false;
+        })
         .delegate('.searchBtn', 'click', function () {
             $body.removeClass('menu_opened').toggleClass('search_opened');
             return false;

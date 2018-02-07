@@ -222,6 +222,10 @@
   }
 }
 
+.action_soc {
+  list-style: none;
+}
+
 .action_sh {
   @include transition_all(color .3s, background .3s);
   @extend %icon_pseudo;
@@ -269,6 +273,12 @@
   &._t {
     &:before {
       content: $icon-tw;
+    }
+  }
+
+  &._tg {
+    &:before {
+      content: $icon-tg;
     }
   }
 
