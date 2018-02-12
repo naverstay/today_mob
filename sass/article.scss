@@ -129,6 +129,19 @@
   letter-spacing: -.017em;
 }
 
+.article_telegram_section {
+  background: #000;
+  margin-left: -16px;
+  padding: 19px;
+  text-align: center;
+
+  p {
+    color: #fff;
+    font: 16px/22px $RubikMed;
+    margin-bottom: 12px;
+  }
+}
+
 .article_telegram_block {
   font: 12px/14px $RubikReg;
   margin-bottom: 28px;
