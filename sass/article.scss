@@ -706,6 +706,10 @@
     letter-spacing: .022em;
   }
 
+  a {
+    @extend %firm_color;
+  }
+
   > ul {
     margin-top: 28px;
     list-style: none;
