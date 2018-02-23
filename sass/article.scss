@@ -80,6 +80,10 @@
   }
 }
 
+.article_subscribe_wide {
+  margin: 20px 0 0 -16px;
+}
+
 .article_subscribe {
   @extend %icon_pseudo;
   position: relative;
