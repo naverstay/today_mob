@@ -71,9 +71,47 @@
   &.error {
     border-color: #ff0a24;
   }
+}
 
+.input_v2 {
+  @include transition_all(border-color .3s);
+  display: block;
+  height: 32px;
+  width: 100%;
+  color: #000;
+  background: #fff;
+  border: 2px solid rgba(0, 0, 0, .1);
+  border-radius: 2px;
+  font: 16px/20px $RubikMed;
+  padding: 4px 14px;
 }
 
 .input_w {
   position: relative;
+
+  &._has_currency {
+
+    input {
+      padding-right: 77px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      right: 67px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: rgba(0, 0, 0, .1);
+    }
+  }
 }
+
+.label_v1 {
+  color: #000;
+  font: 13px $RubikMed;
+  margin-bottom: 7px;
+  display: inline-block;
+  vertical-align: top;
+}
+

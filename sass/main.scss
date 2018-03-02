@@ -39,6 +39,14 @@ a {
   clear: both;
 }
 
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
 .wrapper {
   @extend %global_flex_block_column_nowrap_center_stretch;
   position: relative;
