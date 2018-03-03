@@ -78,6 +78,12 @@ $(function ($) {
             $body.toggleClass('sh_opened');
             return false;
         })
+        .delegate('.statLink', 'click', function () {
+            var btn = $(this);
+            btn.parent().addClass('_active').siblings().removeClass('_active');
+            $('.statList').attr('data-stat', btn.attr('data-stat'));
+            return false;
+        })
         .delegate('.searchBtn', 'click', function () {
             $body.removeClass('menu_opened').toggleClass('search_opened');
             return false;

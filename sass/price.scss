@@ -38,13 +38,17 @@
   li {
     float: left;
     padding-left: 15px;
+
+    &._active {
+      float: right;
+    }
   }
 }
 
 .stat_link {
   color: #c0c0c0;
 
-  &._active,
+  ._active &,
   &:hover {
     color: #999;
   }
@@ -67,6 +71,26 @@
     float: right;
     font: 11px/14px $RubikReg;
     padding-top: 6px;
+
+    span {
+      display: none;
+    }
+  }
+
+  &[data-stat='1'] {
+    dd {
+      span[data-stat='1'] {
+        display: block;
+      }
+    }
+  }
+
+  &[data-stat='2'] {
+    dd {
+      span[data-stat='2'] {
+        display: block;
+      }
+    }
   }
 }
 
@@ -74,15 +98,6 @@
   @include transition_all(color .3s);
   color: #999;
   font: 13px/18px $RubikMed;
-
-  &:hover {
-    color: #000;
-  }
-
-  span {
-    display: inline-block;
-    vertical-align: middle;
-  }
 
   ._abbr {
     height: 14px;
@@ -92,6 +107,23 @@
     background: #999;
     color: #fff;
     margin-left: 8px;
+  }
+
+  &:hover {
+    color: #000;
+  }
+
+  &._active {
+    color: #000;
+
+    ._abbr {
+      background: $violette;
+    }
+  }
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
   }
 
   &._more {
@@ -191,6 +223,93 @@
     > div {
       background: none !important;
     }
+
+    &.ccc-summary {
+      > div {
+        padding-bottom: 0 !important;
+      }
+    }
+
+    &.ccc-chart-v3 {
+      padding-bottom: 0;
+
+      > div:first-child {
+        padding: 0 15px;
+      }
+
+      .chartTypeTabLinks {
+        font-weight: 500;
+        font-size: 16px;
+        padding: 5px 10px;
+      }
+
+      .cTypeTabActive {
+        background: $violette;
+      }
+    }
+
+    &.ccc-histo-week {
+      padding-bottom: 0;
+
+      > div {
+        border: 0;
+        padding: 5px 15px 0;
+      }
+
+      div.histoTitle {
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: 0;
+
+        + div.histoRow {
+
+          div {
+            font-size: 13px;
+            font-weight: 500 !important;
+          }
+        }
+      }
+
+      div.histoRow {
+        padding: 0 0 5px;
+
+        div {
+          font-size: 10px;
+          font-weight: 400 !important;
+        }
+      }
+    }
+  }
+
+  .cccCustomRadioContainer span.radio::before {
+    width: 20px;
+    height: 20px;
+    left: -25px;
+    border-radius: 10px;
+  }
+
+  .cccCustomRadioContainer span.radio::after {
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: -21px;
+    border-radius: 6px;
+  }
+
+  .cccCustomRadioContainer span.checkbox::before {
+    width: 20px;
+    height: 20px;
+    left: -25px;
+  }
+
+  .cccCustomRadioContainer span.checkbox::after {
+    left: -19px;
+    top: -2px;
+  }
+
+  .cccCustomRadioContainer {
+    padding-left: 25px;
+    line-height: 24px;
   }
 
   .histoTitleConverter {
@@ -280,4 +399,54 @@
       }
     }
   }
+
+  .tabContainer {
+    margin-left: -8px;
+  }
+
+  .tablinks {
+    font-size: 13px;
+    margin: 0 0 8px 8px;
+
+    &.active {
+      border-color: $violette !important;
+    }
+  }
+
+  .highlightsWrapper {
+    border: 2px solid $violette;
+    margin-bottom: 20px;
+  }
+
+  .highlights {
+    display: block;
+  }
+
+  .change-value {
+    font-size: 16px;
+  }
+
+  .price-value {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .table-row .value,
+  .table-row .title {
+    margin-top: 5px;
+    padding-bottom: 0;
+  }
+
+  .positive {
+    color: $green;
+  }
+
+  .negative {
+    color: $red;
+  }
+
+}
+
+.cryptocompare-logo {
+  display: none !important;
 }
