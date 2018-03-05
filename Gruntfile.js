@@ -19,6 +19,7 @@ module.exports = function (grunt) {
         wellington: {
             your_target: {
                 src: [
+                    'sass/amp_styles.scss',
                     'sass/main_global.scss',
                     'sass/header_global.scss'
                     //'sass/**/*.scss'

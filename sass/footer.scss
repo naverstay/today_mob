@@ -1,5 +1,13 @@
+@if ($amp_ver) {
+  $prefix: '';
+}
+
 .footer {
-  background: url(../i/footer_bg_2.svg) no-repeat 50% 50%;
+  @if ($amp_ver) {
+    background: url(i/footer_bg_2.svg) no-repeat 50% 50%;
+  } @else {
+    background: url(../i/footer_bg_2.svg) no-repeat 50% 50%;
+  }
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -93,7 +101,6 @@
 }
 
 .go_top {
-  @extend %icon_pseudo;
   @include transition_all(right .3s, opacity .3s);
   position: absolute;
   bottom: 0;
@@ -109,8 +116,13 @@
   background: #000;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50), 0 12px 14px 0 rgba(0, 0, 0, 0.50);
 
-  &:before {
-    content: $icon-arrow-up;
+  @if ($amp_ver) {
+  } @else {
+    @extend %icon_pseudo;
+
+    &:before {
+      content: $icon-arrow-up;
+    }
   }
 
   ._vis & {

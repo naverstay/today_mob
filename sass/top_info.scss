@@ -71,7 +71,6 @@
 
 .select_arrow {
   @include transition_all(transform .3s, color .3s);
-  @extend %icon_pseudo;
   position: absolute;
   top: 10px;
   right: 7px;
@@ -80,8 +79,15 @@
   pointer-events: none;
   transform-origin: 50% 50%;
 
-  &:before {
-    content: $icon-triangle;
+  @if ($amp_ver) {
+    .select_arrow_icon {
+
+    }
+  } @else {
+    @extend %icon_pseudo;
+    &:before {
+      content: $icon-triangle;
+    }
   }
 }
 
