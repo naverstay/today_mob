@@ -54,11 +54,11 @@
     box-shadow: 0 0 rgba(0, 0, 0, 0);
   }
 
-  .menu_opened &,
-  .search_opened & {
-    -webkit-transform: none !important;
-    -ms-transform: none !important;
-    transform: none !important;
+  html .menu_opened &,
+  html .search_opened & {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
   }
 }
 

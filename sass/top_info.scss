@@ -40,7 +40,7 @@
   }
 }
 
-.currency_select {
+html body .currency_select {
   @include transition_all(background .3s, color .3s);
   display: block;
   width: 48px;
@@ -48,10 +48,10 @@
   padding-left: 6px;
   margin: -8px 0 -8px -6px;
   font: 24px $RubikMed;
-  color: $violette !important;
+  color: $violette;
   border: none;
   position: relative;
-  background: #f7f8f8 !important;
+  background: #f7f8f8;
 
   &:focus {
     background: #000;
@@ -61,6 +61,10 @@
       -webkit-transform: rotate(180deg) translate(0, 4px);
       -ms-transform: rotate(180deg) translate(0, 4px);
       transform: rotate(180deg) translate(0, 4px);
+
+      svg {
+        fill: #fff;
+      }
     }
 
     ~ .select_overlay {
@@ -80,8 +84,10 @@
   transform-origin: 50% 50%;
 
   @if ($amp_ver) {
-    .select_arrow_icon {
-
+    svg {
+      width: 12px;
+      height: 12px;
+      fill: $violette;
     }
   } @else {
     @extend %icon_pseudo;

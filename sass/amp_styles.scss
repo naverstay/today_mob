@@ -30,8 +30,16 @@ body {
   -webkit-font-smoothing: antialiased
 }
 
-.hide {
-  display: none !important;
+body .wrapper .hide {
+  display: none;
+}
+
+.header {
+  position: fixed;
+  margin: 0 auto;
+  width: 100%;
+  max-width: $body_width;
+  z-index: 2147483649;
 }
 
 .wrapper {
@@ -99,7 +107,8 @@ body {
 
   ._article & {
     margin-left: -16px;
-    padding-right: 17px;
+    padding-right: 16px;
+    padding-left: 16px;
   }
 }
 
@@ -197,25 +206,22 @@ body {
 
 .article_link {
   font: 20px $RubikBold;
-  letter-spacing: .035em;
   text-decoration: none;
   color: #000;
 
   ._video & {
     font: 16px/1.4 $RubikMed;
-    letter-spacing: -.023em;
   }
 
   ._article & {
     color: #000;
-    letter-spacing: .08em;
   }
 }
 
 .article_preview {
   position: relative;
   font: 17px/24px $RubikMed;
-  padding: 20px 20px 13px 16px;
+  padding: 30px 20px 13px 16px;
   margin-bottom: 28px;
   margin-left: -16px;
   border-bottom: 4px solid $violette;
@@ -311,7 +317,7 @@ body {
   z-index: 2;
   list-style: none;
   bottom: 14px;
-  left: 16px;
+  left: 32px;
 
   li {
     float: left;
@@ -340,6 +346,7 @@ body {
 
   .article_tag_icon {
     font-size: 18px;
+    line-height: 24px;
     width: 28px;
     height: 28px;
     display: inline-block;
@@ -351,6 +358,7 @@ body {
       height: 18px;
       display: inline-block;
       vertical-align: middle;
+      line-height: 1;
       fill: #fff;
     }
   }
@@ -732,7 +740,7 @@ body {
 
 %sidebar {
   @include transition_all(transform .3s, opacity .3s);
-  z-index: 5;
+  z-index: 2147483648;
   position: fixed;
   top: 0;
   right: 0;
@@ -784,6 +792,8 @@ body {
     pointer-events: all;
 
     ~ .header {
+      background: none;
+
       .menu_btn {
         &:before {
           transform: rotate(-45deg);
@@ -840,6 +850,8 @@ body {
     pointer-events: all;
 
     ~ .header {
+      background: none;
+
       .logo_block {
         opacity: 0;
       }
@@ -929,24 +941,13 @@ body {
   }
 }
 
-amp-accordion > section > .footer_action {
-  display: block !important;
-
-  section[expanded] + & {
-    display: none !important;
-  }
-}
-
-amp-accordion section[expanded] + section > .footer_action {
-  display: none !important;
-}
-
-.footer_subscribe {
+body amp-accordion > section .footer_subscribe {
   background: #f7f8f8;
+  margin-right: -20px;
   padding: 20px 34px 22px;
   position: relative;
-  border: 0 !important;
-  overflow: visible !important;
+  border: 0;
+  overflow: visible;
 
   &:before {
     content: '';
@@ -1057,6 +1058,10 @@ amp-accordion section[expanded] + section > .footer_action {
   }
 }
 
+.currency_val {
+  font-weight: bold;
+}
+
 .msg_icon {
   font-size: 40px;
   padding-right: 30px;
@@ -1087,11 +1092,6 @@ amp-accordion section[expanded] + section > .footer_action {
   .action_link .action_link_icon svg {
     fill: $violette;
   }
-}
-
-.i-amphtml-sidebar-mask {
-  background-color: transparent !important;
-  z-index: 4 !important;
 }
 
 .main_menu {

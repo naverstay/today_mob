@@ -14,7 +14,9 @@ html(lang='ru', amp='')
         link(rel='canonical' href='http://naverstay.me/i/folio/crypto/article.html')
         meta(name='viewport' content='width=device-width,minimum-scale=1,initial-scale=1')
         title Crypto article
-        <style amp-boilerplate="">body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate="">body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+        <style amp-boilerplate="">body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+        <noscript><style amp-boilerplate="">body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
         style(amp-custom='')
             include ../styles/amp_styles.css
@@ -86,7 +88,7 @@ html(lang='ru', amp='')
                             .article_img_link
                                 amp-img.article_img(src='i/sberbank.jpg', width='272', height='194', alt='sberbank')
 
-                        .article_info
+                        //-.article_info
                             .article_author.text_right
                                 span Photo by Sarah Perez ( @sarahintampa )
 
@@ -184,73 +186,76 @@ html(lang='ru', amp='')
                             .news_item
                                 .news_date 2 min<br>ago
                                 a.news_name(href='#') Russia's Sberbank Has Launched&nbsp;a&nbsp;Blockchain Lab
-
                         li
                             .news_item
                                 .news_date 1 hr<br>ago
                                 a.news_name(href='#') PBoC Official Calls for Wider Ban on Chinese Crypto Trading
 
-            .nav_holder
-                amp-sidebar.main_menu_holder(layout= 'nodisplay' id= 'header-sidebar')
-                    ul.main_menu
-                        li.menu_item
-                            a.menu_link(href='#') News
-                        li.menu_item
-                            a.menu_link(href='#') Features
-                        li.menu_item
-                            a.menu_link(href='#') Sharks pool
-                        li.menu_item
-                            a.menu_link(href='price.html') Price analysis
-                        li.menu_item
-                            a.menu_link(href='#') Share insight
-                        li.menu_item
-                            a.menu_link(href='about.html') About us
-
-                    .menu_footer.subscribeBlock
-                        amp-accordion(layout='container' disable-session-states='' class='ampstart-dropdown')
-                            section
-                                .footer_subscribe
-                                    .subscribe_link.subscribeLink() Subscribe with your email
-
-                                .footer_form
-                                    form.validateMe.formParent.subscribeForm(action='#')
-                                        .form_cell.formCell
-                                            .input_w
-                                                input.input_v1.forceValidation(placeholder='Enter your email' class='validate[required]')
-
-                                        .form_cell
-                                            button.btn_v1.subscribe_btn.white_btn Subscribe
-
-                            section
-                                .hide
-                                .footer_action
-                                    p Follow us with:
-
-                                    +action_list()
-
-                        .footer_msg._success
-                            .footer_msg_title
-                                span.icon-check.msg_icon
-                                br
-                                span Subscription<br>enabled
-
-                        .footer_msg._fail
-                            .footer_msg_title
-                                span.icon-close.clr_red.msg_icon
-                                span Error
-                            p Something went wrong,<br>try again
-
-                amp-sidebar.search_holder(layout= 'nodisplay' id= 'search-sidebar' side='right')
-                    .search_title Search
-                    form(action='#')
-                        .form_cell
-                            input.completeIt.search_input(placeholder='search...')
-                            button.filter_btn
-                                span.filter_btn_icon
-                                    +svg_icon('search')
-
-                +header()
-
             +footer()
+
+        amp-sidebar.main_menu_holder(layout= 'nodisplay' id= 'header-sidebar')
+            ul.main_menu
+                li.menu_item
+                    a.menu_link(href='#') News
+                li.menu_item
+                    a.menu_link(href='#') Features
+                li.menu_item
+                    a.menu_link(href='#') Sharks pool
+                li.menu_item
+                    a.menu_link(href='price.html') Price analysis
+                li.menu_item
+                    a.menu_link(href='#') Share insight
+                li.menu_item
+                    a.menu_link(href='about.html') About us
+
+            .menu_footer.subscribeBlock
+                //-amp-accordion(layout='container' disable-session-states='' class='ampstart-dropdown')
+                    section
+                        header: .footer_subscribe
+                            .subscribe_link.subscribeLink() Subscribe with your email
+
+                        footer.footer_form
+                            form.validateMe.formParent.subscribeForm(action='#' target='_top')
+                                .form_cell.formCell
+                                    .input_w
+                                        input.input_v1.forceValidation(placeholder='Enter your email' class='validate[required]')
+
+                                .form_cell
+                                    button.btn_v1.subscribe_btn.white_btn Subscribe
+
+                    section
+                        header.hide
+                        footer.footer_action
+                            p Follow us with:
+
+                            +action_list()
+
+                .footer_action
+                    p Follow us with:
+
+                    +action_list()
+
+                //-.footer_msg._success
+                    .footer_msg_title
+                        span.icon-check.msg_icon
+                        br
+                        span Subscription<br>enabled
+
+                //-.footer_msg._fail
+                    .footer_msg_title
+                        span.icon-close.clr_red.msg_icon
+                        span Error
+                    p Something went wrong,<br>try again
+
+        amp-sidebar.search_holder(layout= 'nodisplay' id= 'search-sidebar' side='right')
+            .search_title Search
+            form(action='#' target='_top')
+                .form_cell
+                    input.completeIt.search_input(placeholder='search...')
+                    button.filter_btn
+                        span.filter_btn_icon
+                            +svg_icon('search')
+
+        +header()
 
 

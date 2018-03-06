@@ -82,6 +82,8 @@ mixin top_info()
                 option &#8381;
                 option &#163;
             .select_arrow
+                - if (amp)
+                    +svg_icon('triangle')
             .select_overlay
         .currency_info
             .currency_info_table
@@ -327,6 +329,10 @@ mixin widget_converter()
     | </script>
 
 mixin svg_icon(icon)
+    if (icon === 'triangle')
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+        <path d="M88.629 63.127h334.75c34.647 0 62.736 28.087 62.736 62.735 0 12.033-3.461 23.811-9.969 33.933l-167.375 260.27c-18.74 29.142-57.556 37.574-86.698 18.832-7.553-4.857-13.976-11.281-18.832-18.832l-167.375-260.27c-18.741-29.142-10.309-67.957 18.832-86.698 10.121-6.508 21.901-9.969 33.932-9.969z"></path>
+        </svg>
     if (icon === 'close')
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
         <path d="M256 192.736l158.163-158.162 63.264 63.264-158.163 158.162 158.163 158.163-63.264 63.264-158.163-158.163-158.162 158.163-63.264-63.264 158.162-158.163-158.162-158.162 63.264-63.264 158.162 158.162z"></path>

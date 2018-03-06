@@ -154,14 +154,14 @@ textarea::-moz-placeholder {
   color: $placeholder_color;
 }
 
-input:focus::-webkit-input-placeholder,
-textarea:focus::-webkit-input-placeholder {
-  color: rgba(0, 0, 0, 0) !important;
+html body input:focus::-webkit-input-placeholder,
+html body textarea:focus::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0);
 }
 
-input:focus::-moz-placeholder,
-textarea:focus::-moz-placeholder {
-  color: rgba(0, 0, 0, 0) !important;
+html body input:focus::-moz-placeholder,
+html body textarea:focus::-moz-placeholder {
+  color: rgba(0, 0, 0, 0);
 }
 
 a {
