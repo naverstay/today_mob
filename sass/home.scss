@@ -42,6 +42,18 @@
   z-index: 1;
 }
 
+.press_release_title {
+  margin: 0 -16px 22px;
+  padding: 20px 16px 18px;
+  color: #fff;
+  font: 24px $RubikBold;
+  letter-spacing: .025em;
+
+  &._release {
+    background: $violette_2;
+  }
+}
+
 .article_reviews {
   list-style: none;
 }
