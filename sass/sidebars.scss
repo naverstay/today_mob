@@ -460,6 +460,12 @@
       content: $icon-rss;
     }
   }
+
+  &._y {
+    &:before {
+      content: $icon-youtube;
+    }
+  }
 }
 
 .sh_holder {
