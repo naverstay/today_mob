@@ -28,6 +28,10 @@
   }
 }
 
+.stat_holder_icon {
+  padding-right: 5px;
+}
+
 .stat_holder_controls {
   float: right;
   list-style: none;
@@ -41,6 +45,31 @@
 
     &._active {
       float: right;
+    }
+  }
+
+  .stat_caption & {
+    padding-top: 7px;
+    font-size: 14px;
+
+    li {
+      padding-left: 6px;
+
+      &._first {
+        position: relative;
+        padding-right: 6px;
+        padding-left: 0;
+
+        &:before {
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 50%;
+          height: 10px;
+          margin-top: -5px;
+          border-right: 1px solid #c0c0c0;
+        }
+      }
     }
   }
 }
@@ -209,6 +238,27 @@
 .stat_caption {
   font: 22px $RubikMed;
   margin: 35px 0 20px;
+}
+
+.date_select {
+  @extend .input_v3;
+  display: block;
+
+  + .select_arrow {
+    top: 15px;
+    right: 16px;
+  }
+
+  &:focus {
+    color: $violette;
+
+    + .select_arrow {
+      color: $violette;
+      -webkit-transform: rotate(180deg) translate(0, 4px);
+      -ms-transform: rotate(180deg) translate(0, 4px);
+      transform: rotate(180deg) translate(0, 4px);
+    }
+  }
 }
 
 .stat_widget_holder {

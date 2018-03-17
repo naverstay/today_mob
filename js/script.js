@@ -115,6 +115,48 @@ $(function ($) {
             });
         });
 
+    $('.completeLocation').each(function (ind) {
+        var inp = this, ajax = new XMLHttpRequest(), url = $(inp).attr('data-url');
+        ajax.open("GET", url, true);
+
+        ajax.onload = function () {
+            var list = JSON.parse(ajax.responseText).map(function (i) {
+                return {name: i.name, date: i.date};
+            });
+
+            new autoComplete({
+                selector: inp,
+                menuClass: 'autocomplete_v2',
+                minChars: 1,
+                source: function (term, suggest) {
+                    term = term.toLowerCase();
+                    var choices = list;
+                    var suggestions = [];
+                    for (i = 0; i < choices.length; i++)
+                        if (~(choices[i].name).toLowerCase().indexOf(term)) suggestions.push(choices[i]);
+                    suggest(suggestions);
+                },
+                renderItem: function (item, search) {
+                    search = search.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+                    return '<div class="autocomplete-suggestion" ' +
+                        'data-name="' + item.name + '" ' +
+                        'data-val="' + search + '">' +
+                        //'<div class="search_date">' + item.date + '' + '</div>' +
+                        '<div class="search_result">' + item.name + '</div>' +
+                        '</div>';
+                },
+                onSelect: function (e, term, item) {
+                    console.log('Item "' + ' (' + item.getAttribute('data-name') + ')" selected by ' + (e.type === 'keydown' ? 'pressing enter' : 'mouse click') + '.');
+
+                    inp.value = item.getAttribute('data-name');
+
+                }
+            });
+        };
+
+        ajax.send();
+    });
+
     $('.completeIt').each(function (ind) {
         var inp = this, ajax = new XMLHttpRequest();
         ajax.open("GET",
@@ -157,6 +199,8 @@ $(function ($) {
 
     initValidation();
 
+    initMask();
+
 });
 
 $(window)
@@ -198,6 +242,12 @@ function docScrollTo(pos, speed, callback) {
             callback();
         }
     });
+}
+
+function initMask() {
+    $("input").filter(function (i, el) {
+        return $(el).attr('data-inputmask') !== void 0;
+    }).inputmask();
 }
 
 function checkHeader() {

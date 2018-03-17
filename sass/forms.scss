@@ -35,6 +35,42 @@
   }
 }
 
+.autocomplete_v2 {
+  //display: block !important;
+  max-width: 100%;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  background: #fff;
+  box-shadow: none;
+
+  .autocomplete-suggestion {
+    @include transition_all(color .3s);
+    @extend %clearfix;
+    position: relative;
+    padding: 9px 0;
+    color: #000;
+
+    &.selected {
+      background-color: transparent;
+      color: $violette;
+    }
+  }
+
+  .search_result {
+    white-space: normal;
+    font: 13px/1.2 $RubikMed;
+    padding: 3px 16px;
+  }
+
+  .search_date {
+    @extend .news_date;
+
+    + .search_result {
+      margin-right: 50px;
+    }
+  }
+}
+
 .search_input {
   display: block;
   position: relative;

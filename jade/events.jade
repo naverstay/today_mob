@@ -1,0 +1,91 @@
+include mixins.pug
+doctype html
+html(lang='ru')
+    +dev_head('Crypto events')
+
+    body.no_transition
+        .wrapper
+            .main_content
+                .section_inner
+                    +top_info()
+
+                    .attention_block._warn
+                        p Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate'
+
+                    .stat_holder
+                        .stat_holder_title
+                            span.icon-filter.clr_violette.stat_holder_icon
+                            span.clr_violette._fw_b Filter
+                            ul.stat_holder_controls
+                                li: a.stat_link(href='#') Clear
+
+                        form(action='#')
+                            .form_cell
+                                label.label_v1(for='filter_countries') Countries
+                                .input_w
+                                    input#filter_countries.input_v3(placeholder='' value='Russia')
+                            .form_cell
+                                label.label_v1(for='filter_cities') Cities
+                                .input_w
+                                    input#filter_cities.input_v3(placeholder='All cities')
+
+                            .form_cell
+                                label.label_v1(for='filter_date') Date
+                                .input_w
+                                    select#filter_date.date_select
+                                        option 22.10.2017
+                                        option 24.10.2017
+                                        option 26.10.2017
+                                    .select_arrow
+
+                    //-.stat_holder
+                        .stat_holder_title
+                            span.clr_violette._fw_b Crypto Converter
+                        form(action='#')
+                            .form_cell
+                                label.label_v1(for='xchange_give') I give
+                                .input_w._has_currency
+                                    input#xchange_give.input_v2(placeholder='')
+                                    .stat_currency BTC
+                            .form_cell
+                                label.label_v1(for='xchange_get') I get
+                                .input_w._has_currency
+                                    input#xchange_get.input_v2(placeholder='')
+                                    .stat_currency: .stat_select_w
+                                        select.stat_select
+                                            option USD
+                                            option UAH
+                                            option RUB
+                                        .select_arrow
+
+                    .stat_caption.clearfix
+                        span Events
+                        ul.stat_holder_controls
+                            li._first: a.stat_link(href='new_event.html') Submit events
+                            li: a.stat_link(href='#') Past
+                            li._active: a.stat_link(href='#') Future
+
+                    .related_title._stories Related Articles and News
+
+                    ul.news_list._related._stories
+                        +loop_while(3)
+                            li
+                                .news_item
+                                    .news_date 2 min<br>ago
+                                    a.news_name(href='#') Russia's Sberbank Has Launched&nbsp;a&nbsp;Blockchain Lab
+
+                            li
+                                .news_item
+                                    .news_date 1 hr<br>ago
+                                    a.news_name(href='#') PBoC Official Calls for Wider Ban on Chinese Crypto Trading
+
+                    .comments_block
+
+            .nav_holder
+                +header()
+                +main_menu(true)
+                +search()
+
+            +footer()
+
+        +scripts(true)
