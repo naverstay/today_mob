@@ -1,0 +1,67 @@
+include mixins.pug
+doctype html
+html(lang='ru')
+    +dev_head('Crypto about')
+
+    body.no_transition
+        .wrapper
+            .main_content
+                .section_inner
+                    +top_info()
+
+                    .attention_block._warn
+                        p Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate'
+
+                    .about_info
+                        .about_info_title
+                            .about_caption CryptoComes —<br>is a crypto community news platform that covers the crypto industry, Blockchain, AI and all new generation technology.
+
+                        .about_text
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.
+
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus
+
+                    .about_contacts
+                        .about_caption Contacts
+                        p We are also giving you useful tips and reference information that will help you deal with such a complex and burgeoning industry.
+                        ul.about_contacts_list
+                            li.icon-feather
+                                .contacts_caption Editorial
+                                a.contacts_link(href='#') @cryptocomes.com
+                            li.icon-lamp
+                                .contacts_caption Partnerships
+                                a.contacts_link(href='#') @cryptocomes.com
+                            li.icon-vial
+                                .contacts_caption Advertising
+                                a.contacts_link(href='#') @cryptocomes.com
+                            li.icon-heart
+                                .contacts_caption Other
+                                a.contacts_link(href='#') @cryptocomes.com
+
+                    .about_team_wrapper
+                        .about_caption Persons
+                        ul.about_team
+                            +loop_while(3)
+                                li
+                                    .team_unit
+                                        .team_unit_photo
+                                            img(src='i/person_1.png')
+                                        .team_unit_info
+                                            .team_unit_name Viola McCormick
+                                            .team_unit_post Office manager
+                                li
+                                    .team_unit
+                                        .team_unit_photo
+                                            img(src='i/person_1.png')
+                                        .team_unit_info
+                                            .team_unit_name Katharine Parsons
+                                            .team_unit_post Office manager
+
+            .nav_holder
+                +header()
+                +main_menu()
+                +search()
+
+            +footer()
+
+        +scripts()
