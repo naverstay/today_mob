@@ -192,3 +192,68 @@ textarea.input_v3 {
   vertical-align: top;
   margin-bottom: 7px;
 }
+
+.msg_block {
+  margin: 40px auto;
+  padding: 10px 20px;
+  text-align: center;
+  line-height: 18px;
+  font-size: 16px;
+
+  p {
+    letter-spacing: .02em;
+  }
+}
+
+.msg_title {
+  font: 22px/30px $RubikBold;
+  color: #202020;
+  margin-bottom: 12px;
+}
+
+.msg_status {
+  @extend %icon_pseudo;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border: 2px solid;
+  border-radius: 100%;
+  text-align: center;
+  margin: 18px 0 20px;
+
+  &._success {
+    color: #43a526;
+    border-color: #43a526;
+    line-height: 64px;
+    font-size: 36px;
+
+    &:before {
+      content: $icon-ufo_3;
+    }
+  }
+
+  &._fail {
+    color: #ff0a24;
+    border-color: #ff0a24;
+    line-height: 64px;
+    font-size: 26px;
+    margin-top: 18px;
+
+    &:before {
+      content: $icon-close;
+    }
+  }
+}
+
+.msg_link {
+  font: 14px $RubikMed;
+  text-decoration: underline;
+  color: $violette;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+

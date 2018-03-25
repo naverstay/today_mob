@@ -1,0 +1,37 @@
+include mixins.pug
+doctype html
+html(lang='ru')
+    +dev_head('Crypto главная')
+
+    body.no_transition
+        .wrapper
+            .main_content
+                .section_inner
+                    +top_info()
+
+                    .attention_block._warn
+                        p Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate'
+
+                    ul
+                        li: a(href='about.html') about.html
+                        li: a(href='amp.html') amp.html
+                        li: a(href='article.html') article.html
+                        li: a(href='cat_1.html') cat_1.html
+                        li: a(href='cat_2.html') cat_2.html
+                        li: a(href='events.html') events.html
+                        li: a(href='index.html') index.html
+                        li: a(href='new_event.html') new_event.html
+                        li: a(href='new_release.html') new_release.html
+                        li: a(href='press_release.html') press_release.html
+                        li: a(href='price.html') price.html
+                        li: a(href='success.html') success.html
+                        li: a(href='fail.html') fail.html
+
+            .nav_holder
+                +header()
+                +main_menu()
+                +search()
+
+            +footer()
+
+        +scripts()

@@ -188,65 +188,11 @@
     padding-right: 17px;
   }
 
-  ._news &,
-  ._stories &,
-  ._top & {
-    &:before {
-      background: $violette;
-    }
-  }
-
-  ._release & {
-    &:before {
-      background: $pink;
-    }
-  }
-
-  ._analysis & {
-    &:before {
-      background: $green;
-    }
-  }
-
-  ._pricewise & {
-    &:before {
-      background: $green;
-    }
-  }
-
-  ._sponsored & {
-    &:before {
-      background: $green_2;
-    }
-  }
-
-  ._pool & {
-    &:before {
-      background: $blue;
-    }
-  }
-
-  ._features & {
-    &:before {
-      background: $red;
-    }
-  }
-
-  ._wiki & {
-    &:before {
-      background: $brown;
-    }
-  }
-
-  ._watch & {
-    &:before {
-      background: $violette_2;
-    }
-  }
-
-  ._crypto & {
-    &:before {
-      background: $brown_2;
+  @each $cls, $color in $firm-colors {
+    .#{$cls} & {
+      &:before {
+        background: $color;
+      }
     }
   }
 }
@@ -275,46 +221,10 @@
     left: 50%;
   }
 
-  &._news,
-  &._stories,
-  &._top {
-    background: transparentize($violette, .2);
-  }
-
-  &._release {
-    background: transparentize($pink, .2);
-  }
-
-  &._analysis {
-    background: transparentize($orange, .2);
-  }
-
-  &._pricewise {
-    background: transparentize($green, .2);
-  }
-
-  &._sponsored {
-    background: transparentize($green_2, .2);
-  }
-
-  &._pool {
-    background: transparentize($blue, .2);
-  }
-
-  &._features {
-    background: transparentize($red, .2);
-  }
-
-  &._wiki {
-    background: transparentize($brown, .2);
-  }
-
-  &._watch {
-    background: transparentize($violette_2, .2);
-  }
-
-  &._crypto {
-    background: transparentize($brown_2, .2);
+  @each $cls, $color in $firm-colors {
+    &.#{$cls} {
+      background: transparentize($color, .2);
+    }
   }
 }
 
@@ -496,66 +406,10 @@
     }
   }
 
-  &._news,
-  &._stories,
-  &._top {
-    //&:before {
-    background: $violette;
-    //}
-  }
-
-  &._release {
-    //&:before {
-    background: $pink;
-    //}
-  }
-
-  &._analysis {
-    //&:before {
-    background: $orange;
-    //}
-  }
-
-  &._pricewise {
-    //&:before {
-    background: $green;
-    //}
-  }
-
-  &._sponsored {
-    //&:before {
-    background: $green_2;
-    //}
-  }
-
-  &._pool {
-    //&:before {
-    background: $blue;
-    //}
-  }
-
-  &._features {
-    //&:before {
-    background: $red;
-    //}
-  }
-
-  &._wiki {
-    //&:before {
-    background: $brown;
-    //}
-  }
-
-  &._crypto {
-    //&:before {
-    background: $brown_2;
-    //}
-  }
-
-  &._watch {
-    //&:before {
-    background: $violette_2;
-    //}
+  @each $cls, $color in $firm-colors {
+    &.#{$cls} {
+      background: $color;
+    }
   }
 }
 
@@ -591,85 +445,56 @@
     text-align: center;
   }
 
+  @each $cls, $color in $firm-colors {
+    .#{$cls} & {
+      &:before {
+        color: $color;
+      }
+    }
+  }
+
+  @each $cls, $content in $firm-icons {
+    .#{$cls} & {
+      &:before {
+        content: $content;
+      }
+    }
+  }
+
   &._news {
     background-image: url(../i/stories_bg.svg);
-
-    &:before {
-      content: $icon-ufo;
-      color: $violette;
-    }
   }
 
   &._stories {
     background-image: url(../i/stories_bg.svg);
-
-    &:before {
-      content: $icon-crypto;
-      color: $violette;
-    }
   }
 
   &._features {
     background-image: url(../i/features_bg.svg);
-
-    &:before {
-      content: $icon-star;
-      color: $red;
-    }
   }
 
   &._pool {
     background-image: url(../i/sharks_pool_bg.svg);
-
-    &:before {
-      content: $icon-shark;
-      color: $blue;
-    }
   }
 
   &._analysis {
     background-image: url(../i/pricewise_bg.svg);
-
-    &:before {
-      content: $icon-splash;
-      color: $green;
-    }
   }
 
   &._pricewise {
     background-image: url(../i/pricewise_bg.svg);
-
-    &:before {
-      content: $icon-splash;
-      color: $green;
-    }
   }
 
   &._crypto {
     background-image: url(../i/crypto.svg);
-
-    &:before {
-      content: $icon-lamp;
-      color: $brown;
-    }
   }
 
   &._wiki {
     background-image: url(../i/wikicoin_bg.svg);
-
-    &:before {
-      content: $icon-startwo;
-      color: $brown_2;
-    }
   }
 
   &._watch {
     background-image: url(../i/ico_bg.svg);
-
-    &:before {
-      content: $icon-ico;
-      color: $violette_2;
-    }
   }
 }
 
