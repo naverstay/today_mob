@@ -1,4 +1,4 @@
-var $wnd, $body, $header, $footer,
+var $wnd, $body, $header, $footer, $followPopup,
     $subscribeTrigger, $subscribeBlock, $goTop, $goTopHolder, didScroll,
     lastScrollTop = 0, delta = 5,
     subscribe_spacer = 270;
@@ -201,6 +201,8 @@ $(function ($) {
 
     initMask();
 
+    initFollowPopup();
+
 });
 
 $(window)
@@ -242,6 +244,49 @@ function docScrollTo(pos, speed, callback) {
             callback();
         }
     });
+}
+
+function plural(n, str1, str2, str5) {
+	return n + ' ' + ((((n % 10) == 1) && ((n % 100) != 11)) ? (str1) : (((((n % 10) >= 2) && ((n % 10) <= 4)) && (((n % 100) < 10) || ((n % 100) >= 20))) ? (str2) : (str5)))
+}
+
+function initFollowPopup() {
+
+    $followPopup = $('#follow_popup').dialog({
+        autoOpen: true,
+        modal: true,
+        closeOnEscape: true,
+        closeText: '',
+        dialogClass: 'dialog_v1',
+        //appendTo: '.wrapper',
+        width: 600,
+        draggable: true,
+        collision: "fit",
+        position: {my: "top center", at: "top center", of: window},
+        open: function (event, ui) {
+            $body.addClass('modal_opened overlay_v2');
+
+            startFollowCountDown();
+        },
+        close: function (event, ui) {
+            $body.removeClass('modal_opened overlay_v2');
+        }
+    });
+}
+
+function startFollowCountDown() {
+    var time = 20;
+
+    followCountDown = setInterval(function () {
+        time--;
+
+        $('.followCounter').text(plural(time, 'second', 'seconds', 'seconds'));
+
+        if (!time) {
+            clearInterval(followCountDown);
+            $followPopup.dialog('close');
+        }
+    }, 1000);
 }
 
 function initMask() {

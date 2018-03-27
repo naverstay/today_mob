@@ -257,3 +257,40 @@ textarea.input_v3 {
   }
 }
 
+.follow_caption {
+  font: 20px/1.15 $RubikBold;
+  padding: 20px 0 10px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.follow_tips {
+  font: 16px/1.2 $RubikReg;
+  margin-bottom: 20px;
+  min-height: 110px;
+  text-align: center;
+}
+
+.follow_counter {
+  text-align: center;
+  color: #bdbdbd;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font: 14px/1.2 $RubikReg;
+}
+
+.follow_widget {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.dialog_v1 {
+  position: fixed;
+  max-width: 95%;
+
+  .ui-widget-header {
+    border: 0;
+    background-color: transparent;
+  }
+}
+
