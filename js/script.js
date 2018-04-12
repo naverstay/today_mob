@@ -1,4 +1,4 @@
-var $wnd, $body, $header, $footer, $followPopup,
+var $wnd, $body, $header, $footer, $followPopup, currencySlider,
     $subscribeTrigger, $subscribeBlock, $goTop, $goTopHolder, didScroll,
     lastScrollTop = 0, delta = 5,
     subscribe_spacer = 270;
@@ -203,6 +203,12 @@ $(function ($) {
 
     initFollowPopup();
 
+    initCurrencySlider();
+
+    initMainBlockSlider();
+
+    initSmallBlockSlider();
+
 });
 
 $(window)
@@ -247,13 +253,58 @@ function docScrollTo(pos, speed, callback) {
 }
 
 function plural(n, str1, str2, str5) {
-	return n + ' ' + ((((n % 10) == 1) && ((n % 100) != 11)) ? (str1) : (((((n % 10) >= 2) && ((n % 10) <= 4)) && (((n % 100) < 10) || ((n % 100) >= 20))) ? (str2) : (str5)))
+    return n + ' ' + ((((n % 10) == 1) && ((n % 100) != 11)) ? (str1) : (((((n % 10) >= 2) && ((n % 10) <= 4)) && (((n % 100) < 10) || ((n % 100) >= 20))) ? (str2) : (str5)))
+}
+
+function initCurrencySlider() {
+    currencySlider = new Swiper('.currencySlider', {
+        setWrapperSize: false,
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+        freeMode: true,
+        watchOverflow: true,
+        roundLengths: true,
+        navigation: false
+    });
+}
+
+function initMainBlockSlider() {
+    currencySlider = new Swiper('.mainBlockSlider', {
+        setWrapperSize: false,
+        slidesPerView: 'auto',
+        spaceBetween: 16,
+        freeMode: true,
+        watchOverflow: true,
+        roundLengths: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        threshold: 10,
+        touchAngle: 15,
+        navigation: false
+    });
+}
+
+function initSmallBlockSlider() {
+    currencySlider = new Swiper('.smallBlockSlider', {
+        setWrapperSize: false,
+        slidesPerView: 'auto',
+        spaceBetween: 16,
+        freeMode: true,
+        watchOverflow: true,
+        roundLengths: true,
+        pagination: false,
+        threshold: 10,
+        touchAngle: 15,
+        navigation: false
+    });
 }
 
 function initFollowPopup() {
 
     $followPopup = $('#follow_popup').dialog({
-        autoOpen: true,
+        autoOpen: false,
         modal: true,
         closeOnEscape: true,
         closeText: '',

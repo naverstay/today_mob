@@ -24,55 +24,82 @@ mixin loop_while(counter)
         -i++;
         block
 
-mixin action_list()
+mixin action_list(hide_soc_text)
   ul.action_list
     li: a.action_link._w(href='#')
       - if (amp)
         .action_link_icon
           +svg_icon('tw')
-      span Twitter
+      -if (!hide_soc_text)
+        span Twitter
     li: a.action_link._t(href='#')
       - if (amp)
         .action_link_icon
           +svg_icon('tg')
-      span Telegram
+      -if (!hide_soc_text)
+        span Telegram
     li: a.action_link._f(href='#')
       - if (amp)
         .action_link_icon
           +svg_icon('fb')
-      span Facebook
-    li: a.action_link._r(href='#')
-      - if (amp)
-        .action_link_icon
-          +svg_icon('rss')
-      span RSS
+      -if (!hide_soc_text)
+        span Facebook
+
     li: a.action_link._y(href='#')
       - if (amp)
         .action_link_icon
           +svg_icon('youtube')
-      span Youtube
+      -if (!hide_soc_text)
+        span Youtube
+    li: a.action_link._rd(href='#')
+      - if (amp)
+        .action_link_icon
+          +svg_icon('youtube')
+      -if (!hide_soc_text)
+        span Reddit
+    li: a.action_link._r(href='#')
+      - if (amp)
+        .action_link_icon
+          +svg_icon('rss')
+      -if (!hide_soc_text)
+        span RSS
 
-mixin footer(white)
+mixin footer(white, hide_soc_text)
     .footer(class= white ? '_white' : '')
         .section_inner
-            ul.footer_menu
-                li: a.footer_link(href='#') News
-                li: a.footer_link(href='#') Features
-                li: a.footer_link(href='#') Sharks pool
-                li: a.footer_link(href='#') Price analysis
-                li: a.footer_link(href='#') Share insight
-                li: a.footer_link(href='about.html') About us
+            .footer_menu_wrapper
+                ul.footer_menu
+                    li: a.footer_link(href='#') News
+                    li: a.footer_link(href='#') Features
+                    li: a.footer_link(href='#') Sharks Pool
+                    li: a.footer_link(href='#') PriceWise
+                    li: a.footer_link(href='#') CryptoTips
+                    li: a.footer_link(href='#') ICO Watch
+                    li: a.footer_link(href='#') WikiCoin
+                    li: a.footer_link(href='#') AI
+                ul.footer_menu
+                    li: a.footer_link(href='#') Press Releases
+                    li: a.footer_link(href='#') Submit Press Release 
+                    li: a.footer_link(href='#') CryptoEvents 
+                    li: a.footer_link(href='#') Submit your Event 
+                    li: a.footer_link(href='#') Advertise with Us
+                    li: a.footer_link(href='#') CryptoFeeds
+                    li: a.footer_link(href='about.html') About us
 
-            .footer_logo
+            //-.footer_logo
                 a.logo(href='index.html')
                     - if (amp)
                         amp-img(src= white ? 'i/logo_f_v.png' : 'i/logo_c.svg', width='198', height='113', alt='logo')
                     - else
                         img(src= white ? 'i/logo_f_v.png' : 'i/logo_c.svg')
+            .footer_subscribe_holder
+                p Follow us and get all crypto news 24/7
+                p
+                    a.btn_v1.btn_violette_3.subscribe_btn_email(href='#') SUBSCRIBE BY EMAIL
 
-            p Follow us with:
+                +action_list(hide_soc_text)
 
-            +action_list()
+            .copyright ©2018 CryptoComes. All rights reserved.
 
         .go_top_holder.goTopHolder
             .section_inner
@@ -115,25 +142,32 @@ mixin top_info()
                     +svg_icon('triangle')
             .select_overlay
         .currency_info
-            .currency_info_table
-                .currency_info_cell
-                    p
-                        span BTC
-                        span.clr_red_2 (-8.82%)
-                    p
-                        span.currency_val 2636.79
-                .currency_info_cell
-                    p
-                        span BCH
-                        span.clr_green (+10.82%)
-                    p
-                        span.currency_val 3236.51
-                .currency_info_cell
-                    p
-                        span ETH
-                        span.clr_red_2 (-8.82%)
-                    p
-                        span.currency_val 26236.79
+            .swiper-container.currencySlider
+                .currency_info_table.swiper-wrapper
+                    +loop_while(2)
+                        .currency_info_cell.swiper-slide
+                            p
+                                span: b BTC
+                                a.trend._down(href='#') -8.82%
+                            p
+                                span.currency_val 2636.79
+                        .currency_info_cell.swiper-slide
+                            p
+                                span: b BCH
+                                a.trend._up(href='#') +8.82%
+                            p
+                                span.currency_val 3236.51
+                        .currency_info_cell.swiper-slide
+                            p
+                                span: b ETH
+                                a.trend._down(href='#') -8.82%
+                            p
+                                span.currency_val 26236.79
+
+    - if (!amp)
+        a.attention_block._warn(href='#')
+            .attention_text BREAKING
+            p Bears Drag Bitcoin Price to $8,350. Litecoin Holds On, Monero and NEO
 
 mixin main_menu(subscribe)
     - if (subscribe)
@@ -169,29 +203,49 @@ mixin main_menu(subscribe)
                 +action_list()
 
     .main_menu_holder(layout= (amp ? 'nodisplay' : null))
-        ul.main_menu
-            li.menu_item
-                a.menu_link(href='#') News
-            li.menu_item
-                a.menu_link(href='#') Features
-            li.menu_item
-                a.menu_link(href='#') Sharks pool
-            li.menu_item
-                a.menu_link(href='price.html') Price analysis
-            li.menu_item
-                a.menu_link(href='#') Share insight
-            li.menu_item
-                a.menu_link(href='about.html') About us
+        .search_block
+            form(action='#')
+                .form_cell
+                    input.completeIt.search_input(placeholder='Search Cryptocomes.com')
+                    button.filter_btn
+
+        .main_menu_wrapper
+            ul.main_menu
+                li.menu_item
+                    a.menu_link(href='#') News
+                li.menu_item
+                    a.menu_link(href='#') Features
+                li.menu_item
+                    a.menu_link(href='#') Sharks Pool
+                li.menu_item
+                    a.menu_link(href='#') PriceWise
+                li.menu_item
+                    a.menu_link(href='#') CryptoTips
+                li.menu_item
+                    a.menu_link(href='#') ICO Watch
+                li.menu_item
+                    a.menu_link(href='#') WikiCoin
+                li.menu_item
+                    a.menu_link(href='#') AI
+            ul.main_menu
+                li.menu_item
+                    a.menu_link(href='price.html') Press Releases
+                li.menu_item
+                    a.menu_link(href='#') CryptoEvents
+                li.menu_item
+                    a.menu_link(href='about.html') About us
+                li.menu_item
+                    a.menu_link(href='about.html') Advertise with Us
 
         .menu_footer.subscribeBlock
-            .footer_subscribe
+            //-.footer_subscribe
                 a.subscribe_close.subscribeClose(href='#')
                 a.subscribe_link.subscribeLink(href='#') Subscribe with your email
 
             .footer_action
-                p Follow us with:
+                //-p Follow us with:
 
-                +action_list()
+                +action_list(true)
 
             .footer_form
                 form.validateMe.formParent.subscribeForm(action='#')
@@ -271,8 +325,16 @@ mixin search()
 mixin header()
     .header
         .section_inner
-            a.menu_btn.menuBtn(href='#' on= (amp ? 'tap:header-sidebar.toggle' : null) aria-label= (amp ? 'open sidebar' : null))
+            //-a.menu_btn.menuBtn(href='#' on= (amp ? 'tap:header-sidebar.toggle' : null) aria-label= (amp ? 'open sidebar' : null))
                 span
+
+            .lang_block
+                select.lang_select
+                    option EN
+                    option RU
+                .select_arrow
+
+
             .logo_block
                 a.logo(href='index.html')
                     - if (amp)
@@ -280,8 +342,10 @@ mixin header()
                     - else
                         img(src='i/logo_h.svg')
 
+            a.menu_btn.menuBtn(href='#' on= (amp ? 'tap:header-sidebar.toggle' : null) aria-label= (amp ? 'open sidebar' : null))
+                span
 
-            a.search_btn.searchBtn(href='#' on= (amp ? 'tap:search-sidebar.toggle' : null) aria-label= (amp ? 'open sidebar' : null))
+            //-a.search_btn.searchBtn(href='#' on= (amp ? 'tap:search-sidebar.toggle' : null) aria-label= (amp ? 'open sidebar' : null))
                 - if (amp)
                     span.search_btn_icon
                         +svg_icon('search')
@@ -409,7 +473,7 @@ mixin svg_icon(icon)
         </svg>
 
 mixin scripts(share)
-    link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Rubik:400,500,700', media='all')
+    link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=cyrillic', media='all')
     link(rel='stylesheet', href='//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css', media='all')
 
     -if (!prod)
@@ -424,10 +488,10 @@ mixin scripts(share)
     - else
         script(src='js/jquery1.10.js?t=' + time)
         script(src='//code.jquery.com/ui/1.12.1/jquery-ui.js')
+        script(src='js/swiper.min.js?t=' + time)
         script(src='js/auto-complete.js?t=' + time)
         script(src='js/jquery.inputmask.bundle.js?t=' + time)
         script(src='js/jquery.validationEngine.js?t=' + time)
         script(src='js/jquery.validationEngine-ru.js?t=' + time)
-        script(src='js/slick.js?t=' + time)
         script(src='js/jquery.sticky-kit.min.js?t=' + time)
         script(src='js/script.js?t=' + time)

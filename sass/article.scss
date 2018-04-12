@@ -59,7 +59,7 @@
   }
 
   &:before {
-    content: $icon-ufo;
+    content: unicode($icon-ufo);
     position: absolute;
     top: 0;
     right: 7px;
@@ -261,7 +261,7 @@
     line-height: 26px;
 
     &:before {
-      content: $icon-share-alt;
+      content: unicode($icon-share-alt);
       font-size: 14px;
       line-height: 26px;
     }
@@ -269,7 +269,7 @@
 
   &._f {
     &:before {
-      content: $icon-fb;
+      content: unicode($icon-fb);
     }
 
     ._brand & {
@@ -279,7 +279,7 @@
 
   &._t {
     &:before {
-      content: $icon-tw;
+      content: unicode($icon-tw);
     }
 
     ._brand & {
@@ -289,7 +289,7 @@
 
   &._tg {
     &:before {
-      content: $icon-tg;
+      content: unicode($icon-tg);
     }
 
     ._brand & {
@@ -299,19 +299,19 @@
 
   &._g {
     &:before {
-      content: $icon-gp;
+      content: unicode($icon-gp);
     }
   }
 
   &._l {
     &:before {
-      content: $icon-in;
+      content: unicode($icon-in);
     }
   }
 
   &._i {
     &:before {
-      content: $icon-inst;
+      content: unicode($icon-inst);
     }
 
     ._brand & {
@@ -321,25 +321,25 @@
 
   &._p {
     &:before {
-      content: $icon-pint;
+      content: unicode($icon-pint);
     }
   }
 
   &._s {
     &:before {
-      content: $icon-stm;
+      content: unicode($icon-stm);
     }
   }
 
   &._tm {
     &:before {
-      content: $icon-tmblr;
+      content: unicode($icon-tmblr);
     }
   }
 
   &._rd {
     &:before {
-      content: $icon-rd;
+      content: unicode($icon-rd);
     }
 
     ._brand & {
@@ -615,5 +615,20 @@
   ._hash {
     color: #c0c0c0;
     font: 9px $RubikMed;
+  }
+}
+
+.offer_block {
+  background: #f6f7f7;
+  margin: 4px 0 20px;
+  padding: 15px 10px 20px;
+  text-align: center;
+  font: 16px/19px $RubikMed;
+
+  p {
+
+    + p {
+      margin-top: 15px;
+    }
   }
 }

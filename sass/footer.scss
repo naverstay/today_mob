@@ -5,15 +5,16 @@
 .footer {
   @if ($amp_ver) {
     background: url(i/footer_bg_2.svg) no-repeat 50% 50%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   } @else {
-    background: url(../i/footer_bg_2.svg) no-repeat 50% 50%;
+    //background: url(../i/footer_bg_2.svg) no-repeat 50% 50%;
+    background: $violette;
   }
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  padding: 32px 0 30px;
-  text-align: center;
+
+  padding: 24px 0 0;
   position: relative;
 
   p {
@@ -52,24 +53,51 @@
   }
 }
 
+.footer_subscribe_holder {
+  background: $violette_dark;
+  margin: 0 -16px;
+  padding: 18px 30px 15px;
+
+  p {
+    margin-bottom: 5px;
+
+    + p {
+      margin-top: 18px;
+    }
+  }
+
+  .action_list {
+    margin: 0 -20px;
+  }
+}
+
+.copyright {
+  padding: 19px 14px;
+  color: #fff;
+  font: 12px/14px $RubikReg;
+}
+
+.footer_menu_wrapper {
+  @extend %clearfix;
+  padding: 0 5px 15px;
+}
+
 .footer_menu {
+  float: left;
+  width: 50%;
+  padding-left: 10px;
   list-style: none;
-  text-align: center;
-  padding: 0 25px 12px;
 
   li {
-    display: inline-block;
-    vertical-align: top;
-    padding: 0 10px;
-    margin-bottom: 18px;
+    display: block;
+    margin-bottom: 13px;
   }
 }
 
 .footer_link {
   color: #fff;
-  text-decoration: underline;
-  font: 16px $RubikMed;
-  letter-spacing: -.03em;
+  text-decoration: none;
+  font: 12px $RubikReg;
 }
 
 .footer_logo {
@@ -121,7 +149,7 @@
     @extend %icon_pseudo;
 
     &:before {
-      content: $icon-arrow-up;
+      content: unicode($icon-arrow-up);
     }
   }
 

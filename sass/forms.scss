@@ -79,10 +79,9 @@
   color: #fff;
   border: 0;
   background: none;
-  font: 16px/1 $RubikMed;
-  border-radius: 24px;
-  height: 48px;
-  padding: 16px 56px 16px 36px;
+  font: 14px/16px $RubikReg;
+  height: 38px;
+  padding: 11px 36px 11px 36px;
 }
 
 .input_v1 {
@@ -230,7 +229,7 @@ textarea.input_v3 {
     font-size: 36px;
 
     &:before {
-      content: $icon-ufo_3;
+      content: unicode($icon-ufo_3);
     }
   }
 
@@ -242,7 +241,7 @@ textarea.input_v3 {
     margin-top: 18px;
 
     &:before {
-      content: $icon-close;
+      content: unicode($icon-close);
     }
   }
 }

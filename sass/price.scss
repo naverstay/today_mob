@@ -426,7 +426,7 @@
 
       &:before {
         @include transition_all(transform .3s, color .3s, margin .3s);
-        content: $icon-triangle;
+        content: unicode($icon-triangle);
         position: absolute;
         left: 100%;
         margin-left: 46px;

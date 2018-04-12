@@ -1,41 +1,101 @@
+%icon_pseudo {
+
+  &:after,
+  &:before { /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: $icomoon-font-name !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
 .top_info {
   @extend %clearfix;
   margin: 0 -16px;
-  padding: 12px 6px 8px;
-  background: #f7f8f8;
+  padding: 8px 6px 8px;
+  background: #f6f7f7;
   margin-bottom: 12px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, .25);
 }
 
 .currency_switcher {
   position: relative;
   float: left;
-  width: 40px;
+  width: 44px;
 }
 
 .currency_info {
-  margin-left: 40px;
+  margin-left: 44px;
   font-family: $RubikReg;
 }
 
 .currency_info_table {
-  display: table;
-  width: 100%;
-  font-size: 12px;
+  font: 12px $RubikReg;
 }
 
 .currency_info_cell {
-  display: table-cell;
-  vertical-align: top;
-  padding-left: 6px;
+  width: auto !important;
+  padding-right: 18px;
+  padding-top: 2px;
+  min-width: 92px;
 
-  span {
-    padding-right: 4px;
+  .trend {
+    @extend %icon_pseudo;
+    position: relative;
+    white-space: nowrap;
+    padding: 0 0 0 5px;
+    color: #828282;
+    text-decoration: none;
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 5px;
+      height: 1px;
+      background: #828282;
+    }
+
+    &:after {
+      font-size: 8px;
+    }
+
+    &._up {
+      color: rgba(46, 155, 14, 0.9);
+
+      &:before {
+        background: rgba(46, 155, 14, 0.9);
+      }
+
+      &:after {
+        content: unicode(' ' + $icon-asc);
+      }
+    }
+
+    &._down {
+      color: #ff0a24;
+
+      &:before {
+        background: #ff0a24;
+      }
+
+      &:after {
+        content: unicode(' ' + $icon-desc);
+      }
+    }
   }
 
   p {
-
     + p {
-      margin-top: 5px;
+      margin-top: 1px;
     }
   }
 }
@@ -45,9 +105,9 @@ html body .currency_select {
   display: block;
   width: 48px;
   height: 48px;
-  padding-left: 6px;
+  padding-left: 15px;
   margin: -8px 0 -8px -6px;
-  font: 24px $RubikMed;
+  font: 27px $RubikMed;
   color: $violette;
   border: none;
   position: relative;
@@ -73,12 +133,56 @@ html body .currency_select {
   }
 }
 
+.lang_block {
+  z-index: 7;
+  position: absolute;
+  left: 5px;
+  top: 0;
+}
+
+.lang_select {
+  @include transition_all(border .3s, color .3s);
+  display: block;
+  padding: 2px 16px 0 7px;
+  font: 16px/46px $RubikMed;
+  color: #fff;
+  position: relative;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  height: 48px;
+  text-transform: uppercase;
+
+  + .select_arrow {
+    color: #fff;
+    line-height: 32px;
+  }
+
+  &:hover {
+    background: $violette_2;
+  }
+
+  &:focus {
+    background: $violette_2;
+
+    + .select_arrow {
+      -webkit-transform: rotate(180deg) translate(0, 4px);
+      -ms-transform: rotate(180deg) translate(0, 4px);
+      transform: rotate(180deg) translate(0, 4px);
+    }
+
+    ~ .select_overlay {
+      height: 10000px;
+    }
+  }
+}
+
 .select_arrow {
   @include transition_all(transform .3s, color .3s);
   position: absolute;
   top: 10px;
-  right: 7px;
-  font-size: 10px;
+  right: 5px;
+  font-size: 7px;
   color: $violette;
   pointer-events: none;
   transform-origin: 50% 50%;
@@ -92,7 +196,7 @@ html body .currency_select {
   } @else {
     @extend %icon_pseudo;
     &:before {
-      content: $icon-triangle;
+      content: unicode($icon-triangle);
     }
   }
 }

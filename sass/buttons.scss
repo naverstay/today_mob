@@ -1,20 +1,50 @@
 //************  buttons
 
 .btn_v1 {
-  height: 48px;
+  height: 40px;
+
+  &.offer_btn {
+    display: block;
+    text-align: center;
+    font: 14px/20px $RubikBold;
+    padding: 10px 5px;
+    margin: 0 22px;
+    text-transform: uppercase;
+
+    .btn_icon {
+      font-size: 16px;
+      padding-left: 7px;
+    }
+  }
+
+  &.subscribe_btn_email {
+    display: inline-block;
+    vertical-align: top;
+    font: 14px/20px $RubikBold;
+    padding: 10px 16px;
+    text-transform: uppercase;
+  }
 
   &.more_btn {
-    @extend %icon_pseudo;
+    //@extend %icon_pseudo;
     cursor: pointer;
     display: block;
     text-align: center;
     font: 13px/18px $RubikMed;
-    padding: 15px;
+    padding: 10px;
 
-    &:before {
-      content: $icon-triangle;
-      margin: 0 12px 0 -12px;
-      font-size: 9px;
+    &:after {
+      //content: unicode($icon-triangle);
+      //margin: 0 12px 0 -12px;
+      //font-size: 9px;
+
+      content: '';
+      display: inline-block;
+      vertical-align: 0;
+      margin-left: 4px;
+      border-top: 5px solid transparent;
+      border-left: 6px solid #ddd;
+      border-bottom: 5px solid transparent;
     }
   }
 
@@ -160,8 +190,8 @@
 }
 
 .gray_btn {
-  color: $violette;
-  background: #f7f8f8;
+  color: #415cba;
+  border: 1px solid #eee;
 }
 
 .gray_btn_2 {
@@ -178,14 +208,14 @@
 
 .btn_violette_2 {
   @include transition_all(background .3s, color .3s);
-  border: 2px solid rgba(0, 0, 0, .1);
   background: $violette;
   color: #fff;
+}
 
-  &:hover {
-    background: #fff;
-    color: $violette;
-  }
+.btn_violette_3 {
+  @include transition_all(background .3s, color .3s);
+  background: #5b3bec;
+  color: #fff;
 }
 
 .btn_red {

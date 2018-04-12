@@ -5,7 +5,7 @@
 
   &:before {
     @extend %hor_centr;
-    content: $icon-ufo;
+    content: unicode($icon-ufo);
     position: absolute;
     top: -117px;
     padding-left: 12px;
@@ -158,7 +158,7 @@
     letter-spacing: .075em;
 
     &:before {
-      content: $icon-ufo;
+      content: unicode($icon-ufo);
       position: absolute;
       bottom: -37px;
       right: -35px;

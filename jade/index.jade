@@ -9,326 +9,417 @@ html(lang='ru')
                 .section_inner
                     +top_info()
 
-                    .attention_block._warn
-                        p Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate'
+                    .article_group_title._news
+                        h1 News
 
-                    .article_block.story_block._main._stories
+                    .article_block.story_block._main
                         .article_img
-                            ul.article_tags
-                                li
-                                    span.icon-crypto.article_tag._top
-                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                a.article_action_btn.actionBtn(href='#' )
-                            a.article_img_link(href='#'): img(src='i/sberbank.jpg')
+                            a.article_img_link(href='#'): img(src='i/bear.jpg')
 
                         .article_title
-                            a.article_link.clr_violette(href='#') Blockchain and the Rise of Transaction Technol…
+                            .article_action: .article_action_inner
+                                a.article_action_btn.actionBtn(href='#' )
+                            p: a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
                             ul.article_stat
                                 li
-                                    span.article_stat_val._stat_views 212
+                                    a.article_stat_val(href='#') John Doe
                                 li
-                                    span.article_stat_val 2 minutes ago
+                                    span.article_stat_val._stat_time 2h
+                                li
+                                    span.article_stat_val._stat_views 212
 
+                    ul.news_list
+                        +loop_while(3)
+                            li
+                                .news_item
+                                    p: a.news_name(href='#') EOS Bounces Back Despite John Oliver Slam, Up 35 Percent This Week
+                                    .article_action: .article_action_inner
+                                        a.article_action_btn.actionBtn(href='#' )
+
+                                    ul.article_stat
+                                        li
+                                            a.article_stat_val(href='#') John Doe
+                                        li
+                                            span.article_stat_val._stat_time 2h
+                                        li
+                                            span.article_stat_val._stat_views 212
+
+                    .article_controls
+                        a.btn_v1.more_btn.gray_btn(href='#') View All
+
+                    .group_line._stories
+
+                    .article_group_title._stories
+                        h1 stories
+
+                    .article_block.story_block._main
+                        .article_img
+                            a.article_img_link(href='#'): img(src='i/bear.jpg')
+
+                        .article_title
+                            .article_action: .article_action_inner
+                                a.article_action_btn.actionBtn(href='#' )
+                            p: a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
+                            ul.article_stat
+                                li
+                                    a.article_stat_val(href='#') John Doe
+                                li
+                                    span.article_stat_val._stat_time 2h
+                                li
+                                    span.article_stat_val._stat_views 212
+
+                    ul.news_list
+                        li
+                            .news_item._wide
+                                .article_img
+                                    ul.article_tags
+                                        li
+                                            span.icon-say.article_tag._features
+                                                span Features
+                                    a.article_img_link(href='#'): img(src='i/bear.jpg')
+
+                                p: a.news_name(href='#') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
+                                .article_action: .article_action_inner
+                                    a.article_action_btn.actionBtn(href='#' )
+
+                                ul.article_stat
+                                    li
+                                        a.article_stat_val(href='#') John Doe
+                                    li
+                                        span.article_stat_val._stat_time 2h
+                                    li
+                                        span.article_stat_val._stat_views 212
+                        li
+                            .news_item._wide
+                                .article_img
+                                    ul.article_tags
+                                        li
+                                            span.icon-say.article_tag._pricewise
+                                                span PRISEWISE
+                                    a.article_img_link(href='#'): img(src='i/bear.jpg')
+
+                                p: a.news_name(href='#') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
+                                .article_action: .article_action_inner
+                                    a.article_action_btn.actionBtn(href='#' )
+
+                                ul.article_stat
+                                    li
+                                        a.article_stat_val(href='#') John Doe
+                                    li
+                                        span.article_stat_val._stat_time 2h
+                                    li
+                                        span.article_stat_val._stat_views 212
+                        li
+                            .news_item._wide
+                                .article_img
+                                    ul.article_tags
+                                        li
+                                            span.icon-say.article_tag._wiki
+                                                span WIKICOIN
+                                    a.article_img_link(href='#'): img(src='i/bear.jpg')
+
+                                p: a.news_name(href='#') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
+                                .article_action: .article_action_inner
+                                    a.article_action_btn.actionBtn(href='#' )
+
+                                ul.article_stat
+                                    li
+                                        a.article_stat_val(href='#') John Doe
+                                    li
+                                        span.article_stat_val._stat_time 2h
+                                    li
+                                        span.article_stat_val._stat_views 212
+
+                    .article_controls
+                        a.btn_v1.more_btn.gray_btn(href='#') View All
+
+                    .group_line._release
+
+                    .article_group_title._release
+                        h1 PRESS RELEASES
+
+                    .swiper-container.mainBlockSlider.main_block_slider
+                        .currency_info_table.swiper-wrapper
+                            +loop_while(4)
+                                .swiper-slide
+                                    .article_block.story_block._main
+                                        .article_img
+                                            a.article_img_link(href='#'): img(src='i/bear.jpg')
+
+                                        .article_title
+                                            .article_action: .article_action_inner
+                                                a.article_action_btn.actionBtn(href='#' )
+                                            p: a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
+                                            ul.article_stat
+                                                li
+                                                    a.article_stat_val(href='#') John Doe
+                                                li
+                                                    span.article_stat_val._stat_time 2h
+                                                li
+                                                    span.article_stat_val._stat_views 212
+
+                        .swiper-pagination.main_pagination
+
+                    .swiper-container.smallBlockSlider.main_block_slider
+                        .currency_info_table.swiper-wrapper
+                            +loop_while(4)
+                                .swiper-slide._small
+                                    .article_block.story_block._main
+                                        .article_img
+                                            a.article_img_link(href='#'): img(src='i/bear.jpg')
+
+                                        .article_title
+                                            .article_action: .article_action_inner
+                                                a.article_action_btn.actionBtn(href='#' )
+                                            p: a.article_link(href='#') Initial Coin Offerings Are For Everyone, Not Only the Rich
+                                            ul.article_stat
+                                                li._wide
+                                                    span.article_stat_val CocaCola Inc
+                                                li
+                                                    span.article_stat_val._stat_time 2h
+                                                li
+                                                    span.article_stat_val._stat_views 212
+
+                    .offer_block
+                        p Have something interesting
+                        p
+                            a.btn_v1.btn_violette_2.offer_btn(href='#')
+                                span SubMit A PRESS RELEASE
+                                span.btn_icon.icon-rocket
+
+                    .group_line._pricewise
+
+                    .article_group_title._pricewise
+                        h1 PRICEWISE
+
+                    .article_block.story_block._main
+                        .article_img
+                            a.article_img_link(href='#'): img(src='i/bear.jpg')
+
+                        .article_title
+                            .article_action: .article_action_inner
+                                a.article_action_btn.actionBtn(href='#' )
+                            p: a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
+                            ul.article_stat
+                                li
+                                    a.article_stat_val(href='#') John Doe
+                                li
+                                    span.article_stat_val._stat_time 2h
+                                li
+                                    span.article_stat_val._stat_views 212
+
+                    ul.news_list
                         ul.news_list
                             li
-                                .news_item
-                                    .news_date 2 min<br>ago
-                                    .news_name Russia's Sberbank Has Launched a Blockchain Lab
+                                .news_item._wide
+                                    .article_img
+                                        a.article_img_link(href='#'): img(src='i/bear.jpg')
 
-                            li
-                                .news_item
-                                    .news_date 1 hr<br>ago
-                                    .news_name KFC Canada Is Accepting Bitcoin for Fried Chicken
+                                    p: a.news_name(href='#') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
+                                    .article_action: .article_action_inner
+                                        a.article_action_btn.actionBtn(href='#' )
 
+                                    ul.article_stat
+                                        li
+                                            a.article_stat_val(href='#') John Doe
+                                        li
+                                            span.article_stat_val._stat_time 2h
+                                        li
+                                            span.article_stat_val._stat_views 212
                             li
-                                .news_item
-                                    .news_date 2 hr<br>ago
-                                    .news_name Ukraine Forms Cryptocurrency Oversigh…
+                                .news_item._wide
+                                    .article_img
+                                        a.article_img_link(href='#'): img(src='i/bear.jpg')
 
-                            li
-                                .news_item
-                                    .news_date 1 day<br>ago
-                                    .news_name Arizona Lawmakers Want to Let People Pay Taxes i…
+                                    p: a.news_name(href='#') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
+                                    .article_action: .article_action_inner
+                                        a.article_action_btn.actionBtn(href='#' )
 
-                            li
-                                .news_item
-                                    .news_date 29 hr<br>ago
-                                    .news_name US State Regulators Hit BitConnect With Second …
+                                    ul.article_stat
+                                        li
+                                            a.article_stat_val(href='#') John Doe
+                                        li
+                                            span.article_stat_val._stat_time 2h
+                                        li
+                                            span.article_stat_val._stat_views 212
 
                     .article_controls
-                        a.btn_v1.more_btn.gray_btn(href='#') More news
-
-                    .article_block.story_block._top
-                        .top_story_caption Top story
-                        .article_img
-                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                a.article_action_btn.actionBtn(href='#' )
-                            a.article_img_link(href='#'): img(src='i/tennessee.jpg')
-
-                        .article_title
-                            a.article_link(href='article.html') Tennessee Might Also Recognize Blockchain Data Through Propose…
-                            ul.article_stat
-                                li
-                                    a.article_theme(href='#') Explorer the theme
+                        a.btn_v1.more_btn.gray_btn(href='#') View All
 
                     #subscribeTrigger
-                    .article_group_title._stories
-                        span Stories
 
-                    .article_block
-                        .article_img
-                            ul.article_tags
-                                li
-                                    span.icon-shark.article_tag._pool
-                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                a.article_action_btn.actionBtn(href='#' )
-                            a.article_img_link(href='#'): img(src='i/sachs.jpg')
+                    .group_line._watch
 
-                        .article_title
-                            a.article_link(href='article.html') Goldman Sachs: Bitcoin Could Be Viable Mon…
-                            ul.article_stat
-                                li
-                                    span.article_stat_val._stat_views 212
-                                li
-                                    span.article_stat_val 2 minutes ago
-                                li
-                                    span.article_stat_val Ariel Deschapell
+                    .article_group_title._watch
+                        span ICO Watch
 
-                    .article_block
-                        .article_img
-                            ul.article_tags
-                                li
-                                    span.icon-say.article_tag._pricewise
-                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                a.article_action_btn.actionBtn(href='#' )
-                            a.article_img_link(href='#'): img(src='i/sachs.jpg')
+                    .swiper-container.mainBlockSlider.main_block_slider
+                        .currency_info_table.swiper-wrapper
+                            +loop_while(4)
+                                .swiper-slide
+                                    .article_block.story_block._main
+                                        .article_img
+                                            a.article_img_link(href='#'): img(src='i/bear.jpg')
 
-                        .article_title
-                            a.article_link(href='article.html') China's Internet Finance Association Warns on …
-                            ul.article_stat
-                                li
-                                    span.article_stat_val._stat_views 212
-                                li
-                                    span.article_stat_val 2 minutes ago
-                                li
-                                    span.article_stat_val Ariel Deschapell
+                                        .article_title
+                                            .article_action: .article_action_inner
+                                                a.article_action_btn.actionBtn(href='#' )
+                                            p: a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
+                                            ul.article_stat
+                                                li
+                                                    a.article_stat_val(href='#') John Doe
+                                                li
+                                                    span.article_stat_val._stat_time 2h
+                                                li
+                                                    span.article_stat_val._stat_views 212
 
-                    .article_block
-                        .article_img
-                            a.video_link._stories(href='#')
-                            a.article_img_link(href='#'): img(src='i/biosensor.jpg')
+                        .swiper-pagination.main_pagination
 
-                        .article_title._video
-                            a.article_link(href='article.html') Biosensor Analysis Tool - Human Behaviour Research Synchroniz…
-                            ul.article_stat
-                                li
-                                    span.article_stat_val._stat_views 212
-                                li._fr
-                                    span.article_stat_val 13:45
+                    .swiper-container.smallBlockSlider.main_block_slider
+                        .currency_info_table.swiper-wrapper
+                            +loop_while(4)
+                                .swiper-slide._small
+                                    .article_block.story_block._main
+                                        .article_img
+                                            a.article_img_link(href='#'): img(src='i/bear.jpg')
+
+                                        .article_title
+                                            .article_action: .article_action_inner
+                                                a.article_action_btn.actionBtn(href='#' )
+                                            p: a.article_link(href='#') Initial Coin Offerings Are For Everyone, Not Only the Rich
+                                            ul.article_stat
+                                                li._wide
+                                                    span.article_stat_val CocaCola Inc
+                                                li
+                                                    span.article_stat_val._stat_time 2h
+                                                li
+                                                    span.article_stat_val._stat_views 212
 
                     .article_controls
-                        a.btn_v1.more_btn.gray_btn(href='#') More stories
+                        a.btn_v1.more_btn.gray_btn(href='#') View All
 
-                    .article_group_title._features
-                        span Features
+                    .group_line._crypto
 
-                    .article_block._main._features
+                    .article_group_title._crypto
+                        h1 CryptoTips
+
+                    .article_block.story_block._main
                         .article_img
-                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                a.article_action_btn.actionBtn(href='#' )
-                            a.article_img_link(href='#'): img(src='i/sachs.jpg')
+                            a.article_img_link(href='#'): img(src='i/bear.jpg')
 
                         .article_title
-                            a.article_link(href='article.html') 2018: The Year Blockchain, AI and IoT…
+                            .article_action: .article_action_inner
+                                a.article_action_btn.actionBtn(href='#' )
+                            p: a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
                             ul.article_stat
                                 li
+                                    a.article_stat_val(href='#') John Doe
+                                li
+                                    span.article_stat_val._stat_time 2h
+                                li
                                     span.article_stat_val._stat_views 212
-                                li
-                                    span.article_stat_val 2 minutes ago
-                                li
-                                    span.article_stat_val Ariel Deschapell
 
-                    ul.article_reviews._features
-                        li
-                            .article_block._features._review
-                                .article_img
-                                    a.article_img_link(href='#'): img(src='i/regulators.jpg')
+                    ul.news_list
+                        ul.news_list
+                            li
+                                .news_item._wide
+                                    .article_img
+                                        a.article_img_link(href='#'): img(src='i/bear.jpg')
 
-                                .article_title
-                                    a.article_link(href='article.html') US State Regulators Hit BitConnect With Second Cease-And-Desist
-                                ul.article_stat
-                                    li
-                                        span.article_stat_val._stat_views 212
-                                    li
-                                        span.article_stat_val 2 minutes ago
-                                    li
-                                        span.article_stat_val Sujha Sund…
+                                    p: a.news_name(href='#') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
+                                    .article_action: .article_action_inner
+                                        a.article_action_btn.actionBtn(href='#' )
 
-                        li
-                            .article_block._features._review
-                                .article_title
-                                    a.article_link(href='article.html') 2018: The Year Blockchain, AI and IoT Converge
-                                ul.article_stat
-                                    li
-                                        span.article_stat_val._stat_views 212
-                                    li
-                                        span.article_stat_val 2 minutes ago
-                                    li
-                                        span.article_stat_val Sujha Sund…
+                                    ul.article_stat
+                                        li
+                                            a.article_stat_val(href='#') John Doe
+                                        li
+                                            span.article_stat_val._stat_time 2h
+                                        li
+                                            span.article_stat_val._stat_views 212
+                            li
+                                .news_item._wide
+                                    .article_img
+                                        a.article_img_link(href='#'): img(src='i/bear.jpg')
 
-                        li
-                            .article_block._features._review
-                                .article_img
-                                    a.article_img_link(href='#'): img(src='i/arizona.jpg')
+                                    p: a.news_name(href='#') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
+                                    .article_action: .article_action_inner
+                                        a.article_action_btn.actionBtn(href='#' )
 
-                                .article_title
-                                    a.article_link(href='article.html') Arizona Lawmakers Want to Let People Pay Taxes in Bitcoin
-                                ul.article_stat
-                                    li
-                                        span.article_stat_val._stat_views 212
-                                    li
-                                        span.article_stat_val 2 minutes ago
-                                    li
-                                        span.article_stat_val Sujha Sund…
+                                    ul.article_stat
+                                        li
+                                            a.article_stat_val(href='#') John Doe
+                                        li
+                                            span.article_stat_val._stat_time 2h
+                                        li
+                                            span.article_stat_val._stat_views 212
 
                     .article_controls
-                        a.btn_v1.more_btn.gray_btn.clr_red(href='#') More features
+                        a.btn_v1.more_btn.gray_btn(href='#') View All
 
-                    .article_group_title._pool
-                        span Sharks pool
+                    .group_line._event
 
-                    .article_block._main._pool
+                    .article_group_title._event
+                        h1 Events
+
+                    .article_block.story_block._main
                         .article_img
-                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                a.article_action_btn.actionBtn(href='#' )
-                            a.article_img_link(href='#'): img(src='i/sachs.jpg')
+                            a.article_img_link(href='#'): img(src='i/bear.jpg')
 
                         .article_title
-                            a.article_link(href='article.html') Atomic Action: Will 2018 Be the Year of the Cros…
-                            ul.article_stat
-                                li
-                                    span.article_stat_val._stat_views 212
-                                li
-                                    span.article_stat_val 2 minutes ago
-                                li
-                                    span.article_stat_val Ariel Deschapell
-
-                    ul.article_reviews._pool
-                        li
-                            .article_block._pool._review
-                                .article_img
-                                    a.article_img_link(href='#'): img(src='i/regulators.jpg')
-
-                                .article_title
-                                    a.article_link(href='article.html') US State Regulators Hit BitConnect With Second Cease-And-Desist
-                                ul.article_stat
-                                    li
-                                        span.article_stat_val._stat_views 212
-                                    li
-                                        span.article_stat_val 2 minutes ago
-                                    li
-                                        span.article_stat_val Sujha Sund…
-
-                        li
-                            .article_block._pool._review
-                                .article_title
-                                    a.article_link(href='article.html') 2018: The Year Blockchain, AI and IoT Converge
-                                ul.article_stat
-                                    li
-                                        span.article_stat_val._stat_views 212
-                                    li
-                                        span.article_stat_val 2 minutes ago
-                                    li
-                                        span.article_stat_val Sujha Sund…
-
-                        li
-                            .article_block._pool._review
-                                .article_img
-                                    a.article_img_link(href='#'): img(src='i/arizona.jpg')
-
-                                .article_title
-                                    a.article_link(href='article.html') Arizona Lawmakers Want to Let People Pay Taxes in Bitcoin
-                                ul.article_stat
-                                    li
-                                        span.article_stat_val._stat_views 212
-                                    li
-                                        span.article_stat_val 2 minutes ago
-                                    li
-                                        span.article_stat_val Sujha Sund…
-
-                    .article_controls
-                        a.btn_v1.more_btn.gray_btn.clr_blue(href='#') More  «Sharks pool»
-
-                    .article_group_title._analysis
-                        span Price analysis
-
-                    .article_block._main._analysis
-                        .article_img
-                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                            .article_action: .article_action_inner
                                 a.article_action_btn.actionBtn(href='#' )
-                            a.article_img_link(href='#'): img(src='i/sachs.jpg')
-
-                        .article_title
-                            a.article_link(href='article.html') Atomic Action: Will 2018 Be the Year of the Cros…
+                            .article_date._event 21 MARCH
+                            p: a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
                             ul.article_stat
                                 li
+                                    span.article_stat_val Zurich Switzerland
+                                li
                                     span.article_stat_val._stat_views 212
-                                li
-                                    span.article_stat_val 2 minutes ago
-                                li
-                                    span.article_stat_val Ariel Deschapell
 
-                    ul.article_reviews._analysis
+                    ul.news_list
                         li
-                            .article_block._analysis._review
-                                .article_img
-                                    a.article_img_link(href='#'): img(src='i/regulators.jpg')
+                            .news_item
+                                .article_date._event 21 MARCH - 24 MARCH
 
-                                .article_title
-                                    a.article_link(href='article.html') US State Regulators Hit BitConnect With Second Cease-And-Desist
+                                p: a.news_name(href='#') EOS Bounces Back Despite John Oliver Slam, Up 35 Percent This Week
+                                .article_action: .article_action_inner
+                                    a.article_action_btn.actionBtn(href='#' )
+
                                 ul.article_stat
                                     li
+                                        span.article_stat_val Zurich Switzerland
+                                    li
                                         span.article_stat_val._stat_views 212
-                                    li
-                                        span.article_stat_val 2 minutes ago
-                                    li
-                                        span.article_stat_val Sujha Sund…
-
                         li
-                            .article_block._analysis._review
-                                .article_title
-                                    a.article_link(href='article.html') 2018: The Year Blockchain, AI and IoT Converge
+                            .news_item
+                                .article_date._event 21 MARCH
+
+                                p: a.news_name(href='#') EOS Bounces Back Despite John Oliver Slam, Up 35 Percent This Week
+                                .article_action: .article_action_inner
+                                    a.article_action_btn.actionBtn(href='#' )
+
                                 ul.article_stat
                                     li
-                                        span.article_stat_val._stat_views 212
-                                    li
-                                        span.article_stat_val 2 minutes ago
-                                    li
-                                        span.article_stat_val Sujha Sund…
-
-                        li
-                            .article_block._analysis._review
-                                .article_img
-                                    a.article_img_link(href='#'): img(src='i/arizona.jpg')
-
-                                .article_title
-                                    a.article_link(href='article.html') Arizona Lawmakers Want to Let People Pay Taxes in Bitcoin
-                                ul.article_stat
+                                        span.article_stat_val Zurich Switzerland
                                     li
                                         span.article_stat_val._stat_views 212
-                                    li
-                                        span.article_stat_val 2 minutes ago
-                                    li
-                                        span.article_stat_val Sujha Sund…
 
                     .article_controls
-                        a.btn_v1.more_btn.gray_btn.clr_green(href='#') More «Price analysis»
+                        a.btn_v1.more_btn.gray_btn(href='#') View All
+
+                    .offer_block
+                        p Want to publish on CryptoComes?
+                        p
+                            a.btn_v1.btn_violette_2.offer_btn(href='#')
+                                span Subit NEW CRYPTOEVENT
+                                span.btn_icon.icon-rocket
 
             .nav_holder
                 +header()
                 +main_menu()
                 +search()
 
-            +footer()
+            +footer(false, true)
 
         +scripts()
