@@ -264,6 +264,10 @@
       margin-right: 10px;
       border-radius: 100%;
     }
+
+    &:hover {
+      color: #000 !important;
+    }
   }
 
   &._active,
@@ -679,3 +683,4 @@
     }
   }
 }
+
