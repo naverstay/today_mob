@@ -1,6 +1,11 @@
 block vars
     - var prod = true;
     - var prod = false;
+    - var link_fb = 'https://www.facebook.com/CryptoComes-1537974916268413/';
+    - var link_tg = 'https://t.me/cryptocomes';
+    - var link_tw = 'https://twitter.com/CryptoComes';
+    - var link_rss = 'https://cryptocomes.com/rss_feed';
+    - var link_youtube = 'https://www.youtube.com/channel/UCXuvBkbsGkVr4DE0LUbfbaQ';
 
 mixin dev_head(page_title)
     head
@@ -26,26 +31,26 @@ mixin loop_while(counter)
 
 mixin action_list(hide_soc_text)
   ul.action_list
-    li: a.action_link._w(href='#')
+    li: a.action_link._w(href= link_tw)
       - if (amp)
         .action_link_icon
           +svg_icon('tw')
       -if (!hide_soc_text)
         span Twitter
-    li: a.action_link._t(href='#')
+    li: a.action_link._t(href= link_tg)
       - if (amp)
         .action_link_icon
           +svg_icon('tg')
       -if (!hide_soc_text)
         span Telegram
-    li: a.action_link._f(href='#')
+    li: a.action_link._f(href= link_fb)
       - if (amp)
         .action_link_icon
           +svg_icon('fb')
       -if (!hide_soc_text)
         span Facebook
 
-    li: a.action_link._y(href='#')
+    li: a.action_link._y(href= link_youtube)
       - if (amp)
         .action_link_icon
           +svg_icon('youtube')
@@ -57,7 +62,7 @@ mixin action_list(hide_soc_text)
           +svg_icon('youtube')
       -if (!hide_soc_text)
         span Reddit
-    li: a.action_link._r(href='#')
+    li: a.action_link._r(href= link_rss)
       - if (amp)
         .action_link_icon
           +svg_icon('rss')
@@ -95,17 +100,72 @@ mixin footer(white, hide_soc_text)
             .footer_subscribe_holder
                 p Follow us and get all crypto news 24/7
                 p
-                    a.btn_v1.btn_violette_3.subscribe_btn_email(href='#') SUBSCRIBE BY EMAIL
+                    a.btn_v1.btn_violette_3.subscribe_btn_email.subscribeBtnEmail(href='#') SUBSCRIBE BY EMAIL
 
                 +action_list(hide_soc_text)
 
             .copyright ©2018 CryptoComes. All rights reserved.
 
-        .go_top_holder.goTopHolder
+        //-.go_top_holder.goTopHolder
             .section_inner
                 a.go_top.goTop(href='#')
 
     .hide
+        #subscribe_popup
+            .subscribe_form
+                form.validateMe.formParent.subscribeForm(action='#' data-prompts='true')
+                    .form_cell.formCell
+                        .input_w
+                            input.input_v1.forceValidation(placeholder='Enter your email' class='validate[required,custom[email]]' data-errormessage='Please enter valid e-mail')
+
+                    .form_cell
+                        button.btn_v1.subscribe_btn.btn_violette_2 Subscribe
+
+                    .subscribe_success_msg
+
+            .subscribe_form_footer
+                p Follow us on social
+
+                ul.action_soc._brand
+                    li
+                        a.action_sh._t(href='#' data-network="twitter" class='st-custom-button')
+                    li
+                        a.action_sh._tg(href= link_tg)
+                    li
+                        a.action_sh._f(href='#' data-network="facebook" class='st-custom-button')
+                    li
+                        a.action_sh._y(href= link_youtube data-network="facebook" class='st-custom-button')
+                    li
+                        a.action_sh._rd(href='#' data-network="reddit" class='st-custom-button')
+
+        #sh_popup
+            .sh_block
+                .action_block
+                    ul.action_soc._brand
+                        li
+                            a.action_sh._f(href='#' data-network="facebook" class='st-custom-button')
+                                span Facebook
+                        li
+                            a.action_sh._t(href='#' data-network="twitter" class='st-custom-button')
+                                span Twitter
+                        li
+                            a.action_sh._l(href='#' data-network="linkedin" class='st-custom-button')
+                                span LinkedIn
+                        li
+                            a.action_sh._tg(href='https://t.me/cryptocomes')
+                                span Telegram
+                        li
+                            a.action_sh._rd(href='#' data-network="reddit" class='st-custom-button')
+                                span Reddit
+
+        #bonus_popup
+            .bonus_img
+                img(src='i/retweet.jpg')
+            .bonus_caption CryptoComes Twitter GIVEAWAY!<br>Follow and RT to win 💰$100💰
+            .bonus_controls
+                a.btn_v4.subscribe_btn._tw(href='#')
+                    span PARTICIPATE HERE
+
         #follow_popup
             .follow_caption Follow us on Facebook or Twitter<br>to read this article
 
@@ -147,19 +207,19 @@ mixin top_info()
                     +loop_while(2)
                         .currency_info_cell.swiper-slide
                             p
-                                span: b BTC
+                                a.currency_link(href='#'): b BTC
                                 a.trend._down(href='#') -8.82%
                             p
                                 span.currency_val 2636.79
                         .currency_info_cell.swiper-slide
                             p
-                                span: b BCH
+                                a.currency_link(href='#'): b BCH
                                 a.trend._up(href='#') +8.82%
                             p
                                 span.currency_val 3236.51
                         .currency_info_cell.swiper-slide
                             p
-                                span: b ETH
+                                a.currency_link(href='#'): b ETH
                                 a.trend._down(href='#') -8.82%
                             p
                                 span.currency_val 26236.79
@@ -487,7 +547,7 @@ mixin scripts(share)
         script(src='js/main.min.js?t=' + time)
     - else
         script(src='js/jquery1.10.js?t=' + time)
-        script(src='//code.jquery.com/ui/1.12.1/jquery-ui.js')
+        script(src='js/jquery-ui.js?t=' + time)
         script(src='js/swiper.min.js?t=' + time)
         script(src='js/auto-complete.js?t=' + time)
         script(src='js/jquery.inputmask.bundle.js?t=' + time)

@@ -9,11 +9,13 @@
     font: 14px/20px $RubikBold;
     padding: 10px 5px;
     margin: 0 22px;
+    border-radius: 2px;
     text-transform: uppercase;
 
     .btn_icon {
       font-size: 16px;
       padding-left: 7px;
+      vertical-align: -2px;
     }
   }
 
@@ -22,43 +24,42 @@
     vertical-align: top;
     font: 14px/20px $RubikBold;
     padding: 10px 16px;
+    border-radius: 2px;
     text-transform: uppercase;
   }
 
   &.more_btn {
-    //@extend %icon_pseudo;
+    @extend %icon_pseudo;
     cursor: pointer;
     display: block;
     text-align: center;
-    font: 13px/18px $RubikMed;
+    font: 12px/18px $RubikReg;
     padding: 10px;
+    border-radius: 2px;
 
     &:after {
       //content: unicode($icon-triangle);
       //margin: 0 12px 0 -12px;
       //font-size: 9px;
 
-      content: '';
+      content: unicode($icon-triangle_r);
+      font-size: 10px;
+      line-height: 14px;
       display: inline-block;
       vertical-align: 0;
       margin-left: 4px;
-      border-top: 5px solid transparent;
-      border-left: 6px solid #ddd;
-      border-bottom: 5px solid transparent;
+      color: #ddd;
     }
   }
 
   &.subscribe_btn {
-    display: inline-block;
-    vertical-align: top;
+    display: block;
+    width: 100%;
     letter-spacing: .05em;
-    font: 20px/24px $RubikBold;
-    padding: 12px 14px;
-
-    .error & {
-      opacity: .2;
-      pointer-events: none;
-    }
+    font: 16px/20px $RubikBold;
+    padding: 10px 5px;
+    text-align: center;
+    text-transform: uppercase;
   }
 }
 
@@ -121,6 +122,37 @@
 
 .btn_v4 {
   height: 40px;
+
+  &.subscribe_btn {
+    @extend %icon_pseudo;
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 22px;
+    font: 15px/18px $RubikReg;
+    color: #fff;
+    border-radius: 2px;
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &:after {
+      content: unicode($icon-tw);
+      font-size: 20px;
+      display: inline-block;
+      vertical-align: middle;
+      padding-left: 15px;
+    }
+
+    &._tw {
+      background: #1da1f2;
+
+      &:hover {
+        background: #23c1ff;
+      }
+    }
+  }
 
   &.create_release_btn {
     display: block;
@@ -210,6 +242,11 @@
   @include transition_all(background .3s, color .3s);
   background: $violette;
   color: #fff;
+
+  .error & {
+    background: #e87272;
+    pointer-events: none;
+  }
 }
 
 .btn_violette_3 {

@@ -10,7 +10,7 @@ html(lang='ru')
                     +top_info()
 
                     .article_group_title._news
-                        h1 News
+                        h1: a.artile_link(href='#') News
 
                     .article_block.story_block._main
                         .article_img
@@ -50,10 +50,14 @@ html(lang='ru')
                     .group_line._stories
 
                     .article_group_title._stories
-                        h1 stories
+                        h2: a.artile_link(href='#') stories
 
                     .article_block.story_block._main
                         .article_img
+                            ul.article_tags
+                                li
+                                    span.article_tag._stories._top
+                                        span TOP STORY
                             a.article_img_link(href='#'): img(src='i/bear.jpg')
 
                         .article_title
@@ -74,7 +78,7 @@ html(lang='ru')
                                 .article_img
                                     ul.article_tags
                                         li
-                                            span.icon-say.article_tag._features
+                                            a.icon-say.article_tag._features(href='#')
                                                 span Features
                                     a.article_img_link(href='#'): img(src='i/bear.jpg')
 
@@ -94,7 +98,7 @@ html(lang='ru')
                                 .article_img
                                     ul.article_tags
                                         li
-                                            span.icon-say.article_tag._pricewise
+                                            a.icon-say.article_tag._pricewise(href='#')
                                                 span PRISEWISE
                                     a.article_img_link(href='#'): img(src='i/bear.jpg')
 
@@ -114,7 +118,7 @@ html(lang='ru')
                                 .article_img
                                     ul.article_tags
                                         li
-                                            span.icon-say.article_tag._wiki
+                                            a.icon-say.article_tag._wiki(href='#')
                                                 span WIKICOIN
                                     a.article_img_link(href='#'): img(src='i/bear.jpg')
 
@@ -136,31 +140,31 @@ html(lang='ru')
                     .group_line._release
 
                     .article_group_title._release
-                        h1 PRESS RELEASES
+                        h2: a.artile_link(href='#') PRESS RELEASES
 
-                    .swiper-container.mainBlockSlider.main_block_slider
+                    //-.swiper-container.mainBlockSlider.main_block_slider
                         .currency_info_table.swiper-wrapper
                             +loop_while(4)
                                 .swiper-slide
-                                    .article_block.story_block._main
-                                        .article_img
-                                            a.article_img_link(href='#'): img(src='i/bear.jpg')
+                    .article_block.story_block._main
+                        .article_img
+                            a.article_img_link(href='#'): img(src='i/bear.jpg')
 
-                                        .article_title
-                                            .article_action: .article_action_inner
-                                                a.article_action_btn.actionBtn(href='#' )
-                                            p: a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
-                                            ul.article_stat
-                                                li
-                                                    a.article_stat_val(href='#') John Doe
-                                                li
-                                                    span.article_stat_val._stat_time 2h
-                                                li
-                                                    span.article_stat_val._stat_views 212
-
-                        .swiper-pagination.main_pagination
+                        .article_title
+                            .article_action: .article_action_inner
+                                a.article_action_btn.actionBtn(href='#' )
+                            p: a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
+                            ul.article_stat
+                                li
+                                    a.article_stat_val(href='#') John Doe
+                                li
+                                    span.article_stat_val._stat_time 2h
+                                li
+                                    span.article_stat_val._stat_views 212
 
                     .swiper-container.smallBlockSlider.main_block_slider
+                        .swiper-pagination.main_pagination
+
                         .currency_info_table.swiper-wrapper
                             +loop_while(4)
                                 .swiper-slide._small
@@ -190,7 +194,7 @@ html(lang='ru')
                     .group_line._pricewise
 
                     .article_group_title._pricewise
-                        h1 PRICEWISE
+                        h2: a.artile_link(href='#') PRICEWISE
 
                     .article_block.story_block._main
                         .article_img
@@ -251,31 +255,31 @@ html(lang='ru')
                     .group_line._watch
 
                     .article_group_title._watch
-                        span ICO Watch
+                        h3: a.artile_link(href='#') ICO Watch
 
-                    .swiper-container.mainBlockSlider.main_block_slider
+                    //-.swiper-container.mainBlockSlider.main_block_slider
                         .currency_info_table.swiper-wrapper
                             +loop_while(4)
                                 .swiper-slide
-                                    .article_block.story_block._main
-                                        .article_img
-                                            a.article_img_link(href='#'): img(src='i/bear.jpg')
+                    .article_block.story_block._main
+                        .article_img
+                            a.article_img_link(href='#'): img(src='i/bear.jpg')
 
-                                        .article_title
-                                            .article_action: .article_action_inner
-                                                a.article_action_btn.actionBtn(href='#' )
-                                            p: a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
-                                            ul.article_stat
-                                                li
-                                                    a.article_stat_val(href='#') John Doe
-                                                li
-                                                    span.article_stat_val._stat_time 2h
-                                                li
-                                                    span.article_stat_val._stat_views 212
-
-                        .swiper-pagination.main_pagination
+                        .article_title
+                            .article_action: .article_action_inner
+                                a.article_action_btn.actionBtn(href='#' )
+                            p: a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
+                            ul.article_stat
+                                li
+                                    a.article_stat_val(href='#') John Doe
+                                li
+                                    span.article_stat_val._stat_time 2h
+                                li
+                                    span.article_stat_val._stat_views 212
 
                     .swiper-container.smallBlockSlider.main_block_slider
+                        .swiper-pagination.main_pagination
+
                         .currency_info_table.swiper-wrapper
                             +loop_while(4)
                                 .swiper-slide._small
@@ -301,7 +305,7 @@ html(lang='ru')
                     .group_line._crypto
 
                     .article_group_title._crypto
-                        h1 CryptoTips
+                        h3: a.artile_link(href='#') CryptoTips
 
                     .article_block.story_block._main
                         .article_img
@@ -360,7 +364,7 @@ html(lang='ru')
                     .group_line._event
 
                     .article_group_title._event
-                        h1 Events
+                        h3: a.artile_link(href='#') Events
 
                     .article_block.story_block._main
                         .article_img

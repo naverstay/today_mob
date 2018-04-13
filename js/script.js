@@ -1,4 +1,4 @@
-var $wnd, $body, $header, $footer, $followPopup, currencySlider,
+var $wnd, $body, $header, $footer, $followPopup, $sharePopup, $subscribePopup, currencySlider,
     $subscribeTrigger, $subscribeBlock, $goTop, $goTopHolder, didScroll,
     lastScrollTop = 0, delta = 5,
     subscribe_spacer = 270;
@@ -21,11 +21,7 @@ $(function ($) {
             if (form.validationEngine('validate')) {
                 // todo remove
 
-                if (form.find('input').first().val().length > 1) {
-                    $('.subscribeBlock').addClass('subscribe_success');
-                } else {
-                    $('.subscribeBlock').addClass('subscribe_fail');
-                }
+                form.addClass('subscribe_success').closest('.ui-dialog').find('.ui-dialog-title').text('Thank you for subscribing!');
             }
         })
         .delegate('select', 'change', function () {
@@ -75,7 +71,17 @@ $(function ($) {
             return false;
         })
         .delegate('.actionBtn', 'click', function () {
-            $body.toggleClass('sh_opened');
+            //$body.toggleClass('sh_opened');
+
+            $sharePopup.dialog('open');
+
+            return false;
+        })
+        .delegate('.subscribeBtnEmail', 'click', function () {
+            //$body.toggleClass('subscribe_opened');
+
+            $subscribePopup.dialog('open');
+
             return false;
         })
         .delegate('.statLink', 'click', function () {
@@ -201,11 +207,9 @@ $(function ($) {
 
     initMask();
 
-    initFollowPopup();
-
     initCurrencySlider();
 
-    initMainBlockSlider();
+    //initMainBlockSlider();
 
     initSmallBlockSlider();
 
@@ -214,6 +218,14 @@ $(function ($) {
 $(window)
     .on('load', function () {
         checkHeader();
+
+        initBonusPopup();
+
+        initFollowPopup();
+
+        initSharePopup();
+
+        initSubscribePopup();
     })
     .on('scroll', function () {
         var scrtop = getScrollTop(),
@@ -288,17 +300,40 @@ function initMainBlockSlider() {
 
 function initSmallBlockSlider() {
     currencySlider = new Swiper('.smallBlockSlider', {
-        setWrapperSize: false,
+        setWrapperSize: true,
         slidesPerView: 'auto',
         spaceBetween: 16,
         freeMode: true,
         watchOverflow: true,
         roundLengths: true,
-        pagination: false,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
         threshold: 10,
         touchAngle: 15,
-        navigation: false
+        navigation: false,
+        on: {
+            resize: function () {
+                setSwiperHeight(this);
+            },
+            init: function () {
+                setSwiperHeight(this);
+            }
+        }
     });
+}
+
+function setSwiperHeight(swp) {
+    var maxH = 0;
+
+    $(swp.$wrapperEl).find('.article_block').css('height', '');
+
+    $(swp.$wrapperEl).find('.article_block').each(function (ind) {
+        maxH = Math.max(maxH, $(this).outerHeight());
+    });
+
+    $(swp.$wrapperEl).find('.article_block').css('height', maxH);
 }
 
 function initFollowPopup() {
@@ -318,6 +353,75 @@ function initFollowPopup() {
             $body.addClass('modal_opened overlay_v2');
 
             startFollowCountDown();
+        },
+        close: function (event, ui) {
+            $body.removeClass('modal_opened overlay_v2');
+        }
+    });
+}
+
+function initSharePopup() {
+
+    $sharePopup = $('#sh_popup').dialog({
+        autoOpen: false,
+        modal: true,
+        closeOnEscape: true,
+        closeText: '',
+        dialogClass: 'dialog_v2 dialog_title_v2',
+        //appendTo: '.wrapper',
+        width: 320,
+        draggable: true,
+        title: "Share this on:",
+        collision: "fit",
+        position: {my: "top center", at: "top center", of: window},
+        open: function (event, ui) {
+            $body.addClass('modal_opened overlay_v2');
+        },
+        close: function (event, ui) {
+            $body.removeClass('modal_opened overlay_v2');
+        }
+    });
+}
+
+function initSubscribePopup() {
+
+    $subscribePopup = $('#subscribe_popup').dialog({
+        autoOpen: false,
+        modal: true,
+        closeOnEscape: true,
+        closeText: '',
+        dialogClass: 'dialog_v2 dialog_title_v2',
+        //appendTo: '.wrapper',
+        width: 320,
+        draggable: true,
+        title: "Subscribe to our newsletter",
+        collision: "fit",
+        position: {my: "top center", at: "top center", of: window},
+        open: function (event, ui) {
+            $body.addClass('modal_opened overlay_v2');
+
+        },
+        close: function (event, ui) {
+            $body.removeClass('modal_opened overlay_v2');
+        }
+    });
+}
+
+function initBonusPopup() {
+
+    $followPopup = $('#bonus_popup').dialog({
+        autoOpen: false,
+        modal: true,
+        closeOnEscape: true,
+        closeText: '',
+        dialogClass: 'dialog_v2 dialog_title_v1',
+        //appendTo: '.wrapper',
+        width: 320,
+        draggable: true,
+        collision: "fit",
+        position: {my: "top center", at: "top center", of: window},
+        open: function (event, ui) {
+            $body.addClass('modal_opened overlay_v2');
         },
         close: function (event, ui) {
             $body.removeClass('modal_opened overlay_v2');
@@ -387,7 +491,7 @@ function initValidation() {
         f.validationEngine({
             //binded: true,
             scroll: false,
-            showPrompts: false,
+            showPrompts: f.attr('data-prompts') || false,
             showArrow: false,
             addSuccessCssClassToField: 'success',
             addFailureCssClassToField: 'error',

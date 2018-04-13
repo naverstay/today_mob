@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'crypto_icons';
-  src: url('#{$icomoon-font-path}/crypto_icons.eot?qe2icy');
-  src: url('#{$icomoon-font-path}/crypto_icons.eot?qe2icy#iefix') format('embedded-opentype'),
-  url('#{$icomoon-font-path}/crypto_icons.ttf?qe2icy') format('truetype'),
-  url('#{$icomoon-font-path}/crypto_icons.woff?qe2icy') format('woff'),
-  url('#{$icomoon-font-path}/crypto_icons.svg?qe2icy#crypto_icons') format('svg');
+  src: url('#{$icomoon-font-path}/crypto_icons.eot?3pwnro');
+  src: url('#{$icomoon-font-path}/crypto_icons.eot?3pwnro#iefix') format('embedded-opentype'),
+  url('#{$icomoon-font-path}/crypto_icons.ttf?3pwnro') format('truetype'),
+  url('#{$icomoon-font-path}/crypto_icons.woff?3pwnro') format('woff'),
+  url('#{$icomoon-font-path}/crypto_icons.svg?3pwnro#crypto_icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -69,6 +69,24 @@
   }
 }
 
+.icon-check_2 {
+  &:before {
+    content: unicode($icon-check_2);
+  }
+}
+
+.icon-eye_dot {
+  &:before {
+    content: unicode($icon-eye_dot);
+  }
+}
+
+.icon-triangle_r {
+  &:before {
+    content: unicode($icon-triangle_r);
+  }
+}
+
 .icon-ai {
   &:before {
     content: unicode($icon-ai);
@@ -93,15 +111,15 @@
   }
 }
 
-.icon-desc {
-  &:before {
-    content: unicode($icon-desc);
-  }
-}
-
 .icon-asc {
   &:before {
     content: unicode($icon-asc);
+  }
+}
+
+.icon-desc {
+  &:before {
+    content: unicode($icon-desc);
   }
 }
 

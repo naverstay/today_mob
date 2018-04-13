@@ -264,13 +264,13 @@
   opacity: 0;
 
   ._show_subscribe & {
-    @include transform_translate(-100%, 0);
-    opacity: 1;
-    pointer-events: all;
-
-    .subscribe_close {
-      display: block;
-    }
+    //@include transform_translate(-100%, 0);
+    //opacity: 1;
+    //pointer-events: all;
+    //
+    //.subscribe_close {
+    //  display: block;
+    //}
   }
 
   .menu_opened & {
@@ -513,8 +513,25 @@
   @include transform_translate(100%, 0);
   opacity: 0;
   padding: 16px 0;
-  background: $violette;
+  background: rgba(0, 0, 0, .6);
   z-index: 10;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  .sh_opened & {
+    @include transform_translate(0, 0);
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.sh_block {
+  position: relative;
+  background: #fff url(../i/space_ship.svg) no-repeat 95% 87%;
+  padding: 9px 14px 0;
+  border-radius: 5px;
 
   .search_title {
     opacity: 1;
@@ -528,7 +545,8 @@
     li {
       width: 50%;
       float: left;
-      margin-top: 14px;
+      margin-bottom: 13px;
+      padding-left: 5px !important;
     }
   }
 
@@ -553,11 +571,67 @@
     border-bottom: 1px solid #fff;
     margin-left: 5px;
   }
+}
 
-  .sh_opened & {
-    @include transform_translate(0, 0);
-    opacity: 1;
-    pointer-events: all;
+.sh_close_btn {
+  @extend %icon_pseudo;
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  text-align: center;
+  width: 24px;
+  height: 24px;
+
+  &:before {
+    content: unicode($icon-close);
+    color: #c8c8ca;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.sh_title {
+  text-align: center;
+  font: 16px/19px $RubikBold;
+  letter-spacing: -.001em;
+}
+
+.subscribe_form {
+  @extend %clearfix;
+  padding: 10px 15px 30px;
+
+  .form_cell {
+    float: left;
+    width: 36%;
+
+    .input_v1 {
+      border-radius: 2px 0 0 2px;
+    }
+
+    .btn_v1 {
+      border-radius: 0 2px 2px 0;
+    }
+
+    &:first-child {
+      width: 64%;
+    }
+  }
+
+  .subscribe_success {
+    .form_cell {
+      display: none;
+    }
+  }
+}
+
+.subscribe_form_footer {
+  text-align: center;
+  background: #f6f7f7;
+  padding: 22px 5px 8px;
+
+  p {
+    font: 16px/19px $RubikBold;
+    margin-bottom: 5px;
   }
 }
 

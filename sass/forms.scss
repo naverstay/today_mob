@@ -87,13 +87,13 @@
 .input_v1 {
   @include transition_all(border-color .3s);
   display: block;
-  height: 56px;
+  height: 40px;
   width: 100%;
-  color: #fff;
-  border: 2px solid #fff;
+  color: #333;
+  border: 1px solid #ddd;
   border-radius: 2px;
-  font: 16px/20px $RubikMed;
-  padding: 16px 14px;
+  font: 14px/18px $RubikMed;
+  padding: 9px 11px;
 
   &::-moz-placeholder {
     color: rgba(255, 255, 255, .5);
@@ -104,7 +104,7 @@
   }
 
   &.error {
-    border-color: #ff0a24;
+    border-color: #e87272;
   }
 }
 
@@ -283,6 +283,47 @@ textarea.input_v3 {
   text-align: center;
 }
 
+.subscribe_success_msg {
+  @extend %icon_pseudo;
+  position: relative;
+  display: none;
+  height: 52px;
+
+  &:after,
+  &:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+
+  &:after {
+    content: '';
+    background: url(../i/space.svg) no-repeat 50% 50%;
+    width: 91px;
+    height: 63px;
+    margin: -26px 0 0 -44px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  &:before {
+    content: unicode($icon-check_2);
+    color: #27ae60;
+    font-size: 28px;
+    width: 22px;
+    height: 22px;
+    margin: -22px 0 0 -9px;
+    z-index: 1;
+  }
+
+  .subscribe_success & {
+    display: block;
+  }
+
+}
+
 .dialog_v1 {
   position: fixed;
   max-width: 95%;
@@ -293,3 +334,128 @@ textarea.input_v3 {
   }
 }
 
+.ui-widget-overlay {
+
+  .overlay_v2 & {
+    background: rgba(0, 0, 0, .8);
+    opacity: 1;
+  }
+}
+
+.ui-dialog {
+  &.dialog_v2 {
+    padding: 0;
+    border: 0;
+    border-radius: 5px;
+
+    .ui-dialog-content {
+      padding: 0;
+    }
+  }
+
+  &.dialog_title_v1 {
+    .ui-dialog-titlebar-close {
+      @extend %icon_pseudo;
+      background: none;
+      border: 0;
+      width: 20px;
+      height: 20px;
+      top: 20px;
+      right: 15px;
+      text-align: center;
+
+      &:before {
+        content: unicode($icon-close);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: #fff;
+        font-size: 18px;
+        line-height: 20px;
+        text-indent: 0;
+      }
+
+      span {
+        display: none;
+      }
+    }
+
+    .ui-dialog-titlebar {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      border: 0;
+      background: none;
+      z-index: 1;
+    }
+  }
+
+  &.dialog_title_v2 {
+
+    .ui-dialog-title {
+      width: 100%;
+      padding: 0 10%;
+    }
+
+    .ui-dialog-titlebar {
+      @extend .sh_title;
+      border: none;
+      background: none;
+      z-index: 1;
+      padding: 24px 0 0;
+    }
+
+    .ui-dialog-titlebar-close {
+      @extend %icon_pseudo;
+      background: none;
+      border: 0;
+      width: 24px;
+      height: 24px;
+      right: 5px;
+      top: 18px;
+      text-align: center;
+
+      &:before {
+        content: unicode($icon-close);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-indent: 0;
+        color: #c8c8ca;
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+.bonus_img {
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.bonus_caption {
+  text-align: center;
+  color: #000;
+  font: 18px/21px $RubikBold;
+  padding: 30px 10px 20px;
+}
+
+.bonus_controls {
+  text-align: center;
+  padding: 5px 10px 35px;
+}

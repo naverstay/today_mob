@@ -1,3 +1,5 @@
+// npm link grunt grunt-contrib-pug grunt-contrib-watch grunt-contrib-uglify grunt-contrib-imagemin grunt-wellington grunt-imageoptim load-grunt-tasks pug-inheritance
+
 module.exports = function (grunt) {
     grunt.initConfig({
         watch: {

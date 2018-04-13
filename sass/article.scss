@@ -217,6 +217,12 @@
       vertical-align: top;
       padding: 4px;
     }
+
+    .subscribe_form_footer &,
+    .sh_block & {
+      border: 0;
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -240,12 +246,24 @@
   }
 
   ._brand & {
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    font-size: 22px;
-    line-height: 40px;
-    color: #fff;
+    //width: 40px;
+    //height: 40px;
+    //border-radius: 20px;
+    //font-size: 22px;
+    //line-height: 40px;
+    color: #333;
+    font: 14px/36px $RubikReg;
+
+    &:before {
+      color: #fff;
+      width: 36px;
+      height: 36px;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 36px;
+      margin-right: 10px;
+      border-radius: 100%;
+    }
   }
 
   &._active,
@@ -273,7 +291,9 @@
     }
 
     ._brand & {
-      background: #385184;
+      &:before {
+        background: #385184;
+      }
     }
   }
 
@@ -283,7 +303,9 @@
     }
 
     ._brand & {
-      background: #1da1f2;
+      &:before {
+        background: #1da1f2;
+      }
     }
   }
 
@@ -293,7 +315,9 @@
     }
 
     ._brand & {
-      background: #08c;
+      &:before {
+        background: #08c;
+      }
     }
   }
 
@@ -307,6 +331,12 @@
     &:before {
       content: unicode($icon-in);
     }
+
+    ._brand & {
+      &:before {
+        background: #0274b3;
+      }
+    }
   }
 
   &._i {
@@ -315,7 +345,9 @@
     }
 
     ._brand & {
-      background: #ed4956;
+      &:before {
+        background: #ed4956;
+      }
     }
   }
 
@@ -343,7 +375,21 @@
     }
 
     ._brand & {
-      background: #fa500e;
+      &:before {
+        background: #fa500e;
+      }
+    }
+  }
+
+  &._y {
+    &:before {
+      content: unicode($icon-youtube);
+    }
+
+    ._brand & {
+      &:before {
+        background: #d44132;
+      }
     }
   }
 
@@ -621,6 +667,7 @@
 .offer_block {
   background: #f6f7f7;
   margin: 4px 0 20px;
+  border-radius: 2px;
   padding: 15px 10px 20px;
   text-align: center;
   font: 16px/19px $RubikMed;

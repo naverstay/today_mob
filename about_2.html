@@ -30,27 +30,27 @@
               <div class="swiper-container currencySlider">
                 <div class="currency_info_table swiper-wrapper">
                   <div class="currency_info_cell swiper-slide">
-                    <p><span><b>BTC</b></span><a class="trend _down" href="#">-8.82%</a></p>
+                    <p><a class="currency_link" href="#"><b>BTC</b></a><a class="trend _down" href="#">-8.82%</a></p>
                     <p><span class="currency_val">2636.79</span></p>
                   </div>
                   <div class="currency_info_cell swiper-slide">
-                    <p><span><b>BCH</b></span><a class="trend _up" href="#">+8.82%</a></p>
+                    <p><a class="currency_link" href="#"><b>BCH</b></a><a class="trend _up" href="#">+8.82%</a></p>
                     <p><span class="currency_val">3236.51</span></p>
                   </div>
                   <div class="currency_info_cell swiper-slide">
-                    <p><span><b>ETH</b></span><a class="trend _down" href="#">-8.82%</a></p>
+                    <p><a class="currency_link" href="#"><b>ETH</b></a><a class="trend _down" href="#">-8.82%</a></p>
                     <p><span class="currency_val">26236.79</span></p>
                   </div>
                   <div class="currency_info_cell swiper-slide">
-                    <p><span><b>BTC</b></span><a class="trend _down" href="#">-8.82%</a></p>
+                    <p><a class="currency_link" href="#"><b>BTC</b></a><a class="trend _down" href="#">-8.82%</a></p>
                     <p><span class="currency_val">2636.79</span></p>
                   </div>
                   <div class="currency_info_cell swiper-slide">
-                    <p><span><b>BCH</b></span><a class="trend _up" href="#">+8.82%</a></p>
+                    <p><a class="currency_link" href="#"><b>BCH</b></a><a class="trend _up" href="#">+8.82%</a></p>
                     <p><span class="currency_val">3236.51</span></p>
                   </div>
                   <div class="currency_info_cell swiper-slide">
-                    <p><span><b>ETH</b></span><a class="trend _down" href="#">-8.82%</a></p>
+                    <p><a class="currency_link" href="#"><b>ETH</b></a><a class="trend _down" href="#">-8.82%</a></p>
                     <p><span class="currency_val">26236.79</span></p>
                   </div>
                 </div>
@@ -190,12 +190,12 @@
           <div class="menu_footer subscribeBlock">
             <div class="footer_action">
               <ul class="action_list">
-                <li><a class="action_link _w" href="#"></a></li>
-                <li><a class="action_link _t" href="#"></a></li>
-                <li><a class="action_link _f" href="#"></a></li>
-                <li><a class="action_link _y" href="#"></a></li>
+                <li><a class="action_link _w" href="https://twitter.com/CryptoComes"></a></li>
+                <li><a class="action_link _t" href="https://t.me/cryptocomes"></a></li>
+                <li><a class="action_link _f" href="https://www.facebook.com/CryptoComes-1537974916268413/"></a></li>
+                <li><a class="action_link _y" href="https://www.youtube.com/channel/UCXuvBkbsGkVr4DE0LUbfbaQ"></a></li>
                 <li><a class="action_link _rd" href="#"></a></li>
-                <li><a class="action_link _r" href="#"></a></li>
+                <li><a class="action_link _r" href="https://cryptocomes.com/rss_feed"></a></li>
               </ul>
             </div>
             <div class="footer_form">
@@ -274,23 +274,63 @@
           </div>
           <div class="footer_subscribe_holder">
             <p>Follow us and get all crypto news 24/7</p>
-            <p><a class="btn_v1 btn_violette_3 subscribe_btn_email" href="#">SUBSCRIBE BY EMAIL</a></p>
+            <p><a class="btn_v1 btn_violette_3 subscribe_btn_email subscribeBtnEmail" href="#">SUBSCRIBE BY EMAIL</a></p>
             <ul class="action_list">
-              <li><a class="action_link _w" href="#"><span>Twitter</span></a></li>
-              <li><a class="action_link _t" href="#"><span>Telegram</span></a></li>
-              <li><a class="action_link _f" href="#"><span>Facebook</span></a></li>
-              <li><a class="action_link _y" href="#"><span>Youtube</span></a></li>
+              <li><a class="action_link _w" href="https://twitter.com/CryptoComes"><span>Twitter</span></a></li>
+              <li><a class="action_link _t" href="https://t.me/cryptocomes"><span>Telegram</span></a></li>
+              <li><a class="action_link _f" href="https://www.facebook.com/CryptoComes-1537974916268413/"><span>Facebook</span></a></li>
+              <li><a class="action_link _y" href="https://www.youtube.com/channel/UCXuvBkbsGkVr4DE0LUbfbaQ"><span>Youtube</span></a></li>
               <li><a class="action_link _rd" href="#"><span>Reddit</span></a></li>
-              <li><a class="action_link _r" href="#"><span>RSS</span></a></li>
+              <li><a class="action_link _r" href="https://cryptocomes.com/rss_feed"><span>RSS</span></a></li>
             </ul>
           </div>
           <div class="copyright">©2018 CryptoComes. All rights reserved.</div>
         </div>
-        <div class="go_top_holder goTopHolder">
-          <div class="section_inner"><a class="go_top goTop" href="#"></a></div>
-        </div>
       </div>
       <div class="hide">
+        <div id="subscribe_popup">
+          <div class="subscribe_form">
+            <form class="validateMe formParent subscribeForm" action="#" data-prompts="true">
+              <div class="form_cell formCell">
+                <div class="input_w">
+                  <input class="input_v1 forceValidation validate[required,custom[email]]" placeholder="Enter your email" data-errormessage="Please enter valid e-mail"/>
+                </div>
+              </div>
+              <div class="form_cell">
+                <button class="btn_v1 subscribe_btn btn_violette_2">Subscribe</button>
+              </div>
+              <div class="subscribe_success_msg"></div>
+            </form>
+          </div>
+          <div class="subscribe_form_footer">
+            <p>Follow us on social</p>
+            <ul class="action_soc _brand">
+              <li><a class="action_sh _t st-custom-button" href="#" data-network="twitter"></a></li>
+              <li><a class="action_sh _tg" href="https://t.me/cryptocomes"></a></li>
+              <li><a class="action_sh _f st-custom-button" href="#" data-network="facebook"></a></li>
+              <li><a class="action_sh _y st-custom-button" href="https://www.youtube.com/channel/UCXuvBkbsGkVr4DE0LUbfbaQ" data-network="facebook"></a></li>
+              <li><a class="action_sh _rd st-custom-button" href="#" data-network="reddit"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div id="sh_popup">
+          <div class="sh_block">
+            <div class="action_block">
+              <ul class="action_soc _brand">
+                <li><a class="action_sh _f st-custom-button" href="#" data-network="facebook"><span>Facebook</span></a></li>
+                <li><a class="action_sh _t st-custom-button" href="#" data-network="twitter"><span>Twitter</span></a></li>
+                <li><a class="action_sh _l st-custom-button" href="#" data-network="linkedin"><span>LinkedIn</span></a></li>
+                <li><a class="action_sh _tg" href="https://t.me/cryptocomes"><span>Telegram</span></a></li>
+                <li><a class="action_sh _rd st-custom-button" href="#" data-network="reddit"><span>Reddit</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="bonus_popup">
+          <div class="bonus_img"><img src="i/retweet.jpg"/></div>
+          <div class="bonus_caption">CryptoComes Twitter GIVEAWAY!<br>Follow and RT to win 💰$100💰</div>
+          <div class="bonus_controls"><a class="btn_v4 subscribe_btn _tw" href="#"><span>PARTICIPATE HERE</span></a></div>
+        </div>
         <div id="follow_popup">
           <div class="follow_caption">Follow us on Facebook or Twitter<br>to read this article</div>
           <div class="follow_tips">Нажми follow / like чтобы получить доступ. <br>Читай все самые горячие материалы по крипте на одном сайте! </div>
@@ -309,16 +349,16 @@
     </div>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;amp;subset=cyrillic" media="all"/>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" media="all"/>
-    <link rel="stylesheet" href="styles/header_global.css?t=1523533187867" media="all"/>
-    <link rel="stylesheet" href="styles/main_global.css?t=1523533187867" media="all"/>
-    <script src="js/jquery1.10.js?t=1523533187867"></script>
-    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="js/swiper.min.js?t=1523533187867"></script>
-    <script src="js/auto-complete.js?t=1523533187867"></script>
-    <script src="js/jquery.inputmask.bundle.js?t=1523533187867"></script>
-    <script src="js/jquery.validationEngine.js?t=1523533187867"></script>
-    <script src="js/jquery.validationEngine-ru.js?t=1523533187867"></script>
-    <script src="js/jquery.sticky-kit.min.js?t=1523533187867"></script>
-    <script src="js/script.js?t=1523533187867"></script>
+    <link rel="stylesheet" href="styles/header_global.css?t=1523652999905" media="all"/>
+    <link rel="stylesheet" href="styles/main_global.css?t=1523652999905" media="all"/>
+    <script src="js/jquery1.10.js?t=1523652999905"></script>
+    <script src="js/jquery-ui.js?t=1523652999905"></script>
+    <script src="js/swiper.min.js?t=1523652999905"></script>
+    <script src="js/auto-complete.js?t=1523652999905"></script>
+    <script src="js/jquery.inputmask.bundle.js?t=1523652999905"></script>
+    <script src="js/jquery.validationEngine.js?t=1523652999905"></script>
+    <script src="js/jquery.validationEngine-ru.js?t=1523652999905"></script>
+    <script src="js/jquery.sticky-kit.min.js?t=1523652999905"></script>
+    <script src="js/script.js?t=1523652999905"></script>
   </body>
 </html>
