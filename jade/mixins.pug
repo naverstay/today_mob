@@ -189,7 +189,7 @@ mixin footer(white, hide_soc_text)
     |   fjs.parentNode.insertBefore(js, fjs);
     | }(document, 'script', 'facebook-jssdk'));</script>
 
-mixin top_info()
+mixin top_info(no_breaking)
     .top_info
         .currency_switcher
             select.currency_select
@@ -224,7 +224,7 @@ mixin top_info()
                             p
                                 span.currency_val 26236.79
 
-    - if (!amp)
+    - if (!amp && !no_breaking)
         a.attention_block._warn(href='#')
             .attention_text BREAKING
             p Bears Drag Bitcoin Price to $8,350. Litecoin Holds On, Monero and NEO
@@ -567,4 +567,7 @@ mixin scripts(share)
         script(src='js/jquery.validationEngine-ru.js?t=' + time)
         script(src='js/jquery.sticky-kit.min.js?t=' + time)
         script(src='js/script.js?t=' + time)
+
+
+
 
