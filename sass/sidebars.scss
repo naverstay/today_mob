@@ -664,3 +664,17 @@
   margin-bottom: 10px;
   padding-top: 12px;
 }
+
+.article_action_footer {
+  @include transition_all(transform .3s);
+  transform: translate(0, 100%);
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 6;
+
+  ._show_subscribe & {
+    transform: translate(0, 0);
+  }
+}

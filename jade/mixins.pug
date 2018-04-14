@@ -233,7 +233,7 @@ mixin main_menu(subscribe)
     - if (subscribe)
         .subscribe_holder
             a.subscribe_close.subscribeAsideBtn(href='#')
-            .subscribeBlock.subscribe_block
+            .subscribe_block
                 .subscribe_title You can get more hot news and ideas.
 
                 .footer_form
@@ -381,6 +381,18 @@ mixin search()
             .form_cell
                 input.completeIt.search_input(placeholder='search...')
                 button.filter_btn
+
+mixin article_share()
+    .article_action_footer.subscribeBlock
+        ul.action_soc._fixed
+            li
+                a.action_sh._f(href='#' data-network="facebook" class='st-custom-button')
+            li
+                a.action_sh._t(href='#' data-network="twitter" class='st-custom-button')
+            li
+                a.action_sh._rd(href='#' data-network="reddit" class='st-custom-button')
+            li
+                a.action_sh._tg(href='https://t.me/cryptocomes')
 
 mixin header()
     .header
@@ -555,9 +567,4 @@ mixin scripts(share)
         script(src='js/jquery.validationEngine-ru.js?t=' + time)
         script(src='js/jquery.sticky-kit.min.js?t=' + time)
         script(src='js/script.js?t=' + time)
-
-
-
-
-
 
