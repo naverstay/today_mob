@@ -485,6 +485,17 @@ a.article_stat_val {
   bottom: 0;
   left: 0;
 
+  &._head {
+    top: 0;
+    bottom: auto;
+
+    .article_tag {
+      border-radius: 2px 0 2px;
+      padding-left: 14px;
+    }
+
+  }
+
   li {
     float: left;
     padding-right: 10px;
@@ -556,6 +567,23 @@ a.article_stat_val {
   }
 }
 
+.article_group_title_w {
+  @extend %clearfix;
+  margin-bottom: 5px;
+
+  .article_group_title {
+    float: left;
+    margin-bottom: 0;
+  }
+}
+
+.article_tip {
+  clear: both;
+  color: #000;
+  font: 14px/16px $RubikReg;
+  padding: 0 0 14px 33px;
+}
+
 .article_group_title {
   @extend %icon_pseudo;
   position: relative;
@@ -595,7 +623,7 @@ a.article_stat_val {
 
   @each $cls, $content in $firm-icons {
     &.#{$cls} {
-      &:before {
+      &:not([class^="icon-"]):not([class*=" icon-"]):before {
         content: unicode($content);
       }
     }
@@ -715,3 +743,4 @@ a.article_stat_val {
   margin: 0 -16px;
   background: #f7f8f8;
 }
+

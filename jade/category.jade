@@ -1,0 +1,75 @@
+include mixins.pug
+doctype html
+html(lang='ru')
+    +dev_head('Crypto категория')
+
+    body.no_transition
+        .wrapper
+            .main_content
+                .section_inner
+                    +top_info()
+
+                    .article_group_title_w
+                        .article_group_title._news
+                            h1: a.artile_link(href='#') News
+                        .article_group_title._news.icon-hash
+                            h2: a.artile_link(href='#') BITCOIN
+
+                        .article_tip — How Artificial Intelligence combined with Blockchain unlock technologies
+
+                    .article_block.story_block._main
+                        .article_img
+                            a.article_img_link(href='#'): img(src='i/bear.jpg')
+
+                        .article_title
+                            .article_action: .article_action_inner
+                                a.article_action_btn.actionBtn(href='#')
+                            p: a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
+                            ul.article_stat
+                                li
+                                    a.article_stat_val(href='#') John Doe
+                                li
+                                    span.article_stat_val._stat_time 2h
+                                li
+                                    span.article_stat_val._stat_views 212
+
+                    .article_block.story_block._main
+                        .article_img
+                            a.article_img_link(href='#'): img(src='i/bear.jpg')
+
+                        .article_title
+                            .article_action: .article_action_inner
+                                a.article_action_btn.actionBtn(href='#')
+                            p: a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
+                            ul.article_stat
+                                li
+                                    a.article_stat_val(href='#') John Doe
+                                li
+                                    span.article_stat_val._stat_time 2h
+                                li
+                                    span.article_stat_val._stat_views 212
+
+                    .article_block.story_block._main
+                        .article_img
+                            a.article_img_link(href='#'): img(src='i/bear.jpg')
+
+                        .article_title
+                            .article_action: .article_action_inner
+                                a.article_action_btn.actionBtn(href='#')
+                            p: a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
+                            ul.article_stat
+                                li
+                                    a.article_stat_val(href='#') John Doe
+                                li
+                                    span.article_stat_val._stat_time 2h
+                                li
+                                    span.article_stat_val._stat_views 212
+
+            .nav_holder
+                +header()
+                +main_menu()
+                +search()
+
+            +footer(false, true)
+
+        +scripts()

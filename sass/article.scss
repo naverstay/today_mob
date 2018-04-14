@@ -78,25 +78,6 @@
 
 }
 
-.article_tag_list {
-  @extend %clearfix;
-  list-style: none;
-  margin-left: -22px;
-  margin-bottom: 20px;
-
-  li {
-    float: left;
-    padding-left: 22px;
-    margin-top: 7px;
-  }
-}
-
-.tag_link {
-  @extend %firm_color;
-  font: 13px/22px $RubikMed;
-  letter-spacing: -.017em;
-}
-
 .article_telegram_section {
   background: #000;
   margin-left: -16px;
@@ -670,7 +651,7 @@
 
 .offer_block {
   background: #f6f7f7;
-  margin: 4px 0 20px;
+  margin-top: 4px;
   border-radius: 2px;
   padding: 15px 10px 20px;
   text-align: center;
@@ -684,3 +665,250 @@
   }
 }
 
+.bread_crumbs {
+  @extend %clearfix;
+  list-style: none;
+  padding-top: 5px;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: -16px;
+    left: -16px;
+    height: 1px;
+    background: #eee;
+    display: block;
+    bottom: 0;
+  }
+
+  li {
+    @extend %icon_pseudo;
+    float: left;
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 10px;
+
+    &:before {
+      content: unicode($icon-triangle_r);
+      position: absolute;
+      top: 7px;
+      left: 7px;
+      color: #ddd;
+      font-size: 8px;
+    }
+
+    &:first-child {
+      padding-left: 0;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+.crumb_link {
+  color: $clr_blue;
+  font: 12px/15px $RubikReg;
+  text-decoration: underline;
+}
+
+.article_container {
+  position: relative;
+  padding: 16px 0 0;
+
+  .article_caption {
+    font: 20px/26px $RubikBold;
+  }
+
+  .article_stat {
+    padding: 7px 0 18px;
+  }
+
+  .article_tag {
+    padding-left: 8px;
+  }
+
+  .article_lead {
+    padding: 18px 0;
+    margin-bottom: 28px;
+    font: 16px/21px $RubikMed;
+
+    @each $cls, $color in $firm-colors {
+      &.#{$cls} {
+        border-bottom: 4px solid $color;
+      }
+    }
+  }
+
+  h1 {
+
+  }
+
+  h2 {
+
+  }
+
+  h3 {
+
+  }
+
+  h4 {
+
+  }
+
+  h5 {
+
+  }
+
+  h6 {
+
+  }
+
+  figure {
+    margin: 0 -16px;
+    display: block;
+
+    .article_img {
+      border-radius: 0;
+    }
+  }
+
+  blockquote {
+    position: relative;
+    background: #f6f7f7;
+    padding: 30px 16px 30px 20px;
+    margin: 25px 0 30px;
+    border-radius: 2px;
+
+    p {
+      font: 16px/21px $RubikMed;
+
+      &:first-of-type {
+        @extend %icon_pseudo;
+
+        &:before {
+          //content: '\201C';
+          content: unicode($icon-quote_l);
+          position: absolute;
+          color: $violette;
+          top: -5px;
+          left: -1px;
+          font-size: 28px;
+        }
+      }
+
+      &:last-of-type {
+        @extend %icon_pseudo;
+
+        &:after {
+          //content: '\201D';
+          content: unicode($icon-quote_r);
+          position: absolute;
+          color: $violette;
+          bottom: -6px;
+          right: -6px;
+          font-size: 28px;
+        }
+      }
+    }
+
+    i {
+      position: absolute;
+      bottom: 24px;
+      left: 20px;
+      font-size: 15px;
+      line-height: 19px;
+      font-style: italic;
+      color: #bbb;
+    }
+  }
+
+  p {
+    line-height: 1.3;
+    margin-bottom: 22px;
+
+    a {
+      color: $clr_blue;
+    }
+
+    .subscribe_btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+}
+
+.article_tag_list {
+  @extend %clearfix;
+  list-style: none;
+  margin-left: -10px;
+
+  li {
+    float: left;
+    padding-left: 10px;
+    margin-bottom: 8px;
+  }
+}
+
+.tag_link {
+  color: $clr_blue;
+  font: 12px/15px $RubikBold;
+  padding: 3px 7px;
+  background: #f6f7f7;
+  border-radius: 2px;
+  display: block;
+}
+
+.article_line {
+  height: 53px;
+  margin: 0 -16px;
+  background: rgb(221, 221, 221);
+  background: -moz-linear-gradient(top, rgba(221, 221, 221, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background: -webkit-linear-gradient(top, rgba(221, 221, 221, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background: linear-gradient(to bottom, rgba(221, 221, 221, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dddddd', endColorstr='#ffffff', GradientType=0);
+
+  @each $cls, $color in $firm-colors {
+    &.#{$cls} {
+      border-top: 4px solid $color;
+    }
+  }
+}
+
+.article_contents {
+  margin-bottom: 12px;
+  color: #000;
+  font: 14px/16px $RubikBold;
+}
+
+.contents_list {
+  border: solid #eee;
+  border-width: 1px 0;
+  padding: 5px 0 12px;
+  margin-bottom: 24px;
+  list-style: none;
+
+  li {
+    @extend %icon_pseudo;
+    margin: 12px 0;
+    padding-left: 15px;
+    position: relative;
+
+    &:before {
+      content: unicode($icon-triangle_r);
+      position: absolute;
+      left: 0;
+      top: 4px;
+      font-size: 7px;
+      color: #ddd;
+    }
+  }
+}
+
+.contents_link {
+  color: $clr_blue;
+  font: 12px/15px $RubikReg;
+}

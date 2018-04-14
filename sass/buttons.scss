@@ -55,7 +55,6 @@
   &.subscribe_btn {
     display: block;
     width: 100%;
-    letter-spacing: .05em;
     font: 16px/20px $RubikBold;
     padding: 10px 5px;
     text-align: center;
@@ -123,6 +122,36 @@
 .btn_v4 {
   height: 40px;
 
+  &.comment_btn {
+    @extend %icon_pseudo;
+    display: block;
+    text-align: center;
+    position: relative;
+    font: 14px/38px $RubikBold;
+    color: $clr_blue;
+
+    &:after {
+      content: unicode($icon-chevron_r_thin);
+      transform: rotate(90deg);
+      color: #eee;
+      font-size: 20px;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+      padding-bottom: 12px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      right: -16px;
+      left: -16px;
+      top: 0;
+      height: 1px;
+      background: #eee;
+    }
+  }
+
   &.subscribe_btn {
     @extend %icon_pseudo;
     display: inline-block;
@@ -131,6 +160,7 @@
     font: 15px/18px $RubikReg;
     color: #fff;
     border-radius: 2px;
+    text-transform: uppercase;
 
     span {
       display: inline-block;
@@ -222,7 +252,7 @@
 }
 
 .gray_btn {
-  color: #415cba;
+  color: $clr_blue;
   border: 1px solid #eee;
 }
 

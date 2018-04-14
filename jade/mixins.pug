@@ -533,7 +533,7 @@ mixin svg_icon(icon)
         </svg>
 
 mixin scripts(share)
-    link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=cyrillic', media='all')
+    link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&amp;subset=cyrillic', media='all')
     link(rel='stylesheet', href='//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css', media='all')
 
     -if (!prod)
@@ -555,5 +555,9 @@ mixin scripts(share)
         script(src='js/jquery.validationEngine-ru.js?t=' + time)
         script(src='js/jquery.sticky-kit.min.js?t=' + time)
         script(src='js/script.js?t=' + time)
+
+
+
+
 
 
