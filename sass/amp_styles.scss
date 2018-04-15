@@ -292,7 +292,7 @@ body .wrapper .hide {
 
         .article_link {
           font-size: 16px;
-          letter-spacing: -.015em;
+          //letter-spacing: -.015em;
         }
       }
     }
@@ -301,7 +301,7 @@ body .wrapper .hide {
   > p {
     font-size: 17px;
     line-height: 22px;
-    letter-spacing: .021em;
+    //letter-spacing: .021em;
     margin-top: 21px;
     padding-right: 16px;
     font-family: serif;
@@ -341,7 +341,7 @@ body .wrapper .hide {
     vertical-align: top;
     padding: 5px 14px 5px 4px;
     font: 12px/18px $RubikBold;
-    letter-spacing: .015em;
+    //letter-spacing: .015em;
   }
 
   .article_tag_icon {
@@ -386,7 +386,7 @@ body .wrapper .hide {
 .tag_link {
   @extend %firm_color;
   font: 13px/22px $RubikMed;
-  letter-spacing: -.017em;
+  //letter-spacing: -.017em;
 }
 
 .article_telegram_block {
@@ -440,12 +440,12 @@ body .wrapper .hide {
 
 .news_name {
   @extend %firm_color;
-  letter-spacing: -.035em;
+  //letter-spacing: -.035em;
   font: 20px/1.1 $RubikMed;
 
   ._related & {
     font-size: 16px;
-    letter-spacing: .01em;
+    //letter-spacing: .01em;
   }
 }
 
@@ -455,7 +455,7 @@ body .wrapper .hide {
   padding: 20px 16px 18px;
   margin: 0 -16px 20px 0;
   color: #fff;
-  letter-spacing: .022em;
+  //letter-spacing: .022em;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -510,7 +510,7 @@ body .wrapper .hide {
   margin: 31px -16px 31px 20px;
 
   .subscribe_btn {
-    letter-spacing: .025em;
+    //letter-spacing: .025em;
   }
 
   .article_subscribe_icon {
@@ -561,7 +561,7 @@ body .wrapper .hide {
 
   span {
     font: 13px $RubikMed;
-    letter-spacing: -.017em;
+    //letter-spacing: -.017em;
     margin-top: 12px;
     display: inline-block;
     vertical-align: top;
@@ -595,7 +595,7 @@ body .wrapper .hide {
     p {
       @extend %firm_color;
       font: 20px/28px $RubikBold;
-      letter-spacing: .012em;
+      //letter-spacing: .012em;
       margin-bottom: 0;
 
       &:first-of-type {
@@ -639,37 +639,37 @@ body .wrapper .hide {
 
   h1 {
     font: 22px $RubikBold;
-    letter-spacing: .02em;
+    //letter-spacing: .02em;
     margin-bottom: 18px;
   }
 
   h2 {
     font: 20px $RubikMed;
-    letter-spacing: .025em;
+    //letter-spacing: .025em;
     margin-bottom: 18px;
   }
 
   h3 {
     font: 18px $RubikBold;
-    letter-spacing: .015em;
+    //letter-spacing: .015em;
     margin-bottom: 16px;
   }
 
   h4 {
     font: 20px $RubikMed;
-    letter-spacing: -.035em;
+    //letter-spacing: -.035em;
     margin-bottom: 18px;
   }
 
   h5 {
     font: 16px/1.4 $RubikMed;
-    letter-spacing: .015em;
+    //letter-spacing: .015em;
     margin-bottom: 16px;
   }
 
   h6 {
     font: 15px $RubikBold;
-    letter-spacing: 0.01em;
+    //letter-spacing: 0.01em;
     margin-bottom: 16px;
   }
 
@@ -681,7 +681,7 @@ body .wrapper .hide {
     margin-bottom: 1em;
     font-size: 17px;
     line-height: 1.3;
-    letter-spacing: .022em;
+    //letter-spacing: .022em;
   }
 
   a {
@@ -697,7 +697,7 @@ body .wrapper .hide {
       padding-left: 32px;
       margin-bottom: 22px;
       line-height: 1.6;
-      letter-spacing: .05em;
+      //letter-spacing: .05em;
 
       &:before {
         @extend %firm_bg_color;
@@ -758,7 +758,7 @@ body .wrapper .hide {
   color: #fff;
   padding: 14px 0 34px 20px;
   font: 24px $RubikBold;
-  letter-spacing: -.031em;
+  //letter-spacing: -.031em;
 
   .search_holder[side][open] & {
     opacity: 1;
@@ -1018,7 +1018,7 @@ body amp-accordion > section .footer_subscribe {
   p {
     color: #f7f8f8;
     font: 16px/1.3 $RubikMed;
-    letter-spacing: -.021em;
+    //letter-spacing: -.021em;
   }
 
   &._success {
@@ -1048,7 +1048,7 @@ body amp-accordion > section .footer_subscribe {
 .footer_msg_title {
   font: 20px/2 $RubikBold;
   color: #fff;
-  letter-spacing: .017em;
+  //letter-spacing: .017em;
   margin-bottom: 20px;
 
   span {
@@ -1071,7 +1071,7 @@ body amp-accordion > section .footer_subscribe {
   color: $violette;
   font: 16px $RubikMed;
   text-decoration: underline;
-  letter-spacing: -.017em;
+  //letter-spacing: -.017em;
 }
 
 .footer_action {
@@ -1081,7 +1081,7 @@ body amp-accordion > section .footer_subscribe {
 
   p {
     font: 20px/1.2 $RubikBold;
-    letter-spacing: .017em;
+    //letter-spacing: .017em;
     margin-bottom: 16px;
   }
 
@@ -1117,7 +1117,7 @@ body amp-accordion > section .footer_subscribe {
   text-decoration: underline;
   color: #fff;
   font: 24px $RubikBold;
-  letter-spacing: -.031em;
+  //letter-spacing: -.031em;
 }
 
 .menu_footer {
@@ -1180,7 +1180,7 @@ body amp-accordion > section .footer_subscribe {
   &.subscribe_btn {
     display: inline-block;
     vertical-align: top;
-    letter-spacing: .05em;
+    //letter-spacing: .05em;
     font: 20px/24px $RubikBold;
     padding: 12px 14px;
 

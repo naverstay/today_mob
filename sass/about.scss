@@ -19,7 +19,7 @@
   }
 
   > p {
-    letter-spacing: .025em;
+    //letter-spacing: .025em;
     font-size: 17px;
     line-height: 22px;
   }
@@ -38,7 +38,7 @@
 .about_title {
   color: $violette;
   font: 52px/1 $RubikBold;
-  letter-spacing: .021em;
+  //letter-spacing: .021em;
   margin-bottom: 15px;
 }
 
@@ -64,50 +64,34 @@
   }
 }
 
-.about_team {
-  list-style: none;
-
-  li {
-    + li {
-      margin-top: 48px;
-    }
-  }
-}
-
 .team_unit {
   @extend %clearfix;
-  letter-spacing: -.01em;
-  color: #000;
-  padding: 0 12px 10px 20px;
-  border-left: 6px solid $violette;
+  min-height: 108px;
 }
 
 .team_unit_name {
-  font: 16px/1.1 $RubikBold;
-  padding: 12px 0 8px;
+  color: #000;
+  display: inline-block;
+  vertical-align: top;
+  font: 16px/21px $RubikMed;
+  margin-bottom: 5px;
 }
 
 .team_unit_post {
-  opacity: .5;
-  font: 14px $RubikMed;
-}
-
-.team_unit_info {
-  padding-top: 22px;
+  color: #bbb;
+  font: 12px/14px $RubikMed;
 }
 
 .team_unit_photo {
-  float: right;
-  width: 71px;
+  width: 81px;
+  background: #f6f7f7;
+  padding-bottom: 10px;
+  padding-right: 10px;
 
   img {
     display: block;
     max-width: 100%;
-  }
-
-  + .team_unit_post,
-  + .team_unit_name {
-    margin-right: 100px;
+    max-height: 100%;
   }
 }
 
@@ -126,7 +110,7 @@
   p {
     font-size: 17px;
     line-height: 22px;
-    letter-spacing: .023em;
+    //letter-spacing: .023em;
 
     + p {
       margin-top: 20px;
@@ -155,7 +139,7 @@
     z-index: 1;
     background: #fff;
     padding: 35px 14px 40px;
-    letter-spacing: .075em;
+    //letter-spacing: .075em;
 
     &:before {
       content: unicode($icon-ufo);
@@ -172,19 +156,16 @@
   position: relative;
   z-index: 1;
   font: 22px/26px $RubikBold;
-  letter-spacing: .05em;
+  //letter-spacing: .05em;
   color: #000;
 }
 
 .about_contacts {
-  margin: 0 -16px 35px;
+  margin: 0 -16px 22px;
   background: #f8f8f8;
-  padding: 35px 16px 40px;
+  padding: 25px 16px 30px;
 
   p {
-    font-size: 17px;
-    line-height: 22px;
-    letter-spacing: .023em;
     margin-top: 15px;
 
     + p {
@@ -196,7 +177,6 @@
 .about_contacts_list {
   list-style: none;
   color: $violette;
-  padding-top: 8px;
 
   @include respond-to-min($resp_step_2) {
     padding-top: 15px;
@@ -204,41 +184,36 @@
 
   li {
     position: relative;
-    margin-top: 31px;
-    padding-left: 35px;
+    margin-top: 33px;
+    padding-left: 50px;
 
     &:before {
       position: absolute;
-      top: -8px;
-      left: -14px;
+      top: -4px;
+      left: 4px;
       width: 42px;
       height: 42px;
       font-size: 22px;
       line-height: 34px;
       text-align: center;
     }
+
+    &:first-child {
+      margin-top: 25px;
+    }
   }
 }
 
 .contacts_link {
   color: $violette;
-  font-size: 13px;
-  letter-spacing: .065em;
+  font-size: 14px;
+  line-height: 16px;
+  //letter-spacing: .065em;
 }
 
 .contacts_caption {
   font: 20px $RubikMed;
-  margin-bottom: 1px;
-}
-
-.about_team_wrapper {
-  margin-bottom: 30px;
-
-  .about_title {
-    padding-left: 18px;
-    margin-bottom: 48px;
-    letter-spacing: 0;
-  }
+  margin-bottom: 6px;
 }
 
 .about_team {
@@ -246,23 +221,33 @@
   list-style: none;
 
   li {
-    .about_team_wrapper & {
-      position: relative;
-      margin-bottom: 18px;
-      padding-top: 24px;
+    border-top: 1px solid #eee;
+    padding-top: 18px;
+    margin-top: 20px;
 
-      + li {
-        margin-top: 0;
+    &:first-child {
+      border-top: 0;
+      margin-top: 0;
+      padding-top: 0;
+    }
 
-        &:before {
-          content: '';
-          position: absolute;
-          top: 0;
-          right: 0;
-          left: 0;
-          height: 1px;
-          background: #ededed;
-        }
+    &:nth-child(odd) {
+      .team_unit_photo {
+        float: left;
+      }
+
+      .team_unit_info {
+        margin-left: 100px;
+      }
+    }
+
+    &:nth-child(even) {
+      .team_unit_photo {
+        float: right;
+      }
+
+      .team_unit_info {
+        margin-right: 100px;
       }
     }
   }

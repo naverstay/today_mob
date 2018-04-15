@@ -56,74 +56,66 @@
                 </div>
               </div>
             </div>
-          </div><a class="attention_block _warn" href="#">
-            <div class="attention_text">BREAKING</div>
-            <p>Bears Drag Bitcoin Price to $8,350. Litecoin Holds On, Monero and NEO</p></a>
-          <div class="new_release_holder">
-            <h2>Submit a Press Release</h2>
-            <p>Share your press release with our readers. It will appear at the top of the Home Page in Press releases section. Readers are also able to access Press Releases in our catalog. We publish Press releases only after the payment has been cleared and an editor reviewed the text.</p>
-            <p>Press releases for inappropriate or fraudulent products and services will not be published. Cointelegraph has a right to refuse to publish your press release offering you a refund.</p>
           </div>
+          <h2 class="msg_title">Submit your Press Release</h2>
           <div class="new_release_form">
-            <form action="#">
+            <form class="validateMe" action="#" data-prompts="true">
               <div class="form_cell">
                 <label class="label_v2" for="release_title">Title</label>
                 <div class="input_w">
-                  <input class="input_v3" id="release_title">
+                  <input class="input_v3 validate[required]" id="release_title">
                 </div>
               </div>
               <div class="form_cell">
                 <label class="label_v2" for="release_content">Content</label>
                 <div class="input_w">
-                  <textarea class="input_v3" id="release_content"></textarea>
+                  <textarea class="input_v3 validate[required]" id="release_content"></textarea>
                 </div>
               </div>
               <div class="form_group">
                 <div class="form_cell">
                   <label class="label_v2" for="release_company_name">Company name</label>
                   <div class="input_w">
-                    <input class="input_v3" id="release_company_name">
+                    <input class="input_v3 validate[required]" id="release_company_name">
                   </div>
                 </div>
                 <div class="form_cell">
                   <label class="label_v2" for="release_company_site">Company site</label>
                   <div class="input_w">
-                    <input class="input_v3" id="release_company_site">
+                    <input class="input_v3 validate[required]" id="release_company_site">
                   </div>
                 </div>
               </div>
               <div class="form_cell">
-                <label class="label_v2" for="release_contacts">Company Contacts</label>
+                <label class="label_v2" for="release_contacts">Contacts</label>
                 <div class="input_w">
                   <input class="input_v3" id="release_contacts" disabled="disabled">
                 </div>
               </div>
+              <!--.form_cell
+              label.label_v2(for='release_time') Publication time
+              .input_w
+                  input#release_time.input_v3.success
+              -->
+              <!--.form_cell
+              label.label_v2(for='release_email') Your Email
+              .input_w
+                  input#release_email.input_v3.error
+              
+              -->
               <div class="form_cell">
-                <label class="label_v2" for="release_files"><span>File Upload Image/logo Upload</span><span class="clr_gray">&nbsp;— min 720x480, max 1mb</span></label>
-                <div class="input_w">
-                  <label class="btn_v4 upload_btn gray_btn_2"><span>Select file
-                      <input class="hide" id="release_files" type="file"></span></label>
-                </div>
-              </div>
-              <div class="form_cell">
-                <label class="label_v2" for="release_time">Publication time</label>
-                <div class="input_w">
-                  <input class="input_v3 success" id="release_time">
-                </div>
-              </div>
-              <div class="form_cell">
-                <label class="label_v2" for="release_email">Your Email</label>
-                <div class="input_w">
-                  <input class="input_v3 error" id="release_email">
-                </div>
+                <button class="btn_v4 btn_violette_2 create_release_btn"><span>Submit press release</span></button>
               </div>
               <div class="release_summary">
-                <div class="form_cell">
-                  <p><span class="clr_gray">The price per release is&nbsp;</span><span>0.8 BTC</span></p><span class="_hash">1ECGUKEosEhaZnywCVxw6e1VUcPRqGkhvd</span>
-                </div>
-                <div class="form_cell">
-                  <button class="btn_v4 btn_violette_2 create_release_btn"><span>Submit press release</span></button>
-                </div>
+                <p>Footer form desctiption some text with some words. The company’s main focus will be India and Africa and Portuguese-speaking markets</p>
+                <!--.form_cell
+                p
+                    span.clr_gray The price per release is&nbsp;
+                    span 0.8 BTC
+                span._hash 1ECGUKEosEhaZnywCVxw6e1VUcPRqGkhvd
+                
+                
+                -->
               </div>
             </form>
           </div>
@@ -258,12 +250,12 @@
             <p>Follow us and get all crypto news 24/7</p>
             <p><a class="btn_v1 btn_violette_3 subscribe_btn_email subscribeBtnEmail" href="#">SUBSCRIBE BY EMAIL</a></p>
             <ul class="action_list">
-              <li><a class="action_link _w" href="https://twitter.com/CryptoComes"><span>Twitter</span></a></li>
-              <li><a class="action_link _t" href="https://t.me/cryptocomes"><span>Telegram</span></a></li>
-              <li><a class="action_link _f" href="https://www.facebook.com/CryptoComes-1537974916268413/"><span>Facebook</span></a></li>
-              <li><a class="action_link _y" href="https://www.youtube.com/channel/UCXuvBkbsGkVr4DE0LUbfbaQ"><span>Youtube</span></a></li>
-              <li><a class="action_link _rd" href="#"><span>Reddit</span></a></li>
-              <li><a class="action_link _r" href="https://cryptocomes.com/rss_feed"><span>RSS</span></a></li>
+              <li><a class="action_link _w" href="https://twitter.com/CryptoComes"></a></li>
+              <li><a class="action_link _t" href="https://t.me/cryptocomes"></a></li>
+              <li><a class="action_link _f" href="https://www.facebook.com/CryptoComes-1537974916268413/"></a></li>
+              <li><a class="action_link _y" href="https://www.youtube.com/channel/UCXuvBkbsGkVr4DE0LUbfbaQ"></a></li>
+              <li><a class="action_link _rd" href="#"></a></li>
+              <li><a class="action_link _r" href="https://cryptocomes.com/rss_feed"></a></li>
             </ul>
           </div>
           <div class="copyright">©2018 CryptoComes. All rights reserved.</div>
@@ -331,16 +323,16 @@
     </div>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&amp;amp;subset=cyrillic" media="all"/>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" media="all"/>
-    <link rel="stylesheet" href="styles/header_global.css?t=1523702728705" media="all"/>
-    <link rel="stylesheet" href="styles/main_global.css?t=1523702728705" media="all"/>
-    <script src="js/jquery1.10.js?t=1523702728705"></script>
-    <script src="js/jquery-ui.js?t=1523702728705"></script>
-    <script src="js/swiper.min.js?t=1523702728705"></script>
-    <script src="js/auto-complete.js?t=1523702728705"></script>
-    <script src="js/jquery.inputmask.bundle.js?t=1523702728705"></script>
-    <script src="js/jquery.validationEngine.js?t=1523702728705"></script>
-    <script src="js/jquery.validationEngine-ru.js?t=1523702728705"></script>
-    <script src="js/jquery.sticky-kit.min.js?t=1523702728705"></script>
-    <script src="js/script.js?t=1523702728705"></script>
+    <link rel="stylesheet" href="styles/header_global.css?t=1523772055642" media="all"/>
+    <link rel="stylesheet" href="styles/main_global.css?t=1523772055642" media="all"/>
+    <script src="js/jquery1.10.js?t=1523772055642"></script>
+    <script src="js/jquery-ui.js?t=1523772055642"></script>
+    <script src="js/swiper.min.js?t=1523772055642"></script>
+    <script src="js/auto-complete.js?t=1523772055642"></script>
+    <script src="js/jquery.inputmask.bundle.js?t=1523772055642"></script>
+    <script src="js/jquery.validationEngine.js?t=1523772055642"></script>
+    <script src="js/jquery.validationEngine-ru.js?t=1523772055642"></script>
+    <script src="js/jquery.sticky-kit.min.js?t=1523772055642"></script>
+    <script src="js/script.js?t=1523772055642"></script>
   </body>
 </html>

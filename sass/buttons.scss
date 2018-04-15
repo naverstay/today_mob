@@ -189,12 +189,21 @@
   }
 
   &.create_release_btn {
-    display: block;
-    width: 100%;
-    padding: 9px 21px;
+    @extend %icon_pseudo;
+    display: inline-block;
+    vertical-align: top;
+    padding: 9px 16px;
     border-radius: 2px;
-    margin-top: 25px;
-    font: 16px/20px $RubikBold;
+    font: 14px/20px $RubikReg;
+    text-transform: uppercase;
+
+    &:after {
+      content: unicode($icon-rocket);
+      display: inline-block;
+      vertical-align: 0;
+      padding-left: 15px;
+      font-size: 16px;
+    }
 
     span {
       position: relative;

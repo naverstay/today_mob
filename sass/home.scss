@@ -33,7 +33,7 @@
   font: 13px $RubikMed;
   margin-top: 6px;
   margin-bottom: 17px;
-  letter-spacing: .013em;
+  //letter-spacing: .013em;
   position: relative;
   z-index: 1;
 }
@@ -43,7 +43,7 @@
   padding: 20px 16px 18px;
   color: #fff;
   font: 24px $RubikBold;
-  letter-spacing: .025em;
+  //letter-spacing: .025em;
 
   &._release {
     background: $pink;
@@ -189,7 +189,7 @@
 
         .article_link {
           font-size: 16px;
-          letter-spacing: -.015em;
+          //letter-spacing: -.015em;
         }
       }
     }
@@ -198,7 +198,7 @@
   > p {
     font-size: 17px;
     line-height: 22px;
-    letter-spacing: .021em;
+    //letter-spacing: .021em;
     margin-top: 21px;
     padding-right: 16px;
 
@@ -293,6 +293,10 @@
     font-size: 14px;
   }
 
+  &._mt_5 {
+    margin-top: 5px;
+  }
+
   @each $cls, $color in $firm-colors {
     &.#{$cls} {
       background: $color;
@@ -316,12 +320,12 @@
 
   ._video & {
     font: 16px/1.4 $RubikMed;
-    letter-spacing: -.023em;
+    //letter-spacing: -.023em;
   }
 
   ._article & {
     color: #000;
-    letter-spacing: .08em;
+    //letter-spacing: .08em;
   }
 }
 
@@ -365,6 +369,10 @@
 
   .article_action ~ & {
     margin-right: 30px;
+  }
+
+  &._hero {
+    padding-top: 0;
   }
 }
 
@@ -518,7 +526,7 @@ a.article_stat_val {
     vertical-align: top;
     padding: 5px 10px 5px 1px;
     font: 10px/14px $RubikBold;
-    letter-spacing: .015em;
+    //letter-spacing: .015em;
     text-transform: uppercase;
   }
 
@@ -590,7 +598,7 @@ a.article_stat_val {
   color: $clr_black;
   font: 20px/23px $RubikBold;
   text-transform: uppercase;
-  //letter-spacing: .025em;
+  ////letter-spacing: .025em;
   padding: 10px 10px 10px 33px;
   margin: 0 0 5px;
   //background-position: 0 0;
@@ -735,7 +743,7 @@ a.article_stat_val {
 
   ._related & {
     font-size: 16px;
-    letter-spacing: .01em;
+    //letter-spacing: .01em;
   }
 }
 

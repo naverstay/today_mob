@@ -23,7 +23,7 @@
     white-space: normal;
     padding-left: 37px;
     font: 16px/1.4 $RubikMed;
-    letter-spacing: -.021em;
+    //letter-spacing: -.021em;
   }
 
   .search_date {
@@ -151,7 +151,7 @@
 }
 
 textarea.input_v3 {
-  height: 160px;
+  height: 180px;
 }
 
 .input_w {
@@ -184,75 +184,56 @@ textarea.input_v3 {
 }
 
 .label_v2 {
-  letter-spacing: .02em;
+  //letter-spacing: .02em;
   color: #000;
   font: 14px $RubikMed;
   display: inline-block;
   vertical-align: top;
-  margin-bottom: 7px;
+  margin-bottom: 3px;
 }
 
 .msg_block {
-  margin: 40px auto;
-  padding: 10px 20px;
-  text-align: center;
   line-height: 18px;
-  font-size: 16px;
+  font-size: 14px;
+  padding-bottom: 5px;
 
   p {
-    letter-spacing: .02em;
+    //letter-spacing: .02em;
+    margin-bottom: 25px;
+  }
+
+  .subscribe_success_msg {
+    height: 110px;
+
+    &:after {
+      width: 123px;
+      height: 85px;
+      margin: -54px 0 0 -61px;;
+    }
+
+    &:before {
+      margin-top: -40px;
+    }
   }
 }
 
-.msg_title {
-  font: 22px/30px $RubikBold;
+.block_title {
+  font: 20px/26px $RubikBold;
   color: #202020;
   margin-bottom: 12px;
 }
 
 .msg_status {
-  @extend %icon_pseudo;
-  display: inline-block;
-  vertical-align: top;
   position: relative;
-  width: 60px;
-  height: 60px;
-  border: 2px solid;
-  border-radius: 100%;
-  text-align: center;
   margin: 18px 0 20px;
 
   &._success {
-    color: #43a526;
-    border-color: #43a526;
-    line-height: 64px;
-    font-size: 36px;
-
-    &:before {
-      content: unicode($icon-ufo_3);
-    }
+    height: 85px;
+    background: url(../i/space.svg) no-repeat 50% 50%;
   }
 
   &._fail {
-    color: #ff0a24;
-    border-color: #ff0a24;
-    line-height: 64px;
-    font-size: 26px;
-    margin-top: 18px;
 
-    &:before {
-      content: unicode($icon-close);
-    }
-  }
-}
-
-.msg_link {
-  font: 14px $RubikMed;
-  text-decoration: underline;
-  color: $violette;
-
-  &:hover {
-    text-decoration: none;
   }
 }
 
@@ -458,4 +439,10 @@ textarea.input_v3 {
 .bonus_controls {
   text-align: center;
   padding: 5px 10px 35px;
+}
+
+.gl_link {
+  font: 14px $RubikReg;
+  color: $clr_blue;
+  text-decoration: none;
 }

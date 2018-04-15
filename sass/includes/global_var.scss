@@ -531,14 +531,14 @@ $firm-icons: (
 @mixin inline_block_wrapper {
   font-size: 0;
   line-height: 0;
-  letter-spacing: -1px;
+  //letter-spacing: -1px;
 }
 
 @mixin inline_block_element($font-size : 15px, $line-height : 1.4, $letter-spacing : normal) {
   display: inline-block;
   font-size: $font-size;
   line-height: $line-height;
-  letter-spacing: $letter-spacing;
+  //letter-spacing: $letter-spacing;
   @if $ie7 == true {
     display: inline;
   }

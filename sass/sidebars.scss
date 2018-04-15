@@ -75,7 +75,7 @@
 
     p {
       font: 18px/24px $RubikMed;
-      letter-spacing: .025em;
+      //letter-spacing: .025em;
     }
   }
 
@@ -94,7 +94,7 @@
   color: #fff;
   padding: 0 36px;
   font: 28px/32px $RubikBold;
-  letter-spacing: .025em;
+  //letter-spacing: .025em;
 
   .subscribe_fail &,
   .subscribe_success & {
@@ -217,7 +217,7 @@
   color: #fff;
   padding: 14px 0 34px 20px;
   font: 24px $RubikBold;
-  letter-spacing: -.031em;
+  //letter-spacing: -.031em;
 
   .search_opened & {
     opacity: 1;
@@ -353,7 +353,7 @@
   p {
     color: #f7f8f8;
     font: 16px/1.3 $RubikMed;
-    letter-spacing: -.021em;
+    //letter-spacing: -.021em;
   }
 
   &._success {
@@ -383,7 +383,7 @@
 .footer_msg_title {
   font: 20px/2 $RubikBold;
   color: #fff;
-  letter-spacing: .017em;
+  //letter-spacing: .017em;
   margin-bottom: 20px;
 
   span {
@@ -402,7 +402,7 @@
   color: $violette;
   font: 16px $RubikMed;
   text-decoration: underline;
-  letter-spacing: -.017em;
+  //letter-spacing: -.017em;
 }
 
 .footer_action {
@@ -412,7 +412,7 @@
 
   p {
     font: 20px/1.2 $RubikBold;
-    letter-spacing: .017em;
+    //letter-spacing: .017em;
     margin-bottom: 16px;
   }
 
@@ -464,7 +464,7 @@
 
   span {
     font: 13px $RubikMed;
-    letter-spacing: -.017em;
+    //letter-spacing: -.017em;
     margin-top: 12px;
     display: inline-block;
     vertical-align: top;
@@ -593,7 +593,7 @@
 .sh_title {
   text-align: center;
   font: 16px/19px $RubikBold;
-  letter-spacing: -.001em;
+  //letter-spacing: -.001em;
 }
 
 .subscribe_form {

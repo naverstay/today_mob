@@ -7,53 +7,61 @@ html(lang='ru')
         .wrapper
             .main_content
                 .section_inner
-                    +top_info()
+                    +top_info(true)
 
-                    .about_block
-                        .about_title About Us
+                    h1.block_title About Us
 
-                        ul.action_list
-                            li: a.action_link._w(href='#')
-                                span Twitter
-                            li: a.action_link._t(href='#')
-                                span Telegram
-                            li: a.action_link._f(href='#')
-                                span Facebook
-                            li: a.action_link._r(href='#')
-                                span RSS
+                    .article_container
+                        p CryptoComes is a news platform that covers the crypto industry and community, Blockchain, AI and all new generation tech. Keeping you tuned to the latest, we also run price analyses and forecasts, reviews, opinions, interviews, feature stories and investigations. Our CryptoTips and reference information will help you cope with crypto economics and learn more.
 
-                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.
+                        p CryptoComes was founded by editors with extensive experience in both high-quality journalism and the crypto industry. We have developed some very successful projects but we are not satisfied with the current situation when many publications compromise the truth selling out to the highest bidder and twisting their reporting because of the easy money taken from advertisers.
 
-                    .about_action
-                        img(src='i/about_share.png')
+                        p The crypto community deserves better. Our journalism is built upon accuracy, impartiality, independence and accountability. We adhere to the principles of honesty and integrity, committed to deal fairly and openly with our audience. As journalists, we have a responsibility not to mislead.
 
-                    .about_team_holder
+                        p We appreciate when members of our audience share with us their expertise through social media or by other means. Stay tuned and let’s build a better community together!
+
+                    .about_contacts
+                        h2.block_title Contacts
+                        p We are also giving you useful tips and reference information that will help you deal with such a complex and burgeoning industry.
+                        ul.about_contacts_list
+                            li.icon-feather
+                                .contacts_caption Editorial
+                                a.contacts_link(href='mailto:editorial@cryptocomes.com') editorial@cryptocomes.com
+                            li.icon-lamp
+                                .contacts_caption Partnerships
+                                a.contacts_link(href='mailto:partners@cryptocomes.com') partners@cryptocomes.com
+                            li.icon-vial
+                                .contacts_caption Advertising
+                                a.contacts_link(href='mailto:sales@cryptocomes.com') sales@cryptocomes.com
+                            li.icon-heart
+                                .contacts_caption Other
+                                a.contacts_link(href='mailto:hello@cryptocomes.com') hello@cryptocomes.com
+
+                    .about_team_wrapper
+                        h2.block_title Persons
+
                         ul.about_team
-                            li
-                                .team_unit
-                                    .team_unit_photo
-                                        img(src='i/chief.jpg')
-                                    .team_unit_name Konstantin<br>Bradly
-                                    .team_unit_post Chief of Chief
+                            +loop_while(6)
+                                li
+                                    .team_unit
+                                        a.team_unit_photo(href='hero.html')
+                                            img(src='i/dan.jpg')
+                                        .team_unit_info
+                                            a.team_unit_name(href='hero.html') Daniel Osten
+                                            .team_unit_post Financial analyst
+                                li
+                                    .team_unit
+                                        a.team_unit_photo(href='hero.html')
+                                            img(src='i/dan.jpg')
+                                        .team_unit_info
+                                            a.team_unit_name(href='hero.html') Darryn Pollack
+                                            .team_unit_post Reporter, columnist
 
-                            li
-                                .team_unit
-                                    .team_unit_photo
-                                        img(src='i/chief.jpg')
-                                    .team_unit_name Amelia<br>Harris
-                                    .team_unit_post Ofiice manager
-
-                            li
-                                .team_unit
-                                    .team_unit_photo
-                                        img(src='i/chief.jpg')
-                                    .team_unit_name Alejandro<br>Quinn
-                                    .team_unit_post Anthropogenesis maniac
             .nav_holder
                 +header()
                 +main_menu()
                 +search()
 
-            +footer(true)
+            +footer(false, true)
 
         +scripts()

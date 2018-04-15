@@ -9,79 +9,62 @@ html(lang='ru')
                 .section_inner
                     +top_info()
 
-                    .new_release_holder
-                        h2 Submit a Events
-                        p Share your press release with our readers. It will appear at the top of the Home Page in Press releases section. Readers are also able to access Press Releases in our catalog. We publish Press releases only after the payment has been cleared and an editor reviewed the text.
+                    ul.bread_crumbs
+                        li: a.crumb_link(href='#') Cryptocomes
+                        li: a.crumb_link(href='#') CryptoEvents
 
-                    .new_release_form
-                        form(action='#')
-                            .form_cell
-                                label.label_v2(for='event_title') Title
-                                .input_w
-                                    input#event_title.input_v3
-                            .form_cell
-                                label.label_v2(for='event_description') Description
-                                .input_w
-                                    input#event_description.input_v3
-                            .form_cell
-                                label.label_v2(for='event_content') Content
-                                .input_w
-                                    textarea#event_content.input_v3
-                            .form_group
-                                .form_cell
-                                    .form_group
-                                        .form_cell
-                                            label.label_v2(for='event_date_start')
-                                                span Date&nbsp;
-                                                span.clr_gray — start
-                                            .input_w
-                                                input#event_date_start.input_v3(data-inputmask="'alias': 'mm.dd.yyyy', 'placeholder': 'MM.DD.YYYY', 'clearIncomplete': 'true'")
-                                        .form_cell
-                                            label.label_v2(for='event_date_end')
-                                                span Date&nbsp;
-                                                span.clr_gray — end
-                                            .input_w
-                                                input#event_date_end.input_v3(data-inputmask="'alias': 'mm.dd.yyyy', 'placeholder': 'MM.DD.YYYY', 'clearIncomplete': 'true'")
-                                .form_cell
-                                    label.label_v2(for='event_site') Site
-                                    .input_w
-                                        input#event_site.input_v3
-                            .form_group
-                                .form_cell
-                                    label.label_v2(for='event_countries') Countries
-                                    .input_w
-                                        input#event_countries.input_v3.completeLocation(data-url='./data/countries.json')
-                                .form_cell
-                                    label.label_v2(for='event_cities') Cities
-                                    .input_w
-                                        input#event_cities.input_v3.completeLocation(data-url='./data/cities.json')
-                            .form_cell
-                                label.label_v2(for='release_files')
-                                    span File Upload Image/logo Upload
-                                    span.clr_gray &nbsp;— min 720x480, max 1mb
-                                .input_w
-                                    label.btn_v4.upload_btn.gray_btn_2: span Select file
-                                        input#release_files.hide(type='file')
-                            .form_group
-                                .form_cell
-                                    label.label_v2(for='event_author_email') Your Email
-                                    .input_w
-                                        input#event_author_email.input_v3.success
-                                .form_cell
-                                    label.label_v2(for='event_author_name') Your Name
-                                    .input_w
-                                        input#event_author_name.input_v3.error
+                    .article_container
+                        .article_date._event._mt_5 21 MARCH - 24 MARCH
 
-                            .release_summary
-                                .form_group
-                                    .form_cell
-                                        button.btn_v4.btn_violette_2.create_release_btn: span Submit events
+                        .article_caption Chinese Conglomerate Fosun to Invest $3.2 Bln in AI, Biotech, Fintech
+
+                        ul.article_stat
+                            li
+                                span.article_stat_val Zurich Switzerland
+                            li
+                                span.article_stat_val._stat_views 212
+
+                        figure
+                            .article_img
+                                a.article_img_link(href='#'): img(src='i/article_new.jpg')
+
+                        .article_lead._event Fosun is planning to invest 100 bln Yuan($16 bln) in AI, biotech and fintech areas over next decade.
+
+                        p Fosun is planning to invest 100 bln Yuan ($16 bln) in&nbsp;
+                            a(href='#') Artificial Intelligence
+                            | , biotech and fintech areas over next decade. The company’s main focus will be India and Africa and Portuguese-speaking markets
+
+                        p Fosun is planning to invest 100 bln Yuan ($16 bln) in&nbsp;
+                            a(href='#') Artificial Intelligence
+                            | , biotech and fintech areas over next decade. The company’s main focus will be India and Africa and Portuguese-speaking markets
+
+                        p Fosun is planning to invest 100 bln Yuan ($16 bln) in&nbsp;
+                            a(href='#') Artificial Intelligence
+                            | , biotech and fintech areas over next decade.
+
+                        .article_info_holder
+                            dl.article_info
+                                dt Company:
+                                dd CocaCola
+
+                                dt Website:
+                                dd
+                                    a.gl_link(href='#') https://cocacola.com
+
+                                dt Сontacts:
+                                dd Leah Callon-Butler Chief Impact Officer leah@intimate.io
+
+                        p
+                            a.btn_v4.subscribe_btn._tw(href='#')
+                                span follow US on TWITTER
+
+                    a.btn_v4.comment_btn(href='#') Click to leave your comment
 
             .nav_holder
                 +header()
                 +main_menu()
                 +search()
 
-            +footer()
+            +footer(false, true)
 
         +scripts()

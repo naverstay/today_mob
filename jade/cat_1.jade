@@ -9,117 +9,37 @@ html(lang='ru')
                 .section_inner
                     +top_info()
 
-                    ul.category_tip._stories
-                        li Biosensor Analysis Tool
+                    .article_group_title._event
+                        h1: a.artile_link(href='#') cryptoevents
 
-                    ul.article_reviews
-                        li
-                            .article_block._review
-                                .article_img
-                                    a.article_img_link(href='#'): img(src='i/regulators.jpg')
+                    .offer_block._mb_20
+                        p Want to publish on CryptoComes?
+                        p
+                            a.btn_v1.btn_violette_2.offer_btn(href='#')
+                                span Subit NEW CRYPTOEVENT
+                                span.btn_icon.icon-rocket
 
-                                .article_title
-                                    a.article_link(href='article.html') US State Regulators Hit BitConnect With Second Cease-And-Desist
+                    +loop_while(4)
+                        .article_block.story_block._main
+                            .article_img
+                                a.article_img_link(href='#'): img(src='i/bear.jpg')
+
+                            .article_title
+                                .article_action: .article_action_inner
+                                    a.article_action_btn.actionBtn(href='#')
+                                .article_date._event 21 MARCH
+                                p: a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
                                 ul.article_stat
                                     li
-                                        span.article_stat_val._stat_views 212
-                                    li
-                                        span.article_stat_val 2 minutes ago
-                                    li
-                                        span.article_stat_val Sujha Sund…
-
-                        li
-                            .article_block._review
-                                .article_img
-                                    a.article_img_link(href='#'): img(src='i/arizona.jpg')
-
-                                .article_title
-                                    a.article_link(href='article.html') Arizona Lawmakers Want to Let People Pay Taxes in Bitcoin
-                                ul.article_stat
+                                        span.article_stat_val Zurich Switzerland
                                     li
                                         span.article_stat_val._stat_views 212
-                                    li
-                                        span.article_stat_val 2 minutes ago
-                                    li
-                                        span.article_stat_val Sujha Sund…
-
-                    .article_block
-                        .article_img
-                            a.video_link._stories(href='#')
-                            img(src='i/biosensor.jpg')
-
-                        .article_title._video
-                            a.article_link(href='article.html') Biosensor Analysis Tool - Human Behaviour Research Synchroniz…
-                            ul.article_stat
-                                li
-                                    span.article_stat_val._stat_views 212
-                                li._fr
-                                    span.article_stat_val 13:45
-
-                    ul.article_reviews
-                        +loop_while(2)
-                            li
-                                .article_block._review
-                                    .article_img
-                                        a.article_img_link(href='#'): img(src='i/regulators.jpg')
-
-                                    .article_title
-                                        a.article_link(href='article.html') US State Regulators Hit BitConnect With Second Cease-And-Desist
-                                    ul.article_stat
-                                        li
-                                            span.article_stat_val._stat_views 212
-                                        li
-                                            span.article_stat_val 2 minutes ago
-                                        li
-                                            span.article_stat_val Sujha Sund…
-
-                            li
-                                .article_block._stories._review
-                                    .article_title
-                                        a.article_link(href='article.html') 2018: The Year Blockchain, AI and IoT Converge
-                                    ul.article_stat
-                                        li
-                                            span.article_stat_val._stat_views 212
-                                        li
-                                            span.article_stat_val 2 minutes ago
-                                        li
-                                            span.article_stat_val Sujha Sund…
-
-                            li
-                                .article_block._stories._review
-                                    .article_title
-                                        a.article_link(href='article.html') 2018: The Year Blockchain, AI and IoT Converge
-                                    ul.article_stat
-                                        li
-                                            span.article_stat_val._stat_views 212
-                                        li
-                                            span.article_stat_val 2 minutes ago
-                                        li
-                                            span.article_stat_val Sujha Sund…
-
-                            li
-                                .article_block._review
-                                    .article_img
-                                        a.article_img_link(href='#'): img(src='i/arizona.jpg')
-
-                                    .article_title
-                                        a.article_link(href='article.html') Arizona Lawmakers Want to Let People Pay Taxes in Bitcoin
-                                    ul.article_stat
-                                        li
-                                            span.article_stat_val._stat_views 212
-                                        li
-                                            span.article_stat_val 2 minutes ago
-                                        li
-                                            span.article_stat_val Sujha Sund…
-
-                    .article_controls
-                        a.btn_v1.more_btn.gray_btn(href='#') More #Apple apologizes
 
             .nav_holder
                 +header()
                 +main_menu()
                 +search()
 
-            +footer()
+            +footer(false, true)
 
         +scripts()

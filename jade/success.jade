@@ -7,25 +7,25 @@ html(lang='ru')
         .wrapper
             .main_content
                 .section_inner
-                    +top_info()
+                    +top_info(true)
 
-                        .attention_block._warn
-                            p Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate'
+                    .msg_block.subscribe_success
+                        h2.block_title Press release was submitted succesfully!
 
-                    .msg_block
-                        .msg_title Success!
+                        .subscribe_success_msg
 
-                        p We have accepted your press release for publication on the<br>CryptoComes website.<br>It will be published in the nearest time possible. Please note that this service should be paid for in advance
+                        p We have accepted your press release for publication on the CryptoComes website.
 
-                        .msg_status._success
+                        p It will be published in the nearest time possible. Please note that this service should be paid for in advance
+
                         p
-                            a.msg_link(href='#') BACK TO EVENTS
+                            a.gl_link(href='#') Back to events
 
             .nav_holder
                 +main_menu(true)
                 +search()
 
             +header()
-            +footer()
+            +footer(false, true)
 
         +scripts(true)
