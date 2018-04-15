@@ -115,6 +115,7 @@
   margin-bottom: 12px;
   background: #fff;
   box-shadow: 0 0 10px rgba(128, 128, 130, .2);
+  border-radius: 2px;
 
   &._main {
     .article_stat {
@@ -226,7 +227,7 @@
   }
 
   ._main & {
-
+    border-radius: 2px 2px 0 0;
   }
 
   ._article & {
@@ -498,10 +499,9 @@ a.article_stat_val {
     bottom: auto;
 
     .article_tag {
-      border-radius: 2px 0 2px;
-      padding-left: 14px;
+      border-radius: 2px 0 2px 0;
+      padding-left: 10px;
     }
-
   }
 
   li {
