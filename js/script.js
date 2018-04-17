@@ -1,5 +1,5 @@
 var $wnd, $body, $header, $footer, $followPopup, $sharePopup, $subscribePopup, currencySlider,
-    $subscribeTrigger, $subscribeBlock, $goTop, $goTopHolder, didScroll,
+    $subscribeTrigger, $subscribeBlock, $goTop, $goTopHolder, didScroll, followCountDown,
     lastScrollTop = 0, delta = 5,
     subscribe_spacer = 270;
 
