@@ -172,18 +172,45 @@
     }
 
     &:after {
-      content: unicode($icon-tw);
       font-size: 20px;
       display: inline-block;
       vertical-align: middle;
       padding-left: 15px;
     }
 
+    &._fb {
+      background: #385184;
+
+      &:after {
+        content: unicode($icon-fb);
+      }
+
+      &:hover {
+        background: #43619e;
+      }
+    }
+
     &._tw {
       background: #1da1f2;
 
+      &:after {
+        content: unicode($icon-tw);
+      }
+
       &:hover {
         background: #23c1ff;
+      }
+    }
+
+    &._tg {
+      background: #08c;
+
+      &:after {
+        content: unicode($icon-tg);
+      }
+
+      &:hover {
+        background: #00a3f5;
       }
     }
   }
