@@ -112,10 +112,26 @@
 
 .article_block {
   position: relative;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
   background: #fff;
   box-shadow: 0 0 10px rgba(128, 128, 130, .2);
   border-radius: 2px;
+
+  .swiper-slide & {
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
+
+    .article_title {
+      flex: 1 0 auto;
+      display: flex;
+      flex-flow: column;
+
+      p {
+        flex: 1 0 auto;
+      }
+    }
+  }
 
   &._main {
     .article_stat {
@@ -310,6 +326,7 @@
   position: relative;
   padding: 10px 14px 20px 14px;
   background: #fff;
+  border-radius: 0 2px 2px 0;
 }
 
 .article_link {
@@ -500,7 +517,6 @@ a.article_stat_val {
 
     .article_tag {
       border-radius: 2px 0 2px 0;
-      padding-left: 10px;
     }
   }
 
@@ -523,7 +539,7 @@ a.article_stat_val {
 
   span {
     display: inline-block;
-    vertical-align: top;
+    //vertical-align: top;
     padding: 5px 10px 5px 1px;
     font: 10px/14px $RubikBold;
     //letter-spacing: .015em;
@@ -607,6 +623,10 @@ a.article_stat_val {
   //-moz-background-size: cover;
   //-o-background-size: cover;
   //background-size: cover;
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
 
   &:before {
     position: absolute;

@@ -127,9 +127,9 @@
   height: 40px;
   width: 100%;
   color: #000;
-  border: 2px solid rgba(0, 0, 0, .1);
+  border: 1px solid #ddd;
   border-radius: 2px;
-  font: 13px/16px $RubikMed;
+  font: 14px/16px $RubikMed;
   padding: 10px 16px;
 
   &:hover {
@@ -146,7 +146,7 @@
 
   &[disabled] {
     background: #f8f8f8 !important;
-    border: 2px solid rgba(0, 0, 0, .1) !important;
+    border: 1px solid rgba(0, 0, 0, .1) !important;
   }
 }
 

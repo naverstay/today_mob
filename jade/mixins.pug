@@ -205,22 +205,22 @@ mixin top_info(no_breaking)
             .swiper-container.currencySlider
                 .currency_info_table.swiper-wrapper
                     +loop_while(2)
-                        .currency_info_cell.swiper-slide
+                        a.currency_info_cell.swiper-slide(href='#')
                             p
-                                a.currency_link(href='#'): b BTC
-                                a.trend._down(href='#') -8.82%
+                                span.currency_link: b BTC
+                                span.trend._down -8.82%
                             p
                                 span.currency_val 2636.79
-                        .currency_info_cell.swiper-slide
+                        a.currency_info_cell.swiper-slide(href='#')
                             p
-                                a.currency_link(href='#'): b BCH
-                                a.trend._up(href='#') +8.82%
+                                span.currency_link: b BCH
+                                span.trend._up +8.82%
                             p
                                 span.currency_val 3236.51
-                        .currency_info_cell.swiper-slide
+                        a.currency_info_cell.swiper-slide(href='#')
                             p
-                                a.currency_link(href='#'): b ETH
-                                a.trend._down(href='#') -8.82%
+                                span.currency_link: b ETH
+                                span.trend._down -8.82%
                             p
                                 span.currency_val 26236.79
 

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'crypto_icons';
-  src:  url('fonts/crypto_icons.eot?4bzg01');
-  src:  url('fonts/crypto_icons.eot?4bzg01#iefix') format('embedded-opentype'),
-    url('fonts/crypto_icons.ttf?4bzg01') format('truetype'),
-    url('fonts/crypto_icons.woff?4bzg01') format('woff'),
-    url('fonts/crypto_icons.svg?4bzg01#crypto_icons') format('svg');
+  src:  url('fonts/crypto_icons.eot?aam68n');
+  src:  url('fonts/crypto_icons.eot?aam68n#iefix') format('embedded-opentype'),
+    url('fonts/crypto_icons.ttf?aam68n') format('truetype'),
+    url('fonts/crypto_icons.woff?aam68n') format('woff'),
+    url('fonts/crypto_icons.svg?aam68n#crypto_icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -41,6 +41,12 @@
 }
 .icon-chevron-left:before {
   content: "\e926";
+}
+.icon-share-alt:before {
+  content: "\e939";
+}
+.icon-envelope:before {
+  content: "\e93a";
 }
 .icon-attach:before {
   content: "\e936";
@@ -170,9 +176,6 @@
 }
 .icon-ufo:before {
   content: "\e90e";
-}
-.icon-share-alt:before {
-  content: "\e907";
 }
 .icon-eye:before {
   content: "\e906";
