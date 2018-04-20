@@ -1081,7 +1081,7 @@
   margin: 20px -16px 26px;
   background: #f7f8f8;
   position: relative;
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, .25);
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, .25), 0 4px 4px rgba(0, 0, 0, .25);
 
   .article_img {
     float: left;
