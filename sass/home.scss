@@ -375,6 +375,12 @@
       float: right;
       padding-right: 0;
     }
+
+    &.stat_action {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
   }
 
   ._video & {
@@ -391,6 +397,11 @@
 
   &._hero {
     padding-top: 0;
+  }
+
+  &._action {
+    position: relative;
+    padding-right: 30px;
   }
 }
 
@@ -409,7 +420,7 @@
       position: absolute;
       top: 50%;
       left: 0;
-      margin-top: -.5em;
+      margin-top: -.4em;
       font-size: .9em;
       line-height: 1;
       color: #dadada;

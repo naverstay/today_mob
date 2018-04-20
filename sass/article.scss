@@ -797,37 +797,37 @@
     }
   }
 
-  h1 {
+  > h1 {
     color: #000;
     font: 20px/25px $RubikBold;
     margin-bottom: 1em;
   }
 
-  h2 {
+  > h2 {
     color: #000;
     font: 20px/25px $RubikMed;
     margin-bottom: 1em;
   }
 
-  h3 {
+  > h3 {
     color: #828282;
     font: 18px/23px $RubikMed;
     margin-bottom: .8em;
   }
 
-  h4 {
+  > h4 {
     color: #000;
     font: 16px/21px $RubikReg;
     margin-bottom: .6em;
   }
 
-  h5 {
+  > h5 {
     color: #828282;
     font: 14px/18px $RubikMed;
     margin-bottom: .9em;
   }
 
-  h6 {
+  > h6 {
     color: #000;
     font: 12px/15px $RubikBold;
     margin-bottom: 1em;
@@ -1073,4 +1073,67 @@
   color: #000;
   font: 20px/25px $RubikBold;
   margin-bottom: 1em;
+}
+
+.article_related {
+  @extend %clearfix;
+  padding: 16px 14px;
+  margin: 20px -16px 26px;
+  background: #f7f8f8;
+  position: relative;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, .25);
+
+  .article_img {
+    float: left;
+    width: 130px;
+    margin: 0 13px 15px 0;
+  }
+
+  .article_stat {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .article_action {
+    left: auto;
+    bottom: auto;
+    right: -5px;
+    top: -5px;
+  }
+
+  .article_action_btn {
+    margin: 0;
+    position: relative;
+    background: none;
+
+    &:before {
+      color: #cacacc;
+    }
+  }
+}
+
+.related_tags {
+  display: inline-block;
+  vertical-align: top;
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    float: left;
+    margin-bottom: 8px;
+  }
+
+  .article_tag {
+    border-radius: 2px;
+
+    span {
+      padding-left: 0;
+    }
+  }
+}
+
+.article_related_caption {
+  color: #000;
+  font: 14px/18px $RubikMed;
+  margin-bottom: 10px;
 }
