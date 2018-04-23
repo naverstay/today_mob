@@ -209,43 +209,11 @@ html(lang='ru', amp='')
                     a.menu_link(href='about.html') About us
 
             .menu_footer.subscribeBlock
-                //-amp-accordion(layout='container' disable-session-states='' class='ampstart-dropdown')
-                    section
-                        header: .footer_subscribe
-                            .subscribe_link.subscribeLink() Subscribe with your email
-
-                        footer.footer_form
-                            form.validateMe.formParent.subscribeForm(action='#' target='_top')
-                                .form_cell.formCell
-                                    .input_w
-                                        input.input_v1.forceValidation(placeholder='Enter your email' class='validate[required]')
-
-                                .form_cell
-                                    button.btn_v1.subscribe_btn.white_btn Subscribe
-
-                    section
-                        header.hide
-                        footer.footer_action
-                            p Follow us with:
-
-                            +action_list()
 
                 .footer_action
                     p Follow us with:
 
                     +action_list()
-
-                //-.footer_msg._success
-                    .footer_msg_title
-                        span.icon-check.msg_icon
-                        br
-                        span Subscription<br>enabled
-
-                //-.footer_msg._fail
-                    .footer_msg_title
-                        span.icon-close.clr_red.msg_icon
-                        span Error
-                    p Something went wrong,<br>try again
 
         amp-sidebar.search_holder(layout= 'nodisplay' id= 'search-sidebar' side='right')
             .search_title Search
