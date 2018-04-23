@@ -357,6 +357,7 @@
 
 .article_stat {
   @extend %clearfix;
+  position: relative;
   clear: both;
   list-style: none;
   padding-top: 14px;
@@ -494,7 +495,6 @@ a.article_stat_val {
 }
 
 .article_action_btn {
-  @extend %icon_pseudo;
   float: left;
   margin-top: 16px;
   margin-left: 32px;
@@ -509,10 +509,34 @@ a.article_stat_val {
   line-height: 28px;
   background: rgba(0, 0, 0, .4);
 
-  &:before {
-    content: unicode($icon-share-alt);
-    color: #fff;
+  @if ($amp_ver) {
+
+    .btn_icon {
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      top: 6px;
+      left: 6px;
+
+      svg {
+        width: 14px;
+        height: 14px;
+
+        path {
+          fill: rgba(0, 0, 0, .4);
+        }
+      }
+    }
+
+  } @else {
+    @extend %icon_pseudo;
+
+    &:before {
+      content: unicode($icon-share-alt);
+      color: #fff;
+    }
   }
+
 }
 
 .article_tags {

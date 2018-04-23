@@ -884,35 +884,64 @@
     margin: 25px 0 30px;
     border-radius: 2px;
 
-    p {
-      font: 16px/21px $RubikMed;
-      margin-bottom: 22px;
-
-      &:first-of-type {
-        @extend %icon_pseudo;
-
-        &:before {
-          //content: '\201C';
-          content: unicode($icon-quote_l);
-          position: absolute;
-          color: $violette;
-          top: -5px;
-          left: -1px;
-          font-size: 28px;
-        }
+    @if ($amp_ver) {
+      .quote_start {
+        top: -1px;
+        left: 1px;
+        background: url(i/quote_l.svg) no-repeat 50% 50%;
       }
 
-      &:last-of-type {
-        @extend %icon_pseudo;
+      .quote_end {
+        bottom: 1px;
+        right: -3px;
+        background: url(i/quote_r.svg) no-repeat 50% 50%;
+      }
 
-        &:after {
-          //content: '\201D';
-          content: unicode($icon-quote_r);
-          position: absolute;
-          color: $violette;
-          bottom: -6px;
-          right: -6px;
-          font-size: 28px;
+      .quote_start,
+      .quote_end {
+        position: absolute;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        width: 22px;
+        height: 18px;
+      }
+
+      p {
+        font: 16px/21px $RubikMed;
+        margin-bottom: 22px;
+      }
+
+    } @else {
+      p {
+        font: 16px/21px $RubikMed;
+        margin-bottom: 22px;
+
+        &:first-of-type {
+          @extend %icon_pseudo;
+
+          &:before {
+            content: unicode($icon-quote_l);
+            position: absolute;
+            color: $violette;
+            top: -5px;
+            left: -1px;
+            font-size: 28px;
+          }
+        }
+
+        &:last-of-type {
+          @extend %icon_pseudo;
+
+          &:after {
+            content: unicode($icon-quote_r);
+            position: absolute;
+            color: $violette;
+            bottom: -6px;
+            right: -6px;
+            font-size: 28px;
+          }
         }
       }
     }

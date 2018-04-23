@@ -149,6 +149,7 @@ body .wrapper .hide {
 
 .article_stat {
   @extend %clearfix;
+  position: relative;
   list-style: none;
   padding-top: 9px;
   color: rgba(0, 0, 0, .4);
@@ -157,23 +158,14 @@ body .wrapper .hide {
   li {
     float: left;
 
-    &:before {
-      content: '\007C';
-      padding: 0 5px;
-    }
-
-    &:first-child {
-      &:before {
-        display: none;
-      }
-    }
-
     &._fr {
       float: right;
+    }
 
-      &:before {
-        display: none;
-      }
+    &.stat_action {
+      position: absolute;
+      top: 0;
+      right: 0;
     }
   }
 
@@ -192,12 +184,12 @@ body .wrapper .hide {
   vertical-align: top;
 
   &._stat_views {
-    padding-left: 20px;
+    padding-left: 26px;
 
     .article_stat_icon {
       position: absolute;
       top: -1px;
-      left: 0;
+      left: 6px;
 
       svg {
         height: 15px;
@@ -211,12 +203,12 @@ body .wrapper .hide {
   }
 
   &._stat_time {
-    padding-left: 20px;
+    padding-left: 26px;
 
     .article_stat_icon {
       position: absolute;
       top: 1px;
-      left: 2px;
+      left: 10px;
 
       svg {
         height: 12px;
@@ -405,9 +397,9 @@ a.article_stat_val {
 
   .article_tag_icon {
     font-size: 18px;
-    line-height: 24px;
-    width: 28px;
-    height: 28px;
+    line-height: 22px;
+    width: 24px;
+    height: 24px;
     display: inline-block;
     vertical-align: top;
     text-align: center;
@@ -425,11 +417,11 @@ a.article_stat_val {
     }
   }
 
-  &._wide {
-    .article_tag_icon {
-      padding-left: 5px;
-    }
-  }
+  //&._wide {
+  //  .article_tag_icon {
+  //    padding-left: 5px;
+  //  }
+  //}
 
   @each $cls, $color in $firm-colors {
     &.#{$cls} {
@@ -558,10 +550,6 @@ a.article_stat_val {
   padding: 20px 125px 20px 26px;
   margin: 31px -16px 31px 20px;
 
-  .subscribe_btn {
-    //letter-spacing: .025em;
-  }
-
   .article_subscribe_icon {
     position: absolute;
     top: 0;
@@ -648,32 +636,9 @@ a.article_stat_val {
     margin: 36px 0 23px -8px;
 
     p {
-      @extend %firm_color;
       font: 20px/28px $RubikBold;
       //letter-spacing: .012em;
       margin-bottom: 0;
-
-      &:first-of-type {
-        &:before {
-          content: '\201C';
-          position: absolute;
-          color: #000;
-          top: -16px;
-          left: 9px;
-          font: 90px/1 $cross_font_Georgia;
-        }
-      }
-
-      &:last-of-type {
-        &:after {
-          content: '\201D';
-          position: absolute;
-          color: #000;
-          bottom: -42px;
-          right: 7px;
-          font: 90px/1 $cross_font_Georgia;
-        }
-      }
     }
 
     i {
@@ -1325,17 +1290,13 @@ body amp-accordion > section .footer_subscribe {
       height: 1px;
       background: #eee;
     }
-
-    &:last-child {
-      margin-bottom: -20px;
-    }
   }
 
   &.subscribe_btn {
     @extend %icon_pseudo;
     display: inline-block;
     vertical-align: top;
-    padding: 10px 22px;
+    padding: 10px 5px;
     font: 15px/18px $RubikReg;
     color: #fff;
     border-radius: 2px;
@@ -1434,16 +1395,18 @@ body amp-accordion > section .footer_subscribe {
   }
 
   amp-carousel {
-    padding: 0 20px;
+    //padding: 0 20px;
 
     .amp-carousel-button-prev {
-      left: 0;
-      width: 16px;
+      //left: 0;
+      //width: 16px;
+      display: none !important;
     }
 
     .amp-carousel-button-next {
-      right: 0;
-      width: 16px;
+      //right: 0;
+      //width: 16px;
+      display: none !important;
     }
   }
 }

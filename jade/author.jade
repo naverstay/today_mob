@@ -38,13 +38,8 @@ html(lang='ru')
                                 .article_action: .article_action_inner
                                     a.article_action_btn.actionBtn(href='#')
                                 p: a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
-                                ul.article_stat
-                                    li
-                                        a.article_stat_val(href='#') John Doe
-                                    li
-                                        span.article_stat_val._stat_time 2h
-                                    li
-                                        span.article_stat_val._stat_views 212
+
+                                +article_st()
 
             .nav_holder
                 +header()

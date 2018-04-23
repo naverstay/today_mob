@@ -16,13 +16,7 @@ html(lang='ru')
                     .article_container
                         h1.article_caption Chinese Conglomerate Fosun to Invest $3.2 Bln in AI, Biotech, Fintech
 
-                        ul.article_stat
-                            li
-                                a.article_stat_val(href='#') John Doe
-                            li
-                                span.article_stat_val._stat_time 2h
-                            li
-                                span.article_stat_val._stat_views 212
+                        +article_st()
 
                         figure
                             .article_img
@@ -59,13 +53,7 @@ html(lang='ru')
                             li: a.tag_link(href='#') #Fintech
                             li: a.tag_link(href='#') #Biotech
 
-                        ul.article_stat
-                            li
-                                a.article_stat_val(href='#') John Doe
-                            li
-                                span.article_stat_val._stat_time 2h
-                            li
-                                span.article_stat_val._stat_views 212
+                        +article_st()
 
                     a.btn_v4.comment_btn(href='#') Click to leave your comment
 
@@ -74,13 +62,7 @@ html(lang='ru')
                     .article_container
                         h2.article_caption Chinese Conglomerate Fosun to Invest $3.2 Bln in AI, Biotech, Fintech
 
-                        ul.article_stat
-                            li
-                                a.article_stat_val(href='#') John Doe
-                            li
-                                span.article_stat_val._stat_time 2h
-                            li
-                                span.article_stat_val._stat_views 212
+                        +article_st()
 
                         figure
                             .article_img
@@ -120,13 +102,8 @@ html(lang='ru')
                             .article_action: .article_action_inner
                                 a.article_action_btn.actionBtn(href='#')
                             p: a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
-                            ul.article_stat
-                                li
-                                    a.article_stat_val(href='#') John Doe
-                                li
-                                    span.article_stat_val._stat_time 2h
-                                li
-                                    span.article_stat_val._stat_views 212
+
+                            +article_st()
 
                     .article_container
                         p Fosun said this investment would not be affected by control on outbound investment imposed by the government because it is compliant.
@@ -139,16 +116,8 @@ html(lang='ru')
                                     span SEE RELATED
 
                             h4.article_related_caption Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000 and what comes next
-                            ul.article_stat._action
-                                li
-                                    a.article_stat_val(href='#') John Doe
-                                li
-                                    span.article_stat_val._stat_time 2h
-                                li
-                                    span.article_stat_val._stat_views 212
-                                li.stat_action
-                                    .article_action: .article_action_inner
-                                        a.article_action_btn.actionBtn(href='#')
+
+                            +article_st(true)
 
                         h1 H1 Chinese Conglomerate Fosun to Invest $3.2 Bln in AI
 
@@ -206,13 +175,7 @@ html(lang='ru')
                             li: a.tag_link(href='#') #Fintech
                             li: a.tag_link(href='#') #Biotech
 
-                        ul.article_stat
-                            li
-                                a.article_stat_val(href='#') John Doe
-                            li
-                                span.article_stat_val._stat_time 2h
-                            li
-                                span.article_stat_val._stat_views 212
+                        +article_st()
 
                     a.btn_v4.comment_btn(href='#') Click to leave your comment
 
