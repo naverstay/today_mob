@@ -3,17 +3,7 @@
 }
 
 .footer {
-  @if ($amp_ver) {
-    background: url(i/footer_bg_2.svg) no-repeat 50% 50%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  } @else {
-    //background: url(../i/footer_bg_2.svg) no-repeat 50% 50%;
-    background: $violette;
-  }
-
+  background: $violette;
   padding: 24px 0 0;
   position: relative;
 

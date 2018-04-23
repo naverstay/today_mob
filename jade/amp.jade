@@ -10,6 +10,7 @@ html(lang='ru', amp='')
         script(async='' custom-element='amp-sidebar' src='https://cdn.ampproject.org/v0/amp-sidebar-0.1.js')
         script(async='' custom-element='amp-accordion' src='https://cdn.ampproject.org/v0/amp-accordion-0.1.js')
         script(async='' custom-element='amp-form' src='https://cdn.ampproject.org/v0/amp-form-0.1.js')
+        script(async='' custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js")
 
         link(rel='canonical' href='http://naverstay.me/i/folio/crypto/article.html')
         meta(name='viewport' content='width=device-width,minimum-scale=1,initial-scale=1')
@@ -59,24 +60,205 @@ html(lang='ru', amp='')
             .main_content
                 .section_inner
                     +top_info()
+
+                    ul.bread_crumbs
+                        li
+                            a.crumb_link(href='#') Cryptocomes
+                        li
+                            span.crumb_icon
+                                +svg_icon('chevron_right')
+                            a.crumb_link(href='#') News
+
+                    .article_container
+                        h1.article_caption Chinese Conglomerate Fosun to Invest $3.2 Bln in AI, Biotech, Fintech
+
+                        +article_st()
+
+                        figure
+                            .article_img
+                                ul.article_tags
+                                    li
+                                        a.icon-say.article_tag._news(href='#')
+                                            .article_tag_icon
+                                                +svg_icon('say')
+                                            span News
+                                a.article_img_link(href='#'): img(src='i/article_new.jpg')
+
+                        .article_lead._news Fosun is planning to invest 100 bln Yuan($16 bln) in AI, biotech and fintech areas over next decade.
+
+                        p Fosun is planning to invest 100 bln Yuan ($16 bln) in&nbsp;
+                            a(href='#') Artificial Intelligence
+                            | , biotech and fintech areas over next decade. The company’s main focus will be India and Africa and Portuguese-speaking markets
+
+                        p Fosun is planning to invest 100 bln Yuan ($16 bln) in&nbsp;
+                            a(href='#') Artificial Intelligence
+                            | , biotech and fintech areas over next decade. The company’s main focus will be India and Africa and Portuguese-speaking markets
+
+                        p Fosun is planning to invest 100 bln Yuan ($16 bln) in&nbsp;
+                            a(href='#') Artificial Intelligence
+                            | , biotech and fintech areas over next decade.
+
+                        p
+                            a.btn_v4.subscribe_btn._tw(href='#')
+                                span follow US on TWITTER
+                                span.btn_icon
+                                    +svg_icon('tw')
+                        p
+                            a.btn_v4.subscribe_btn._tg(href='#')
+                                span follow US on Telegram
+                                span.btn_icon
+                                    +svg_icon('tg')
+                        p
+                            a.btn_v4.subscribe_btn._fb(href='#')
+                                span follow US on Facebook
+                                span.btn_icon
+                                    +svg_icon('fb')
+
+
+                        ul.article_tag_list
+                            li: a.tag_link(href='#') #Fosun
+                            li: a.tag_link(href='#') #AI
+                            li: a.tag_link(href='#') #Investments
+                            li: a.tag_link(href='#') #Fintech
+                            li: a.tag_link(href='#') #Biotech
+
+                        +article_st()
+
+                    a.btn_v4.comment_btn(href='#')
+                        span Click to leave your comment
+                        span.btn_icon
+                            +svg_icon('chevron_down')
+
+                    .article_line._news
+
+                    .article_container
+                        h2.article_caption Chinese Conglomerate Fosun to Invest $3.2 Bln in AI, Biotech, Fintech
+
+                        +article_st()
+
+                        figure
+                            .article_img
+                                ul.article_tags
+                                    li
+                                        a.icon-say.article_tag._pricewise(href='#')
+                                            span PRISEWISE
+                                a.article_img_link(href='#'): img(src='i/article_new.jpg')
+
+                        .article_lead._pricewise Fosun is planning to invest 100 bln Yuan($16 bln) in AI, biotech and fintech areas over next decade.
+
+                        .article_contents Contents
+
+                        ul.contents_list
+                            li: a.contents_link(href='#') Bitcoinization of space
+                            li: a.contents_link(href='#') Cryptocurrencies running away from Earth
+                            li: a.contents_link(href='#') Internet 2.0
+                            li: a.contents_link(href='#') States are going there, too
+
+                        p Fosun said this investment would not be affected by control on outbound investment imposed by the government because it is compliant with both Chinese laws and other countries’ local laws. Investment imposed by the government because it is compliant with both Chinese laws and other countries’ local laws.
+
+                        blockquote(cite='#')
+                            p As is often the case in such situations, the activation of protective stop-losses placed by investors at purchase price levels accelerated the fall even more.
+                            i Patrick Johnes
+
+                        p Fosun said this investment would not be affected by control on outbound investment imposed by the government because it is compliant with both Chinese laws and other countries’ local laws.
+
+                    .article_block.story_block._main
+                        .article_img
+                            ul.article_tags._head
+                                li
+                                    span.article_tag._stories.icon-attach
+                                        span SEE RELATED
+                            a.article_img_link(href='#'): img(src='i/bear.jpg')
+
+                        .article_title
+                            .article_action: .article_action_inner
+                                a.article_action_btn.actionBtn(href='#')
+                            p: a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
+
+                            +article_st()
+
+                    .article_container
+                        p Fosun said this investment would not be affected by control on outbound investment imposed by the government because it is compliant.
+
+                        .article_related
+                            .article_img
+                                a.article_img_link(href='article.html'): img(src='i/bear.jpg')
+                            ul.related_tags
+                                li: a.icon-attach.article_tag._wide._news(href='#')
+                                    span SEE RELATED
+
+                            h4.article_related_caption Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000 and what comes next
+                            ul.article_stat._action
+                                li
+                                    a.article_stat_val(href='#') John Doe
+                                li
+                                    span.article_stat_val._stat_time 2h
+                                li
+                                    span.article_stat_val._stat_views 212
+                                li.stat_action
+                                    .article_action: .article_action_inner
+                                        a.article_action_btn.actionBtn(href='#')
+
+                        h1 H1 Chinese Conglomerate Fosun to Invest $3.2 Bln in AI
+
+                        p Fosun said this investment would not be affected by control on outbound investment imposed by the government because it is compliant with both Chinese laws and other countries’ local laws.
+
+                        h2 H2 Chinese Conglomerate Fosun to Invest $3.2 Bln in AI
+
+                        p Fosun said this investment would not be affected by control on outbound investment imposed by the government because it is compliant with both Chinese laws and other countries’ local laws.
+
+                        h3 H3 Chinese Conglomerate Fosun to Invest $3.2 Bln in AI
+
+
+                        p Fosun said this investment would not be affected by control on outbound investment imposed by the government because it is compliant with both Chinese laws and other countries’ local laws.
+
+                        h4 H4 Chinese Conglomerate Fosun to Invest $3.2 Bln in AI
+
+                        h5 H5 Chinese Conglomerate Fosun to Invest $3.2 Bln in AI
+
+                        h6 H6 Chinese Conglomerate Fosun to Invest $3.2 Bln in AI technologies
+
+                        p Fosun said this investment would not be affected by control on outbound investment imposed by the government because it is compliant with both Chinese laws and other countries’ local laws.
+
+                        img(src='i/diagram.png')
+                        i How bitcoin price fall down
+
+                        p Fosun said this investment would not be affected by control on outbound investment imposed by the government because it is compliant with both Chinese laws and other countries’ local laws.
+
+                        ul
+                            li Fosun said this investment would not be affected by control
+                            li
+                                p Fosun said this investment would not be affected by control
+
+                                ul
+                                    li Fosun said this investment would not be
+                                    li Fosun said this investment would not be affected
+
+                        p Fosun said this investment would not be affected by control on outbound investment imposed by the government because it is compliant with both Chinese laws and other countries’ local laws  the government
+                        p
+                            a.btn_v4.subscribe_btn._tw(href='#')
+                                span follow US on TWITTER
+
+                        ul.article_tag_list
+                            li: a.tag_link(href='#') #Fosun
+                            li: a.tag_link(href='#') #AI
+                            li: a.tag_link(href='#') #Investments
+                            li: a.tag_link(href='#') #Fintech
+                            li: a.tag_link(href='#') #Biotech
+
+                        ul.article_stat
+                            li
+                                a.article_stat_val(href='#') John Doe
+                            li
+                                span.article_stat_val._stat_time 2h
+                            li
+                                span.article_stat_val._stat_views 212
+
+                    a.btn_v4.comment_btn(href='#') Click to leave your comment
+
+
+
                     .article_block.story_block._main._news._article
-                        ul.article_stat._mod_1
-                            li
-                                span.article_stat_val._stat_views
-                                    span.article_stat_icon
-                                        +svg_icon('eye')
-                                    span 212
-                            li
-                                time.article_stat_val(datetime="2018-10-01") Jan 10, 2018 at 10:00
-
-                        a.article_link(href='article.html') Blockchain and the Rise of Transaction Techno
-
-                        .article_author
-                            span by Sarah Perez (&nbsp;
-                            a.article_author_link(href='#')
-                                span sarahintampa
-                            span &nbsp;)
-
                         .article_img_w
                             .article_img_icon
                             ul.article_tags
@@ -87,10 +269,6 @@ html(lang='ru', amp='')
                                         span Shark Pool
                             .article_img_link
                                 amp-img.article_img(src='i/sberbank.jpg', width='272', height='194', alt='sberbank')
-
-                        //-.article_info
-                            .article_author.text_right
-                                span Photo by Sarah Perez ( @sarahintampa )
 
                         .article_preview iGaming platform provider Cash Bet has partnered with Arsenal Football Club in a deal that will promote the firm's new crypto token.
 
@@ -163,22 +341,6 @@ html(lang='ru', amp='')
                             p ! Get more awesome news in our&nbsp;&nbsp;
                             a.telegram_link(href='#') Telegram channel
 
-                        .article_subscribe_wide
-                            a.btn_v3.subscr_btn._tg(href='#')
-                                span.btn_icon
-                                    +svg_icon('tg')
-                                span Join CryptoComes #[span._unl Telegram channel]
-                        .article_subscribe_wide
-                            a.btn_v3.subscr_btn._fb(href='#')
-                                span.btn_icon
-                                    +svg_icon('fb')
-                                span Join CryptoComes #[span._unl Facebook page]
-                        .article_subscribe_wide
-                            a.btn_v3.subscr_btn._tw(href='#')
-                                span.btn_icon
-                                    +svg_icon('tw')
-                                span Join CryptoComes #[span._unl on Twitter]
-
                     .related_title._stories Related Articles and News
 
                     ul.news_list._related._stories
@@ -191,37 +353,47 @@ html(lang='ru', amp='')
                                 .news_date 1 hr<br>ago
                                 a.news_name(href='#') PBoC Official Calls for Wider Ban on Chinese Crypto Trading
 
-            +footer()
+            +footer(null, true)
 
         amp-sidebar.main_menu_holder(layout= 'nodisplay' id= 'header-sidebar')
-            ul.main_menu
-                li.menu_item
-                    a.menu_link(href='#') News
-                li.menu_item
-                    a.menu_link(href='#') Features
-                li.menu_item
-                    a.menu_link(href='#') Sharks pool
-                li.menu_item
-                    a.menu_link(href='price.html') Price analysis
-                li.menu_item
-                    a.menu_link(href='#') Share insight
-                li.menu_item
-                    a.menu_link(href='about.html') About us
+            .search_block
+                form(action='#' target='_top')
+                    .form_cell
+                        input.completeIt.search_input(placeholder='search...')
+                        button.filter_btn
+                            span.filter_btn_icon
+                                +svg_icon('search')
+
+            .main_menu_wrapper
+                ul.main_menu
+                    li.menu_item
+                        a.menu_link(href='#') News
+                    li.menu_item
+                        a.menu_link(href='#') Features
+                    li.menu_item
+                        a.menu_link(href='#') Sharks Pool
+                    li.menu_item
+                        a.menu_link(href='#') PriceWise
+                    li.menu_item
+                        a.menu_link(href='#') CryptoTips
+                    li.menu_item
+                        a.menu_link(href='#') ICO Watch
+                    li.menu_item
+                        a.menu_link(href='#') WikiCoin
+                    li.menu_item
+                        a.menu_link(href='#') AI
+                ul.main_menu
+                    li.menu_item
+                        a.menu_link(href='price.html') Press Releases
+                    li.menu_item
+                        a.menu_link(href='#') CryptoEvents
+                    li.menu_item
+                        a.menu_link(href='about.html') About us
+                    li.menu_item
+                        a.menu_link(href='about.html') Advertise with Us
 
             .menu_footer.subscribeBlock
-
                 .footer_action
-                    p Follow us with:
-
-                    +action_list()
-
-        amp-sidebar.search_holder(layout= 'nodisplay' id= 'search-sidebar' side='right')
-            .search_title Search
-            form(action='#' target='_top')
-                .form_cell
-                    input.completeIt.search_input(placeholder='search...')
-                    button.filter_btn
-                        span.filter_btn_icon
-                            +svg_icon('search')
+                    +action_list(true)
 
         +header()

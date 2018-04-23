@@ -37,6 +37,16 @@
 
 .currency_info_table {
   font: 12px $RubikReg;
+
+  .swiper-slide {
+
+    @if ($amp_ver) {
+
+    } @else {
+      float: left;
+      width: auto !important;
+    }
+  }
 }
 
 .currency_info_cell {
@@ -83,32 +93,53 @@
     color: #828282;
     text-decoration: none;
 
-    &:after {
-      font-size: 10px;
-      padding-left: 2px;
+    @if ($amp_ver) {
+      svg {
+        width: 11px;
+        height: 11px;
+      }
+    } @else {
+      &:after {
+        font-size: 10px;
+        padding-left: 2px;
+      }
     }
 
     &._up {
       color: rgba(46, 155, 14, 0.9);
 
-      &:before {
-        //background: rgba(46, 155, 14, 0.9);
-      }
+      @if ($amp_ver) {
+        svg path {
+          fill: rgba(46, 155, 14, 0.9);
+        }
+      } @else {
 
-      &:after {
-        content: unicode($icon-asc);
+        &:before {
+          //background: rgba(46, 155, 14, 0.9);
+        }
+
+        &:after {
+          content: unicode($icon-asc);
+        }
       }
     }
 
     &._down {
       color: #ff0a24;
 
-      &:before {
-        //background: #ff0a24;
-      }
+      @if ($amp_ver) {
+        svg path {
+          fill: #ff0a24;
+        }
+      } @else {
 
-      &:after {
-        content: unicode($icon-desc);
+        &:before {
+          //background: #ff0a24;
+        }
+
+        &:after {
+          content: unicode($icon-desc);
+        }
       }
     }
   }

@@ -4,8 +4,15 @@ module.exports = function (grunt) {
     grunt.initConfig({
         watch: {
             templates: {
-                files: ['jade/*.jade', 'jade/*.pug'],
+                files: ['jade/*.jade', 'jade/*.pug', '!jade/amp.jade'],
                 tasks: ['pug'],
+                options: {
+                    spawn: false
+                }
+            },
+            amp: {
+                files: ['jade/*.pug', 'jade/amp.jade'],
+                tasks: ['pug:amp'],
                 options: {
                     spawn: false
                 }
@@ -107,6 +114,22 @@ module.exports = function (grunt) {
                 files: [{
                     cwd: "jade/",
                     src: "*.jade",
+                    dest: "",
+                    expand: true,
+                    ext: ".html"
+                }]
+            },
+            amp: {
+                options: {
+                    basedir: 'jade',
+                    pretty: true,
+                    data: {
+                        time: (new Date()).getTime()
+                    }
+                },
+                files: [{
+                    cwd: "jade/",
+                    src: "amp.jade",
                     dest: "",
                     expand: true,
                     ext: ".html"

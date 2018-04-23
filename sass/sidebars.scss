@@ -669,7 +669,7 @@
   @include transition_all(transform .3s);
   transform: translate(0, 100%);
   position: fixed;
-  bottom: 0;
+  bottom: 43px;
   right: 0;
   left: 0;
   z-index: 6;
