@@ -1,5 +1,6 @@
 var $wnd, $body, $header, $footer, $followPopup, $sharePopup, $subscribePopup, currencySlider,
-    $subscribeTrigger, $subscribeBlock, $goTop, $goTopHolder, didScroll, followCountDown,
+    $subscribeTrigger, $subscribeBlock, $hotEmailPopup, $compilationPopup,
+    $goTop, $goTopHolder, didScroll, followCountDown,
     lastScrollTop = 0, delta = 5,
     subscribe_spacer = 270;
 
@@ -21,7 +22,7 @@ $(function ($) {
             if (form.validationEngine('validate')) {
                 // todo remove
 
-                form.addClass('subscribe_success').closest('.ui-dialog').find('.ui-dialog-title').text('Thank you for subscribing!');
+                form.addClass('subscribe_success').closest('.ui-dialog')//.find('.ui-dialog-title').text('Thank you for subscribing!');
             }
         })
         .delegate('select', 'change', function () {
@@ -226,6 +227,10 @@ $(window)
         initSharePopup();
 
         initSubscribePopup();
+
+        initCompilationPopup();
+
+        initHotEmailBtn();
     })
     .on('scroll', function () {
         var scrtop = getScrollTop(),
@@ -404,6 +409,60 @@ function initSubscribePopup() {
         close: function (event, ui) {
             $body.removeClass('modal_opened overlay_v2');
         }
+    });
+}
+
+function initCompilationPopup() {
+
+    $compilationPopup = $('#compilation_popup').dialog({
+        autoOpen: false,
+        modal: true,
+        closeOnEscape: true,
+        closeText: '',
+        dialogClass: 'dialog_v2 dialog_title_v1',
+        //appendTo: '.wrapper',
+        width: 320,
+        draggable: true,
+        collision: "fit",
+        position: {my: "top center", at: "top center", of: window},
+        open: function (event, ui) {
+            $body.addClass('modal_opened overlay_v2');
+        },
+        close: function (event, ui) {
+            $body.removeClass('modal_opened overlay_v2');
+        }
+    });
+
+    $('body').delegate('.compilationBtn', 'click', function () {
+        $compilationPopup.dialog('open');
+        return false;
+    });
+}
+
+function initHotEmailBtn() {
+
+    $hotEmailPopup = $('#hotmail_popup').dialog({
+        autoOpen: false,
+        modal: true,
+        closeOnEscape: true,
+        closeText: '',
+        dialogClass: 'dialog_v2 dialog_title_v1',
+        //appendTo: '.wrapper',
+        width: 320,
+        draggable: true,
+        collision: "fit",
+        position: {my: "top center", at: "top center", of: window},
+        open: function (event, ui) {
+            $body.addClass('modal_opened overlay_v2');
+        },
+        close: function (event, ui) {
+            $body.removeClass('modal_opened overlay_v2');
+        }
+    });
+
+    $('body').delegate('.hotEmailBtn', 'click', function () {
+        $hotEmailPopup.dialog('open');
+        return false;
     });
 }
 

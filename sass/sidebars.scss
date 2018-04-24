@@ -596,6 +596,30 @@
   //letter-spacing: -.001em;
 }
 
+.subscribe_img {
+  border-radius: 2px 2px 0 0;
+  overflow: hidden;
+  margin-bottom: 12px;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.subscribe_caption {
+  font: 16px/19px $RubikBold;
+  margin: 0 0 17px;
+  text-align: center;
+}
+
+.subscribe_stat {
+  text-align: center;
+  font: 12px/14px $RubikReg;
+  color: #bdbdbd;
+  margin-bottom: 18px;
+}
+
 .subscribe_form {
   @extend %clearfix;
   padding: 10px 15px 30px;
@@ -617,10 +641,55 @@
     }
   }
 
+  &._hot {
+    .subscribe_success_msg {
+      p {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+
+    .subscribe_success_msg {
+      height: 240px;
+
+      &:before {
+        width: 60px;
+        height: 60px;
+        font-size: 54px;
+        bottom: 112px;
+        margin-left: -25px;
+      }
+
+      &:after {
+        width: 185px;
+        height: 100px;
+        margin-left: -94px;
+      }
+    }
+
+    .form_cell {
+      margin-bottom: 18px;
+      width: 100%;
+      float: none;
+    }
+
+    .btn_v1 {
+      border-radius: 2px;
+      max-width: 216px;
+      margin: 0 auto;
+    }
+  }
+
   .subscribe_success {
     .form_cell {
       display: none;
     }
+  }
+}
+
+.success_hide {
+  .subscribe_success & {
+    display: none;
   }
 }
 
@@ -667,7 +736,7 @@
 
 .article_action_footer {
   @include transition_all(transform .3s);
-  transform: translate(0, 100%);
+  transform: translate(0, 75px);
   position: fixed;
   bottom: 43px;
   right: 0;
