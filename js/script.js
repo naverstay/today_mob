@@ -1,5 +1,5 @@
-var $wnd, $body, $header, $footer, $followPopup, $sharePopup, $subscribePopup, currencySlider,
-    $subscribeTrigger, $subscribeBlock, $hotEmailPopup, $compilationPopup,
+var $wnd, $body, $header, $footer, $followPopup, $bonusPopup, $sharePopup, $subscribePopup, currencySlider,
+    $subscribeTrigger, $subscribeBlock, $hotEmailPopup, $compilationPopup, $contestFbPopup,
     $goTop, $goTopHolder, didScroll, followCountDown,
     lastScrollTop = 0, delta = 5,
     subscribe_spacer = 270;
@@ -221,6 +221,8 @@ $(window)
         checkHeader();
 
         initBonusPopup();
+
+        initContestFbPopup();
 
         initFollowPopup();
 
@@ -468,7 +470,7 @@ function initHotEmailBtn() {
 
 function initBonusPopup() {
 
-    $followPopup = $('#bonus_popup').dialog({
+    $bonusPopup = $('#bonus_popup').dialog({
         autoOpen: false,
         modal: true,
         closeOnEscape: true,
@@ -485,6 +487,38 @@ function initBonusPopup() {
         close: function (event, ui) {
             $body.removeClass('modal_opened overlay_v2');
         }
+    });
+
+    $('body').delegate('.contestBtnTw', 'click', function () {
+        $bonusPopup.dialog('open');
+        return false;
+    });
+}
+
+function initContestFbPopup() {
+
+    $contestFbPopup = $('#contest_fb_popup').dialog({
+        autoOpen: false,
+        modal: true,
+        closeOnEscape: true,
+        closeText: '',
+        dialogClass: 'dialog_v2 dialog_title_v1',
+        //appendTo: '.wrapper',
+        width: 320,
+        draggable: true,
+        collision: "fit",
+        position: {my: "top center", at: "top center", of: window},
+        open: function (event, ui) {
+            $body.addClass('modal_opened overlay_v2');
+        },
+        close: function (event, ui) {
+            $body.removeClass('modal_opened overlay_v2');
+        }
+    });
+
+    $('body').delegate('.contestBtnFb', 'click', function () {
+        $contestFbPopup.dialog('open');
+        return false;
     });
 }
 

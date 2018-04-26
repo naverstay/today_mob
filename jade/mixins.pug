@@ -92,6 +92,8 @@ mixin footer(white, hide_soc_text, no_suscribe)
                     li: a.footer_link(href='about.html') About us
                     li: a.footer_link.compilationBtn(href='#'): span subscribe 1
                     li: a.footer_link.hotEmailBtn(href='#'): span subscribe 2
+                    li: a.footer_link.contestBtnTw(href='#'): span contest 1
+                    li: a.footer_link.contestBtnFb(href='#'): span contest 2
 
             .footer_subscribe_holder
                 - if (!no_suscribe)
@@ -198,6 +200,14 @@ mixin footer(white, hide_soc_text, no_suscribe)
             .bonus_caption CryptoComes Twitter GIVEAWAY!<br>Follow and RT to win 💰$100💰
             .bonus_controls
                 a.btn_v4.subscribe_btn._tw(href='#')
+                    span PARTICIPATE HERE
+
+        #contest_fb_popup
+            .bonus_img
+                img(src='i/fb_popup.jpg')
+            .bonus_caption CryptoComes GIVEAWAY!<br>Like the Facebook page and make a comment to win 💰$100💰
+            .bonus_controls
+                a.btn_v4.subscribe_btn._fb(href='#')
                     span PARTICIPATE HERE
 
         #follow_popup
