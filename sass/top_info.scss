@@ -64,9 +64,14 @@
     position: absolute;
     top: 0;
     height: 30px;
-    right: 10px;
     width: 1px;
     background: #ebebeb;
+
+    @if ($amp_ver) {
+      right: 5px;
+    } @else {
+      right: 10px;
+    }
   }
 
   .currency_link {

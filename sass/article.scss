@@ -987,13 +987,13 @@
         position: relative;
         padding-left: 56px;
         margin-bottom: 15px;
-        font: 14px/18px $RubikReg;
+        font: 16px/1.3 $RubikReg;
 
         &:before {
           counter-increment: ordered_list;
           content: counter(ordered_list) ".";
           position: absolute;
-          top: 1px;
+          top: 3px;
           left: 16px;
           font-size: 12px;
         }
@@ -1033,7 +1033,7 @@
         position: relative;
         padding-left: 38px;
         margin-bottom: 15px;
-        font: 14px/18px $RubikReg;
+        font: 16px/1.3 $RubikReg;
 
         &:before {
           content: '';
@@ -1117,22 +1117,52 @@
   margin-bottom: 24px;
   list-style: none;
 
-  li {
-    @extend %icon_pseudo;
-    margin: 12px 0;
-    padding-left: 15px;
-    position: relative;
+  @if ($amp_ver) {
+    li {
+      margin: 12px 0;
+      padding-left: 15px;
+      position: relative;
 
-    &:before {
-      content: unicode($icon-triangle_r);
-      position: absolute;
-      left: 0;
-      top: 5px;
-      font-size: 7px;
-      line-height: 1;
-      color: #ddd;
+      &:before {
+        content: '';
+        background: url(i/chevron_r_thin.svg) no-repeat 50% 50%;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 7px;
+        height: 7px;
+        font-size: 7px;
+        line-height: 1;
+
+        path {
+          fill: #ddd;
+        }
+      }
+    }
+  } @else {
+    li {
+      @extend %icon_pseudo;
+      margin: 12px 0;
+      padding-left: 15px;
+      position: relative;
+
+      &:before {
+        content: unicode($icon-triangle_r);
+        position: absolute;
+        left: 0;
+        top: 5px;
+        font-size: 7px;
+        line-height: 1;
+        color: #ddd;
+      }
     }
   }
+
+
 }
 
 .contents_link {

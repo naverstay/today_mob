@@ -510,7 +510,6 @@ a.article_stat_val {
   background: rgba(0, 0, 0, .4);
 
   @if ($amp_ver) {
-
     .btn_icon {
       position: absolute;
       width: 14px;
@@ -536,7 +535,6 @@ a.article_stat_val {
       color: #fff;
     }
   }
-
 }
 
 .article_tags {
