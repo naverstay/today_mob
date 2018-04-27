@@ -1428,3 +1428,12 @@ body amp-accordion > section .footer_subscribe {
   max-width: $body_width !important;
 }
 
+.article_action_footer {
+  position: fixed;
+  bottom: 15px;
+  right: 0;
+  left: 0;
+  z-index: 6;
+
+
+}

@@ -246,7 +246,6 @@
 
 .action_sh {
   @include transition_all(color .3s, background .3s);
-  @extend %icon_pseudo;
   display: block;
   position: relative;
   cursor: pointer;
@@ -258,9 +257,19 @@
   background: #fff;
   border: 1px solid transparent;
 
-  &:before {
-    font-size: 17px;
-    line-height: 32px;
+  @if ($amp_ver) {
+    svg {
+      width: 12px;
+      height: 12px;
+      fill: #ddd;
+    }
+  } @else {
+    @extend %icon_pseudo;
+
+    &:before {
+      font-size: 17px;
+      line-height: 32px;
+    }
   }
 
   ._fixed & {
@@ -269,6 +278,7 @@
     border-radius: 2px;
     height: 25px;
     border: 0;
+    background: none;
 
     &:before {
       border-radius: inherit;
@@ -276,6 +286,28 @@
       font-size: 15px;
       line-height: 25px;
       color: #fff;
+    }
+
+    @if ($amp_ver) {
+      text-align: center;
+      line-height: 25px;
+
+      &:before {
+        content: '' !important;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+
+      svg {
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        line-height: 1;
+        fill: #fff;
+      }
     }
   }
 
@@ -288,15 +320,29 @@
     color: #333;
     font: 14px/36px $RubikReg;
 
-    &:before {
-      color: #fff;
-      width: 36px;
-      height: 36px;
-      display: inline-block;
-      vertical-align: middle;
-      line-height: 36px;
-      margin-right: 10px;
-      border-radius: 100%;
+    @if ($amp_ver) {
+      svg {
+        color: #fff;
+        width: 36px;
+        height: 36px;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 36px;
+        margin-right: 10px;
+        border-radius: 100%;
+      }
+    } @else {
+
+      &:before {
+        color: #fff;
+        width: 36px;
+        height: 36px;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 36px;
+        margin-right: 10px;
+        border-radius: 100%;
+      }
     }
 
     &:hover {
@@ -1161,7 +1207,6 @@
       }
     }
   }
-
 
 }
 
