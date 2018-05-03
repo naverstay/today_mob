@@ -228,14 +228,31 @@
 
 .article_img_link {
   display: block;
-  position: relative;
+  //position: relative;
   z-index: 1;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .article_img {
   position: relative;
   overflow: hidden;
   border-radius: 2px;
+
+  &:before {
+    display: block;
+    content: '';
+    padding-bottom: 62.5%;
+    background: #edf1fb;
+    background: -moz-radial-gradient(center, ellipse cover, #fff 0%, #edf1fb 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #fff 0%, #edf1fb 100%);
+    background: radial-gradient(ellipse at center, #fff 0%, #edf1fb 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#edf1fb', GradientType=1);
+  }
 
   img {
     display: block;
@@ -352,6 +369,67 @@
 
   .story_block & {
     color: $violette;
+  }
+}
+
+.how_to_list {
+  padding-left: 10px;
+  list-style: none;
+  position: relative;
+
+  .article_container & {
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: -16px;
+      left: -16px;
+      background: #eee;
+    }
+  }
+
+  ._main & {
+    ~ .article_stat {
+      padding-top: 8px;
+    }
+  }
+
+  .manual_list & {
+    display: none;
+  }
+
+  .manual_list ._opened & {
+    display: block;
+  }
+
+  > li {
+    @extend %icon_pseudo;
+    position: relative;
+    padding-left: 14px;
+    margin-bottom: 8px;
+
+    &:before {
+      content: unicode($icon-triangle_r);
+      position: absolute;
+      top: 4px;
+      left: 0;
+      color: #bbb;
+      font-size: 7px;
+    }
+  }
+}
+
+.how_to_link {
+  color: #bbb;
+  font: 12px/15px $RubikReg;
+
+  &._active {
+    cursor: default;
+    color: #000;
   }
 }
 
@@ -591,7 +669,6 @@ a.article_stat_val {
     width: 24px;
     height: 24px;
     line-height: 24px;
-    //border-radius: inherit;
     display: inline-block;
     vertical-align: top;
     text-align: center;

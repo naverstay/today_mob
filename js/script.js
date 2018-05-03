@@ -208,8 +208,6 @@ $(function ($) {
 
     initMask();
 
-    initCurrencySlider();
-
     //initMainBlockSlider();
 
     initSmallBlockSlider();
@@ -233,6 +231,9 @@ $(window)
         initCompilationPopup();
 
         initHotEmailBtn();
+
+        initCurrencySlider();
+
     })
     .on('scroll', function () {
         var scrtop = getScrollTop(),

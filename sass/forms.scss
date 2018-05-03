@@ -483,3 +483,13 @@ textarea.input_v3 {
   color: $clr_blue;
   text-decoration: none;
 }
+
+.manual_search {
+  margin-top: -5px;
+  padding: 0 0 15px;
+
+  .article_container & {
+    padding-top: 5px;
+    margin-top: 0;
+  }
+}

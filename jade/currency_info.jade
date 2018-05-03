@@ -1,0 +1,61 @@
+include mixins.pug
+doctype html
+html(lang='ru')
+    +dev_head('Crypto currency_info')
+
+    body.no_transition
+        .wrapper
+            .main_content
+                .section_inner
+                    +top_info(true)
+
+                    ul.bread_crumbs
+                        li: a.crumb_link(href='#') Cryptocomes
+                        li: a.crumb_link(href='#') CryptoCoins Manual
+
+                    .article_container
+                        .manual_search
+                            form(action='#')
+                                .input_w
+                                    select.filter_select()
+                                        option(disabled selected) Select CryptoCurrency
+                                        option Bitcoin
+                                        option Bitcoin
+                                        option Bitcoin
+                                    .select_arrow
+
+                        +how_to(1)
+
+                        h1.article_caption What is Bitcoin
+
+                        +article_st()
+
+                        figure
+                            .article_img
+                                a.article_img_link(href='#'): img(src='i/article_new.jpg')
+
+                        .article_lead._news Fosun is planning to invest 100 bln Yuan($16 bln) in AI, biotech and fintech areas over next decade.
+
+                        #subscribeTrigger
+
+                        p Fosun is planning to invest 100 bln Yuan ($16 bln) in&nbsp;
+                            a(href='#') Artificial Intelligence
+                            | , biotech and fintech areas over next decade. The company’s main focus will be India and Africa and Portuguese-speaking markets
+
+                        p Fosun is planning to invest 100 bln Yuan ($16 bln) in&nbsp;
+                            a(href='#') Artificial Intelligence
+                            | , biotech and fintech areas over next decade. The company’s main focus will be India and Africa and Portuguese-speaking markets
+
+                        p Fosun is planning to invest 100 bln Yuan ($16 bln) in&nbsp;
+                            a(href='#') Artificial Intelligence
+                            | , biotech and fintech areas over next decade.
+
+            .nav_holder
+                +header()
+                +main_menu(true)
+                +search()
+                +article_share()
+
+            +footer(false, true)
+
+        +scripts(true)

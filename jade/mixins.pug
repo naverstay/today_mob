@@ -427,6 +427,13 @@ mixin main_menu(subscribe)
                 li: a.action_sh._tg(href='#')
                     span.action_sh_text Telegram
 
+mixin how_to(active)
+    ul.how_to_list
+        li: a.how_to_link(class= (active === 1 ? '_active' : ((active === 0 ? '_active' : ''))) href='#') What is Bitcoin
+        li: a.how_to_link(class= (active === 2 ? '_active' : ((active === 0 ? '_active' : ''))) href='#') How to trade Bitcoin
+        li: a.how_to_link(class= (active === 3 ? '_active' : ((active === 0 ? '_active' : ''))) href='#') How to store Bitcoin
+        li: a.how_to_link(class= (active === 4 ? '_active' : ((active === 0 ? '_active' : ''))) href='#') How to mine Bitcoin
+
 mixin article_st(share)
     ul.article_stat
         li

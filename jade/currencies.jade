@@ -1,0 +1,48 @@
+include mixins.pug
+doctype html
+html(lang='ru')
+    +dev_head('Crypto currencies')
+
+    body.no_transition
+        .wrapper
+            .main_content
+                .section_inner
+                    +top_info(true)
+
+                    .article_group_title_w
+                        .article_group_title._news.icon-flag
+                            h1: a.artile_link(href='#') CRYPTOCOINS MANUAL
+
+                        .article_tip — How Artificial Intelligence combined with Blockchain unlock technologies
+
+                    .manual_search
+                        form(action='#')
+                            .input_w
+                                select.filter_select()
+                                    option(disabled selected) Select CryptoCurrency
+                                    option Bitcoin
+                                    option Bitcoin
+                                    option Bitcoin
+                                .select_arrow
+
+                    +loop_while(5)
+                        .article_block.story_block._main
+                            .article_img
+                                a.article_img_link(href='currency_info.html'): img(src='i/bear.jpg')
+
+                            .article_title
+                                .article_action: .article_action_inner
+                                    a.article_action_btn.actionBtn(href='#')
+                                p: a.article_link(href='#') Bitcoin (BTC) manual
+
+                                +how_to(1)
+                                +article_st()
+
+            .nav_holder
+                +header()
+                +main_menu()
+                +search()
+
+            +footer(false, true)
+
+        +scripts()
