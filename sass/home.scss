@@ -268,10 +268,16 @@
     padding-right: 17px;
   }
 
-  @each $cls, $color in $firm-colors {
-    .#{$cls} & {
-      &:before {
-        background: $color;
+  @if ($amp_ver) {
+    &:before {
+      background: $violette;
+    }
+  } @else {
+    @each $cls, $color in $firm-colors {
+      .#{$cls} & {
+        &:before {
+          background: $color;
+        }
       }
     }
   }
@@ -301,9 +307,13 @@
     left: 50%;
   }
 
-  @each $cls, $color in $firm-colors {
-    &.#{$cls} {
-      background: transparentize($color, .2);
+  @if ($amp_ver) {
+    background: transparentize($violette, .2);
+  } @else {
+    @each $cls, $color in $firm-colors {
+      &.#{$cls} {
+        background: transparentize($color, .2);
+      }
     }
   }
 }
@@ -331,9 +341,13 @@
     margin-top: 5px;
   }
 
-  @each $cls, $color in $firm-colors {
-    &.#{$cls} {
-      background: $color;
+  @if ($amp_ver) {
+    background: $violette;
+  } @else {
+    @each $cls, $color in $firm-colors {
+      &.#{$cls} {
+        background: $color;
+      }
     }
   }
 }
@@ -388,6 +402,7 @@
       bottom: 0;
       right: -16px;
       left: -16px;
+      height: 1px;
       background: #eee;
     }
   }
@@ -680,9 +695,13 @@ a.article_stat_val {
     }
   }
 
-  @each $cls, $color in $firm-colors {
-    &.#{$cls} {
-      background: $color;
+  @if ($amp_ver) {
+    background: $violette;
+  } @else {
+    @each $cls, $color in $firm-colors {
+      &.#{$cls} {
+        background: $color;
+      }
     }
   }
 }
@@ -695,9 +714,13 @@ a.article_stat_val {
   height: 4px;
   margin: 22px -16px 5px;
 
-  @each $cls, $color in $firm-colors {
-    &.#{$cls} {
-      background: $color;
+  @if ($amp_ver) {
+    background: $violette;
+  } @else {
+    @each $cls, $color in $firm-colors {
+      &.#{$cls} {
+        background: $color;
+      }
     }
   }
 }
@@ -752,57 +775,27 @@ a.article_stat_val {
     text-align: center;
   }
 
-  @each $cls, $color in $firm-colors {
-    &.#{$cls} {
-      &:before {
-        background: $color;
+  @if ($amp_ver) {
+    &:before {
+      background: $violette;
+    }
+  } @else {
+    @each $cls, $color in $firm-colors {
+      &.#{$cls} {
+        &:before {
+          background: $color;
+        }
+      }
+    }
+
+    @each $cls, $content in $firm-icons {
+      &.#{$cls} {
+        &:not([class^="icon-"]):not([class*=" icon-"]):before {
+          content: unicode($content);
+        }
       }
     }
   }
-
-  @each $cls, $content in $firm-icons {
-    &.#{$cls} {
-      &:not([class^="icon-"]):not([class*=" icon-"]):before {
-        content: unicode($content);
-      }
-    }
-  }
-
-  //&._news {
-  //  background-image: url(../i/stories_bg.svg);
-  //}
-  //
-  //&._stories {
-  //  background-image: url(../i/stories_bg.svg);
-  //}
-  //
-  //&._features {
-  //  background-image: url(../i/features_bg.svg);
-  //}
-  //
-  //&._pool {
-  //  background-image: url(../i/sharks_pool_bg.svg);
-  //}
-  //
-  //&._analysis {
-  //  background-image: url(../i/pricewise_bg.svg);
-  //}
-  //
-  //&._pricewise {
-  //  background-image: url(../i/pricewise_bg.svg);
-  //}
-  //
-  //&._crypto {
-  //  background-image: url(../i/crypto.svg);
-  //}
-  //
-  //&._wiki {
-  //  background-image: url(../i/wikicoin_bg.svg);
-  //}
-  //
-  //&._watch {
-  //  background-image: url(../i/ico_bg.svg);
-  //}
 }
 
 .artile_link {

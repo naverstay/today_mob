@@ -26,7 +26,7 @@ module.exports = function (grunt) {
             }
         },
         wellington: {
-            your_target: {
+            css: {
                 src: [
                     'sass/amp_styles.scss',
                     'sass/main_global.scss',
@@ -100,6 +100,24 @@ module.exports = function (grunt) {
                         ext: '.jpg'
                     }
                 ]
+            }
+        },
+        uncss: {
+            dist: {
+                options: {
+                    ignore: [
+                        '.main_menu_holder[side][open]',
+                        '.main_menu_holder[side][open] .main_menu',
+                        '.wrapper amp-carousel .amp-carousel-button-prev',
+                        '.main_menu_holder[side][open] .search_block',
+                        '.main_menu_holder[side][open] .menu_footer',
+                        '.main_menu_holder[side][open]:before',
+                        'body .i-amphtml-sidebar-mask'
+                    ]
+                },
+                files: {
+                    'styles/tidy_amp_styles.css': ['amp.html']
+                }
             }
         },
         pug: {
@@ -178,6 +196,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-imageoptim');
     grunt.loadNpmTasks('grunt-wellington');
+    grunt.loadNpmTasks('grunt-uncss');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.registerTask('default', ['watch']);
 };

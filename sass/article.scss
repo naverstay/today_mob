@@ -53,159 +53,172 @@
 
 }
 
-.article_preview {
-  position: relative;
-  font: 17px/24px $RubikMed;
-  padding: 20px 20px 13px 16px;
-  margin-bottom: 28px;
-  margin-left: -16px;
-  border-bottom: 4px solid #000;
+@if ($amp_ver) {
 
-  @each $cls, $color in $firm-colors {
-    .#{$cls} & {
-      border-bottom-color: $color;
+} @else {
+  .article_preview {
+    position: relative;
+    font: 17px/24px $RubikMed;
+    padding: 20px 20px 13px 16px;
+    margin-bottom: 28px;
+    margin-left: -16px;
+    border-bottom: 4px solid #000;
+
+    @if ($amp_ver) {
+      border-bottom-color: $violette;
+    } @else {
+      @each $cls, $color in $firm-colors {
+        .#{$cls} & {
+          border-bottom-color: $color;
+        }
+      }
     }
   }
-}
 
-.article_subscribe_wide {
-  margin: 20px 0 0 -16px;
-}
-
-.article_subscribe {
-  @extend %icon_pseudo;
-  position: relative;
-  padding: 20px 125px 20px 26px;
-  margin: 31px -16px 31px 20px;
-
-  .subscribe_btn {
-    //letter-spacing: .025em;
+  .article_subscribe_wide {
+    margin: 20px 0 0 -16px;
   }
 
-  &:before {
-    content: unicode($icon-ufo);
-    position: absolute;
-    top: 0;
-    right: 7px;
-    font-size: 130px;
-    line-height: 1;
+  .article_subscribe {
+    @extend %icon_pseudo;
+    position: relative;
+    padding: 20px 125px 20px 26px;
+    margin: 31px -16px 31px 20px;
+
+    .subscribe_btn {
+      //letter-spacing: .025em;
+    }
+
+    &:before {
+      content: unicode($icon-ufo);
+      position: absolute;
+      top: 0;
+      right: 7px;
+      font-size: 130px;
+      line-height: 1;
+      color: #fff;
+    }
+
+    &._stories {
+      background: url(../i/subscribe_bg_blue.jpg) no-repeat 50% 50%;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+  }
+
+  .article_telegram_section {
+    background: #000;
+    margin-left: -16px;
+    padding: 19px;
+    text-align: center;
+
+    p {
+      color: #fff;
+      font: 16px/22px $RubikMed;
+      margin-bottom: 12px;
+    }
+  }
+
+  .article_telegram_block {
+    font: 12px/14px $RubikReg;
+    margin-bottom: 28px;
+
+    span {
+      opacity: .4;
+    }
+  }
+
+  .telegram_link {
+    @extend %firm_color;
+    font: 12px/14px $RubikMed;
+  }
+
+  .related_title {
+    position: relative;
+    font: 18px/22px $RubikMed;
+    padding: 20px 16px 18px;
+    margin: 0 -16px 20px 0;
     color: #fff;
-  }
-
-  &._stories {
-    background: url(../i/subscribe_bg_blue.jpg) no-repeat 50% 50%;
+    //letter-spacing: .022em;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    @if ($amp_ver) {
+      background-image: url(../i/stories_bg.svg);
+    } @else {
+      &._news {
+        background-image: url(../i/stories_bg.svg);
+      }
+
+      &._stories {
+        background-image: url(../i/stories_bg.svg);
+      }
+
+      &._features {
+        background-image: url(../i/features_bg.svg);
+      }
+
+      &._pool {
+        background-image: url(../i/sharks_pool_bg.svg);
+      }
+
+      &._analysis {
+        background-image: url(../i/pricewise_bg.svg);
+      }
+
+      &._pricewise {
+        background-image: url(../i/pricewise_bg.svg);
+      }
+
+      &._crypto {
+        background-image: url(../i/crypto.svg);
+      }
+
+      &._wiki {
+        background-image: url(../i/wikicoin_bg.svg);
+      }
+
+      &._watch {
+        background-image: url(../i/ico_bg.svg);
+      }
+    }
+
   }
 
-}
+  .article_soc {
+    @extend %clearfix;
+    list-style: none;
+    margin-left: -4px;
+    padding-right: 10px;
+    padding-bottom: 7px;
 
-.article_telegram_section {
-  background: #000;
-  margin-left: -16px;
-  padding: 19px;
-  text-align: center;
+    img {
+      display: inline-block;
+      vertical-align: top;
+      max-width: 100%;
+    }
 
-  p {
-    color: #fff;
-    font: 16px/22px $RubikMed;
-    margin-bottom: 12px;
-  }
-}
+    ._action_only & {
+      padding-top: 17px;
+    }
 
-.article_telegram_block {
-  font: 12px/14px $RubikReg;
-  margin-bottom: 28px;
+    li {
+      margin-bottom: 10px;
+      padding-left: 4px;
+      float: left;
 
-  span {
-    opacity: .4;
-  }
-}
-
-.telegram_link {
-  @extend %firm_color;
-  font: 12px/14px $RubikMed;
-}
-
-.related_title {
-  position: relative;
-  font: 18px/22px $RubikMed;
-  padding: 20px 16px 18px;
-  margin: 0 -16px 20px 0;
-  color: #fff;
-  //letter-spacing: .022em;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-
-  &._news {
-    background-image: url(../i/stories_bg.svg);
-  }
-
-  &._stories {
-    background-image: url(../i/stories_bg.svg);
-  }
-
-  &._features {
-    background-image: url(../i/features_bg.svg);
-  }
-
-  &._pool {
-    background-image: url(../i/sharks_pool_bg.svg);
-  }
-
-  &._analysis {
-    background-image: url(../i/pricewise_bg.svg);
-  }
-
-  &._pricewise {
-    background-image: url(../i/pricewise_bg.svg);
-  }
-
-  &._crypto {
-    background-image: url(../i/crypto.svg);
-  }
-
-  &._wiki {
-    background-image: url(../i/wikicoin_bg.svg);
-  }
-
-  &._watch {
-    background-image: url(../i/ico_bg.svg);
-  }
-}
-
-.article_soc {
-  @extend %clearfix;
-  list-style: none;
-  margin-left: -4px;
-  padding-right: 10px;
-  padding-bottom: 7px;
-
-  img {
-    display: inline-block;
-    vertical-align: top;
-    max-width: 100%;
-  }
-
-  ._action_only & {
-    padding-top: 17px;
-  }
-
-  li {
-    margin-bottom: 10px;
-    padding-left: 4px;
-    float: left;
-
-    &:last-child {
-      float: right;
+      &:last-child {
+        float: right;
+      }
     }
   }
+
 }
 
 .action_soc {
@@ -484,13 +497,22 @@
     }
   }
 
-  @each $cls, $color in $firm-colors {
-    .#{$cls} & {
-      color: $color;
+  @if ($amp_ver) {
+    color: $violette;
 
-      &._active,
-      &:hover {
-        background: $color;
+    &._active,
+    &:hover {
+      background: $violette;
+    }
+  } @else {
+    @each $cls, $color in $firm-colors {
+      .#{$cls} & {
+        color: $color;
+
+        &._active,
+        &:hover {
+          background: $color;
+        }
       }
     }
   }
@@ -530,17 +552,31 @@
       border-right: 6px solid #fff;
     }
 
-    @each $cls, $color in $firm-colors {
-      .#{$cls} & {
-        border-color: $color;
+    @if ($amp_ver) {
+      border-color: $violette;
 
-        &:before {
-          border-right-color: $color;
+      &:before {
+        border-right-color: $violette;
+      }
+
+      &:hover {
+        &:after {
+          border-right-color: $violette;
         }
+      }
+    } @else {
+      @each $cls, $color in $firm-colors {
+        .#{$cls} & {
+          border-color: $color;
 
-        &:hover {
-          &:after {
+          &:before {
             border-right-color: $color;
+          }
+
+          &:hover {
+            &:after {
+              border-right-color: $color;
+            }
           }
         }
       }
@@ -698,72 +734,76 @@
   }
 }
 
-.new_release_holder {
-  padding-top: 24px;
+@if ($amp_ver) {
 
-  h2 {
-    font: 22px $RubikMed;
-    margin-bottom: 15px;
-  }
+} @else {
+  .new_release_holder {
+    padding-top: 24px;
 
-  p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 25px;
-  }
-}
+    h2 {
+      font: 22px $RubikMed;
+      margin-bottom: 15px;
+    }
 
-.release_form_holder {
-  border: solid #f8f8f8;
-  border-width: 1px 0;
-  margin: 50px 0 25px;
-  padding: 43px 0 8px;
-}
-
-.new_release_form {
-  position: relative;
-  padding-top: 5px;
-
-  .form_cell {
-    margin-bottom: 20px;
-  }
-
-  .formError.relative_mode .formErrorContent {
-    padding-top: 0;
-  }
-}
-
-.release_summary {
-  padding-top: 10px;
-  padding-bottom: 120px;
-  background: url(../i/armstrong.svg) no-repeat 100% 100%;
-
-  p {
-    font-size: 14px;
-  }
-
-  ._hash {
-    color: #c0c0c0;
-    font: 9px $RubikMed;
-  }
-}
-
-.offer_block {
-  background: #f6f7f7;
-  margin-top: 4px;
-  border-radius: 2px;
-  padding: 15px 10px 20px;
-  text-align: center;
-  font: 16px/19px $RubikMed;
-
-  p {
-    + p {
-      margin-top: 15px;
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 25px;
     }
   }
 
-  &._mb_20 {
-    margin-bottom: 20px;
+  .release_form_holder {
+    border: solid #f8f8f8;
+    border-width: 1px 0;
+    margin: 50px 0 25px;
+    padding: 43px 0 8px;
+  }
+
+  .new_release_form {
+    position: relative;
+    padding-top: 5px;
+
+    .form_cell {
+      margin-bottom: 20px;
+    }
+
+    .formError.relative_mode .formErrorContent {
+      padding-top: 0;
+    }
+  }
+
+  .release_summary {
+    padding-top: 10px;
+    padding-bottom: 120px;
+    background: url(../i/armstrong.svg) no-repeat 100% 100%;
+
+    p {
+      font-size: 14px;
+    }
+
+    ._hash {
+      color: #c0c0c0;
+      font: 9px $RubikMed;
+    }
+  }
+
+  .offer_block {
+    background: #f6f7f7;
+    margin-top: 4px;
+    border-radius: 2px;
+    padding: 15px 10px 20px;
+    text-align: center;
+    font: 16px/19px $RubikMed;
+
+    p {
+      + p {
+        margin-top: 15px;
+      }
+    }
+
+    &._mb_20 {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -854,9 +894,14 @@
     margin-bottom: 28px;
     font: 16px/21px $RubikMed;
 
-    @each $cls, $color in $firm-colors {
-      &.#{$cls} {
-        border-bottom: 4px solid $color;
+    @if ($amp_ver) {
+      border-bottom: 4px solid $violette;
+    } @else {
+
+      @each $cls, $color in $firm-colors {
+        &.#{$cls} {
+          border-bottom: 4px solid $color;
+        }
       }
     }
   }
@@ -1008,6 +1053,11 @@
     line-height: 1.3;
     margin-bottom: 22px;
 
+    > img {
+      display: block;
+      max-width: 100%;
+    }
+
     a {
       color: $clr_blue;
     }
@@ -1031,7 +1081,7 @@
 
       li {
         position: relative;
-        padding-left: 56px;
+        padding-left: 38px;
         margin-bottom: 15px;
         font: 16px/1.3 $RubikReg;
 
@@ -1143,9 +1193,13 @@
   background: linear-gradient(to bottom, rgba(221, 221, 221, 1) 0%, rgba(255, 255, 255, 1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dddddd', endColorstr='#ffffff', GradientType=0);
 
-  @each $cls, $color in $firm-colors {
-    &.#{$cls} {
-      border-top: 4px solid $color;
+  @if ($amp_ver) {
+    border-top: 4px solid $violette;
+  } @else {
+    @each $cls, $color in $firm-colors {
+      &.#{$cls} {
+        border-top: 4px solid $color;
+      }
     }
   }
 }
@@ -1215,27 +1269,31 @@
   font: 12px/15px $RubikReg;
 }
 
-.huston_problem {
-  position: relative;
-  margin-bottom: 28px;
+@if ($amp_ver) {
 
-  &:before {
-    content: '';
-    position: absolute;
-    width: 72px;
-    height: 110px;
-    bottom: -20px;
-    right: 0;
-    background: url(../i/nlo.svg) no-repeat 90% 90%;
-  }
+} @else {
+  .huston_problem {
+    position: relative;
+    margin-bottom: 28px;
 
-  h1 {
-    font: 50px/59px $RubikBold;
-    margin-bottom: .1em;
-  }
+    &:before {
+      content: '';
+      position: absolute;
+      width: 72px;
+      height: 110px;
+      bottom: -20px;
+      right: 0;
+      background: url(../i/nlo.svg) no-repeat 90% 90%;
+    }
 
-  p {
-    color: #000;
+    h1 {
+      font: 50px/59px $RubikBold;
+      margin-bottom: .1em;
+    }
+
+    p {
+      color: #000;
+    }
   }
 }
 

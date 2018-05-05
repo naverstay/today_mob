@@ -33,9 +33,13 @@
     }
   }
 
-  @each $cls, $color in $firm-colors {
-    &.#{$cls} {
-      background: $color;
+  @if ($amp_ver) {
+    background: $violette;
+  } @else {
+    @each $cls, $color in $firm-colors {
+      &.#{$cls} {
+        background: $color;
+      }
     }
   }
 }
@@ -85,14 +89,24 @@
     //letter-spacing: -.05em;
   }
 
-  @each $cls, $color in $firm-colors {
-    &.#{$cls} {
-      &:before {
-        border-bottom-color: $color;
-      }
+  @if ($amp_ver) {
+    &:before {
+      border-bottom-color: $violette;
+    }
 
-      .category_link {
-        background: $color;
+    .category_link {
+      background: $violette;
+    }
+  } @else {
+    @each $cls, $color in $firm-colors {
+      &.#{$cls} {
+        &:before {
+          border-bottom-color: $color;
+        }
+
+        .category_link {
+          background: $color;
+        }
       }
     }
   }

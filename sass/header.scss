@@ -119,58 +119,16 @@
   }
 }
 
-.menu_close_btn {
-  @extend %header_btn;
-
-  @if ($amp_ver) {
-  } @else {
-    @extend %icon_pseudo;
-  }
-
-  right: 16px;
-  background: none;
-  box-shadow: none;
-
-  &:after,
-  &:before {
-    @include transition_all(transform .3s, top 0.3s, background .3s);
-    content: '';
-    position: absolute;
-    left: 17px;
-    width: 14px;
-    height: 2px;
-    top: 24px;
-    background: white;
-  }
-
-  &:before {
-    transform: rotate(-45deg);
-  }
-
-  &:after {
-    transform: rotate(45deg);
-  }
-}
-
-.search_btn {
-  @extend %header_btn;
-  right: 16px;
-
-  @if ($amp_ver) {
-  } @else {
+@if ($amp_ver) {
+} @else {
+  .menu_close_btn {
+    @extend %header_btn;
     @extend %icon_pseudo;
 
-    &:before {
-      content: unicode($icon-search);
-    }
-  }
+    right: 16px;
+    background: none;
+    box-shadow: none;
 
-  &:after {
-    content: '';
-    background-color: transparent;
-  }
-
-  .search_opened & {
     &:after,
     &:before {
       @include transition_all(transform .3s, top 0.3s, background .3s);
@@ -189,6 +147,47 @@
 
     &:after {
       transform: rotate(45deg);
+    }
+  }
+}
+
+@if ($amp_ver) {
+} @else {
+  .search_btn {
+    @extend %header_btn;
+    right: 16px;
+
+    @extend %icon_pseudo;
+
+    &:before {
+      content: unicode($icon-search);
+    }
+
+    &:after {
+      content: '';
+      background-color: transparent;
+    }
+
+    .search_opened & {
+      &:after,
+      &:before {
+        @include transition_all(transform .3s, top 0.3s, background .3s);
+        content: '';
+        position: absolute;
+        left: 17px;
+        width: 14px;
+        height: 2px;
+        top: 24px;
+        background: white;
+      }
+
+      &:before {
+        transform: rotate(-45deg);
+      }
+
+      &:after {
+        transform: rotate(45deg);
+      }
     }
   }
 }
@@ -222,14 +221,17 @@
   }
 }
 
-.callback_block {
-  float: right;
-}
+@if ($amp_ver) {
+} @else {
+  .callback_block {
+    float: right;
+  }
 
-.clr_red_2 {
-  color: $red_2;
-}
+  .clr_red_2 {
+    color: $red_2;
+  }
 
-.clr_green {
-  color: $green;
+  .clr_green {
+    color: $green;
+  }
 }

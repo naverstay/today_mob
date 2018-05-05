@@ -149,137 +149,149 @@
   }
 
   %firm_color {
-    ._news &,
-    ._stories &,
-    ._top & {
+    @if ($amp_ver) {
       color: $violette;
-    }
+    } @else {
+      ._news &,
+      ._stories &,
+      ._top & {
+        color: $violette;
+      }
 
-    ._release & {
-      color: $pink;
-    }
+      ._release & {
+        color: $pink;
+      }
 
-    ._analysis & {
-      //color: $orange;
-      color: $green;
-    }
+      ._analysis & {
+        //color: $orange;
+        color: $green;
+      }
 
-    ._pricewise & {
-      color: $green;
-    }
+      ._pricewise & {
+        color: $green;
+      }
 
-    ._sponsored & {
-      color: $green_2;
-    }
+      ._sponsored & {
+        color: $green_2;
+      }
 
-    ._pool & {
-      color: $blue;
-    }
+      ._pool & {
+        color: $blue;
+      }
 
-    ._features & {
-      color: $red;
-    }
+      ._features & {
+        color: $red;
+      }
 
-    ._crypto & {
-      color: $brown;
-    }
+      ._crypto & {
+        color: $brown;
+      }
 
-    ._wiki & {
-      color: $brown_2;
-    }
+      ._wiki & {
+        color: $brown_2;
+      }
 
-    ._watch & {
-      color: $violette_2;
+      ._watch & {
+        color: $violette_2;
+      }
     }
   }
 
   %firm_border_color {
-    ._news &,
-    ._stories &,
-    ._top & {
+    @if ($amp_ver) {
       border-color: $violette;
-    }
+    } @else {
+      ._news &,
+      ._stories &,
+      ._top & {
+        border-color: $violette;
+      }
 
-    ._release & {
-      border-color: $pink;
-    }
+      ._release & {
+        border-color: $pink;
+      }
 
-    ._analysis & {
-      //border-color: $orange;
-      border-color: $green;
-    }
+      ._analysis & {
+        //border-color: $orange;
+        border-color: $green;
+      }
 
-    ._pricewise & {
-      border-color: $green;
-    }
+      ._pricewise & {
+        border-color: $green;
+      }
 
-    ._sponsored & {
-      border-color: $green_2;
-    }
+      ._sponsored & {
+        border-color: $green_2;
+      }
 
-    ._pool & {
-      border-color: $blue;
-    }
+      ._pool & {
+        border-color: $blue;
+      }
 
-    ._features & {
-      border-color: $red;
-    }
+      ._features & {
+        border-color: $red;
+      }
 
-    ._crypto & {
-      border-color: $brown;
-    }
+      ._crypto & {
+        border-color: $brown;
+      }
 
-    ._wiki & {
-      border-color: $brown_2;
-    }
+      ._wiki & {
+        border-color: $brown_2;
+      }
 
-    ._watch & {
-      border-color: $violette_2;
+      ._watch & {
+        border-color: $violette_2;
+      }
     }
   }
 
   %firm_bg_color {
-    ._news &,
-    ._stories &,
-    ._top & {
+    @if ($amp_ver) {
       background-color: $violette;
-    }
+    } @else {
+      ._news &,
+      ._stories &,
+      ._top & {
+        background-color: $violette;
+      }
 
-    ._release & {
-      background-color: $pink;
-    }
+      ._release & {
+        background-color: $pink;
+      }
 
-    ._analysis & {
-      //background-color: $orange;
-      background-color: $green;
-    }
+      ._analysis & {
+        //background-color: $orange;
+        background-color: $green;
+      }
 
-    ._pricewise & {
-      background-color: $green;
-    }
+      ._pricewise & {
+        background-color: $green;
+      }
 
-    ._sponsored & {
-      background-color: $green_2;
-    }
+      ._sponsored & {
+        background-color: $green_2;
+      }
 
-    ._pool & {
-      background-color: $blue;
-    }
+      ._pool & {
+        background-color: $blue;
+      }
 
-    ._features & {
-      background-color: $red;
-    }
+      ._features & {
+        background-color: $red;
+      }
 
-    ._crypto & {
-      background-color: $brown;
-    }
+      ._crypto & {
+        background-color: $brown;
+      }
 
-    ._wiki & {
-      background-color: $brown_2;
-    }
+      ._wiki & {
+        background-color: $brown_2;
+      }
 
-    ._watch & {
-      background-color: $violette_2;
+      ._watch & {
+        background-color: $violette_2;
+      }
     }
   }
 

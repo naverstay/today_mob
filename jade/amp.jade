@@ -21,7 +21,10 @@ html(lang='ru', amp='')
         <noscript><style amp-boilerplate="">body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
         style(amp-custom='')
+            //-include ../styles/tidy_amp_styles.css
             include ../styles/amp_styles.css
+
+        //-link(rel='stylesheet', href='styles/amp_styles.css?t=' + time, media='all')
 
         script(type='application/ld+json').
             {
@@ -294,4 +297,3 @@ html(lang='ru', amp='')
         +header()
 
         +article_share()
-
