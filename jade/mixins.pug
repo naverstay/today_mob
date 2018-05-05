@@ -109,120 +109,121 @@ mixin footer(white, hide_soc_text, no_suscribe)
             .section_inner
                 a.go_top.goTop(href='#')
 
-    .hide
-        #subscribe_popup
-            .subscribe_form
-                form.validateMe.formParent.subscribeForm(action='#' data-prompts='true')
-                    .form_cell.formCell
-                        .input_w
-                            input.input_v1.forceValidation(placeholder='Enter your email' class='validate[required,custom[email]]' data-errormessage='Please enter valid e-mail')
+    - if (!amp)
+        .hide
+            #subscribe_popup
+                .subscribe_form
+                    form.validateMe.formParent.subscribeForm(action='#' data-prompts='true')
+                        .form_cell.formCell
+                            .input_w
+                                input.input_v1.forceValidation(placeholder='Enter your email' class='validate[required,custom[email]]' data-errormessage='Please enter valid e-mail')
 
-                    .form_cell
-                        button.btn_v1.subscribe_btn.btn_violette_2 Subscribe
+                        .form_cell
+                            button.btn_v1.subscribe_btn.btn_violette_2 Subscribe
 
-                    .subscribe_success_msg
+                        .subscribe_success_msg
 
-            .subscribe_form_footer
-                p Follow us on social
+                .subscribe_form_footer
+                    p Follow us on social
 
-                ul.action_soc._brand
-                    li
-                        a.action_sh._t(href='#' data-network="twitter" class='st-custom-button')
-                    li
-                        a.action_sh._tg(href= link_tg)
-                    li
-                        a.action_sh._f(href='#' data-network="facebook" class='st-custom-button')
-                    li
-                        a.action_sh._y(href= link_youtube data-network="facebook" class='st-custom-button')
-                    li
-                        a.action_sh._rd(href='#' data-network="reddit" class='st-custom-button')
-
-        #sh_popup
-            .sh_block
-                .action_block
                     ul.action_soc._brand
                         li
-                            a.action_sh._f(href='#' data-network="facebook" class='st-custom-button')
-                                span Facebook
-                        li
                             a.action_sh._t(href='#' data-network="twitter" class='st-custom-button')
-                                span Twitter
                         li
-                            a.action_sh._l(href='#' data-network="linkedin" class='st-custom-button')
-                                span LinkedIn
+                            a.action_sh._tg(href= link_tg)
                         li
-                            a.action_sh._tg(href='https://t.me/cryptocomes')
-                                span Telegram
+                            a.action_sh._f(href='#' data-network="facebook" class='st-custom-button')
+                        li
+                            a.action_sh._y(href= link_youtube data-network="facebook" class='st-custom-button')
                         li
                             a.action_sh._rd(href='#' data-network="reddit" class='st-custom-button')
-                                span Reddit
 
-        #compilation_popup
-            .subscribe_img
-                img(src='i/compilation_popup.jpg')
+            #sh_popup
+                .sh_block
+                    .action_block
+                        ul.action_soc._brand
+                            li
+                                a.action_sh._f(href='#' data-network="facebook" class='st-custom-button')
+                                    span Facebook
+                            li
+                                a.action_sh._t(href='#' data-network="twitter" class='st-custom-button')
+                                    span Twitter
+                            li
+                                a.action_sh._l(href='#' data-network="linkedin" class='st-custom-button')
+                                    span LinkedIn
+                            li
+                                a.action_sh._tg(href='https://t.me/cryptocomes')
+                                    span Telegram
+                            li
+                                a.action_sh._rd(href='#' data-network="reddit" class='st-custom-button')
+                                    span Reddit
 
-            .subscribe_form._hot
-                form.validateMe.formParent.subscribeForm(action='#' data-prompts='true')
-                    .success_hide
-                        .subscribe_caption Не пропусти самое важное<br>в крипте. Подборка лучшего
-                        .subscribe_stat 3800 enthusiasts subsribed already
-                        .form_cell.formCell
-                            .input_w
-                                input.input_v5.forceValidation(placeholder='Enter your email' class='validate[required,custom[email]]' data-errormessage='Please enter valid e-mail')
+            #compilation_popup
+                .subscribe_img
+                    img(src='i/compilation_popup.jpg')
 
-                        .form_cell
-                            button.btn_v1.subscribe_btn.btn_violette_2 Subscribe TO NEWSLETTER
+                .subscribe_form._hot
+                    form.validateMe.formParent.subscribeForm(action='#' data-prompts='true')
+                        .success_hide
+                            .subscribe_caption Не пропусти самое важное<br>в крипте. Подборка лучшего
+                            .subscribe_stat 3800 enthusiasts subsribed already
+                            .form_cell.formCell
+                                .input_w
+                                    input.input_v5.forceValidation(placeholder='Enter your email' class='validate[required,custom[email]]' data-errormessage='Please enter valid e-mail')
 
-                    .subscribe_success_msg
-                        p Thank you for subscribing!
+                            .form_cell
+                                button.btn_v1.subscribe_btn.btn_violette_2 Subscribe TO NEWSLETTER
 
-        #hotmail_popup
-            .subscribe_img
-                img(src='i/inbox_popup.jpg')
-            .subscribe_form._hot
-                form.validateMe.formParent.subscribeForm(action='#' data-prompts='true')
-                    .success_hide
-                        .subscribe_caption Получи в свой inbox самые горячие криптоновости
-                        .subscribe_stat 3800 enthusiasts subsribed already
-                        .form_cell.formCell
-                            .input_w
-                                input.input_v5.forceValidation(placeholder='Enter your email' class='validate[required,custom[email]]' data-errormessage='Please enter valid e-mail')
+                        .subscribe_success_msg
+                            p Thank you for subscribing!
 
-                        .form_cell
-                            button.btn_v1.subscribe_btn.btn_violette_2 Subscribe TO OUR HOTTEST
+            #hotmail_popup
+                .subscribe_img
+                    img(src='i/inbox_popup.jpg')
+                .subscribe_form._hot
+                    form.validateMe.formParent.subscribeForm(action='#' data-prompts='true')
+                        .success_hide
+                            .subscribe_caption Получи в свой inbox самые горячие криптоновости
+                            .subscribe_stat 3800 enthusiasts subsribed already
+                            .form_cell.formCell
+                                .input_w
+                                    input.input_v5.forceValidation(placeholder='Enter your email' class='validate[required,custom[email]]' data-errormessage='Please enter valid e-mail')
 
-                    .subscribe_success_msg
-                        p Thank you for subscribing!
+                            .form_cell
+                                button.btn_v1.subscribe_btn.btn_violette_2 Subscribe TO OUR HOTTEST
 
-        #bonus_popup
-            .bonus_img
-                img(src='i/retweet.jpg')
-            .bonus_caption CryptoComes Twitter GIVEAWAY!<br>Follow and RT to win 💰$100💰
-            .bonus_controls
-                a.btn_v4.subscribe_btn._tw(href='#')
-                    span PARTICIPATE HERE
+                        .subscribe_success_msg
+                            p Thank you for subscribing!
 
-        #contest_fb_popup
-            .bonus_img
-                img(src='i/fb_popup.jpg')
-            .bonus_caption CryptoComes GIVEAWAY!<br>Like the Facebook page and make a comment to win 💰$100💰
-            .bonus_controls
-                a.btn_v4.subscribe_btn._fb(href='#')
-                    span PARTICIPATE HERE
+            #bonus_popup
+                .bonus_img
+                    img(src='i/retweet.jpg')
+                .bonus_caption CryptoComes Twitter GIVEAWAY!<br>Follow and RT to win 💰$100💰
+                .bonus_controls
+                    a.btn_v4.subscribe_btn._tw(href='#')
+                        span PARTICIPATE HERE
 
-        #follow_popup
-            .follow_caption Follow us on Facebook or Twitter<br>to read this article
+            #contest_fb_popup
+                .bonus_img
+                    img(src='i/fb_popup.jpg')
+                .bonus_caption CryptoComes GIVEAWAY!<br>Like the Facebook page and make a comment to win 💰$100💰
+                .bonus_controls
+                    a.btn_v4.subscribe_btn._fb(href='#')
+                        span PARTICIPATE HERE
 
-            .follow_tips Нажми follow / like чтобы получить доступ. <br>Читай все самые горячие материалы по крипте на одном сайте! 
-            .follow_widget
-                <a href="https://twitter.com/intent/tweet?button_hashtag=CryptoComes&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-size="large" data-show-count="true">Tweet #CryptoComes</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            #follow_popup
+                .follow_caption Follow us on Facebook or Twitter<br>to read this article
 
-            .follow_widget
-                <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+                .follow_tips Нажми follow / like чтобы получить доступ. <br>Читай все самые горячие материалы по крипте на одном сайте! 
+                .follow_widget
+                    <a href="https://twitter.com/intent/tweet?button_hashtag=CryptoComes&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-size="large" data-show-count="true">Tweet #CryptoComes</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-            .follow_counter
-                span or wait&nbsp;
-                span.followCounter 20 seconds
+                .follow_widget
+                    <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+
+                .follow_counter
+                    span or wait&nbsp;
+                    span.followCounter 20 seconds
 
     | <div id="fb-root"></div>
     | <script>(function(d, s, id) {
@@ -683,7 +684,7 @@ mixin svg_icon(icon)
         <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path d="M208.084 495.058c-15.4 12.834-38.781 1.884-38.781-18.164v-70.933H98.37c-30.468 0-55.169-24.701-55.169-55.169V98.585c0-30.468 24.701-55.169 55.169-55.169h315.259c30.468 0 55.169 24.701 55.169 55.169v252.207c0 30.468-24.701 55.169-55.169 55.169h-98.627l-106.915 89.097zm83.22-130.904a23.64 23.64 0 0 1 15.137-5.479h107.186a7.881 7.881 0 0 0 7.88-7.88V98.588a7.88 7.88 0 0 0-7.88-7.88H98.368a7.88 7.88 0 0 0-7.88 7.88v252.207a7.88 7.88 0 0 0 7.88 7.88h94.577c13.058 0 23.644 10.586 23.644 23.644v44.096l74.712-62.26zm-98.356-194.636c30.468 0 55.169 24.701 55.169 55.169s-24.701 55.169-55.169 55.169c-30.468 0-55.169-24.701-55.169-55.169s24.701-55.169 55.169-55.169zm126.105 0c30.468 0 55.169 24.701 55.169 55.169s-24.701 55.169-55.169 55.169c-30.468 0-55.169-24.701-55.169-55.169s24.701-55.169 55.169-55.169z"/></svg>
 
 mixin scripts(share)
-    link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&amp;subset=cyrillic', media='all')
+    link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&subset=cyrillic', media='all')
     link(rel='stylesheet', href='//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css', media='all')
 
     - if (!prod)

@@ -50,7 +50,6 @@
 }
 
 .currency_info_cell {
-  width: auto !important;
   padding-right: 18px;
   padding-top: 2px;
   min-width: 92px;
@@ -58,6 +57,14 @@
   text-decoration: none;
   display: block;
   color: $clr_black;
+
+  @if ($amp_ver) {
+    html body & {
+      width: auto;
+    }
+  } @else {
+    width: auto !important;
+  }
 
   &:before {
     content: '';
@@ -91,7 +98,6 @@
   }
 
   .trend {
-    @extend %icon_pseudo;
     position: relative;
     white-space: nowrap;
     padding: 0 0 0 5px;
@@ -104,6 +110,8 @@
         height: 11px;
       }
     } @else {
+      @extend %icon_pseudo;
+
       &:after {
         font-size: 10px;
         padding-left: 2px;

@@ -1245,7 +1245,6 @@ body amp-accordion > section .footer_subscribe {
   }
 
   &.subscribe_btn {
-    @extend %icon_pseudo;
     display: inline-block;
     vertical-align: top;
     padding: 10px 5px;
@@ -1336,14 +1335,14 @@ body amp-accordion > section .footer_subscribe {
   text-decoration: underline;
 }
 
-.wrapper {
+html body .wrapper {
   .i-amphtml-slides-container {
-    padding-bottom: 0 !important;
+    //padding-bottom: 0; // !important;
   }
 
   .i-amphtml-slide-item {
-    width: auto !important;
-    display: block !important;
+    //width: auto; // !important;
+    //display: block; // !important;
   }
 
   amp-carousel {
@@ -1352,13 +1351,13 @@ body amp-accordion > section .footer_subscribe {
     .amp-carousel-button-prev {
       //left: 0;
       //width: 16px;
-      display: none !important;
+      display: none; // !important;
     }
 
     .amp-carousel-button-next {
       //right: 0;
       //width: 16px;
-      display: none !important;
+      display: none; // !important;
     }
   }
 }
@@ -1378,9 +1377,27 @@ body amp-accordion > section .footer_subscribe {
   }
 }
 
-.main_menu_holder {
-  width: 100vw !important;
-  max-width: $body_width !important;
+html body .main_menu_holder {
+  //min-width: 100vw;
+  //max-width: $body_width;
+
+  //&:after {
+  //  right: 100%;
+  //}
+  //
+  //&:before {
+  //  left: 100%;
+  //}
+  //
+  //&:after,
+  //&:before {
+  //  content: '';
+  //  position: absolute;
+  //  width: 10vw;
+  //  top: 0;
+  //  bottom: 0;
+  //  background: inherit;
+  //}
 }
 
 .article_action_footer {
@@ -1391,7 +1408,7 @@ body amp-accordion > section .footer_subscribe {
   z-index: 6;
 }
 
-body .i-amphtml-sidebar-mask {
-  display: none !important;
-}
+//html body .i-amphtml-sidebar-mask {
+//  display: none; // !important;
+//}
 

@@ -13,7 +13,7 @@ html(lang='ru', amp='')
         script(async='' custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js")
 
         link(rel='canonical' href='http://naverstay.me/i/folio/crypto/article.html')
-        link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&amp;subset=cyrillic', media='all')
+        link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&subset=cyrillic', media='all')
         meta(name='viewport' content='width=device-width,minimum-scale=1,initial-scale=1')
         title Crypto article
 
@@ -22,6 +22,8 @@ html(lang='ru', amp='')
 
         style(amp-custom='')
             //-include ../styles/tidy_amp_styles.css
+            | /* amp styles */
+            |
             include ../styles/amp_styles.css
 
         //-link(rel='stylesheet', href='styles/amp_styles.css?t=' + time, media='all')
@@ -52,7 +54,7 @@ html(lang='ru', amp='')
             "name": "CryptoComes",
             "logo": {
             "@type": "ImageObject",
-            "url": "http://naverstay.me/i/folio/crypto/i/logo_h.svg",
+            "url": "http://naverstay.me/i/folio/crypto/i/logo_h.png",
             "width": 168,
             "height": 52
             }
@@ -86,7 +88,7 @@ html(lang='ru', amp='')
                                             .article_tag_icon
                                                 +svg_icon('say')
                                             span News
-                                a.article_img_link(href='#'): img(src='i/article_new.jpg')
+                                a.article_img_link(href='#'): amp-img(layout="responsive" src='i/article_new.jpg' width=320 height=211)
 
                         .article_lead._news Fosun is planning to invest 100 bln Yuan($16 bln) in AI, biotech and fintech areas over next decade.
 
@@ -149,7 +151,7 @@ html(lang='ru', amp='')
                                                 +svg_icon('say')
                                             span PRISEWISE
 
-                                a.article_img_link(href='#'): img(src='i/article_new.jpg')
+                                a.article_img_link(href='#'): amp-img(layout="responsive" src='i/article_new.jpg' width=320 height=211)
 
                         .article_lead._pricewise Fosun is planning to invest 100 bln Yuan($16 bln) in AI, biotech and fintech areas over next decade.
 
@@ -178,7 +180,7 @@ html(lang='ru', amp='')
 
                         .article_related
                             .article_img
-                                a.article_img_link(href='article.html'): img(src='i/bear.jpg')
+                                a.article_img_link(href='article.html'): amp-img(layout="responsive" src='i/bear.jpg' width=290 height=180)
                             ul.related_tags
                                 li: a.icon-attach.article_tag._wide._news(href='#')
                                     .article_tag_icon
@@ -209,7 +211,7 @@ html(lang='ru', amp='')
 
                         p Fosun said this investment would not be affected by control on outbound investment imposed by the government because it is compliant with both Chinese laws and other countries’ local laws.
 
-                        img(src='i/diagram.png')
+                        amp-img(layout="responsive" src='i/diagram.png' width=291 height=145)
                         i How bitcoin price fall down
 
                         p Fosun said this investment would not be affected by control on outbound investment imposed by the government because it is compliant with both Chinese laws and other countries’ local laws.
