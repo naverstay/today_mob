@@ -37,7 +37,8 @@ module.exports = function (grunt) {
                     //debug: true,
                     p: 'sass',
                     b: 'styles',
-                    s: 'expanded',
+                    s: 'compressed',
+                    //s: 'expanded',
                     d: 'i/src',
                     gen: 'i/dist',
                     font: 'fonts'
