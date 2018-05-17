@@ -265,7 +265,9 @@ html(lang='ru', amp='')
                                 +svg_icon('search')
 
             .main_menu_wrapper
-                ul.main_menu
+                +new_menu()
+
+                //-ul.main_menu
                     li.menu_item
                         a.menu_link(href='#') News
                     li.menu_item
@@ -282,7 +284,7 @@ html(lang='ru', amp='')
                         a.menu_link(href='#') WikiCoin
                     li.menu_item
                         a.menu_link(href='#') AI
-                ul.main_menu
+                //-ul.main_menu
                     li.menu_item
                         a.menu_link(href='price.html') Press Releases
                     li.menu_item

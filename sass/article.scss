@@ -24,6 +24,39 @@
   }
 }
 
+.speakers_list {
+  list-style: none;
+  padding: 0 0 20px 15px;
+
+  li {
+    @extend %icon_pseudo;
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 23px;
+
+    &:before {
+      content: unicode($icon-person);
+      position: absolute;
+      top: -2px;
+      left: 0;
+      color: $violette;
+      font-size: 18px;
+    }
+
+    &:last-child {
+      margin-bottom: 7px;
+    }
+  }
+}
+
+.speaker_link {
+  font: 14px/18px $RubikReg;
+}
+
+a.speaker_link {
+  color: #415cba;
+}
+
 .article_info {
   @extend %clearfix;
   background: #f6f7f7;
@@ -39,7 +72,7 @@
     float: left;
     clear: both;
     text-align: right;
-    width: 75px;
+    width: 80px;
     font: 14px/18px $RubikMed;
     color: #000;
   }
@@ -1106,9 +1139,9 @@
           counter-increment: ordered_list;
           content: counter(ordered_list) ".";
           position: absolute;
-          top: 3px;
+          top: 0;
           left: 16px;
-          font-size: 12px;
+          font-size: 16px;
         }
 
         ol {
@@ -1123,7 +1156,7 @@
               &:before {
                 counter-increment: ordered_list_2;
                 content: counter(ordered_list) "." counter(ordered_list_2) ".";
-                left: 0;
+                left: -7px;
               }
             }
           }

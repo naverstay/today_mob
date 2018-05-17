@@ -29,6 +29,62 @@ mixin loop_while(counter)
         -i++;
         block
 
+mixin new_menu()
+    .footer_col
+        p: a.footer_col_caption(href='#') News
+        ul.footer_col_menu
+            li: a.footer_link(href='#'): span Bitcoin News
+            li: a.footer_link(href='#'): span Ripple News
+            li: a.footer_link(href='#'): span Etherium News
+            li: a.footer_link(href='#'): span Monero News
+            li: a.footer_link(href='#'): span Bitcoin News
+            li: a.footer_link(href='#'): span Ripple News
+            li: a.footer_link(href='#'): span Etherium News
+            li: a.footer_link(href='#'): span Monero News
+
+    .footer_col
+        p: a.footer_col_caption(href='#') Stories
+        ul.footer_col_menu
+            li: a.footer_link(href='#'): span Top stories
+            li: a.footer_link(href='#'): span Editor's choice
+            li: a.footer_link(href='#'): span Experts Opinion
+            li: a.footer_link(href='#'): span Artifical Intelligence
+
+    .footer_col
+        p: a.footer_col_caption(href='#') Interviews
+        p: a.footer_link(href='#'): span ICO Watch
+
+    .footer_col
+        .footer_col_caption._op Market analysis
+
+        ul.footer_col_menu
+            li: a.footer_link(href='#'): span Price prediction
+            li: a.footer_link(href='#'): span Bitcoin Price Index
+            li: a.footer_link(href='#'): span Etherium Price Index
+            li: a.footer_link(href='#'): span LiteCoin Price Index
+            li: a.footer_link(href='#'): span Ripple Price Index
+            li: a.footer_link(href='#'): span Dash Price Index
+
+    .footer_col
+        .footer_col_caption._op Guides
+
+        ul.footer_col_menu
+            li: a.footer_link(href='#'): span Coins Guide
+            li: a.footer_link(href='#'): span WikiCoin
+            li: a.footer_link(href='#'): span Traders Guide
+            li: a.footer_link(href='#'): span CryptoTips
+
+    .footer_col
+        .footer_col_caption._op Industry
+
+        ul.footer_col_menu
+            li: a.footer_link(href='#'): span Press-releases
+            li: a.footer_link(href='#'): span Submit Release
+            li: a.footer_link(href='#'): span Events
+            li: a.footer_link(href='#'): span Submit Event
+            li: a.footer_link(href='#'): span About Us
+            li: a.footer_link(href='#'): span Job Opportunitites
+
 mixin action_list(hide_soc_text, cls)
   ul.action_list(class= cls)
     li: a.action_link._w(href= link_tw)
@@ -73,7 +129,8 @@ mixin footer(white, hide_soc_text, no_suscribe)
     .footer(class= white ? '_white' : '')
         .section_inner
             .footer_menu_wrapper
-                ul.footer_menu
+                +new_menu()
+                //-ul.footer_menu
                     li: a.footer_link(href='#') News
                     li: a.footer_link(href='#') Features
                     li: a.footer_link(href='#') Sharks Pool
@@ -82,7 +139,7 @@ mixin footer(white, hide_soc_text, no_suscribe)
                     li: a.footer_link(href='#') ICO Watch
                     li: a.footer_link(href='#') WikiCoin
                     li: a.footer_link(href='#') AI
-                ul.footer_menu
+                //-ul.footer_menu
                     li: a.footer_link(href='#') Press Releases
                     li: a.footer_link(href='#') Submit Press Release 
                     li: a.footer_link(href='#') CryptoEvents 
@@ -253,6 +310,7 @@ mixin top_info(no_breaking)
                         .swiper-slide: a.currency_info_cell(href='#')
                             p
                                 span.currency_link: b BTC
+                            p
                                 span.trend._down -8.82%
                                     +svg_icon('_down')
                             p
@@ -260,6 +318,7 @@ mixin top_info(no_breaking)
                         .swiper-slide: a.currency_info_cell(href='#')
                             p
                                 span.currency_link: b BCH
+                            p
                                 span.trend._up +8.82%
                                     +svg_icon('_up')
                             p
@@ -267,6 +326,7 @@ mixin top_info(no_breaking)
                         .swiper-slide: a.currency_info_cell(href='#')
                             p
                                 span.currency_link: b ETH
+                            p
                                 span.trend._down -8.82%
                                     +svg_icon('_down')
                             p
@@ -279,18 +339,21 @@ mixin top_info(no_breaking)
                             .swiper-slide: a.currency_info_cell(href='#')
                                 p
                                     span.currency_link: b BTC
+                                p
                                     span.trend._down -8.82%
                                 p
                                     span.currency_val 2636.79
                             .swiper-slide: a.currency_info_cell(href='#')
                                 p
                                     span.currency_link: b BCH
+                                p
                                     span.trend._up +8.82%
                                 p
                                     span.currency_val 3236.51
                             .swiper-slide: a.currency_info_cell(href='#')
                                 p
                                     span.currency_link: b ETH
+                                p
                                     span.trend._down -8.82%
                                 p
                                     span.currency_val 26236.79
@@ -341,7 +404,9 @@ mixin main_menu(subscribe)
                     button.filter_btn
 
         .main_menu_wrapper
-            ul.main_menu
+            +new_menu()
+
+            //-ul.main_menu
                 li.menu_item
                     a.menu_link(href='#') News
                 li.menu_item
@@ -358,7 +423,7 @@ mixin main_menu(subscribe)
                     a.menu_link(href='#') WikiCoin
                 li.menu_item
                     a.menu_link(href='#') AI
-            ul.main_menu
+            //-ul.main_menu
                 li.menu_item
                     a.menu_link(href='price.html') Press Releases
                 li.menu_item
@@ -706,8 +771,6 @@ mixin scripts(share)
         script(src='js/jquery.validationEngine-ru.js?t=' + time)
         script(src='js/jquery.sticky-kit.min.js?t=' + time)
         script(src='js/script.js?t=' + time)
-
-
 
 
 

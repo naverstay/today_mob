@@ -19,7 +19,7 @@
 .top_info {
   @extend %clearfix;
   margin: 0 -16px;
-  padding: 8px 6px 8px;
+  padding: 4px 6px 8px;
   background: #f6f7f7;
   margin-bottom: 12px;
 }
@@ -27,11 +27,12 @@
 .currency_switcher {
   position: relative;
   float: left;
+  margin-top: 7px;
   width: 44px;
 }
 
 .currency_info {
-  margin-left: 48px;
+  margin-left: 45px;
   font-family: $RubikReg;
 }
 
@@ -50,9 +51,9 @@
 }
 
 .currency_info_cell {
-  padding-right: 18px;
+  padding-right: 16px;
   padding-top: 2px;
-  min-width: 92px;
+  //min-width: 62px;
   position: relative;
   text-decoration: none;
   display: block;
@@ -70,7 +71,7 @@
     content: '';
     position: absolute;
     top: 0;
-    height: 30px;
+    bottom: 0;
     width: 1px;
     background: #ebebeb;
 
@@ -81,10 +82,15 @@
     }
   }
 
+  .currency_val {
+    font-size: 11px;
+  }
+
   .currency_link {
     position: relative;
     text-decoration: none;
     color: $clr_black;
+    font-size: 11px;
 
     &:before {
       content: '';
@@ -100,9 +106,9 @@
   .trend {
     position: relative;
     white-space: nowrap;
-    padding: 0 0 0 5px;
     color: #828282;
     text-decoration: none;
+    font-size: 11px;
 
     @if ($amp_ver) {
       svg {
@@ -113,8 +119,9 @@
       @extend %icon_pseudo;
 
       &:after {
-        font-size: 10px;
-        padding-left: 2px;
+        font-size: 8px;
+        padding-left: 1px;
+        vertical-align: 1px;
       }
     }
 
@@ -156,12 +163,6 @@
       }
     }
   }
-
-  p {
-    + p {
-      margin-top: 1px;
-    }
-  }
 }
 
 html body .currency_select {
@@ -179,6 +180,7 @@ html body .currency_select {
 
   ~ .select_arrow {
     top: 12px;
+    right: 10px;
   }
 
   &:focus {
@@ -281,3 +283,4 @@ html body .currency_select {
   z-index: 4;
   pointer-events: none;
 }
+

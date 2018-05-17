@@ -4,7 +4,7 @@
 
 .footer {
   background: $violette;
-  padding: 24px 0 0;
+  padding: 12px 0 0;
   position: relative;
 
   p {
@@ -75,7 +75,7 @@
 
 .footer_menu_wrapper {
   @extend %clearfix;
-  padding: 0 5px 15px;
+  padding: 0 5px;
 }
 
 .footer_menu {
@@ -94,6 +94,50 @@
   color: #fff;
   text-decoration: none;
   font: 12px $RubikReg;
+}
+
+.footer_col_menu {
+  list-style: none;
+  -moz-column-count: 2;
+  //-moz-column-width: 200px;
+  -moz-column-gap: 5px;
+  -webkit-column-count: 2;
+  //-webkit-column-width: 200px;
+  -webkit-column-gap: 5px;
+  column-count: 2;
+  //column-width: 200px;
+  column-gap: 5px;
+
+  li {
+    padding: 10px 0 4px 21px;
+  }
+}
+
+.footer_col_caption {
+  color: #fff;
+  font: 12px/25px $RubikBold;
+
+  &._op {
+    opacity: .3;
+  }
+}
+
+.footer_col {
+  position: relative;
+  padding-bottom: 20px;
+
+  p {
+
+    + p {
+      margin-top: 10px;
+    }
+  }
+}
+
+a.footer_col_caption {
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 @if ($amp_ver) {
