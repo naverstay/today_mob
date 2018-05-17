@@ -89,7 +89,7 @@
   .currency_link {
     position: relative;
     text-decoration: none;
-    color: $clr_black;
+    color: #2c1f63;
     font-size: 11px;
 
     &:before {
@@ -99,7 +99,7 @@
       right: 0;
       left: 0;
       height: 1px;
-      background: $clr_black;
+      background: #2c1f63;
     }
   }
 
@@ -283,4 +283,3 @@ html body .currency_select {
   z-index: 4;
   pointer-events: none;
 }
-
