@@ -78,6 +78,7 @@ $color_voice: #169dd7;
 $color_stairs: #9b51e0;
 
 $firm-colors: (
+        _promoted: $pink,
         _news: $violette,
         _stories: $violette,
         _top: $violette,
@@ -97,6 +98,7 @@ $firm-colors: (
 );
 
 $firm-icons: (
+        _promoted: $icon-btc_circle,
         _news: $icon-say,
         _stories: $icon-feather,
         _top: $icon-crown,

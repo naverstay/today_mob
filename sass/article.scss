@@ -72,18 +72,54 @@ a.speaker_link {
     float: left;
     clear: both;
     text-align: right;
-    width: 80px;
+    width: 88px;
     font: 14px/18px $RubikMed;
     color: #000;
   }
 
   dd {
-    margin-left: 92px;
+    margin-left: 102px;
     padding-right: 5px;
     font: 14px/18px $RubikReg;
     color: #000;
+    
+    &._wide {
+      clear: both;
+      margin-left: 15px;
+    }
   }
 
+  .action_soc {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    padding-left: 40px;
+    list-style: none;
+
+    li {
+      float: left;
+      width: 50%;
+      padding-right: 20px;
+      margin-bottom: 11px;
+    }
+
+    .action_sh {
+      span {
+        position: absolute;
+        left: 100%;
+        margin-left: 10px;
+        top: 4px;
+        color: #415cba;
+        font: 12px/26px $RubikReg;
+      }
+
+      &:hover {
+        span {
+          border-bottom-color: #415cba;
+        }
+      }
+    }
+  }
 }
 
 @if ($amp_ver) {
@@ -437,6 +473,14 @@ a.speaker_link {
       content: unicode($icon-fb);
     }
 
+    ._brand_2 & {
+      color: #385184;
+
+      &:hover {
+        color: #43619e !important;
+      }
+    }
+
     ._fixed &,
     ._brand & {
       &:before {
@@ -448,6 +492,14 @@ a.speaker_link {
   &._t {
     &:before {
       content: unicode($icon-tw);
+    }
+
+    ._brand_2 & {
+      color: #1da1f2;
+
+      &:hover {
+        color: #23c1ff !important;
+      }
     }
 
     ._fixed &,
@@ -463,6 +515,14 @@ a.speaker_link {
       content: unicode($icon-tg);
     }
 
+    ._brand_2 & {
+      color: #69c;
+
+      &:hover {
+        color: #6daaec !important;
+      }
+    }
+
     ._fixed &,
     ._brand & {
       &:before {
@@ -471,15 +531,63 @@ a.speaker_link {
     }
   }
 
+  &._st {
+    &:before {
+      content: unicode($icon-stm);
+    }
+
+    ._brand_2 & {
+      color: #69c;
+
+      &:hover {
+        color: #6daaec !important;
+      }
+    }
+
+    ._action &,
+    ._brand & {
+      background: #69c;
+
+      &:hover {
+        background: #6daaec;
+      }
+    }
+  }
+
   &._g {
     &:before {
       content: unicode($icon-gp);
+    }
+
+    ._brand_2 & {
+      color: #d44132;
+
+      &:hover {
+        color: #fe4e3c !important;
+      }
+    }
+
+    ._action &,
+    ._brand & {
+      background: #d44132;
+
+      &:hover {
+        background: #fe4e3c;
+      }
     }
   }
 
   &._l {
     &:before {
       content: unicode($icon-in);
+    }
+
+    ._brand_2 & {
+      color: #007bb6;
+
+      &:hover {
+        color: #0094da !important;
+      }
     }
 
     ._fixed &,
@@ -521,9 +629,40 @@ a.speaker_link {
     }
   }
 
+  //&._tg {
+  //  &:before {
+  //    content: unicode($icon-tg);
+  //  }
+  //
+  //  ._brand_2 & {
+  //    color: #08c;
+  //
+  //    &:hover {
+  //      color: #00a3f5 !important;
+  //    }
+  //  }
+  //
+  //  ._action &,
+  //  ._brand & {
+  //    background: #08c;
+  //
+  //    &:hover {
+  //      background: #00a3f5;
+  //    }
+  //  }
+  //}
+
   &._rd {
     &:before {
       content: unicode($icon-rd);
+    }
+
+    ._brand_2 & {
+      color: #fa500e;
+
+      &:hover {
+        color: #ff6011 !important;
+      }
     }
 
     ._fixed &,
@@ -534,15 +673,92 @@ a.speaker_link {
     }
   }
 
+  &._rss {
+    &:before {
+      content: unicode($icon-rss);
+    }
+
+    ._brand_2 & {
+      color: #433099;
+
+      &:hover {
+        color: #433099 !important;
+      }
+    }
+
+    ._action &,
+    ._brand & {
+      background: #fa500e;
+
+      &:hover {
+        background: #ff6011;
+      }
+    }
+  }
+
   &._y {
     &:before {
       content: unicode($icon-youtube);
+    }
+
+    ._brand_2 & {
+      color: #d44132;
+
+      &:hover {
+        color: #f74335 !important;
+      }
     }
 
     ._fixed &,
     ._brand & {
       &:before {
         background: #d44132;
+      }
+    }
+  }
+
+  &._gh {
+    &:before {
+      content: unicode($icon-github);
+    }
+
+    ._brand_2 & {
+      color: #000;
+
+      &:hover {
+        color: #040404 !important;
+      }
+    }
+
+    ._action &,
+    ._brand & {
+      background: #000;
+
+      &:hover {
+        background: #040404;
+      }
+    }
+  }
+
+  &._m {
+    &:before {
+      content: unicode($icon-medium);
+    }
+
+    ._brand_2 & {
+      color: #00c860;
+
+      &:hover {
+        color: #00e866 !important;
+      }
+    }
+
+    ._action &,
+    ._brand & {
+      background: #00c860;
+
+      &:hover {
+        background: #00e866;
       }
     }
   }
@@ -565,6 +781,10 @@ a.speaker_link {
         }
       }
     }
+  }
+
+  ._brand_2 & {
+    border: 1px solid #ddd;
   }
 
   &._more {
@@ -1003,8 +1223,9 @@ a.speaker_link {
   }
 
   > img {
-    display: block;
-    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
     margin-top: 30px;
 
     + i {

@@ -335,7 +335,7 @@ mixin top_info(no_breaking)
             - else
                 .swiper-container.currencySlider
                     .currency_info_table.swiper-wrapper
-                        +loop_while(2)
+                        +loop_while(3)
                             .swiper-slide: a.currency_info_cell(href='#')
                                 p
                                     span.currency_link: b BTC
@@ -775,8 +775,6 @@ mixin scripts(share)
         script(src='js/jquery.validationEngine-ru.js?t=' + time)
         script(src='js/jquery.sticky-kit.min.js?t=' + time)
         script(src='js/script.js?t=' + time)
-
-
 
 
 
