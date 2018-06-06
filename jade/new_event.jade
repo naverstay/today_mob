@@ -11,9 +11,9 @@ html(lang='ru')
 
                     ul.bread_crumbs
                         li: a.crumb_link(href='#') Cryptocomes
-                        li: a.crumb_link(href='#') Press releases
+                        li: a.crumb_link(href='#') Events
                     
-                    h1.block_title._submit Submit your Press release
+                    h1.block_title._submit Submit your event
 
                     .article_container._fz_14
                         p Мы предлагаем две опции для публикации вашего пресс-релиза
@@ -24,103 +24,133 @@ html(lang='ru')
 
                     form.validateMe(action='#' data-prompts='true')
                         .new_release_form
-                            .new_release_form_caption 1. Press release content
+                            .new_release_form_caption 1. Event content
                             .form_cell
-                                label.label_v2(for='release_title')
+                                label.label_v2(for='event_title')
                                     span Title
                                     span._required &nbsp;*
                                 .input_w
-                                    input#release_title.input_v3
+                                    input#event_title.input_v3
                             .form_cell
-                                label.label_v2(for='release_description')
-                                    span Description
+                                label.label_v2(for='event_description')
+                                    span Short description
                                     span._required &nbsp;*
                                 .input_w
-                                    input#release_description.input_v3
+                                    input#event_description.input_v3
                             .form_cell
-                                label.label_v2(for='release_content')
+                                label.label_v2(for='event_content')
                                     span Content
                                     span._required &nbsp;*
                                 .input_w
-                                    textarea#release_content.input_v3
+                                    textarea#event_content.input_v3
+                            .form_cell
+                                label.label_v2(for='event_content_2')
+                                    span Content
+                                    span._required &nbsp;*
+                                .input_w
+                                    textarea#event_content_2.input_v3
+                            .form_cell
+                                label.label_v2(for='event_date_start')
+                                    span Date — start
+                                    span._required &nbsp;*
+                                .input_w
+                                    input#event_date_start.input_v3
+                            .form_cell
+                                label.label_v2(for='event_date_end')
+                                    span Date — end
+                                    span._required &nbsp;*
+                                .input_w
+                                    input#event_date_end.input_v3
+                            .form_cell
+                                label.label_v2(for='event_country')
+                                    span Country
+                                    span._required &nbsp;*
+                                .input_w
+                                    input#event_country.input_v3
+                            .form_cell
+                                label.label_v2(for='event_city')
+                                    span City
+                                    span._required &nbsp;*
+                                .input_w
+                                    input#event_city.input_v3
                                     
                         .new_release_form
                             .new_release_form_caption 2. Contacts
                             .form_cell
-                                label.label_v2(for='release_company_name')
+                                label.label_v2(for='event_company_name')
                                     span Organization Name
                                     span._required &nbsp;*
                                 .input_w
-                                    input#release_company_name.input_v3
+                                    input#event_company_name.input_v3
                             .form_cell
-                                label.label_v2(for='release_company_site')
+                                label.label_v2(for='event_company_site')
                                     span Website
                                     span._required &nbsp;*
                                 .input_w
-                                    input#release_company_site.input_v3
+                                    input#event_company_site.input_v3
                             .form_cell
-                                label.label_v2(for='release_company_email')
+                                label.label_v2(for='event_company_email')
                                     span Your Email
                                     span._required &nbsp;* (invisible on site)
                                 .input_w
-                                    input#release_company_email.input_v3
+                                    input#event_company_email.input_v3
                             .form_cell
-                                label.label_v2(for='release_company_user')
+                                label.label_v2(for='event_company_user')
                                     span Your Name
                                     span._required &nbsp;* (invisible on site)
                                 .input_w
-                                    input#release_company_user.input_v3
+                                    input#event_company_user.input_v3
 
                         .new_release_form
                             .new_release_form_caption 3. Additional contacts (premium option)
                             .form_cell
-                                label.label_v2(for='release_additional_contacts') Additional contacts
+                                label.label_v2(for='event_additional_contacts') Additional contacts
                                 .input_w
-                                    textarea#release_additional_contacts.input_v3._h_90
+                                    textarea#event_additional_contacts.input_v3._h_90
                             .form_cell
-                                label.label_v2(for='release_contact_twitter') Twitter
+                                label.label_v2(for='event_contact_twitter') Twitter
                                 .input_w
-                                    input#release_contact_twitter.input_v3
+                                    input#event_contact_twitter.input_v3
                             .form_cell
-                                label.label_v2(for='release_contact_facebook') Facebook
+                                label.label_v2(for='event_contact_facebook') Facebook
                                 .input_w
-                                    input#release_contact_facebook.input_v3
+                                    input#event_contact_facebook.input_v3
                             .form_cell
-                                label.label_v2(for='release_contact_telegram') Telegram
+                                label.label_v2(for='event_contact_telegram') Telegram
                                 .input_w
-                                    input#release_contact_telegram.input_v3
+                                    input#event_contact_telegram.input_v3
                             .form_cell
-                                label.label_v2(for='release_contact_linkedin') LinkedIn
+                                label.label_v2(for='event_contact_linkedin') LinkedIn
                                 .input_w
-                                    input#release_contact_linkedin.input_v3
+                                    input#event_contact_linkedin.input_v3
                             .form_cell
-                                label.label_v2(for='release_contact_reddit') Reddit
+                                label.label_v2(for='event_contact_reddit') Reddit
                                 .input_w
-                                    input#release_contact_reddit.input_v3
+                                    input#event_contact_reddit.input_v3
                             .form_cell
-                                label.label_v2(for='release_contact_medium') Medium
+                                label.label_v2(for='event_contact_medium') Medium
                                 .input_w
-                                    input#release_contact_medium.input_v3
+                                    input#event_contact_medium.input_v3
                             .form_cell
-                                label.label_v2(for='release_company_steemit') Steemit
+                                label.label_v2(for='event_company_steemit') Steemit
                                 .input_w
-                                    input#release_company_steemit.input_v3
+                                    input#event_company_steemit.input_v3
                             .form_cell
-                                label.label_v2(for='release_company_google') Google+
+                                label.label_v2(for='event_company_google') Google+
                                 .input_w
-                                    input#release_company_google.input_v3
+                                    input#event_company_google.input_v3
                             .form_cell
-                                label.label_v2(for='release_company_youtube') Youtube
+                                label.label_v2(for='event_company_youtube') Youtube
                                 .input_w
-                                    input#release_company_youtube.input_v3
+                                    input#event_company_youtube.input_v3
                             .form_cell
-                                label.label_v2(for='release_company_github') Github
+                                label.label_v2(for='event_company_github') Github
                                 .input_w
-                                    input#release_company_github.input_v3
+                                    input#event_company_github.input_v3
                             .form_cell
-                                label.label_v2(for='release_company_other') Other
+                                label.label_v2(for='event_company_other') Other
                                 .input_w
-                                    input#release_company_other.input_v3
+                                    input#event_company_other.input_v3
 
                         .new_release_form
                             .new_release_form_caption 4. Advantages of premium version
@@ -139,7 +169,7 @@ html(lang='ru')
                                         b Upload a picture or your logo
                                     .input_w
                                         label.btn_v1.upload_btn.btn_violette_2: span ATTACH FILE
-                                            input#release_files.hide(type='file')
+                                            input#event_files.hide(type='file')
 
                                     p.clr_gray Мы нарисуем отличную картинку  основываясь на вашем лого. Либо пришлите нам готовую
                                     
@@ -160,7 +190,7 @@ html(lang='ru')
 
                                 .form_upload_block
                                     .input_w
-                                        input#release_publication_date.input_v3
+                                        input#event_publication_date.input_v3
                             
                         .release_summary
                             .form_cell

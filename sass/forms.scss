@@ -127,6 +127,7 @@
   height: 40px;
   width: 100%;
   color: #000;
+  background: #fff;
   border: 1px solid #ddd;
   border-radius: 2px;
   font: 14px/16px $RubikMed;
@@ -152,6 +153,10 @@
 
 textarea.input_v3 {
   height: 180px;
+
+  &._h_90 {
+    height: 90px;
+  }
 }
 
 .input_v5 {
@@ -225,6 +230,11 @@ textarea.input_v3 {
   display: inline-block;
   vertical-align: top;
   margin-bottom: 3px;
+
+  ._required {
+    color: #828282;
+    font-family: $RubikReg;
+  }
 }
 
 .msg_block {
@@ -238,7 +248,7 @@ textarea.input_v3 {
   }
 
   .subscribe_success_msg {
-    height: 110px;
+    height: 122px;
 
     &:after {
       width: 123px;
@@ -256,6 +266,10 @@ textarea.input_v3 {
   font: 20px/26px $RubikBold;
   color: #202020;
   margin-bottom: 12px;
+
+  &._submit {
+    margin: 12px 0 0;
+  }
 }
 
 .msg_status {
@@ -491,5 +505,56 @@ textarea.input_v3 {
   .article_container & {
     padding-top: 5px;
     margin-top: 0;
+  }
+}
+
+.checkbox_v1 {
+
+  .check_text {
+    @extend %icon_pseudo;
+    position: relative;
+    display: block;
+    margin-bottom: -10px;
+    padding-left: 32px;
+    font: 14px/28px $RubikReg;
+    color: #000;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 2px;
+      font-size: 14px;
+      line-height: 20px !important;
+      text-align: center;
+      border: 1px solid #ddd;
+      color: #bdbdbd;
+    }
+  }
+
+  .hide:checked ~ .check_text {
+    @extend %icon_pseudo;
+    position: relative;
+    display: block;
+
+    &:before {
+      content: unicode($icon-check_2);
+    }
+  }
+}
+
+.form_upload_block {
+  font-size: 12px;
+  line-height: 1.3;
+  padding: 15px 5px 0 32px;
+
+  p {
+
+    &:first-child {
+      margin-top: 5px;
+    }
   }
 }

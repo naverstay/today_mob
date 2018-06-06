@@ -48,6 +48,12 @@ a {
   float: right;
 }
 
+.mb {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
 .wrapper {
   @extend %global_flex_block_column_nowrap_center_stretch;
   position: relative;

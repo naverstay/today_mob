@@ -1023,15 +1023,18 @@ a.speaker_link {
   }
 
   .release_form_holder {
-    border: solid #f8f8f8;
-    border-width: 1px 0;
-    margin: 50px 0 25px;
-    padding: 43px 0 8px;
+    //border: solid #f8f8f8;
+    //border-width: 1px 0;
+    //margin: 50px 0 25px;
+    //padding: 43px 0 8px;
+
   }
 
   .new_release_form {
     position: relative;
-    padding-top: 5px;
+    background: #f8f8f8;
+    margin: 20px -16px 0;
+    padding: 18px 16px 2px;
 
     .form_cell {
       margin-bottom: 20px;
@@ -1042,18 +1045,35 @@ a.speaker_link {
     }
   }
 
+  .new_release_form_caption {
+    color: #828282;
+    font: 20px $RubikReg;
+    margin-bottom: 14px;
+  }
+
   .release_summary {
-    padding-top: 10px;
-    padding-bottom: 120px;
-    background: url(../i/armstrong.svg) no-repeat 100% 100%;
+    @extend %clearfix;
+    margin-left: -12px;
+    padding: 18px 0 0;
 
     p {
-      font-size: 14px;
+      margin-top: 4px;
+      font: 14px $RubikBold;
     }
 
     ._hash {
       color: #c0c0c0;
       font: 9px $RubikMed;
+    }
+
+    .form_cell {
+      float: left;
+      margin-bottom: 20px;
+      padding-left: 12px;
+      
+      &:last-child {
+        margin-bottom: 5px;
+      }
     }
   }
 
@@ -1339,6 +1359,46 @@ a.speaker_link {
     .subscribe_btn {
       width: 100%;
       text-align: center;
+    }
+  }
+
+  &._fz_14 {
+    > p {
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    > ul {
+      &[class=""],
+      &:not([class]) {
+        margin-bottom: 22px;
+  
+        li {
+          padding-left: 30px;
+          margin-bottom: 10px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  &._fz_12 {
+    > p {
+      font-size: 12px;
+      margin-bottom: 16px;
+    }
+
+    > ul {
+      &[class=""],
+      &:not([class]) {
+        margin-bottom: 18px;
+  
+        li {
+          padding-left: 30px;
+          margin-bottom: 10px;
+          font-size: 12px;
+        }
+      }
     }
   }
 

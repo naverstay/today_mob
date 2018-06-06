@@ -8,9 +8,13 @@ html(lang='ru')
             .main_content
                 .section_inner
                     +top_info(true)
+                    
+                    ul.bread_crumbs
+                        li: a.crumb_link(href='#') Cryptocomes
+                        li: a.crumb_link(href='#') Press releases
 
                     .msg_block.subscribe_success
-                        h1.block_title Press release was submitted succesfully!
+                        h1.block_title._submit Press release was submitted succesfully!
 
                         .subscribe_success_msg
 
