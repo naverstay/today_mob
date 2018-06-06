@@ -354,6 +354,18 @@
   color: #fff;
 }
 
+.btn_violette_4 {
+  @include transition_all(background .3s, color .3s);
+  border: 2px solid $violette;
+  background: #fff;
+  color: $violette;
+
+  &:hover {
+    background: $violette;
+    color: #fff;
+  }
+}
+
 .btn_red {
   color: #fff;
   background: #f46b65;
