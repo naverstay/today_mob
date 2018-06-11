@@ -172,6 +172,21 @@ body .wrapper .hide {
   &._mod_1 {
     margin-bottom: 15px;
   }
+
+  &._author {
+    line-height: 30px;
+  }
+}
+
+.article_author_img {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 2px;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
 }
 
 .article_stat_val {
