@@ -26,7 +26,7 @@
 
 .speakers_list {
   @if ($amp_ver) {
-  
+
   } @else {
     list-style: none;
     padding: 0 0 20px 15px;
@@ -480,8 +480,13 @@ a.speaker_link {
     ._brand_2 & {
       color: #385184;
 
-      &:hover {
-        color: #43619e !important;
+      @if ($amp_ver) {
+        
+      } @else {
+
+        &:hover {
+          color: #43619e !important;
+        }
       }
     }
 
@@ -501,8 +506,13 @@ a.speaker_link {
     ._brand_2 & {
       color: #1da1f2;
 
-      &:hover {
-        color: #23c1ff !important;
+      @if ($amp_ver) {
+        
+      } @else {
+
+        &:hover {
+          color: #23c1ff !important;
+        }
       }
     }
 
@@ -522,8 +532,13 @@ a.speaker_link {
     ._brand_2 & {
       color: #69c;
 
-      &:hover {
-        color: #6daaec !important;
+      @if ($amp_ver) {
+        
+      } @else {
+
+        &:hover {
+          color: #6daaec !important;
+        }
       }
     }
 
@@ -543,8 +558,13 @@ a.speaker_link {
     ._brand_2 & {
       color: #69c;
 
-      &:hover {
-        color: #6daaec !important;
+      @if ($amp_ver) {
+        
+      } @else {
+
+        &:hover {
+          color: #6daaec !important;
+        }
       }
     }
 
@@ -566,8 +586,13 @@ a.speaker_link {
     ._brand_2 & {
       color: #d44132;
 
-      &:hover {
-        color: #fe4e3c !important;
+      @if ($amp_ver) {
+        
+      } @else {
+
+        &:hover {
+          color: #fe4e3c !important;
+        }
       }
     }
 
@@ -589,8 +614,13 @@ a.speaker_link {
     ._brand_2 & {
       color: #007bb6;
 
-      &:hover {
-        color: #0094da !important;
+      @if ($amp_ver) {
+        
+      } @else {
+
+        &:hover {
+          color: #0094da !important;
+        }
       }
     }
 
@@ -633,29 +663,6 @@ a.speaker_link {
     }
   }
 
-  //&._tg {
-  //  &:before {
-  //    content: unicode($icon-tg);
-  //  }
-  //
-  //  ._brand_2 & {
-  //    color: #08c;
-  //
-  //    &:hover {
-  //      color: #00a3f5 !important;
-  //    }
-  //  }
-  //
-  //  ._action &,
-  //  ._brand & {
-  //    background: #08c;
-  //
-  //    &:hover {
-  //      background: #00a3f5;
-  //    }
-  //  }
-  //}
-
   &._rd {
     &:before {
       content: unicode($icon-rd);
@@ -664,8 +671,13 @@ a.speaker_link {
     ._brand_2 & {
       color: #fa500e;
 
-      &:hover {
-        color: #ff6011 !important;
+      @if ($amp_ver) {
+        
+      } @else {
+
+        &:hover {
+          color: #ff6011 !important;
+        }
       }
     }
 
@@ -685,8 +697,13 @@ a.speaker_link {
     ._brand_2 & {
       color: #433099;
 
-      &:hover {
-        color: #433099 !important;
+      @if ($amp_ver) {
+        
+      } @else {
+
+        &:hover {
+          color: #433099 !important;
+        }
       }
     }
 
@@ -708,8 +725,13 @@ a.speaker_link {
     ._brand_2 & {
       color: #d44132;
 
-      &:hover {
-        color: #f74335 !important;
+      @if ($amp_ver) {
+        
+      } @else {
+
+        &:hover {
+          color: #f74335 !important;
+        }
       }
     }
 
@@ -729,8 +751,13 @@ a.speaker_link {
     ._brand_2 & {
       color: #000;
 
-      &:hover {
-        color: #040404 !important;
+      @if ($amp_ver) {
+        
+      } @else {
+
+        &:hover {
+          color: #040404 !important;
+        }
       }
     }
 
@@ -752,8 +779,13 @@ a.speaker_link {
     ._brand_2 & {
       color: #00c860;
 
-      &:hover {
-        color: #00e866 !important;
+      @if ($amp_ver) {
+        
+      } @else {
+
+        &:hover {
+          color: #00e866 !important;
+        }
       }
     }
 
@@ -1074,7 +1106,7 @@ a.speaker_link {
       float: left;
       margin-bottom: 20px;
       padding-left: 12px;
-      
+
       &:last-child {
         margin-bottom: 5px;
       }
@@ -1376,7 +1408,7 @@ a.speaker_link {
       &[class=""],
       &:not([class]) {
         margin-bottom: 22px;
-  
+
         li {
           padding-left: 30px;
           margin-bottom: 10px;
@@ -1396,7 +1428,7 @@ a.speaker_link {
       &[class=""],
       &:not([class]) {
         margin-bottom: 18px;
-  
+
         li {
           padding-left: 30px;
           margin-bottom: 10px;
