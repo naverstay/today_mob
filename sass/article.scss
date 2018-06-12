@@ -1683,8 +1683,7 @@ a.speaker_link {
 }
 
 .related_tags {
-  display: inline-block;
-  vertical-align: top;
+  overflow: hidden;
   list-style: none;
   padding-left: 0;
 
@@ -1706,4 +1705,5 @@ a.speaker_link {
   color: #000;
   font: 14px/18px $RubikMed;
   margin-bottom: 10px;
+  display: block;
 }
