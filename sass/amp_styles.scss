@@ -254,6 +254,11 @@ body .wrapper .hide {
   z-index: 1;
   border-radius: 2px;
   overflow: hidden;
+
+  ._archived & {
+    -webkit-filter: saturate(.4);
+    filter: saturate(.4);
+  }
 }
 
 //.article_link {

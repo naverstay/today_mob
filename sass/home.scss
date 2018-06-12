@@ -241,6 +241,11 @@
   bottom: 0;
   left: 0;
   right: 0;
+
+  ._archived & {
+    -webkit-filter: saturate(.4);
+    filter: saturate(.4);
+  }
 }
 
 .article_img {

@@ -152,6 +152,17 @@ html(lang='ru', amp='')
                                             span PRISEWISE
 
                                 a.article_img_link(href='#'): amp-img(layout="responsive" src='i/article_new.jpg' width=320 height=211)
+                                
+                        figure._archived
+                            .article_img
+                                ul.article_tags
+                                    li
+                                        a.icon-say.article_tag._pricewise(href='#')
+                                            .article_tag_icon
+                                                +svg_icon('calendar')
+                                            span ARCHIVED
+
+                                a.article_img_link(href='#'): amp-img(layout="responsive" src='i/article_new.jpg' width=320 height=211)
 
                         .article_lead._pricewise Fosun is planning to invest 100 bln Yuan($16 bln) in AI, biotech and fintech areas over next decade.
 
@@ -266,33 +277,6 @@ html(lang='ru', amp='')
 
             .main_menu_wrapper
                 +new_menu()
-
-                //-ul.main_menu
-                    li.menu_item
-                        a.menu_link(href='#') News
-                    li.menu_item
-                        a.menu_link(href='#') Features
-                    li.menu_item
-                        a.menu_link(href='#') Sharks Pool
-                    li.menu_item
-                        a.menu_link(href='#') PriceWise
-                    li.menu_item
-                        a.menu_link(href='#') CryptoTips
-                    li.menu_item
-                        a.menu_link(href='#') ICO Watch
-                    li.menu_item
-                        a.menu_link(href='#') WikiCoin
-                    li.menu_item
-                        a.menu_link(href='#') AI
-                //-ul.main_menu
-                    li.menu_item
-                        a.menu_link(href='price.html') Press Releases
-                    li.menu_item
-                        a.menu_link(href='#') CryptoEvents
-                    li.menu_item
-                        a.menu_link(href='about.html') About us
-                    li.menu_item
-                        a.menu_link(href='about.html') Advertise with Us
 
             .menu_footer.subscribeBlock
                 .footer_action

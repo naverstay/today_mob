@@ -676,6 +676,10 @@ mixin widget_converter()
     | </script>
 
 mixin svg_icon(icon)
+    - if (icon === 'calendar')
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+        <path fill="#000" d="M422.755 89.245h-23.822v47.645h-71.466v-47.644h-142.934v47.644h-71.466v-47.644h-23.822c-26.228 0-47.645 21.44-47.645 47.644v285.866c0 26.204 21.416 47.644 47.645 47.644h333.511c26.204 0 47.644-21.44 47.644-47.644v-285.866c0-26.204-21.44-47.644-47.644-47.644zM422.755 422.755h-333.511v-190.578h333.511v190.578zM172.622 41.6h-47.644v83.378h47.644v-83.378zM387.022 41.6h-47.644v83.378h47.644v-83.378z"></path>
+        </svg>
     - if (icon === 'chevron_down')
         <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path d="M342.802 256l26.005 26.005L394.812 256l-26.005-26.005L342.802 256zM117.189 82.397l199.608 199.608 52.01-52.01L169.199 30.387l-52.01 52.01zm199.608 147.597L117.189 429.602l52.01 52.01 199.608-199.608-52.01-52.01z"/></svg>
     - if (icon === 'chevron_right')
@@ -775,4 +779,6 @@ mixin scripts(share)
         script(src='js/jquery.validationEngine-ru.js?t=' + time)
         script(src='js/jquery.sticky-kit.min.js?t=' + time)
         script(src='js/script.js?t=' + time)
+
+
 
