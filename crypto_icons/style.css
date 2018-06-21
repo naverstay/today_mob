@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'crypto_icons';
-  src:  url('fonts/crypto_icons.eot?zcx7dw');
-  src:  url('fonts/crypto_icons.eot?zcx7dw#iefix') format('embedded-opentype'),
-    url('fonts/crypto_icons.ttf?zcx7dw') format('truetype'),
-    url('fonts/crypto_icons.woff?zcx7dw') format('woff'),
-    url('fonts/crypto_icons.svg?zcx7dw#crypto_icons') format('svg');
+  src:  url('fonts/crypto_icons.eot?ydwjhc');
+  src:  url('fonts/crypto_icons.eot?ydwjhc#iefix') format('embedded-opentype'),
+    url('fonts/crypto_icons.ttf?ydwjhc') format('truetype'),
+    url('fonts/crypto_icons.woff?ydwjhc') format('woff'),
+    url('fonts/crypto_icons.svg?ydwjhc#crypto_icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,6 +26,27 @@
 
 .icon-btc:before {
   content: "\e943";
+}
+.icon-gags:before {
+  content: "\e94a";
+}
+.icon-sponsored:before {
+  content: "\e94b";
+}
+.icon-buck_circle:before {
+  content: "\e947";
+}
+.icon-close_circle:before {
+  content: "\e948";
+}
+.icon-check_circle:before {
+  content: "\e949";
+}
+.icon-globe:before {
+  content: "\e945";
+}
+.icon-buck:before {
+  content: "\e946";
 }
 .icon-btc_circle:before {
   content: "\e944";
