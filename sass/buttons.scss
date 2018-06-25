@@ -3,6 +3,19 @@
 .btn_v1 {
   height: 40px;
 
+  &.compare_btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 9px 48px;
+    border-radius: 2px;
+    font: 14px/20px $RubikBold;
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
   &.create_release_btn {
     float: right;
     display: block;
@@ -15,7 +28,7 @@
       z-index: 1;
     }
   }
-  
+
   &.upload_btn {
     cursor: pointer;
     display: inline-block;
@@ -31,7 +44,7 @@
       z-index: 1;
     }
   }
-  
+
   &.offer_btn {
     display: block;
     text-align: center;
@@ -334,6 +347,16 @@
   &:hover {
     background: $violette;
     color: #fff;
+  }
+}
+
+.btn_violette {
+  position: relative;
+  background: $violette;
+  color: #fff;
+  
+  &:hover {
+    background: $violette_dark;
   }
 }
 

@@ -181,7 +181,7 @@ body .wrapper .hide {
 .article_author_img {
   display: inline-block;
   vertical-align: top;
-  margin-right: 2px;
+  margin-right: 7px;
 
   img {
     display: block;
@@ -206,6 +206,8 @@ body .wrapper .hide {
       svg {
         height: 15px;
         width: 15px;
+        display: inline-block;
+        vertical-align: middle;
 
         path {
           fill: #ddd;
@@ -555,10 +557,11 @@ body .wrapper .hide {
 //}
 
 .action_list {
-  @extend %global_flex_block_row_nowrap_space_between_stretch;
+  //@extend %global_flex_block_row_nowrap_space_between_stretch;
+  @include flex_block(row nowrap, space-between, stretch);
   text-align: center;
   list-style: none;
-  margin: 0 -12px;
+  margin: 0 -12px; 
 
   li {
     @include flex(1 0 auto);

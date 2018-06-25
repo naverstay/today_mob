@@ -305,7 +305,7 @@ mixin top_info(no_breaking)
             .select_overlay
         .currency_info
             - if (amp)
-                amp-carousel.currency_info_table(height="32" layout="fixed-height" type="carousel")
+                amp-carousel.currency_info_table(height="44" layout="fixed-height" type="carousel")
                     +loop_while(2)
                         .swiper-slide: a.currency_info_cell(href='#')
                             p
@@ -331,6 +331,7 @@ mixin top_info(no_breaking)
                                     +svg_icon('_down')
                             p
                                 span.currency_val 26236.79
+            
 
             - else
                 .swiper-container.currencySlider
@@ -779,5 +780,7 @@ mixin scripts(share)
         script(src='js/jquery.validationEngine-ru.js?t=' + time)
         script(src='js/jquery.sticky-kit.min.js?t=' + time)
         script(src='js/script.js?t=' + time)
+
+
 
 
