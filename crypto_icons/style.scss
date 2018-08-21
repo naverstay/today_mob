@@ -1,12 +1,12 @@
 @import "variables";
 
 @font-face {
-  font-family: 'crypto_icons';
-  src: url('#{$icomoon-font-path}/crypto_icons.eot?ydwjhc');
-  src: url('#{$icomoon-font-path}/crypto_icons.eot?ydwjhc#iefix') format('embedded-opentype'),
-  url('#{$icomoon-font-path}/crypto_icons.ttf?ydwjhc') format('truetype'),
-  url('#{$icomoon-font-path}/crypto_icons.woff?ydwjhc') format('woff'),
-  url('#{$icomoon-font-path}/crypto_icons.svg?ydwjhc#crypto_icons') format('svg');
+  font-family: '#{$icomoon-font-family}';
+  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?3rb3es');
+  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?3rb3es#iefix') format('embedded-opentype'),
+  url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?3rb3es') format('truetype'),
+  url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?3rb3es') format('woff'),
+  url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?3rb3es##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
   &:after,
   &:before {
     /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'crypto_icons' !important;
+    font-family: '#{$icomoon-font-family}' !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -32,6 +32,12 @@
 .icon-btc {
   &:before {
     content: $icon-btc;
+  }
+}
+
+.icon-chain {
+  &:before {
+    content: $icon-chain;
   }
 }
 

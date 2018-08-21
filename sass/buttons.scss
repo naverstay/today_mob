@@ -97,10 +97,13 @@
   &.subscribe_btn {
     display: block;
     width: 100%;
-    font: 14px/20px $RubikBold;
+    font: 16px/20px $RubikBold;
     padding: 16px 5px;
     text-align: center;
-    text-transform: uppercase;
+    
+    .btn_icon {
+      padding: 0 5px; 
+    }
   }
 }
 
@@ -203,10 +206,10 @@
     display: inline-block;
     vertical-align: top;
     padding: 10px 22px;
-    font: 15px/18px $RubikReg;
+    font: 15px/18px $RubikBold;
     color: #fff;
    //border-radius: 2px;
-    text-transform: uppercase;
+   // text-transform: uppercase;
 
     span {
       display: inline-block;
@@ -382,6 +385,18 @@
   border: 2px solid $violette;
   background: #fff;
   color: $violette;
+
+  &:hover {
+    background: $violette;
+    color: #fff;
+  }
+}
+
+.btn_violette_5 {
+  @include transition_all(background .3s, color .3s);
+  border: 2px solid $violette;
+  background: #fff;
+  color: $default_t_color;
 
   &:hover {
     background: $violette;

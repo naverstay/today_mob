@@ -7,59 +7,144 @@ html(lang='ru')
         .wrapper
             .main_content
                 .section_inner
-                    +top_info()
+                    //-+top_info()
 
-                    ul.bread_crumbs
-                        li: a.crumb_link(href='#') Cryptocomes
+                    //-ul.bread_crumbs
                         li: a.crumb_link(href='#') News
+                        
 
                     .article_container
-                        h1.article_caption Chinese Conglomerate Fosun to Invest $3.2 Bln in AI, Biotech, Fintech
+                        .category_title News
 
-                        +article_st(false, true)
+                        h1.article_caption Bitcoin, Ethereum, Ripple, EOS Suffer Significant Losses: Price Analysis Ttl
+
+                        +article_st()
+
+                        .article_lead iGaming platform provider Cash Bet has partnered with Arsenal Football Club in a deal that will promote the firm's new crypto token. Ld
 
                         figure
                             .article_img
-                                ul.article_tags
+                                //-ul.article_tags
+                                    li
+                                        a.icon-say.article_tag._news(href='#')
+                                            span News
+                                a.article_img_link(href='#'): img(src='i/article_new.jpg')
+                                
+                        #subscribeTrigger
+
+                        h1 The Reasons Why Those Assets Loses. H1 
+
+                        h2 The 1st Reason — Poor Production Power H2
+                        
+                        p Your privacy is important to us and we are committed to protecting the data you share with us. This privacy policy statement (hereinafter referred to as the “Privacy Policy”) explains what information of yours is collected, how we collect, use, share your information and how you can control the collection, correction and/or deletion of the information.
+                        p This Privacy Policy is incorporated into, and is subject to, the U.community Terms of Use. Capitalized terms used but not defined in this Pravicy Policy have the meaning given to them in the U.community Terms of Use.
+                        p The European General Data Protection Regulation (hereinafter referred to as the “GDPR”) that comes into force on the 25th of May 2018 regulates the manner in which the personal data are collected, shared and processed. The Privacy Policy has been prepared in accordance with the provisions of the GDPR.
+
+                        .article_related
+                            p.clr_violette Related
+                            
+                            .news_item
+                                .article_img: a.article_img_link(href='#')
+                                    img(src='i/steam.jpg')
+                                p: a.news_name(href='#') International Search For Bitcoin’s Mysterious Creator Picking Up Steam
+                                +article_st()
+                            
+
+                        p U.community, a company incorporated under the law of [county] having its registered address at [address] (hereinafter referred to as the “Company”, “we” or “us”) collects from the individual user (hereinafter referred to as “you” or “your”) certain personal data when using the website [website] (hereinafter referred to as the “Website”), the online services on the Website (hereinafter referred to as “Services”) or otherwise interact with us (hereinafter referred to as “User”).
+                        
+                        p Your privacy is important to us and we are committed to protecting the data you share with us. This privacy policy statement (hereinafter referred to as the “Privacy Policy”) explains what information of yours is collected, how we collect, use, share your information and how you can control the collection, correction and/or deletion of the information.
+
+                        h2 The 1st Reason — Poor Production Power H2
+                        
+                        p This Privacy Policy is incorporated into, and is subject to, the U.community Terms of Use. Capitalized terms used but not defined in this Pravicy Policy have the meaning given to them in the U.community Terms of Use.
+                        
+                        p The European General Data Protection Regulation (hereinafter referred to as the “GDPR”) that comes into force on the 25th of May 2018 regulates the manner in which the personal data are collected, shared and processed. The Privacy Policy has been prepared in accordance with the provisions of the GDPR.
+                        
+                        figure
+                            .article_img
+                                a.article_img_link(href='#'): img(src='i/btc_flow.jpg')
+                            p How Bitcoin makes its flow
+                            
+                        p U.community, a company incorporated under the law of [county] having its registered address at [address] (hereinafter referred to as the “Company”, “we” or “us”) collects from the individual user (hereinafter referred to as “you” or “your”) certain personal data when using the website [website] (hereinafter referred to as the “Website”), the online services on the Website (hereinafter referred to as “Services”) or otherwise interact with us (hereinafter referred to as “User”).
+
+                        ul
+                            li Punkt one on two lines. So, it should be like that.
+                            li 
+                                p Punkt two on one line.
+                                ul 
+                                    li Sub punkt 1
+                                    li Sub punkt 2
+
+                        p Your privacy is important to us and we are committed to protecting the data you share with us. This privacy policy statement (hereinafter referred to as the “Privacy Policy”) explains what information of yours is collected, how we collect, use, share your information and how you can control the collection, correction and/or deletion of the information.
+                                    
+                        blockquote(cite='#')
+                            p As is often the case in such situations, the activation of protective stop-losses placed by investors at purchase price levels accelerated the fall even more.
+                            i — Jane Ostin
+                        
+                        p Your privacy is important to us and we are committed to protecting the data you share with us. This privacy policy statement (hereinafter referred to as the “Privacy Policy”) explains what information of yours is collected, how we collect, use, share your information and how you can control the collection, correction and/or deletion of the information.
+                        
+                        ol
+                            li Punkt one on two lines. So, it should be like that.
+                            li 
+                                p Punkt two on one line.
+                                
+                                ol
+                                    li Sub punkt 1
+                                    li Sub punkt 2
+                            
+                        p That’s fine. Thank u 🙏
+                                    
+                        //-p
+                            a.btn_v4.subscribe_btn._tw(href='#')
+                                span follow US on TWITTER
+
+                        ul.article_tag_list
+                            li: a.tag_link(href='#') #Ethereum Classic
+                            li: a.tag_link(href='#') #VeChain
+                            li: a.tag_link(href='#') #Market
+                            li: a.tag_link(href='#') #VeChain
+                            li: a.tag_link(href='#') #Biotech
+                            li: a.tag_link(href='#') #VeChain
+                            li: a.tag_link(href='#') #VeChain
+
+                        .article_soc_holder: ul.action_soc._fixed
+                            li: a.action_sh._f(href='#' data-network="facebook" class='st-custom-button')
+                            li: a.action_sh._t(href='#' data-network="twitter" class='st-custom-button')
+                            li: a.action_sh._tg(href='#' data-network="reddit" class='st-custom-button')
+                            li: a.action_sh._ch(href='#')
+
+                        p.text_center
+                            a.load_more_link(href='#') Show 213 Comments
+
+                        a.btn_v1.subscribe_btn.btn_violette_5(href='#')
+                            span Subscribe on
+                            span.icon-tg.btn_icon
+                            span Telegram
+                            
+                    .article_container
+                        .category_title Interview
+
+                        h1.article_caption Bitcoin, Ethereum, Ripple, EOS Suffer Significant Losses: Price Analysis Ttl
+
+                        +article_st()
+
+                        .article_lead iGaming platform provider Cash Bet has partnered with Arsenal Football Club in a deal that will promote the firm's new crypto token. Ld
+
+                        figure
+                            .article_img
+                                //-ul.article_tags
                                     li
                                         a.icon-say.article_tag._news(href='#')
                                             span News
                                 a.article_img_link(href='#'): img(src='i/article_new.jpg')
 
-                        .article_lead._news Fosun is planning to invest 100 bln Yuan($16 bln) in AI, biotech and fintech areas over next decade.
+                        h1 The Reasons Why Those Assets Loses. H1 
 
-                        #subscribeTrigger
-
-                        p Fosun is planning to invest 100 bln Yuan ($16 bln) in&nbsp;
-                            a(href='#') Artificial Intelligence
-                            | , biotech and fintech areas over next decade. The company’s main focus will be India and Africa and Portuguese-speaking markets
-
-                        p Fosun is planning to invest 100 bln Yuan ($16 bln) in&nbsp;
-                            a(href='#') Artificial Intelligence
-                            | , biotech and fintech areas over next decade. The company’s main focus will be India and Africa and Portuguese-speaking markets
-
-                        p Fosun is planning to invest 100 bln Yuan ($16 bln) in&nbsp;
-                            a(href='#') Artificial Intelligence
-                            | , biotech and fintech areas over next decade.
-
-                        p
-                            a.btn_v4.subscribe_btn._tw(href='#')
-                                span follow US on TWITTER
-
-                        ul.article_tag_list
-                            li: a.tag_link(href='#') #Fosun
-                            li: a.tag_link(href='#') #AI
-                            li: a.tag_link(href='#') #Investments
-                            li: a.tag_link(href='#') #Fintech
-                            li: a.tag_link(href='#') #Biotech
-
-                        +article_st()
-
-                    a.btn_v4.comment_btn(href='#') Click to leave your comment
-
-                    .article_line._news
-
-                    .article_container
+                        h2 The 1st Reason — Poor Production Power H2
+                    
+                    //-a.btn_v4.comment_btn(href='#') Click to leave your comment
+                    
+                    //-.article_container
                         h2.article_caption Chinese Conglomerate Fosun to Invest $3.2 Bln in AI, Biotech, Fintech
 
                         +article_st()
@@ -90,7 +175,18 @@ html(lang='ru')
 
                         p Fosun said this investment would not be affected by control on outbound investment imposed by the government because it is compliant with both Chinese laws and other countries’ local laws.
 
-                    .article_block.story_block._main
+                    //-ul.news_list
+                        li
+                            .news_item
+                                .article_img: a.article_img_link(href='#')
+                                    img(src='i/steam.jpg')
+                                p: a.news_name(href='#') International Search For Bitcoin’s Mysterious Creator Picking Up Steam
+                                //-.article_action: .article_action_inner
+                                    a.article_action_btn.actionBtn(href='#')
+
+                                +article_st()
+
+                    //-.article_block.story_block._main
                         .article_img
                             ul.article_tags._head
                                 li
@@ -105,20 +201,9 @@ html(lang='ru')
 
                             +article_st()
 
-                    .article_container
+                    //-.article_container
                         p Fosun said this investment would not be affected by control on outbound investment imposed by the government because it is compliant.
-
-                        .article_related
-                            .article_img
-                                a.article_img_link(href='article.html'): img(src='i/bear.jpg')
-                            ul.related_tags
-                                li: a.icon-attach.article_tag._wide._news(href='#')
-                                    span SEE RELATED
-
-                            h4.article_related_caption Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000 and what comes next
-
-                            +article_st(true)
-
+                        
                         h1 H1 Chinese Conglomerate Fosun to Invest $3.2 Bln in AI
 
                         p Fosun said this investment would not be affected by control on outbound investment imposed by the government because it is compliant with both Chinese laws and other countries’ local laws.
@@ -177,7 +262,7 @@ html(lang='ru')
 
                         +article_st()
 
-                    a.btn_v4.comment_btn(href='#') Click to leave your comment
+                    //-a.btn_v4.comment_btn(href='#') Click to leave your comment
 
             .nav_holder
                 +header()

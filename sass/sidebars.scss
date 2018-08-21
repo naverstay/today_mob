@@ -530,6 +530,12 @@
     }
   }
 
+  &._ch {
+    &:before {
+      content: unicode($icon-chain);
+    }
+  }
+
   &._rd {
     &:before {
       content: unicode($icon-rd);

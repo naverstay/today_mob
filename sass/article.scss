@@ -66,7 +66,7 @@ a.speaker_link {
   background: #f6f7f7;
   padding: 13px 0 5px;
   margin-bottom: 15px;
- //border-radius: 2px;
+  //border-radius: 2px;
 
   dt, dd {
     margin-bottom: 12px;
@@ -291,7 +291,6 @@ a.speaker_link {
       }
     }
   }
-
 }
 
 .action_soc {
@@ -330,6 +329,30 @@ a.speaker_link {
   }
 }
 
+.article_soc_holder {
+  margin: 20px -20px 55px;
+
+  .action_soc {
+    margin-left: -1px;
+
+    li {
+      padding: 0 0 0 1px;
+    }
+
+    .action_sh {
+      border-radius: 0;
+      height: 52px;
+      
+      &:before {
+        color: #000;
+        font-size: 20px;
+        line-height: 52px;
+        background: rgba(189,189,189, .35) !important;
+      }
+    }
+  }
+}
+
 .action_sh {
   @include transition_all(color .3s, background .3s);
   display: block;
@@ -361,7 +384,7 @@ a.speaker_link {
   ._fixed & {
     display: block;
     width: 100%;
-   //border-radius: 2px;
+    //border-radius: 2px;
     height: 25px;
     border: 0;
     background: none;
@@ -481,7 +504,7 @@ a.speaker_link {
       color: #385184;
 
       @if ($amp_ver) {
-        
+
       } @else {
 
         &:hover {
@@ -507,7 +530,7 @@ a.speaker_link {
       color: #1da1f2;
 
       @if ($amp_ver) {
-        
+
       } @else {
 
         &:hover {
@@ -533,7 +556,7 @@ a.speaker_link {
       color: #69c;
 
       @if ($amp_ver) {
-        
+
       } @else {
 
         &:hover {
@@ -559,7 +582,7 @@ a.speaker_link {
       color: #69c;
 
       @if ($amp_ver) {
-        
+
       } @else {
 
         &:hover {
@@ -587,7 +610,7 @@ a.speaker_link {
       color: #d44132;
 
       @if ($amp_ver) {
-        
+
       } @else {
 
         &:hover {
@@ -615,7 +638,7 @@ a.speaker_link {
       color: #007bb6;
 
       @if ($amp_ver) {
-        
+
       } @else {
 
         &:hover {
@@ -663,6 +686,12 @@ a.speaker_link {
     }
   }
 
+  &._ch {
+    &:before {
+      content: unicode($icon-chain);
+    }
+  }
+
   &._rd {
     &:before {
       content: unicode($icon-rd);
@@ -672,7 +701,7 @@ a.speaker_link {
       color: #fa500e;
 
       @if ($amp_ver) {
-        
+
       } @else {
 
         &:hover {
@@ -698,7 +727,7 @@ a.speaker_link {
       color: #433099;
 
       @if ($amp_ver) {
-        
+
       } @else {
 
         &:hover {
@@ -726,7 +755,7 @@ a.speaker_link {
       color: #d44132;
 
       @if ($amp_ver) {
-        
+
       } @else {
 
         &:hover {
@@ -752,7 +781,7 @@ a.speaker_link {
       color: #000;
 
       @if ($amp_ver) {
-        
+
       } @else {
 
         &:hover {
@@ -780,7 +809,7 @@ a.speaker_link {
       color: #00c860;
 
       @if ($amp_ver) {
-        
+
       } @else {
 
         &:hover {
@@ -832,7 +861,7 @@ a.speaker_link {
   &._count {
     width: auto;
     margin-right: 5px;
-   //border-radius: 2px;
+    //border-radius: 2px;
     padding: 0 10px;
 
     &:after,
@@ -1116,13 +1145,13 @@ a.speaker_link {
   .offer_block {
     //background: #f6f7f7;
     //margin-top: 4px;
-   //border-radius: 2px;
-   // padding: 15px 10px 20px;
+    //border-radius: 2px;
+    // padding: 15px 10px 20px;
     text-align: left;
     font: 24px/28px $RubikBold;
     position: relative;
     margin: 20px 0;
-    
+
     &:before {
       content: '?';
       position: absolute;
@@ -1150,25 +1179,25 @@ a.speaker_link {
 .bread_crumbs {
   @extend %clearfix;
   list-style: none;
-  padding-top: 5px;
+  padding-top: 12px;
   position: relative;
 
-  &:before {
-    content: '';
-    position: absolute;
-    right: -16px;
-    left: -16px;
-    height: 1px;
-    background: #eee;
-    display: block;
-    bottom: 0;
-  }
+  //&:before {
+  //  content: '';
+  //  position: absolute;
+  //  right: -16px;
+  //  left: -16px;
+  //  height: 1px;
+  //  background: #eee;
+  //  display: block;
+  //  bottom: 0;
+  //}
 
   li {
     float: left;
     position: relative;
     padding-left: 22px;
-    margin-bottom: 10px;
+    margin-bottom: 3px;
 
     @if ($amp_ver) {
       .crumb_icon {
@@ -1206,24 +1235,30 @@ a.speaker_link {
   }
 }
 
+.category_title {
+  color: $violette;
+  font: 14px/25px $RubikBold;
+  margin-bottom: 3px;
+}
+
 .crumb_link {
-  color: $clr_blue;
-  font: 12px/15px $RubikReg;
-  text-decoration: underline;
+  color: $violette;
+  font: 14px/25px $RubikBold;
 }
 
 .article_container {
   position: relative;
-  padding: 16px 0 0;
-  font: 16px/1.3 $RubikReg;
+  padding-top: 12px;
+  margin-bottom: 28px;
+  font: 400 16px/1.3 $cross_font_Georgia;
 
   .article_caption {
-    font: 20px/26px $RubikBold;
+    font: 700 28px/34px $cross_font_Georgia;
     margin-bottom: 0;
   }
 
   .article_stat {
-    padding: 7px 0 18px;
+    padding: 12px 0 18px;
   }
 
   .article_tag {
@@ -1231,9 +1266,9 @@ a.speaker_link {
   }
 
   .article_lead {
-    padding: 3px 0 18px;
-    margin-bottom: 28px;
-    font: 16px/21px $RubikMed;
+    padding: 3px 0 20px;
+    //margin-bottom: 28px;
+    font: 18px/24px $RubikMed;
 
     @if ($amp_ver) {
       border-bottom: 4px solid $violette;
@@ -1249,46 +1284,58 @@ a.speaker_link {
 
   > h1 {
     color: #000;
-    font: 20px/25px $RubikBold;
-    margin-bottom: 1em;
+    font: 28px/34px $cross_font_Georgia;
+    margin-bottom: .8em;
   }
 
   > h2 {
     color: #000;
-    font: 20px/25px $RubikMed;
-    margin-bottom: 1em;
+    font: 700 20px/26px $cross_font_Georgia;
+    margin-bottom: .8em;
   }
 
   > h3 {
     color: #828282;
-    font: 18px/23px $RubikMed;
+    font: 18px/23px $cross_font_Georgia;
     margin-bottom: .8em;
   }
 
   > h4 {
     color: #000;
-    font: 16px/21px $RubikReg;
+    font: 700 16px/21px $cross_font_Georgia;
     margin-bottom: .6em;
   }
 
   > h5 {
     color: #828282;
-    font: 14px/18px $RubikMed;
+    font: 14px/18px $cross_font_Georgia;
     margin-bottom: .9em;
   }
 
   > h6 {
     color: #000;
-    font: 12px/15px $RubikBold;
+    font: 700 12px/15px $cross_font_Georgia;
     margin-bottom: 1em;
   }
 
   figure {
-    margin: 0 -16px 15px;
+    margin: 0 -16px 20px;
     display: block;
+    background: #f2f2f2;
 
     .article_img {
       border-radius: 0;
+
+      img {
+        min-height: 100%;
+      }
+    }
+
+    p {
+      font: 12px/22px $RubikReg;
+      color: #828282;
+      margin: 0;
+      padding: 2px 16px;
     }
   }
 
@@ -1312,10 +1359,9 @@ a.speaker_link {
 
   blockquote {
     position: relative;
-    background: #f6f7f7;
-    padding: 30px 16px 30px 20px;
-    margin: 25px 0 30px;
-   //border-radius: 2px;
+    margin: 10px 0 20px 0;
+    padding-left: 16px;
+    border-left: 1px solid #000;
 
     @if ($amp_ver) {
       .quote_start {
@@ -1342,58 +1388,56 @@ a.speaker_link {
       }
 
       p {
-        font: 16px/21px $RubikMed;
+        font: 16px/21px $cross_font_Georgia;
         margin-bottom: 22px;
       }
 
     } @else {
       p {
-        font: 16px/21px $RubikMed;
-        margin-bottom: 22px;
+        font: 20px/26px $RubikMed;
+        margin-bottom: 10px;
 
-        &:first-of-type {
-          @extend %icon_pseudo;
-
-          &:before {
-            content: unicode($icon-quote_l);
-            position: absolute;
-            color: $violette;
-            top: -5px;
-            left: -1px;
-            font-size: 28px;
-          }
-        }
-
-        &:last-of-type {
-          @extend %icon_pseudo;
-
-          &:after {
-            content: unicode($icon-quote_r);
-            position: absolute;
-            color: $violette;
-            bottom: -6px;
-            right: -6px;
-            font-size: 28px;
-          }
-        }
+        //&:first-of-type {
+        //  @extend %icon_pseudo;
+        //
+        //  &:before {
+        //    content: unicode($icon-quote_l);
+        //    position: absolute;
+        //    color: $violette;
+        //    top: -5px;
+        //    left: -1px;
+        //    font-size: 28px;
+        //  }
+        //}
+        //
+        //&:last-of-type {
+        //  @extend %icon_pseudo;
+        //
+        //  &:after {
+        //    content: unicode($icon-quote_r);
+        //    position: absolute;
+        //    color: $violette;
+        //    bottom: -6px;
+        //    right: -6px;
+        //    font-size: 28px;
+        //  }
+        //}
       }
     }
 
     i {
-      position: absolute;
-      bottom: 24px;
-      left: 20px;
-      font-size: 15px;
-      line-height: 19px;
-      font-style: italic;
-      color: #bbb;
+      display: block;
+      width: 100%;
+      text-align: right;
+      color: #828282;
+      font: 18px/24px $cross_font_Georgia;
     }
   }
 
   > p {
-    font-size: 16px;
-    line-height: 1.3;
-    margin-bottom: 22px;
+    font-size: 18px;
+    line-height: 1.35;
+    margin-bottom: 25px;
 
     > img,
     > b > img,
@@ -1456,26 +1500,26 @@ a.speaker_link {
     &[class=""],
     &:not([class]) {
       list-style: none;
-      margin-bottom: 32px;
+      margin-bottom: 16px;
       counter-reset: ordered_list;
 
       p {
-        margin-bottom: 22px;
+        margin-bottom: 14px;
       }
 
       li {
         position: relative;
-        padding-left: 38px;
+        padding-left: 20px;
         margin-bottom: 15px;
-        font: 16px/1.3 $RubikReg;
+        font: 18px/1.35 $cross_font_Georgia;
 
         &:before {
           counter-increment: ordered_list;
-          content: counter(ordered_list) ".";
+          content: counter(ordered_list);
           position: absolute;
           top: 0;
-          left: 16px;
-          font-size: 16px;
+          left: 0;
+          font: 18px $cross_font_Georgia;
         }
 
         ol {
@@ -1485,11 +1529,11 @@ a.speaker_link {
             counter-reset: ordered_list_2;
 
             li {
-              padding-left: 21px;
+              padding-left: 16px;
 
               &:before {
                 counter-increment: ordered_list_2;
-                content: counter(ordered_list) "." counter(ordered_list_2) ".";
+                content: counter(ordered_list_2, lower-alpha);
                 left: -7px;
               }
             }
@@ -1503,28 +1547,29 @@ a.speaker_link {
     &[class=""],
     &:not([class]) {
       list-style: none;
-      margin-bottom: 32px;
+      margin-top: -10px;
+      margin-bottom: 16px;
 
       p {
-        margin-bottom: 22px;
+        margin-bottom: 14px;
       }
 
       li {
         position: relative;
-        padding-left: 38px;
+        padding-left: 22px;
         margin-bottom: 15px;
-        font: 16px/1.3 $RubikReg;
+        font: 18px/1.35 $cross_font_Georgia;
 
         &:before {
           content: '';
           position: absolute;
-          top: 6px;
-          left: 16px;
-          width: 8px;
-          height: 8px;
+          top: 9px;
+          left: 0;
+          width: 4px;
+          height: 4px;
           border-radius: 100%;
-          background: $violette;
-          border: 2px solid $violette;
+          background: $default_t_color;
+          border: 1px solid $default_t_color;
         }
 
         ul {
@@ -1533,10 +1578,10 @@ a.speaker_link {
             list-style: none;
 
             li {
-              padding-left: 21px;
+              padding-left: 14px;
 
               &:before {
-                left: 0;
+                left: -5px;
                 background: #fff;
               }
             }
@@ -1545,26 +1590,36 @@ a.speaker_link {
       }
     }
   }
+
+  + .article_container {
+    position: relative;
+
+    &:before {
+      border-top: 1px solid #f2f2f2;
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -16px;
+      left: -16px;
+    }
+  }
 }
 
 .article_tag_list {
   @extend %clearfix;
   list-style: none;
-  margin-left: -10px;
+  margin-left: -8px;
 
   li {
     float: left;
-    padding-left: 10px;
-    margin-bottom: 8px;
+    padding-left: 8px;
+    margin-bottom: 16px;
   }
 }
 
 .tag_link {
-  color: $clr_blue;
-  font: 12px/15px $RubikBold;
-  padding: 3px 7px;
-  background: #f6f7f7;
- //border-radius: 2px;
+  color: #828282;
+  font: 12px/16px $RubikReg;
   display: block;
 }
 
@@ -1689,16 +1744,21 @@ a.speaker_link {
 
 .article_related {
   @extend %clearfix;
-  padding: 16px 14px;
-  margin: 20px -16px 26px;
-  background: #f1f4ff;
+  padding: 7px 16px 1px;
+  margin: -7px -16px 20px;
+  background: #f2f2f2;
   position: relative;
-  box-shadow: inset 0 0 1px rgba(0, 0, 0, .25);
+  //box-shadow: inset 0 0 1px rgba(0, 0, 0, .25);
 
   .article_img {
-    float: left;
-    width: 130px;
-    margin: 0 13px 15px 0;
+    //float: left;
+    //width: 130px;
+    //margin: 0 13px 15px 0;
+  }
+
+  p {
+    font: 12px $RubikReg;
+    margin-bottom: 8px;
   }
 
   .article_stat {
@@ -1709,8 +1769,9 @@ a.speaker_link {
         margin: 0;
       }
     } @else {
-      padding: 0 !important;
-      margin: 0 !important;
+      padding-bottom: 5px;
+      //padding: 0 !important;
+      //margin: 0 !important;
     }
   }
 
@@ -1743,7 +1804,7 @@ a.speaker_link {
   }
 
   .article_tag {
-   //border-radius: 2px;
+    //border-radius: 2px;
 
     span {
       padding-left: 0;
