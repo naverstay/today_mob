@@ -3,13 +3,21 @@
 }
 
 .footer {
-  background: $violette;
   padding: 12px 0 0;
   position: relative;
 
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 16px;
+    left: 16px;
+    border-top: 1px solid #f2f2f2;
+  }
+  
   p {
-    color: #fff;
-    font: 12px $RubikMed;
+    color: #333;
+    font: 12px $RubikBold;
   }
 
   .action_list {
@@ -27,7 +35,7 @@
     }
 
     .action_link {
-      color: #fff;
+      //color: #fff;
 
       &:before {
         font-size: 18px;
@@ -50,9 +58,14 @@
 }
 
 .footer_subscribe_holder {
-  background: $violette_dark;
-  margin: 0 -16px;
-  padding: 18px 30px 15px;
+  //background: $violette_dark;
+  //margin: 0 -16px;
+  padding: 0 0 15px;
+
+  .subscribe_btn_email {
+    width: 100%;
+    text-align: center;
+  }
 
   p {
     margin-bottom: 5px;
@@ -75,7 +88,7 @@
 
 .footer_menu_wrapper {
   @extend %clearfix;
-  padding: 0 5px;
+  //padding: 0 5px;
 }
 
 .footer_menu {
@@ -91,7 +104,7 @@
 }
 
 .footer_link {
-  color: #fff;
+  color: #333;
   text-decoration: none;
   font: 12px $RubikReg;
 }
@@ -103,22 +116,29 @@
   -moz-column-gap: 5px;
   -webkit-column-count: 2;
   //-webkit-column-width: 200px;
-  -webkit-column-gap: 5px;
+  //-webkit-column-gap: 5px;
   column-count: 2;
   //column-width: 200px;
-  column-gap: 5px;
+  //column-gap: 5px;
+  margin-bottom: -5px;
 
+  &._single_col {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
+  }
+  
   li {
-    padding: 10px 0 4px 21px;
+    padding: 10px 10px 10px 0;
   }
 }
 
 .footer_col_caption {
-  color: #fff;
+  color: #333;
   font: 12px/25px $RubikBold;
 
   &._op {
-    opacity: .3;
+    color: #828282;
   }
 }
 
@@ -129,7 +149,7 @@
   p {
 
     + p {
-      margin-top: 10px;
+      margin-top: 15px;
     }
   }
 }
@@ -227,6 +247,10 @@ a.footer_col_caption {
 $rectWidth: $content-max-w;
 
 // **********  text
+
+._ff_serif {
+  font-family: $cross_font_Georgia;
+}
 
 .text_center {
   text-align: center;

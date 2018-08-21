@@ -116,7 +116,7 @@ body .wrapper .hide {
 .article_img {
   position: relative;
   overflow: hidden;
-  border-radius: 2px;
+ //border-radius: 2px;
 
   img {
     display: block;
@@ -124,7 +124,7 @@ body .wrapper .hide {
   }
 
   ._main & {
-    border-radius: 2px 2px 0 0;
+   //border-radius: 2px 2px 0 0;
   }
 
   ._article & {
@@ -254,7 +254,7 @@ body .wrapper .hide {
   display: block;
   position: relative;
   z-index: 1;
-  border-radius: 2px;
+ //border-radius: 2px;
   overflow: hidden;
 
   ._archived & {
@@ -383,7 +383,7 @@ body .wrapper .hide {
     bottom: auto;
 
     .article_tag {
-      border-radius: 2px 0 2px 0;
+     //border-radius: 2px 0 2px 0;
     }
   }
 
@@ -881,7 +881,7 @@ body .wrapper .hide {
   opacity: 0;
   margin: 0 15px 22px;
   position: relative;
-  border-radius: 2px;
+ //border-radius: 2px;
   background: rgba(255, 255, 255, .25);
 }
 
@@ -1147,7 +1147,7 @@ body amp-accordion > section .footer_subscribe {
   width: 100%;
   color: #fff;
   border: 2px solid #fff;
-  border-radius: 2px;
+ //border-radius: 2px;
   font: 16px/20px $RubikMed;
   padding: 16px 14px;
 
@@ -1174,7 +1174,7 @@ body amp-accordion > section .footer_subscribe {
     vertical-align: top;
     font: 14px/20px $RubikBold;
     padding: 10px 16px;
-    border-radius: 2px;
+   //border-radius: 2px;
     text-transform: uppercase;
   }
 
@@ -1275,7 +1275,7 @@ body amp-accordion > section .footer_subscribe {
     padding: 10px 5px;
     font: 15px/18px $RubikReg;
     color: #fff;
-    border-radius: 2px;
+   //border-radius: 2px;
     text-transform: uppercase;
 
     span {

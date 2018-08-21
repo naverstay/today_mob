@@ -12,45 +12,78 @@ html(lang='ru')
                     .article_group_title._news
                         h1: a.artile_link(href='#') News
 
-                    .article_block.story_block._main
+                    .article_block.story_block._main._wide
                         .article_img
-                            a.article_img_link(href='#'): img(src='i/bear.jpg')
+                            a.article_img_link(href='#'): img(src='i/today_hero.jpg')
 
                         .article_title
-                            .article_action: .article_action_inner
+                            //-.article_action: .article_action_inner
                                 a.article_action_btn.actionBtn(href='#')
-                            p: a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
+                            p: a.article_link(href='#') Bitcoin, Ethereum, Ripple, EOS Suffer Significant Losses: Price Analysis
 
                             +article_st()
 
                     ul.news_list
-                        +loop_while(3)
+                        +loop_while(1)
                             li
                                 .news_item
-                                    p: a.news_name(href='#') EOS Bounces Back Despite John Oliver Slam, Up 35 Percent This Week
-                                    .article_action: .article_action_inner
+                                    .article_img: a.article_img_link(href='#')
+                                        img(src='i/swiss.jpg')
+                                    p: a.news_name(href='#') Swiss Cheese is Full of Holes: Past-ICO Review
+                                    //-.article_action: .article_action_inner
                                         a.article_action_btn.actionBtn(href='#')
 
                                     +article_st()
+                            li
+                                .news_item
+                                    .article_img: a.article_img_link(href='#')
+                                        img(src='i/steam.jpg')
+                                    p: a.news_name(href='#') International Search For Bitcoin’s Mysterious Creator Picking Up Steam
+                                    //-.article_action: .article_action_inner
+                                        a.article_action_btn.actionBtn(href='#')
 
-                    .article_controls
+                                    +article_st()
+                            li
+                                .news_item
+                                    .article_img: a.article_img_link(href='#')
+                                        img(src='i/neuromation.jpg')
+                                    p: a.news_name(href='#') No Way Neuromation: Past-ICO Review
+                                    //-.article_action: .article_action_inner
+                                        a.article_action_btn.actionBtn(href='#')
+
+                                    +article_st()
+                                    
+                            li._show_more
+                                a.load_more_link(href='#') Load More
+                                .news_item
+                                    .article_img: a.article_img_link(href='#')
+                                        img(src='i/neuromation.jpg')
+                                    p: a.news_name(href='#') Will ShipChain Ever Sail: Past-ICO Review
+                                    //-.article_action: .article_action_inner
+                                        a.article_action_btn.actionBtn(href='#')
+
+                                    +article_st()
+                                    
+                                    
+
+                    //-.article_controls
                         a.btn_v1.more_btn.gray_btn(href='#') View All
 
                     .group_line._stories
 
                     .article_group_title._stories
-                        h2: a.artile_link(href='#') stories
+                        h2: a.artile_link(href='#') Stories
 
                     .article_block.story_block._main
                         .article_img
-                            ul.article_tags
+                            //-ul.article_tags
                                 li
                                     span.article_tag._stories._top
                                         span TOP STORY
                             a.article_img_link(href='#'): img(src='i/bear.jpg')
 
                         .article_title
-                            .article_action: .article_action_inner
+                            //-.article_action: .article_action_inner
                                 a.article_action_btn.actionBtn(href='#')
                             p: a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
 
@@ -60,29 +93,29 @@ html(lang='ru')
                         li
                             .news_item._wide
                                 .article_img
-                                    ul.article_tags
+                                    //-ul.article_tags
                                         li
                                             a.icon-say.article_tag._features(href='#')
                                                 span Features
                                     a.article_img_link(href='#'): img(src='i/bear.jpg')
 
                                 p: a.news_name(href='article.html') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
-                                .article_action: .article_action_inner
+                                //-.article_action: .article_action_inner
                                     a.article_action_btn.actionBtn(href='#')
 
-                                +article_st()
+                                +article_st() 
 
                         li
                             .news_item._wide
                                 .article_img
-                                    ul.article_tags
+                                    //-ul.article_tags
                                         li
                                             a.icon-say.article_tag._pricewise(href='#')
                                                 span PRISEWISE
                                     a.article_img_link(href='#'): img(src='i/bear.jpg')
 
                                 p: a.news_name(href='article.html') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
-                                .article_action: .article_action_inner
+                                //-.article_action: .article_action_inner
                                     a.article_action_btn.actionBtn(href='#')
 
                                 +article_st()
@@ -90,51 +123,144 @@ html(lang='ru')
                         li
                             .news_item._wide
                                 .article_img
-                                    ul.article_tags
+                                    //-ul.article_tags
                                         li
                                             a.icon-say.article_tag._wiki(href='#')
                                                 span WIKICOIN
                                     a.article_img_link(href='#'): img(src='i/bear.jpg')
 
                                 p: a.news_name(href='article.html') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
-                                .article_action: .article_action_inner
+                                //-.article_action: .article_action_inner
+                                    a.article_action_btn.actionBtn(href='#')
+
+                                +article_st()
+                                
+                        li
+                            .news_item._wide
+                                p: a.news_name(href='article.html') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
+                                //-.article_action: .article_action_inner
                                     a.article_action_btn.actionBtn(href='#')
 
                                 +article_st()
 
-                    .article_controls
+                        li._show_more
+                            a.load_all_link(href='#') View All
+                            .news_item._wide
+                                .article_img
+                                    //-ul.article_tags
+                                        li
+                                            a.icon-say.article_tag._wiki(href='#')
+                                                span WIKICOIN
+                                    a.article_img_link(href='#'): img(src='i/bear.jpg')
+                                p: a.news_name(href='article.html') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
+                                //-.article_action: .article_action_inner
+                                    a.article_action_btn.actionBtn(href='#')
+
+                                +article_st()
+
+                    //-.article_controls
                         a.btn_v1.more_btn.gray_btn(href='#') View All
 
                     .group_line._release
 
                     .article_group_title._release
-                        h2: a.artile_link(href='#') PRESS RELEASES
+                        h2: a.artile_link(href='#') Press Releases
 
                     //-.swiper-container.mainBlockSlider.main_block_slider
                         .currency_info_table.swiper-wrapper
                             +loop_while(4)
                                 .swiper-slide
-                    .article_block.story_block._main
+                    .article_block.story_block._main._wide
                         .article_img
-                            ul.article_tags
+                            ul.article_tags._right
                                 li
-                                    a.article_tag._promoted.icon-btc_circle(href='#')
-                                        span PROMOTED
+                                    a.article_tag._top(href='#')
+                                        span Top Story
                             a.article_img_link(href='#'): img(src='i/bear.jpg')
 
                         .article_title
-                            .article_action: .article_action_inner
+                            //-.article_action: .article_action_inner
                                 a.article_action_btn.actionBtn(href='#')
                             p: a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
 
                             +article_st()
                             
-                    .article_block.story_block._main
+                    
+                    ul.news_list
+                        li
+                            .news_item._wide
+                                .article_img
+                                    //-ul.article_tags
+                                        li
+                                            a.icon-say.article_tag._features(href='#')
+                                                span Features
+                                    a.article_img_link(href='#'): img(src='i/bear.jpg')
+
+                                p: a.news_name(href='article.html') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
+                                //-.article_action: .article_action_inner
+                                    a.article_action_btn.actionBtn(href='#')
+
+                                +article_st() 
+
+                        li
+                            .news_item._wide
+                                .article_img
+                                    //-ul.article_tags
+                                        li
+                                            a.icon-say.article_tag._pricewise(href='#')
+                                                span PRISEWISE
+                                    a.article_img_link(href='#'): img(src='i/bear.jpg')
+
+                                p: a.news_name(href='article.html') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
+                                //-.article_action: .article_action_inner
+                                    a.article_action_btn.actionBtn(href='#')
+
+                                +article_st()
+
+                        li
+                            .news_item._wide
+                                .article_img
+                                    //-ul.article_tags
+                                        li
+                                            a.icon-say.article_tag._wiki(href='#')
+                                                span WIKICOIN
+                                    a.article_img_link(href='#'): img(src='i/bear.jpg')
+
+                                p: a.news_name(href='article.html') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
+                                //-.article_action: .article_action_inner
+                                    a.article_action_btn.actionBtn(href='#')
+
+                                +article_st()
+                                
+                        li
+                            .news_item._wide
+                                p: a.news_name(href='article.html') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
+                                //-.article_action: .article_action_inner
+                                    a.article_action_btn.actionBtn(href='#')
+
+                                +article_st()
+
+                        li._show_more
+                            a.load_all_link(href='#') View All
+                            .news_item._wide
+                                .article_img
+                                    //-ul.article_tags
+                                        li
+                                            a.icon-say.article_tag._wiki(href='#')
+                                                span WIKICOIN
+                                    a.article_img_link(href='#'): img(src='i/bear.jpg')
+                                p: a.news_name(href='article.html') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
+                                //-.article_action: .article_action_inner
+                                    a.article_action_btn.actionBtn(href='#')
+
+                                +article_st()
+                            
+                    //-.article_block.story_block._main._wide
                         .article_img
                             a.article_img_link(href='#'): img(src='i/bear.jpg')
 
                         .article_title
-                            .article_action: .article_action_inner
+                            //-.article_action: .article_action_inner
                                 a.article_action_btn.actionBtn(href='#')
                             p: a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
 
@@ -148,38 +274,42 @@ html(lang='ru')
                                 .swiper-slide._small
                                     .article_block.story_block._main
                                         .article_img
+                                            ul.article_tags._right
+                                                li
+                                                    a.article_tag._top(href='#')
+                                                        span Top Story
                                             a.article_img_link(href='#'): img(src='i/bear.jpg')
 
                                         .article_title
-                                            .article_action: .article_action_inner
+                                            //-.article_action: .article_action_inner
                                                 a.article_action_btn.actionBtn(href='#')
                                             p: a.article_link(href='#') Initial Coin Offerings Are For Everyone, Not Only the Rich
                                             ul.article_stat
                                                 li._wide
-                                                    span.article_stat_val CocaCola Inc
+                                                    a.article_stat_val(href='#') Alex Morris
                                                 li
-                                                    span.article_stat_val._stat_time 2h
-                                                li
-                                                    span.article_stat_val._stat_views 212
+                                                    span.article_stat_val 2 Aug 2018
+                                                li._fr
+                                                    span.article_stat_val._stat_views 16 765
 
                     .offer_block
                         p Have something interesting
                         p
                             a.btn_v1.btn_violette_2.offer_btn(href='#')
-                                span SubMit A PRESS RELEASE
-                                span.btn_icon.icon-rocket
+                                span Submit Press Release
+                                //-span.btn_icon.icon-rocket
 
                     .group_line._pricewise
 
                     .article_group_title._pricewise
-                        h2: a.artile_link(href='#') PRICEWISE
+                        h2: a.artile_link(href='#') Pricewise
 
-                    .article_block.story_block._main
+                    .article_block.story_block._main._wide
                         .article_img
                             a.article_img_link(href='#'): img(src='i/bear.jpg')
 
                         .article_title
-                            .article_action: .article_action_inner
+                            //-.article_action: .article_action_inner
                                 a.article_action_btn.actionBtn(href='#')
                             p: a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
 
@@ -193,10 +323,6 @@ html(lang='ru')
                                         a.article_img_link(href='#'): img(src='i/bear.jpg')
 
                                     p: a.news_name(href='article.html') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
-                                    .article_action: .article_action_inner
-                                        a.article_action_btn.actionBtn(href='#')
-
-                                        +article_st()
 
                             li
                                 .news_item._wide
@@ -204,154 +330,159 @@ html(lang='ru')
                                         a.article_img_link(href='#'): img(src='i/bear.jpg')
 
                                     p: a.news_name(href='article.html') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
-                                    .article_action: .article_action_inner
-                                        a.article_action_btn.actionBtn(href='#')
-
-                                    +article_st()
-
-                    .article_controls
-                        a.btn_v1.more_btn.gray_btn(href='#') View All
-
-                    #subscribeTrigger
-
-                    .group_line._watch
-
-                    .article_group_title._watch
-                        h3: a.artile_link(href='#') ICO Watch
-
-                    //-.swiper-container.mainBlockSlider.main_block_slider
-                        .currency_info_table.swiper-wrapper
-                            +loop_while(4)
-                                .swiper-slide
-                    .article_block.story_block._main
-                        .article_img
-                            a.article_img_link(href='#'): img(src='i/bear.jpg')
-
-                        .article_title
-                            .article_action: .article_action_inner
-                                a.article_action_btn.actionBtn(href='#')
-                            p: a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
-
-                            +article_st()
-
-                    .swiper-container.smallBlockSlider.main_block_slider
-                        .swiper-pagination.main_pagination
-
-                        .swiper-wrapper
-                            +loop_while(4)
-                                .swiper-slide._small
-                                    .article_block.story_block._main
+                                        
+                            li._show_more
+                                a.load_all_link(href='#') View All
+                                .news_item._wide
+                                    .article_img
+                                        //-ul.article_tags
+                                            li
+                                                a.icon-say.article_tag._wiki(href='#')
+                                                    span WIKICOIN
+                                        a.article_img_link(href='#'): img(src='i/bear.jpg')
+                                    p: a.news_name(href='article.html') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
+                                        
+                    //-
+                        #subscribeTrigger
+    
+                        .group_line._watch
+    
+                        .article_group_title._watch
+                            h3: a.artile_link(href='#') ICO Watch
+    
+                        //-.swiper-container.mainBlockSlider.main_block_slider
+                            .currency_info_table.swiper-wrapper
+                                +loop_while(4)
+                                    .swiper-slide
+                        .article_block.story_block._main
+                            .article_img
+                                a.article_img_link(href='#'): img(src='i/bear.jpg')
+    
+                            .article_title
+                                //-.article_action: .article_action_inner
+                                    a.article_action_btn.actionBtn(href='#')
+                                p: a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
+    
+                                +article_st()
+    
+                        .swiper-container.smallBlockSlider.main_block_slider
+                            .swiper-pagination.main_pagination
+    
+                            .swiper-wrapper
+                                +loop_while(4)
+                                    .swiper-slide._small
+                                        .article_block.story_block._main
+                                            .article_img
+                                                a.article_img_link(href='#'): img(src='i/bear.jpg')
+    
+                                            .article_title
+                                                //-.article_action: .article_action_inner
+                                                    a.article_action_btn.actionBtn(href='#')
+                                                p: a.article_link(href='#') Initial Coin Offerings Are For Everyone, Not Only the Rich
+                                                ul.article_stat
+                                                    li._wide
+                                                        span.article_stat_val CocaCola Inc
+                                                    li
+                                                        span.article_stat_val._stat_time 2h
+                                                    li
+                                                        span.article_stat_val._stat_views 212
+    
+                        .article_controls
+                            a.btn_v1.more_btn.gray_btn(href='#') View All
+    
+                        .group_line._crypto
+    
+                        .article_group_title._crypto
+                            h3: a.artile_link(href='#') CryptoTips
+    
+                        .article_block.story_block._main
+                            .article_img
+                                a.article_img_link(href='#'): img(src='i/bear.jpg')
+    
+                            .article_title
+                                //-.article_action: .article_action_inner
+                                    a.article_action_btn.actionBtn(href='#')
+                                p: a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
+    
+                                +article_st()
+    
+                        ul.news_list
+                            ul.news_list
+                                li
+                                    .news_item._wide
                                         .article_img
                                             a.article_img_link(href='#'): img(src='i/bear.jpg')
-
-                                        .article_title
-                                            .article_action: .article_action_inner
-                                                a.article_action_btn.actionBtn(href='#')
-                                            p: a.article_link(href='#') Initial Coin Offerings Are For Everyone, Not Only the Rich
-                                            ul.article_stat
-                                                li._wide
-                                                    span.article_stat_val CocaCola Inc
-                                                li
-                                                    span.article_stat_val._stat_time 2h
-                                                li
-                                                    span.article_stat_val._stat_views 212
-
-                    .article_controls
-                        a.btn_v1.more_btn.gray_btn(href='#') View All
-
-                    .group_line._crypto
-
-                    .article_group_title._crypto
-                        h3: a.artile_link(href='#') CryptoTips
-
-                    .article_block.story_block._main
-                        .article_img
-                            a.article_img_link(href='#'): img(src='i/bear.jpg')
-
-                        .article_title
-                            .article_action: .article_action_inner
-                                a.article_action_btn.actionBtn(href='#')
-                            p: a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
-
-                            +article_st()
-
-                    ul.news_list
+    
+                                        p: a.news_name(href='article.html') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
+                                        //-.article_action: .article_action_inner
+                                            a.article_action_btn.actionBtn(href='#')
+    
+                                        +article_st()
+    
+                                li
+                                    .news_item._wide
+                                        .article_img
+                                            a.article_img_link(href='#'): img(src='i/bear.jpg')
+    
+                                        p: a.news_name(href='article.html') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
+                                        //-.article_action: .article_action_inner
+                                            a.article_action_btn.actionBtn(href='#')
+    
+                                        +article_st()
+    
+                        .article_controls
+                            a.btn_v1.more_btn.gray_btn(href='#') View All
+    
+                        .group_line._event
+    
+                        .article_group_title._event
+                            h3: a.artile_link(href='#') Events
+    
+                        .article_block.story_block._main
+                            .article_img
+                                a.article_img_link(href='#'): img(src='i/bear.jpg')
+    
+                            .article_title
+                                //-.article_action: .article_action_inner
+                                    a.article_action_btn.actionBtn(href='#')
+                                .article_date._event 21 MARCH
+                                p: a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
+                                ul.article_stat
+                                    li
+                                        span.article_stat_val Zurich Switzerland
+                                    li
+                                        span.article_stat_val._stat_views 212
+    
                         ul.news_list
                             li
-                                .news_item._wide
-                                    .article_img
-                                        a.article_img_link(href='#'): img(src='i/bear.jpg')
-
-                                    p: a.news_name(href='article.html') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
-                                    .article_action: .article_action_inner
+                                .news_item
+                                    .article_date._event 21 MARCH - 24 MARCH
+    
+                                    p: a.news_name(href='#') EOS Bounces Back Despite John Oliver Slam, Up 35 Percent This Week
+                                    //-.article_action: .article_action_inner
                                         a.article_action_btn.actionBtn(href='#')
-
-                                    +article_st()
-
+    
+                                    ul.article_stat
+                                        li
+                                            span.article_stat_val Zurich Switzerland
+                                        li
+                                            span.article_stat_val._stat_views 212
                             li
-                                .news_item._wide
-                                    .article_img
-                                        a.article_img_link(href='#'): img(src='i/bear.jpg')
-
-                                    p: a.news_name(href='article.html') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
-                                    .article_action: .article_action_inner
+                                .news_item
+                                    .article_date._event 21 MARCH
+    
+                                    p: a.news_name(href='#') EOS Bounces Back Despite John Oliver Slam, Up 35 Percent This Week
+                                    //-.article_action: .article_action_inner
                                         a.article_action_btn.actionBtn(href='#')
-
-                                    +article_st()
-
-                    .article_controls
-                        a.btn_v1.more_btn.gray_btn(href='#') View All
-
-                    .group_line._event
-
-                    .article_group_title._event
-                        h3: a.artile_link(href='#') Events
-
-                    .article_block.story_block._main
-                        .article_img
-                            a.article_img_link(href='#'): img(src='i/bear.jpg')
-
-                        .article_title
-                            .article_action: .article_action_inner
-                                a.article_action_btn.actionBtn(href='#')
-                            .article_date._event 21 MARCH
-                            p: a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
-                            ul.article_stat
-                                li
-                                    span.article_stat_val Zurich Switzerland
-                                li
-                                    span.article_stat_val._stat_views 212
-
-                    ul.news_list
-                        li
-                            .news_item
-                                .article_date._event 21 MARCH - 24 MARCH
-
-                                p: a.news_name(href='#') EOS Bounces Back Despite John Oliver Slam, Up 35 Percent This Week
-                                .article_action: .article_action_inner
-                                    a.article_action_btn.actionBtn(href='#')
-
-                                ul.article_stat
-                                    li
-                                        span.article_stat_val Zurich Switzerland
-                                    li
-                                        span.article_stat_val._stat_views 212
-                        li
-                            .news_item
-                                .article_date._event 21 MARCH
-
-                                p: a.news_name(href='#') EOS Bounces Back Despite John Oliver Slam, Up 35 Percent This Week
-                                .article_action: .article_action_inner
-                                    a.article_action_btn.actionBtn(href='#')
-
-                                ul.article_stat
-                                    li
-                                        span.article_stat_val Zurich Switzerland
-                                    li
-                                        span.article_stat_val._stat_views 212
-
-                    .article_controls
-                        a.btn_v1.more_btn.gray_btn(href='#') View All
+    
+                                    ul.article_stat
+                                        li
+                                            span.article_stat_val Zurich Switzerland
+                                        li
+                                            span.article_stat_val._stat_views 212
+    
+                        .article_controls
+                            a.btn_v1.more_btn.gray_btn(href='#') View All
 
                     .offer_block
                         p Want to publish on CryptoComes?

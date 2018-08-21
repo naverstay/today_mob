@@ -19,7 +19,7 @@
 .top_info {
   @extend %clearfix;
   margin: 0 -16px;
-  padding: 4px 6px 8px;
+  padding: 4px 6px 5px;
   background: #f6f7f7;
   margin-bottom: 12px;
 }
@@ -27,7 +27,6 @@
 .currency_switcher {
   position: relative;
   float: left;
-  margin-top: 7px;
   width: 44px;
 }
 
@@ -52,12 +51,18 @@
 
 .currency_info_cell {
   padding-right: 16px;
-  padding-top: 2px;
+  padding-top: 6px;
   //min-width: 62px;
   position: relative;
   text-decoration: none;
   display: block;
+  line-height: 17px;
   color: $clr_black;
+
+  p {
+    display: inline-block;
+    vertical-align: top;
+  }
 
   @if ($amp_ver) {
     html body & {
@@ -67,100 +72,92 @@
     width: auto !important;
   }
 
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 1px;
-    background: #ebebeb;
-
-    @if ($amp_ver) {
-      right: 5px;
-    } @else {
-      right: 10px;
-    }
-  }
+  //&:before {
+  //  content: '';
+  //  position: absolute;
+  //  top: 0;
+  //  bottom: 0;
+  //  width: 1px;
+  //  background: #ebebeb;
+  //
+  //  @if ($amp_ver) {
+  //    right: 5px;
+  //  } @else {
+  //    right: 10px;
+  //  }
+  //}
 
   .currency_val {
-    font-size: 11px;
+    font-size: 14px;
+    color: #828282;
   }
 
   .currency_link {
     position: relative;
     text-decoration: none;
-    color: #2c1f63;
-    font-size: 11px;
-
-    &:before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      height: 1px;
-      background: #2c1f63;
-    }
+    color: #000;
+    font-size: 14px;
   }
 
   .trend {
     position: relative;
     white-space: nowrap;
     color: #828282;
+    padding: 0 4px;
     text-decoration: none;
-    font-size: 11px;
+    font-size: 14px;
 
-    @if ($amp_ver) {
-      svg {
-        width: 11px;
-        height: 11px;
-      }
-    } @else {
-      @extend %icon_pseudo;
-
-      &:after {
-        font-size: 8px;
-        padding-left: 1px;
-        vertical-align: 1px;
-      }
-    }
+    //@if ($amp_ver) {
+    //  svg {
+    //    width: 11px;
+    //    height: 11px;
+    //  }
+    //} @else {
+    //  @extend %icon_pseudo;
+    //
+    //  &:after {
+    //    font-size: 8px;
+    //    padding-left: 1px;
+    //    vertical-align: 1px;
+    //  }
+    //}
 
     &._up {
-      color: rgba(46, 155, 14, 0.9);
+      color: #27ae60;
 
-      @if ($amp_ver) {
-        svg path {
-          fill: rgba(46, 155, 14, 0.9);
-        }
-      } @else {
-
-        &:before {
-          //background: rgba(46, 155, 14, 0.9);
-        }
-
-        &:after {
-          content: unicode($icon-asc);
-        }
-      }
+      //@if ($amp_ver) {
+      //  svg path {
+      //    fill: #27ae60;
+      //  }
+      //} @else {
+      //
+      //  &:before {
+      //    //background: rgba(46, 155, 14, 0.9);
+      //  }
+      //
+      //  &:after {
+      //    content: unicode($icon-asc);
+      //  }
+      //}
     }
 
     &._down {
-      color: #ff0a24;
+      color: #eb5757;
 
-      @if ($amp_ver) {
-        svg path {
-          fill: #ff0a24;
-        }
-      } @else {
-
-        &:before {
-          //background: #ff0a24;
-        }
-
-        &:after {
-          content: unicode($icon-desc);
-        }
-      }
+      //@if ($amp_ver) {
+      //  svg path {
+      //    fill: #eb5757;
+      //  }
+      //} @else {
+      //
+      //  &:before {
+      //    //background: #ff0a24;
+      //  }
+      //
+      //  &:after {
+      //    content: unicode($icon-desc);
+      //  }
+      //}
     }
   }
 }
@@ -170,13 +167,14 @@ html body .currency_select {
   display: block;
   width: 48px;
   height: 48px;
-  padding-left: 15px;
-  margin: -8px 0 -8px -6px;
-  font: 27px $RubikMed;
+  padding-left: 10px;
+  margin: -10px 0 -10px -6px;
+  font: 24px $RubikMed;
   color: $violette;
   border: none;
   position: relative;
-  background: #f7f8f8;
+  background: none;
+  border-radius: 0;
 
   ~ .select_arrow {
     top: 12px;
@@ -184,8 +182,8 @@ html body .currency_select {
   }
 
   &:focus {
-    background: #000;
-    color: #fff;
+    //background: #000;
+    //color: #fff;
 
     + .select_arrow {
       -webkit-transform: rotate(180deg) translate(0, 4px);

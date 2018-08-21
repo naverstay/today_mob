@@ -84,6 +84,65 @@ mixin new_menu()
             li: a.footer_link(href='#'): span Submit Event
             li: a.footer_link(href='#'): span About Us
             li: a.footer_link(href='#'): span Job Opportunitites
+            
+mixin new_menu_aside()
+    .footer_col
+        p: a.footer_col_caption(href='#') News
+        ul.footer_col_menu
+            li: a.footer_link(href='#'): span #Bitcoin
+            li: a.footer_link(href='#'): span #Ethereum
+            li: a.footer_link(href='#'): span #Bitcoin Cash
+            li: a.footer_link(href='#'): span #Ripple
+            li: a.footer_link(href='#'): span #EOS
+            li: a.footer_link(href='#'): span #Litecoin
+            li: a.footer_link(href='#'): span #Cardano
+            li: a.footer_link(href='#'): span #NEM
+
+    .footer_col
+        p: a.footer_col_caption(href='#') Stories
+        ul.footer_col_menu
+            li: a.footer_link(href='#'): span #Features
+            li: a.footer_link(href='#'): span #Sharks Pool
+            li: a.footer_link(href='#'): span #Artificial Intelligence
+            li: a.footer_link(href='#'): span #Crypto Gags
+
+    .footer_col
+        p: a.footer_col_caption(href='#') Interviews
+        p: a.footer_col_caption(href='#'): span ICO Watch
+
+    .footer_col
+        p: span.footer_col_caption._op Market analysis
+
+        ul.footer_col_menu
+            li: a.footer_link(href='#'): span Pricewise
+            li: a.footer_link(href='#'): span Bitcoin
+            li: a.footer_link(href='#'): span Ethereum
+            li: a.footer_link(href='#'): span Ripple
+            li: a.footer_link(href='#'): span EOS
+            li: a.footer_link(href='#'): span LiteCoin
+            li: a.footer_link(href='#'): span Cardano
+            li: a.footer_link(href='#'): span Stellar
+
+    .footer_col
+        p: span.footer_col_caption._op Guides
+
+        ul.footer_col_menu
+            li: a.footer_link(href='#'): span Coins Guide
+            li: a.footer_link(href='#'): span Trading Guide
+            li: a.footer_link(href='#'): span WikiCoin
+            li: a.footer_link(href='#'): span CryptoTips
+            li: a.footer_link(href='#'): span Exchanges Guide
+            li: .footer_link(): span &nbsp;
+
+    .footer_col
+        p: span.footer_col_caption._op Industry
+
+        ul.footer_col_menu._single_col
+            li: a.footer_link(href='#'): span Press-releases
+            li: a.footer_link(href='#'): span Submit Release
+            li: a.footer_link(href='#'): span Events
+            li: a.footer_link(href='#'): span Submit Event
+            li: a.footer_link(href='#'): span About Us
 
 mixin action_list(hide_soc_text, cls)
   ul.action_list(class= cls)
@@ -154,13 +213,13 @@ mixin footer(white, hide_soc_text, no_suscribe)
 
             .footer_subscribe_holder
                 - if (!no_suscribe)
-                    p Follow us and get all crypto news 24/7
+                    p Follow us! <br>Get all crypto news 24/7
                     p
-                        a.btn_v1.btn_violette_3.subscribe_btn_email.subscribeBtnEmail(href='#') SUBSCRIBE BY EMAIL
+                        a.btn_v1.btn_violette_3.subscribe_btn_email.subscribeBtnEmail(href='#') SUBSCRIBE
 
                 +action_list(hide_soc_text, '_no_gap')
 
-            .copyright ©2018 CryptoComes. All rights reserved.
+            //-.copyright ©2018 CryptoComes. All rights reserved.
 
         //-.go_top_holder.goTopHolder
             .section_inner
@@ -310,25 +369,19 @@ mixin top_info(no_breaking)
                         .swiper-slide: a.currency_info_cell(href='#')
                             p
                                 span.currency_link: b BTC
-                            p
                                 span.trend._down -8.82%
-                                    +svg_icon('_down')
                             p
                                 span.currency_val 2636.79
                         .swiper-slide: a.currency_info_cell(href='#')
                             p
                                 span.currency_link: b BCH
-                            p
                                 span.trend._up +8.82%
-                                    +svg_icon('_up')
                             p
                                 span.currency_val 3236.51
                         .swiper-slide: a.currency_info_cell(href='#')
                             p
                                 span.currency_link: b ETH
-                            p
                                 span.trend._down -8.82%
-                                    +svg_icon('_down')
                             p
                                 span.currency_val 26236.79
             
@@ -340,28 +393,25 @@ mixin top_info(no_breaking)
                             .swiper-slide: a.currency_info_cell(href='#')
                                 p
                                     span.currency_link: b BTC
-                                p
                                     span.trend._down -8.82%
                                 p
                                     span.currency_val 2636.79
                             .swiper-slide: a.currency_info_cell(href='#')
                                 p
                                     span.currency_link: b BCH
-                                p
                                     span.trend._up +8.82%
                                 p
                                     span.currency_val 3236.51
                             .swiper-slide: a.currency_info_cell(href='#')
                                 p
                                     span.currency_link: b ETH
-                                p
                                     span.trend._down -8.82%
                                 p
                                     span.currency_val 26236.79
 
     - if (!amp && !no_breaking)
         a.attention_block._warn(href='#')
-            .attention_text BREAKING
+            .attention_text Breaking News
             p Bears Drag Bitcoin Price to $8,350. Litecoin Holds On, Monero and NEO
 
 mixin main_menu(subscribe)
@@ -398,14 +448,20 @@ mixin main_menu(subscribe)
                 +action_list()
 
     .main_menu_holder(layout= (amp ? 'nodisplay' : null))
+        .main_menu_title Menu
         .search_block
             form(action='#')
                 .form_cell
-                    input.completeIt.search_input(placeholder='Search Cryptocomes.com')
+                    input#menu_search.completeIt.search_input.checkEmpty(placeholder='')
+                    label.search_label(for='menu_search') 
+                        span Search for 
+                        b #tag 
+                        span or 
+                        b._ff_serif article
                     button.filter_btn
 
         .main_menu_wrapper
-            +new_menu()
+            +new_menu_aside()
 
             //-ul.main_menu
                 li.menu_item
@@ -508,19 +564,20 @@ mixin article_st(share, author)
                 a.article_author_img(href='#')
                     img(src='i/article_author.png')
         li
-            a.article_stat_val(href='#') John Doe
+            a.article_stat_val(href='#') Alex Morris
         li
-            span.article_stat_val._stat_time
-                - if (amp)
+            span.article_stat_val
+                //- if (amp)
                     span.article_stat_icon
                         +svg_icon('clock')
-                span 2h
-        li
+                span 1 hour ago
+        li._fr
             span.article_stat_val._stat_views
                 - if (amp)
                     span.article_stat_icon
                         +svg_icon('eye')
-                span 212
+                span 3
+                
         - if (share)
             li.stat_action
                 .article_action
@@ -582,7 +639,7 @@ mixin header()
             //-a.menu_btn.menuBtn(href='#' on= (amp ? 'tap:header-sidebar.toggle' : null) aria-label= (amp ? 'open sidebar' : null))
                 span
 
-            .lang_block
+            //-.lang_block
                 select.lang_select
                     option EN
                     option RU
@@ -593,9 +650,9 @@ mixin header()
             .logo_block
                 a.logo(href='index.html')
                     - if (amp)
-                        amp-img(src='i/logo_h.svg', width='116', height='36', alt='logo')
+                        amp-img(src='i/logo_today.svg', width='116', height='36', alt='logo')
                     - else
-                        img(src='i/logo_h.svg')
+                        img(src='i/logo_today.svg')
 
             a.menu_btn.menuBtn(href='#' on= (amp ? 'tap:header-sidebar.toggle' : null) aria-label= (amp ? 'open sidebar' : null))
                 span
@@ -758,7 +815,8 @@ mixin svg_icon(icon)
         <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path d="M208.084 495.058c-15.4 12.834-38.781 1.884-38.781-18.164v-70.933H98.37c-30.468 0-55.169-24.701-55.169-55.169V98.585c0-30.468 24.701-55.169 55.169-55.169h315.259c30.468 0 55.169 24.701 55.169 55.169v252.207c0 30.468-24.701 55.169-55.169 55.169h-98.627l-106.915 89.097zm83.22-130.904a23.64 23.64 0 0 1 15.137-5.479h107.186a7.881 7.881 0 0 0 7.88-7.88V98.588a7.88 7.88 0 0 0-7.88-7.88H98.368a7.88 7.88 0 0 0-7.88 7.88v252.207a7.88 7.88 0 0 0 7.88 7.88h94.577c13.058 0 23.644 10.586 23.644 23.644v44.096l74.712-62.26zm-98.356-194.636c30.468 0 55.169 24.701 55.169 55.169s-24.701 55.169-55.169 55.169c-30.468 0-55.169-24.701-55.169-55.169s24.701-55.169 55.169-55.169zm126.105 0c30.468 0 55.169 24.701 55.169 55.169s-24.701 55.169-55.169 55.169c-30.468 0-55.169-24.701-55.169-55.169s24.701-55.169 55.169-55.169z"/></svg>
 
 mixin scripts(share)
-    link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&subset=cyrillic', media='all')
+    //-link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&subset=cyrillic', media='all')
+    link(href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet")
     link(rel='stylesheet', href='//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css', media='all')
 
     - if (!prod)

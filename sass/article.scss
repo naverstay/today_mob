@@ -66,7 +66,7 @@ a.speaker_link {
   background: #f6f7f7;
   padding: 13px 0 5px;
   margin-bottom: 15px;
-  border-radius: 2px;
+ //border-radius: 2px;
 
   dt, dd {
     margin-bottom: 12px;
@@ -361,7 +361,7 @@ a.speaker_link {
   ._fixed & {
     display: block;
     width: 100%;
-    border-radius: 2px;
+   //border-radius: 2px;
     height: 25px;
     border: 0;
     background: none;
@@ -832,7 +832,7 @@ a.speaker_link {
   &._count {
     width: auto;
     margin-right: 5px;
-    border-radius: 2px;
+   //border-radius: 2px;
     padding: 0 10px;
 
     &:after,
@@ -1114,16 +1114,30 @@ a.speaker_link {
   }
 
   .offer_block {
-    background: #f6f7f7;
-    margin-top: 4px;
-    border-radius: 2px;
-    padding: 15px 10px 20px;
-    text-align: center;
-    font: 16px/19px $RubikMed;
+    //background: #f6f7f7;
+    //margin-top: 4px;
+   //border-radius: 2px;
+   // padding: 15px 10px 20px;
+    text-align: left;
+    font: 24px/28px $RubikBold;
+    position: relative;
+    margin: 20px 0;
+    
+    &:before {
+      content: '?';
+      position: absolute;
+      top: 35px;
+      right: 5px;
+      transform: rotate(45deg);
+      font-size: 145px;
+      color: #000;
+      opacity: .1;
+      z-index: -1;
+    }
 
     p {
       + p {
-        margin-top: 15px;
+        margin-top: 25px;
       }
     }
 
@@ -1301,7 +1315,7 @@ a.speaker_link {
     background: #f6f7f7;
     padding: 30px 16px 30px 20px;
     margin: 25px 0 30px;
-    border-radius: 2px;
+   //border-radius: 2px;
 
     @if ($amp_ver) {
       .quote_start {
@@ -1550,7 +1564,7 @@ a.speaker_link {
   font: 12px/15px $RubikBold;
   padding: 3px 7px;
   background: #f6f7f7;
-  border-radius: 2px;
+ //border-radius: 2px;
   display: block;
 }
 
@@ -1729,7 +1743,7 @@ a.speaker_link {
   }
 
   .article_tag {
-    border-radius: 2px;
+   //border-radius: 2px;
 
     span {
       padding-left: 0;

@@ -208,6 +208,8 @@ $(function ($) {
 
     initMask();
 
+    initEmptyCheck();
+    
     //initMainBlockSlider();
 
     initSmallBlockSlider();
@@ -542,6 +544,16 @@ function initMask() {
     $("input").filter(function (i, el) {
         return $(el).attr('data-inputmask') !== void 0;
     }).inputmask();
+}
+
+function initEmptyCheck() {
+    $(".checkEmpty").each(function (i, el) {
+        var inp = $(this);
+        
+        inp.on('input', function () {
+            inp.toggleClass('_not_empty', inp.val().length > 0);
+        });
+    });
 }
 
 function checkHeader() {

@@ -76,12 +76,28 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  color: #fff;
+  color: #bdbdbd;
   border: 0;
   background: none;
-  font: 14px/16px $RubikReg;
+  font: 18px/1 $RubikReg;
   height: 38px;
-  padding: 11px 36px 11px 36px;
+  padding: 4px 36px 7px 40px;
+}
+
+.search_label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 40px;
+  padding-top: 7px;
+  font-size: 18px;
+  line-height: 22px;
+  color: #bdbdbd;
+
+  .search_input._not_empty ~ &,
+  .search_input:focus ~ & {
+    display: none;
+  }
 }
 
 .input_v1 {
@@ -91,7 +107,7 @@
   width: 100%;
   color: #333;
   border: 1px solid #ddd;
-  border-radius: 2px;
+  //border-radius: 2px;
   font: 14px/18px $RubikMed;
   padding: 9px 11px;
 
@@ -116,7 +132,7 @@
   color: #000;
   background: #fff;
   border: 2px solid rgba(0, 0, 0, .1);
-  border-radius: 2px;
+  //border-radius: 2px;
   font: 16px/20px $RubikMed;
   padding: 4px 14px;
 }
@@ -129,7 +145,7 @@
   color: #000;
   background: #fff;
   border: 1px solid #ddd;
-  border-radius: 2px;
+  //border-radius: 2px;
   font: 14px/16px $RubikMed;
   padding: 10px 16px;
 
@@ -166,7 +182,7 @@ textarea.input_v3 {
   width: 100%;
   color: $clr_black;
   border: 1px solid #ddd;
-  border-radius: 2px;
+  //border-radius: 2px;
   font: 14px/16px $RubikReg;
   padding: 11px 15px;
   background: #fff;
@@ -381,7 +397,7 @@ textarea.input_v3 {
   &.dialog_v2 {
     padding: 0;
     border: 0;
-    border-radius: 2px;
+    //border-radius: 2px;
 
     .ui-dialog-content {
       padding: 0;
@@ -441,7 +457,7 @@ textarea.input_v3 {
       background: none;
       z-index: 1;
       padding: 24px 0 0;
-      border-radius: 2px 2px 0 0;
+      //border-radius: 2px 2px 0 0;
     }
 
     .ui-dialog-titlebar-close {
@@ -475,7 +491,7 @@ textarea.input_v3 {
 }
 
 .bonus_img {
-  border-radius: 2px 2px 0 0;
+  //border-radius: 2px 2px 0 0;
   overflow: hidden;
 
   img {
@@ -530,7 +546,7 @@ textarea.input_v3 {
       left: 0;
       width: 22px;
       height: 22px;
-      border-radius: 2px;
+      //border-radius: 2px;
       font-size: 14px;
       line-height: 20px !important;
       text-align: center;

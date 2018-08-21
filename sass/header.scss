@@ -7,7 +7,7 @@
 %header_btn {
   position: absolute;
   z-index: 7;
-  top: 1px;
+  top: 8px;
   border-radius: 100%;
   width: 48px;
   height: 48px;
@@ -37,9 +37,9 @@
   right: 0;
   left: 0;
   text-align: center;
-  padding-top: 8px;
+  padding-top: 20px;
   min-height: 50px;
-  background: $violette;
+  background: #fff;
   //background: url($prefix + 'i/header_bg_2.svg') no-repeat 50% 50%;
   //-webkit-background-size: cover;
   //-moz-background-size: cover;
@@ -66,14 +66,14 @@
   @include transition_all(opacity .3s);
   @extend %header_btn;
   opacity: 1;
-  right: 3px;
+  right: 10px;
 
   &:before {
-    top: 16px;
+    top: 14px;
   }
 
   &:after {
-    top: 28px;
+    top: 30px;
   }
 
   span,
@@ -83,14 +83,14 @@
     content: '';
     position: absolute;
     left: 16px;
-    width: 20px;
+    width: 24px;
     height: 2px;
-    background: white;
+    background: #000;
   }
 
   span {
     @include transition_all(opacity .3s);
-    width: 16px;
+    width: 24px;
     top: 22px;
     opacity: 1;
   }
@@ -196,12 +196,12 @@
   @include transition_all(opacity .3s);
   position: relative;
   z-index: 6;
-  display: inline-block;
-  vertical-align: top;
-  padding: 0 50px;
-  max-width: 216px;
+  float: left;
+  //padding: 0 50px;
+  max-width: 134px;
   opacity: 1;
 
+  .menu_opened &,
   .search_opened & {
     @include transition_all(opacity .3s, z-index .01s .3s);
     opacity: 0;

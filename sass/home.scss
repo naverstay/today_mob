@@ -1,13 +1,13 @@
 .attention_block {
   display: block;
   text-decoration: none;
-  padding: 36px 15px 13px 14px;
+  padding: 36px 10px 13px 13px;
   margin: 14px 0;
   background: #fff;
-  font: 14px/16px $RubikReg;
+  font: 14px/16px $RubikBold;
   position: relative;
   z-index: 1;
-  border-radius: 2px;
+  //border-radius: 2px;
   box-shadow: 0 1px 10px rgba(128, 128, 130, .2);
 
   &._warn {
@@ -20,12 +20,12 @@
   top: 0;
   left: 0;
   color: #fff;
-  font: 10px/12px $RubikBold;
-  border-radius: 2px 0 2px 0;
-  padding: 7px 12px 7px 12px;
+  font: 12px/14px $RubikBold;
+  //border-radius: 2px 0 2px 0;
+  padding: 7px 3px 7px 13px;
 
   ._warn & {
-    background: #ff3700;
+    color: #eb5757;
   }
 }
 
@@ -115,7 +115,7 @@
   margin-bottom: 15px;
   background: #fff;
   box-shadow: 0 0 10px rgba(128, 128, 130, .2);
-  border-radius: 2px;
+  //border-radius: 2px;
 
   .swiper-slide & {
     display: flex;
@@ -133,13 +133,23 @@
     }
   }
 
+  &._wide {
+    margin: 0 -12px;
+
+    .article_img {
+      margin: 0 -4px;
+    }
+  }
+
   &._main {
     .article_stat {
-      padding-top: 32px;
+      padding-top: 22px;
     }
 
     .article_link {
       min-height: 38px;
+      font-size: 24px;
+      line-height: 28px;
       display: inline-block;
       vertical-align: top;
     }
@@ -251,7 +261,7 @@
 .article_img {
   position: relative;
   overflow: hidden;
-  border-radius: 2px;
+  //border-radius: 2px;
 
   &:before {
     display: block;
@@ -270,7 +280,7 @@
   }
 
   ._main & {
-    border-radius: 2px 2px 0 0;
+    //border-radius: 2px 2px 0 0;
   }
 
   ._article & {
@@ -337,7 +347,7 @@
   color: #fff;
   font: 10px/12px $RubikBold;
   padding: 6px 10px 6px 26px;
-  border-radius: 2px;
+  //border-radius: 2px;
 
   @if ($amp_ver) {
 
@@ -347,7 +357,7 @@
       content: unicode($icon-calendar);
     }
   }
-  
+
   &:before {
     position: absolute;
     left: 7px;
@@ -361,11 +371,11 @@
       font-size: 16px;
     }
   }
-  
+
   &._archived {
     background: $violette;
   }
-  
+
   &._mt_5 {
     margin-top: 5px;
   }
@@ -384,7 +394,7 @@
 .article_title {
   z-index: 1;
   position: relative;
-  padding: 10px 14px 20px 14px;
+  padding: 15px 15px 20px 15px;
   background: #fff;
   border-radius: 0 2px 2px 0;
 }
@@ -581,10 +591,6 @@
   }
 }
 
-a.article_stat_val {
-  text-decoration: underline;
-}
-
 .article_action {
   position: absolute;
   z-index: 2;
@@ -681,12 +687,17 @@ a.article_stat_val {
   bottom: 0;
   left: 0;
 
+  &._right {
+    left: auto;
+    right: 0;
+  }
+  
   &._head {
     top: 0;
     bottom: auto;
 
     .article_tag {
-      border-radius: 2px 0 2px 0;
+      //border-radius: 2px 0 2px 0;
     }
   }
 
@@ -699,11 +710,11 @@ a.article_stat_val {
 .article_tag {
   position: relative;
   min-width: 24px;
-  height: 24px;
-  line-height: 22px;
+  height: 28px;
+  line-height: 26px;
   display: inline-block;
   vertical-align: top;
-  border-radius: 0 2px 0 2px;
+  //border-radius: 0 2px 0 2px;
   color: #fff;
   text-decoration: none;
 
@@ -711,11 +722,11 @@ a.article_stat_val {
     display: inline-block;
     vertical-align: middle;
     //vertical-align: top;
-    height: 24px;
+    height: 28px;
     padding: 6px 10px 4px 1px;
-    font: 10px/14px $RubikBold;
+    font: 12px/18px $RubikBold;
     //letter-spacing: .015em;
-    text-transform: uppercase;
+    //text-transform: uppercase;
   }
 
   &._top {
@@ -767,6 +778,7 @@ a.article_stat_val {
 .group_line {
   height: 4px;
   margin: 22px -16px 5px;
+  background: none !important;
 
   @if ($amp_ver) {
     background: $violette;
@@ -797,14 +809,13 @@ a.article_stat_val {
 }
 
 .article_group_title {
-  @extend %icon_pseudo;
   position: relative;
   color: $clr_black;
-  font: 20px/23px $RubikBold;
-  text-transform: uppercase;
+  font: 48px/52px $RubikBold;
+  //text-transform: uppercase;
   ////letter-spacing: .025em;
-  padding: 10px 10px 10px 33px;
-  margin: 0 0 5px;
+  padding: 10px 0;
+  margin: 0 0 15px;
   //background-position: 0 0;
   //background-repeat: no-repeat;
   //-webkit-background-size: cover;
@@ -816,34 +827,42 @@ a.article_stat_val {
     margin: 0;
   }
 
-  &:before {
-    position: absolute;
-    top: 8px;
-    left: 0;
-    border-radius: 100%;
-    color: #fff;
-    height: 26px;
-    width: 26px;
-    font-size: 15px;
-    line-height: 26px;
-    text-align: center;
+  .artile_link {
+    @extend %icon_pseudo;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    padding-right: 40px;
+
+    &:before {
+      position: absolute;
+      bottom: 8px;
+      right: 0;
+      border-radius: 100%;
+      color: #fff;
+      height: 32px;
+      width: 32px;
+      font-size: 18px;
+      line-height: 32px;
+      text-align: center;
+    }
   }
 
   @if ($amp_ver) {
-    &:before {
+    .artile_link:before {
       background: $violette;
     }
   } @else {
     @each $cls, $color in $firm-colors {
       &.#{$cls} {
-        &:before {
+        .artile_link:before {
           background: $color;
         }
       }
     }
 
     @each $cls, $content in $firm-icons {
-      &.#{$cls} {
+      &.#{$cls} .artile_link {
         &:not([class^="icon-"]):not([class*=" icon-"]):before {
           content: unicode($content);
         }
@@ -857,16 +876,76 @@ a.article_stat_val {
   text-decoration: none;
 }
 
+.load_more_link {
+  @extend %icon_pseudo;
+  position: absolute;
+  z-index: 3;
+  text-align: center;
+  bottom: 10px;
+  right: 20px;
+  left: 20px;
+  padding-bottom: 20px;
+  color: #000;
+  font: 16px/20px $RubikBold;
+
+  &:before {
+    content: $icon-chevron-right;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    font-size: 20px;
+    margin-left: -10px;
+    transform: rotate(90deg);
+  }
+}
+
+.load_all_link {
+  @extend %icon_pseudo;
+  position: absolute;
+  z-index: 3;
+  text-align: center;
+  bottom: 10px;
+  right: 20px;
+  left: 20px;
+  padding-bottom: 20px;
+  color: #000;
+  font: 16px/20px $RubikBold;
+
+  &:after {
+    content: $icon-chevron-right;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
 .news_list {
   list-style: none;
 
   > li {
-    margin-top: 12px;
-    border-bottom: 1px solid #eee;
+    margin-top: 20px;
+    //border-bottom: 1px solid #eee;
 
-    &:last-child {
-      border-bottom: 0;
+    &._show_more {
+      position: relative;
+
+      &:before {
+        content: '';
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -16px;
+        right: -16px;
+        background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.86) 0%, rgba(255, 255, 255, 1) 44%, rgba(255, 255, 255, 1) 100%);
+        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.86) 0%, rgba(255, 255, 255, 1) 44%, rgba(255, 255, 255, 1) 100%);
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.86) 0%, rgba(255, 255, 255, 1) 44%, rgba(255, 255, 255, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dbffffff', endColorstr='#ffffff', GradientType=0);
+      }
     }
+
+    //&:last-child {
+    //  border-bottom: 0;
+    //}
   }
 
   &._related {
@@ -878,23 +957,68 @@ a.article_stat_val {
   }
 }
 
+.news_img {
+  position: absolute;
+  left: 100%;
+  margin-left: -67px;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+
+  img {
+    display: block;
+  }
+}
+
 .news_item {
   @extend %clearfix;
+  margin-right: -16px;
   position: relative;
-  padding: 0 16px 14px;
+  padding: 0 16px 14px 0;
 
   .article_img {
-    float: left;
-    width: 130px;
-    margin-right: 10px;
+    //float: left;
+    //width: 130px;
+    //margin-right: 10px;
+
+    position: absolute;
+    left: 100%;
+    margin-left: -67px;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+
+    &:before {
+      display: none;
+    }
+    
+    ~ * {
+      margin-right: 60px;
+    }
+    
+    .article_img_link {
+      position: relative;
+    }
+    
+    img {
+      width: auto;
+      min-width: 67px;
+      display: block;
+    }
   }
 
   &._wide {
-    padding-left: 0;
-    padding-right: 0;
+    //padding-left: 0;
+    //padding-right: 0;
 
     .article_stat {
       padding-top: 10px;
+    }
+  }
+
+  .article_stat {
+    ._fr {
+      float: left;
     }
   }
 }
@@ -916,7 +1040,7 @@ a.article_stat_val {
 
 .news_name {
   //@extend %firm_color;
-  font: 14px/1.2 $RubikMed;
+  font: 18px/22px $RubikBold;
   color: $clr_black;
 
   ._related & {

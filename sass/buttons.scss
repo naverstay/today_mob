@@ -1,13 +1,13 @@
 //************  buttons
 
 .btn_v1 {
-  height: 40px;
+  height: 52px;
 
   &.compare_btn {
     display: inline-block;
     vertical-align: top;
-    padding: 9px 48px;
-    border-radius: 2px;
+    padding: 15px 48px;
+   //border-radius: 2px;
     font: 14px/20px $RubikBold;
 
     span {
@@ -19,8 +19,8 @@
   &.create_release_btn {
     float: right;
     display: block;
-    padding: 9px 10px;
-    border-radius: 2px;
+    padding: 15px 10px;
+   //border-radius: 2px;
     font: 14px/20px $RubikBold;
 
     span {
@@ -34,10 +34,10 @@
     display: inline-block;
     vertical-align: top;
     padding: 10px 18px;
-    margin: 10px 0 5px;
+    margin: 16px 0 5px;
     font: 14px/18px $RubikBold;
     text-align: center;
-    border-radius: 2px;
+   //border-radius: 2px;
 
     span {
       position: relative;
@@ -49,10 +49,10 @@
     display: block;
     text-align: center;
     font: 14px/20px $RubikBold;
-    padding: 10px 5px;
-    margin: 0 22px;
-    border-radius: 2px;
-    text-transform: uppercase;
+    padding: 16px 5px;
+    //margin: 0 22px;
+   //border-radius: 2px;
+   // text-transform: uppercase;
 
     .btn_icon {
       font-size: 16px;
@@ -65,8 +65,8 @@
     display: inline-block;
     vertical-align: top;
     font: 14px/20px $RubikBold;
-    padding: 10px 16px;
-    border-radius: 2px;
+    padding: 16px 16px;
+   //border-radius: 2px;
     text-transform: uppercase;
   }
 
@@ -76,8 +76,8 @@
     display: block;
     text-align: center;
     font: 12px/18px $RubikReg;
-    padding: 10px;
-    border-radius: 2px;
+    padding: 16px 10px;
+   //border-radius: 2px;
 
     &:after {
       //content: unicode($icon-triangle);
@@ -98,7 +98,7 @@
     display: block;
     width: 100%;
     font: 14px/20px $RubikBold;
-    padding: 10px 5px;
+    padding: 16px 5px;
     text-align: center;
     text-transform: uppercase;
   }
@@ -205,7 +205,7 @@
     padding: 10px 22px;
     font: 15px/18px $RubikReg;
     color: #fff;
-    border-radius: 2px;
+   //border-radius: 2px;
     text-transform: uppercase;
 
     span {
@@ -262,7 +262,7 @@
     display: inline-block;
     vertical-align: top;
     padding: 9px 16px;
-    border-radius: 2px;
+   //border-radius: 2px;
     font: 14px/20px $RubikReg;
     text-transform: uppercase;
 
@@ -287,7 +287,7 @@
     font: 14px/20px $RubikBold;
     background: #fff;
     text-align: center;
-    border-radius: 2px;
+   //border-radius: 2px;
     margin: 20px 23px 0 0;
 
     span {
@@ -306,7 +306,7 @@
     font: 14px/20px $RubikBold;
     background: #fff;
     text-align: center;
-    border-radius: 2px;
+   //border-radius: 2px;
 
     span {
       position: relative;
