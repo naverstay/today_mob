@@ -47,7 +47,8 @@
   //background-size: cover;
 
   &._shadow {
-    box-shadow: 0 3px 5px rgba(0, 0, 0, .75);
+    //box-shadow: 0 3px 5px rgba(0, 0, 0, .75);
+    box-shadow: 0 1px 3px rgba(36, 40, 42, 0.27);
   }
   &.nav-up {
     @include transform_translate(0, -100%);

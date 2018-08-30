@@ -342,12 +342,12 @@ a.speaker_link {
     .action_sh {
       border-radius: 0;
       height: 52px;
-      
+
       &:before {
         color: #000;
         font-size: 20px;
         line-height: 52px;
-        background: rgba(189,189,189, .35) !important;
+        background: rgba(189, 189, 189, .35) !important;
       }
     }
   }
@@ -1742,6 +1742,110 @@ a.speaker_link {
   margin-bottom: 1em;
 }
 
+.poll_block {
+  background: #f2f2f2;
+  padding: 10px 16px 8px;
+  margin: -14px -16px 10px;
+
+  p {
+    color: #828282;
+    font: 12px $RubikReg;
+  }
+  
+  &._show_vote {
+    .compare_btn {
+      display: none;
+    }
+    
+    .poll_result {
+      display: block;
+    }
+  }
+}
+
+.poll_result {
+  @extend %clearfix;
+  display: none;
+  color: #000;
+  padding: 12px 8px 0;
+}
+
+.poll_progress {
+  clear: both;
+  position: relative;
+  height: 1px;
+  background: rgba(224, 224, 224, .8);
+}
+
+.poll_progress_val {
+  position: absolute;
+  bottom: 0;
+  left: 2px;
+  height: 2px;
+  background: #6340fe;
+}
+
+.poll_val {
+  float: right;
+  font: 12px/24px $RubikBold;
+}
+
+.poll_name {
+  margin-bottom: 9px;
+  float: left;
+  font: 14px/24px $RubikBold;
+}
+
+.poll_unit {
+  margin: 0 -11px 6px;
+  
+  p {
+    margin-top: 15px;
+  }
+}
+
+.poll_title {
+  font: 18px/24px $RubikMed;
+  color: #000;
+  margin: 10px 0 20px;
+  letter-spacing: -.01em;
+}
+
+.article_banner_text {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  right: 20px;
+  text-align: left;
+}
+
+.article_banner_link {
+  @extend %icon_pseudo;
+  color: #fff;
+  font: 16px/20px $RubikBold;
+  text-decoration: none;
+
+  &:after {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 18px;
+    content: $icon-chevron-right;
+  }
+}
+
+.article_banner {
+  position: relative;
+  margin: -7px -16px 20px;
+  background: #6340fe;
+  text-align: center;
+
+  img {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+  }
+}
+
 .related_block {
   @extend %clearfix;
   padding: 35px 16px 14px 16px;
@@ -1772,7 +1876,7 @@ a.speaker_link {
     font: 18px/22px $RubikBold;
     color: $clr_black;
   }
-  
+
   .article_stat {
     position: absolute;
     left: 15px;

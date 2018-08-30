@@ -352,7 +352,7 @@ mixin footer(white, hide_soc_text, no_suscribe)
 
 mixin top_info(no_breaking)
     .top_info
-        .currency_switcher
+        //-.currency_switcher
             select.currency_select
                 option &#8364;
                 option &#36;
@@ -362,6 +362,7 @@ mixin top_info(no_breaking)
                 - if (amp)
                     +svg_icon('triangle')
             .select_overlay
+            
         .currency_info
             - if (amp)
                 amp-carousel.currency_info_table(height="44" layout="fixed-height" type="carousel")
@@ -654,6 +655,15 @@ mixin header()
                     - else
                         img(src='i/logo_today.svg')
 
+            .currency_switcher
+                select.currency_select
+                    option ESP
+                    option DSP
+                    option USD
+                .select_arrow
+                    - if (amp)
+                        +svg_icon('triangle')
+                    
             a.menu_btn.menuBtn(href='#' on= (amp ? 'tap:header-sidebar.toggle' : null) aria-label= (amp ? 'open sidebar' : null))
                 span
 

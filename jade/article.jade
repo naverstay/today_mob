@@ -31,7 +31,37 @@ html(lang='ru')
                                 a.article_img_link(href='#'): img(src='i/article_new.jpg')
                                 
                         #subscribeTrigger
+                            
+                        .poll_block.pollBlock
+                            p Poll
+                            .poll_title What macbook is really sick? 🔥
 
+                            .poll_unit
+                                a.btn_v1.compare_btn.btn_violette_6.btn_wide.text_center.pollBtn(href='#') MacBook Pro 2017
+                                .poll_result
+                                    .poll_name MacBook Pro 2017
+                                    .poll_val 20%
+                                    .poll_progress
+                                        .poll_progress_val(style='width:20%')
+
+                            .poll_unit
+                                a.btn_v1.compare_btn.btn_violette_6.btn_wide.text_center.pollBtn(href='#') MacBook Pro 2015
+                                .poll_result
+                                    .poll_name MacBook Pro 2015
+                                    .poll_val 30%
+                                    .poll_progress
+                                        .poll_progress_val(style='width:30%')
+
+                            .poll_unit
+                                a.btn_v1.compare_btn.btn_violette_6.btn_wide.text_center.pollBtn(href='#') MacBook Pro 2012
+                                .poll_result
+                                    .poll_name MacBook Pro 2012
+                                    .poll_val 50%
+                                    .poll_progress
+                                        .poll_progress_val(style='width:50%')
+                                            
+                                    p.text_right 660 voters
+                                    
                         h1 The Reasons Why Those Assets Loses. H1 
 
                         h2 The 1st Reason — Poor Production Power H2
@@ -49,6 +79,13 @@ html(lang='ru')
                                 p: a.news_name(href='#') International Search For Bitcoin’s Mysterious Creator Picking Up Steam
                                 +article_st()
                             
+                        .article_banner
+                            img(src='i/u_community.png')
+                            .article_banner_text
+                                .article_banner_logo
+                                    img(src='i/uc_logo.svg')
+                                a.article_banner_link(href='#') Learn More
+                                
                         .related_block
                             a.related_img(href='#')
                                 img(src='i/steam.jpg')

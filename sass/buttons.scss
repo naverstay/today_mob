@@ -7,7 +7,7 @@
     display: inline-block;
     vertical-align: top;
     padding: 15px 48px;
-   //border-radius: 2px;
+    //border-radius: 2px;
     font: 14px/20px $RubikBold;
 
     span {
@@ -20,7 +20,7 @@
     float: right;
     display: block;
     padding: 15px 10px;
-   //border-radius: 2px;
+    //border-radius: 2px;
     font: 14px/20px $RubikBold;
 
     span {
@@ -37,7 +37,7 @@
     margin: 16px 0 5px;
     font: 14px/18px $RubikBold;
     text-align: center;
-   //border-radius: 2px;
+    //border-radius: 2px;
 
     span {
       position: relative;
@@ -51,8 +51,8 @@
     font: 14px/20px $RubikBold;
     padding: 16px 5px;
     //margin: 0 22px;
-   //border-radius: 2px;
-   // text-transform: uppercase;
+    //border-radius: 2px;
+    // text-transform: uppercase;
 
     .btn_icon {
       font-size: 16px;
@@ -66,7 +66,7 @@
     vertical-align: top;
     font: 14px/20px $RubikBold;
     padding: 16px 16px;
-   //border-radius: 2px;
+    //border-radius: 2px;
     text-transform: uppercase;
   }
 
@@ -77,7 +77,7 @@
     text-align: center;
     font: 12px/18px $RubikReg;
     padding: 16px 10px;
-   //border-radius: 2px;
+    //border-radius: 2px;
 
     &:after {
       //content: unicode($icon-triangle);
@@ -100,9 +100,9 @@
     font: 16px/20px $RubikBold;
     padding: 16px 5px;
     text-align: center;
-    
+
     .btn_icon {
-      padding: 0 5px; 
+      padding: 0 5px;
     }
   }
 }
@@ -208,8 +208,8 @@
     padding: 10px 22px;
     font: 15px/18px $RubikBold;
     color: #fff;
-   //border-radius: 2px;
-   // text-transform: uppercase;
+    //border-radius: 2px;
+    // text-transform: uppercase;
 
     span {
       display: inline-block;
@@ -265,7 +265,7 @@
     display: inline-block;
     vertical-align: top;
     padding: 9px 16px;
-   //border-radius: 2px;
+    //border-radius: 2px;
     font: 14px/20px $RubikReg;
     text-transform: uppercase;
 
@@ -290,7 +290,7 @@
     font: 14px/20px $RubikBold;
     background: #fff;
     text-align: center;
-   //border-radius: 2px;
+    //border-radius: 2px;
     margin: 20px 23px 0 0;
 
     span {
@@ -309,7 +309,7 @@
     font: 14px/20px $RubikBold;
     background: #fff;
     text-align: center;
-   //border-radius: 2px;
+    //border-radius: 2px;
 
     span {
       position: relative;
@@ -357,7 +357,7 @@
   position: relative;
   background: $violette;
   color: #fff;
-  
+
   &:hover {
     background: $violette_dark;
   }
@@ -404,6 +404,18 @@
   }
 }
 
+.btn_violette_6 {
+  @include transition_all(background .3s, color .3s);
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  color: $violette;
+
+  &:hover {
+    background: $violette;
+    color: #fff;
+  }
+}
+
 .btn_red {
   color: #fff;
   background: #f46b65;
@@ -412,4 +424,8 @@
 .white_btn {
   background: #fff;
   color: $violette;
+}
+
+.btn_wide {
+  width: 100%;
 }

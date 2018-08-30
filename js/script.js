@@ -32,6 +32,10 @@ $(function ($) {
             $('.subscribeBlock').addClass('open_subscribe');
             return false;
         })
+        .delegate('.pollBtn', 'click', function () {
+            $(this).closest('.pollBlock').addClass('_show_vote');
+            return false;
+        })
         .delegate('.forceValidation', 'keyup', function () {
             var inp = $(this);
 

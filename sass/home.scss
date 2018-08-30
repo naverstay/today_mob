@@ -1,10 +1,10 @@
 .attention_block {
   display: block;
   text-decoration: none;
-  padding: 36px 10px 13px 13px;
-  margin: 14px 0;
+  padding: 32px 10px 16px 12px;
+  margin: 14px -13px;
   background: #fff;
-  font: 14px/16px $RubikBold;
+  font: 14px/18px $RubikBold;
   position: relative;
   z-index: 1;
   //border-radius: 2px;
@@ -22,7 +22,7 @@
   color: #fff;
   font: 12px/14px $RubikBold;
   //border-radius: 2px 0 2px 0;
-  padding: 7px 3px 7px 13px;
+  padding: 9px 3px 7px 12px;
 
   ._warn & {
     color: #eb5757;
